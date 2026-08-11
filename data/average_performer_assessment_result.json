@@ -1,0 +1,520 @@
+{
+  "assessment": {
+    "name": "Minerva Career Assessment",
+    "version": "1.0",
+    "total_questions": 40
+  },
+  "results": {
+    "overall": {
+      "score": 23,
+      "max_score": 40,
+      "percentage": 57.5,
+      "classification": "Developing"
+    },
+    "categories": {
+      "problem_solving": {
+        "score": 3,
+        "max_score": 5,
+        "questions": 5,
+        "correct": 3,
+        "incorrect": 2,
+        "percentage": 60.0
+      },
+      "analytical_thinking": {
+        "score": 3,
+        "max_score": 5,
+        "questions": 5,
+        "correct": 3,
+        "incorrect": 2,
+        "percentage": 60.0
+      },
+      "logical_reasoning": {
+        "score": 3,
+        "max_score": 5,
+        "questions": 5,
+        "correct": 3,
+        "incorrect": 2,
+        "percentage": 60.0
+      },
+      "technical_aptitude": {
+        "score": 4,
+        "max_score": 7,
+        "questions": 7,
+        "correct": 4,
+        "incorrect": 3,
+        "percentage": 57.14
+      },
+      "creativity": {
+        "score": 2,
+        "max_score": 5,
+        "questions": 5,
+        "correct": 2,
+        "incorrect": 3,
+        "percentage": 40.0
+      },
+      "communication": {
+        "score": 3,
+        "max_score": 4,
+        "questions": 4,
+        "correct": 3,
+        "incorrect": 1,
+        "percentage": 75.0
+      },
+      "attention_to_detail": {
+        "score": 3,
+        "max_score": 5,
+        "questions": 5,
+        "correct": 3,
+        "incorrect": 2,
+        "percentage": 60.0
+      },
+      "learning_ability": {
+        "score": 2,
+        "max_score": 4,
+        "questions": 4,
+        "correct": 2,
+        "incorrect": 2,
+        "percentage": 50.0
+      }
+    },
+    "strengths": [],
+    "moderate_areas": [
+      {
+        "category": "problem_solving",
+        "percentage": 60.0
+      },
+      {
+        "category": "analytical_thinking",
+        "percentage": 60.0
+      },
+      {
+        "category": "logical_reasoning",
+        "percentage": 60.0
+      },
+      {
+        "category": "communication",
+        "percentage": 75.0
+      },
+      {
+        "category": "attention_to_detail",
+        "percentage": 60.0
+      }
+    ],
+    "weaknesses": [
+      {
+        "category": "technical_aptitude",
+        "percentage": 57.14
+      },
+      {
+        "category": "creativity",
+        "percentage": 40.0
+      },
+      {
+        "category": "learning_ability",
+        "percentage": 50.0
+      }
+    ],
+    "questions": [
+      {
+        "question_id": "PS-01",
+        "category": "problem_solving",
+        "difficulty": "easy",
+        "student_answer": "A",
+        "correct_answer": "A",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "PS-02",
+        "category": "problem_solving",
+        "difficulty": "easy",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "PS-03",
+        "category": "problem_solving",
+        "difficulty": "medium",
+        "student_answer": "A",
+        "correct_answer": "B",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "PS-04",
+        "category": "problem_solving",
+        "difficulty": "medium",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "PS-05",
+        "category": "problem_solving",
+        "difficulty": "hard",
+        "student_answer": "A",
+        "correct_answer": "C",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "AT-01",
+        "category": "analytical_thinking",
+        "difficulty": "easy",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "AT-02",
+        "category": "analytical_thinking",
+        "difficulty": "easy",
+        "student_answer": "C",
+        "correct_answer": "C",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "AT-03",
+        "category": "analytical_thinking",
+        "difficulty": "medium",
+        "student_answer": "A",
+        "correct_answer": "C",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "AT-04",
+        "category": "analytical_thinking",
+        "difficulty": "medium",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "AT-05",
+        "category": "analytical_thinking",
+        "difficulty": "hard",
+        "student_answer": "C",
+        "correct_answer": "B",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "LR-01",
+        "category": "logical_reasoning",
+        "difficulty": "easy",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "LR-02",
+        "category": "logical_reasoning",
+        "difficulty": "easy",
+        "student_answer": "A",
+        "correct_answer": "A",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "LR-03",
+        "category": "logical_reasoning",
+        "difficulty": "medium",
+        "student_answer": "A",
+        "correct_answer": "B",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "LR-04",
+        "category": "logical_reasoning",
+        "difficulty": "medium",
+        "student_answer": "D",
+        "correct_answer": "D",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "LR-05",
+        "category": "logical_reasoning",
+        "difficulty": "hard",
+        "student_answer": "D",
+        "correct_answer": "A",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "TA-01",
+        "category": "technical_aptitude",
+        "difficulty": "easy",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "TA-02",
+        "category": "technical_aptitude",
+        "difficulty": "easy",
+        "student_answer": "C",
+        "correct_answer": "C",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "TA-03",
+        "category": "technical_aptitude",
+        "difficulty": "medium",
+        "student_answer": "B",
+        "correct_answer": "A",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "TA-04",
+        "category": "technical_aptitude",
+        "difficulty": "medium",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "TA-05",
+        "category": "technical_aptitude",
+        "difficulty": "medium",
+        "student_answer": "A",
+        "correct_answer": "B",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "TA-06",
+        "category": "technical_aptitude",
+        "difficulty": "hard",
+        "student_answer": "C",
+        "correct_answer": "C",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "TA-07",
+        "category": "technical_aptitude",
+        "difficulty": "hard",
+        "student_answer": "B",
+        "correct_answer": "A",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "CR-01",
+        "category": "creativity",
+        "difficulty": "easy",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "CR-02",
+        "category": "creativity",
+        "difficulty": "easy",
+        "student_answer": "A",
+        "correct_answer": "B",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "CR-03",
+        "category": "creativity",
+        "difficulty": "medium",
+        "student_answer": "C",
+        "correct_answer": "C",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "CR-04",
+        "category": "creativity",
+        "difficulty": "medium",
+        "student_answer": "A",
+        "correct_answer": "B",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "CR-05",
+        "category": "creativity",
+        "difficulty": "hard",
+        "student_answer": "C",
+        "correct_answer": "B",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "CM-01",
+        "category": "communication",
+        "difficulty": "easy",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "CM-02",
+        "category": "communication",
+        "difficulty": "easy",
+        "student_answer": "C",
+        "correct_answer": "C",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "CM-03",
+        "category": "communication",
+        "difficulty": "medium",
+        "student_answer": "A",
+        "correct_answer": "B",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "CM-04",
+        "category": "communication",
+        "difficulty": "hard",
+        "student_answer": "C",
+        "correct_answer": "C",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "AD-01",
+        "category": "attention_to_detail",
+        "difficulty": "easy",
+        "student_answer": "D",
+        "correct_answer": "D",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "AD-02",
+        "category": "attention_to_detail",
+        "difficulty": "easy",
+        "student_answer": "A",
+        "correct_answer": "D",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "AD-03",
+        "category": "attention_to_detail",
+        "difficulty": "medium",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "AD-04",
+        "category": "attention_to_detail",
+        "difficulty": "medium",
+        "student_answer": "A",
+        "correct_answer": "D",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "AD-05",
+        "category": "attention_to_detail",
+        "difficulty": "hard",
+        "student_answer": "C",
+        "correct_answer": "C",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "LA-01",
+        "category": "learning_ability",
+        "difficulty": "easy",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "LA-02",
+        "category": "learning_ability",
+        "difficulty": "easy",
+        "student_answer": "A",
+        "correct_answer": "C",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      },
+      {
+        "question_id": "LA-03",
+        "category": "learning_ability",
+        "difficulty": "medium",
+        "student_answer": "B",
+        "correct_answer": "B",
+        "is_correct": true,
+        "score": 1,
+        "max_score": 1
+      },
+      {
+        "question_id": "LA-04",
+        "category": "learning_ability",
+        "difficulty": "hard",
+        "student_answer": "C",
+        "correct_answer": "A",
+        "is_correct": false,
+        "score": 0,
+        "max_score": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,1129 @@
+{
+  "assessment": {
+    "name": "Minerva Career Assessment",
+    "version": "1.0",
+    "total_questions": 40
+  },
+  "questions": [
+    {
+      "question_id": "PS-01",
+      "category": "problem_solving",
+      "difficulty": "easy",
+      "question_type": "scenario",
+      "question": "A student has three assignments due within the next two days. One assignment is due tomorrow, while the other two are due the day after tomorrow. What should the student do first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Start with the assignment that is due tomorrow."
+        },
+        {
+          "id": "B",
+          "text": "Start with the easiest assignment, regardless of its deadline."
+        },
+        {
+          "id": "C",
+          "text": "Wait until the day before all assignments are due."
+        },
+        {
+          "id": "D",
+          "text": "Work randomly on all three assignments."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The assignment with the closest deadline should be prioritized first. This demonstrates the ability to identify urgency and organize tasks effectively.",
+      "score": 1
+    },
+    {
+      "question_id": "PS-02",
+      "category": "problem_solving",
+      "difficulty": "easy",
+      "question_type": "mcq",
+      "question": "A computer program is not producing the expected result. What is the most appropriate first step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rewrite the entire program immediately."
+        },
+        {
+          "id": "B",
+          "text": "Identify and understand the problem before changing the code."
+        },
+        {
+          "id": "C",
+          "text": "Delete the program and start a different project."
+        },
+        {
+          "id": "D",
+          "text": "Add more code without checking the existing code."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Before attempting a solution, the problem should first be understood and the possible cause identified. This prevents unnecessary changes and makes troubleshooting more systematic.",
+      "score": 1
+    },
+    {
+      "question_id": "PS-03",
+      "category": "problem_solving",
+      "difficulty": "medium",
+      "question_type": "scenario",
+      "question": "A university's online portal works normally for most students but becomes extremely slow during registration week. What would be the most logical approach to solving the problem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Remove some features from the portal immediately."
+        },
+        {
+          "id": "B",
+          "text": "Investigate server load, database performance, and the number of concurrent users."
+        },
+        {
+          "id": "C",
+          "text": "Ask students to stop using the portal."
+        },
+        {
+          "id": "D",
+          "text": "Change the website's colors and layout."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The problem occurs specifically when many students use the system simultaneously. Investigating server load, database performance, and concurrent users helps identify the actual cause before selecting a solution.",
+      "score": 1
+    },
+    {
+      "question_id": "PS-04",
+      "category": "problem_solving",
+      "difficulty": "medium",
+      "question_type": "multi_step",
+      "question": "A student wants to build a mobile application but has limited time and has never developed a mobile app before. Which approach is most effective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Build every planned feature at once without testing."
+        },
+        {
+          "id": "B",
+          "text": "Start with a small set of essential features, learn the required tools, and test the application step by step."
+        },
+        {
+          "id": "C",
+          "text": "Wait until the student knows every aspect of mobile development."
+        },
+        {
+          "id": "D",
+          "text": "Copy a complete application from another developer without understanding it."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Breaking a large project into smaller manageable parts reduces complexity. Learning the required concepts and testing incrementally also makes it easier to identify and solve problems.",
+      "score": 1
+    },
+    {
+      "question_id": "PS-05",
+      "category": "problem_solving",
+      "difficulty": "hard",
+      "question_type": "scenario",
+      "question": "An e-commerce website has recently started receiving customer complaints about failed orders. The failures happen only occasionally. The development team discovers that the problem could be related to the payment service, database, network connection, or application code. What would be the best problem-solving approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replace the entire application immediately."
+        },
+        {
+          "id": "B",
+          "text": "Choose the payment service as the cause without investigating other possibilities."
+        },
+        {
+          "id": "C",
+          "text": "Collect error information, reproduce the issue if possible, test each potential cause systematically, and identify the root cause."
+        },
+        {
+          "id": "D",
+          "text": "Ignore the issue because it does not happen every time."
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "When multiple possible causes exist, the problem should be investigated systematically. Collecting evidence, reproducing the problem, testing possible causes, and identifying the root cause prevents assumptions and leads to a more reliable solution.",
+      "score": 1
+    },
+    {
+      "question_id": "AT-01",
+      "category": "analytical_thinking",
+      "difficulty": "easy",
+      "question_type": "data_interpretation",
+      "question": "A student tracks the number of programming problems they solve each day. On Monday they solve 4, Tuesday 6, Wednesday 5, and Thursday 8. On which day did the student solve the second-highest number of problems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monday"
+        },
+        {
+          "id": "B",
+          "text": "Tuesday"
+        },
+        {
+          "id": "C",
+          "text": "Wednesday"
+        },
+        {
+          "id": "D",
+          "text": "Thursday"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The numbers are 4, 6, 5, and 8. Thursday has the highest value of 8, while Tuesday has the second-highest value of 6.",
+      "score": 1
+    },
+    {
+      "question_id": "AT-02",
+      "category": "analytical_thinking",
+      "difficulty": "easy",
+      "question_type": "comparison",
+      "question": "Two students recorded the following study hours over four days. Student A studied 2, 4, 3, and 5 hours. Student B studied 3, 3, 4, and 4 hours. Which statement is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Student A studied more total hours than Student B."
+        },
+        {
+          "id": "B",
+          "text": "Student B studied more total hours than Student A."
+        },
+        {
+          "id": "C",
+          "text": "Both students studied the same total number of hours."
+        },
+        {
+          "id": "D",
+          "text": "There is not enough information to compare them."
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Student A studied 2 + 4 + 3 + 5 = 14 hours. Student B studied 3 + 3 + 4 + 4 = 14 hours. Therefore, both studied the same total number of hours.",
+      "score": 1
+    },
+    {
+      "question_id": "AT-03",
+      "category": "analytical_thinking",
+      "difficulty": "medium",
+      "question_type": "data_interpretation",
+      "question": "A software team records the number of bugs found during four testing stages: Stage 1 = 20, Stage 2 = 15, Stage 3 = 10, and Stage 4 = 5. What does this data most strongly suggest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of detected bugs increased throughout testing."
+        },
+        {
+          "id": "B",
+          "text": "The number of detected bugs remained constant."
+        },
+        {
+          "id": "C",
+          "text": "The number of detected bugs decreased throughout testing."
+        },
+        {
+          "id": "D",
+          "text": "Testing became unnecessary after Stage 1."
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "The number of detected bugs decreases from 20 to 15, then 10, and finally 5. This shows a consistent downward trend in detected bugs across the testing stages.",
+      "score": 1
+    },
+    {
+      "question_id": "AT-04",
+      "category": "analytical_thinking",
+      "difficulty": "medium",
+      "question_type": "scenario_analysis",
+      "question": "An online learning platform records the following results after introducing video tutorials: course completion increased from 60% to 75%, while the average time spent per lesson increased from 20 minutes to 30 minutes. Which conclusion is best supported by the data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The video tutorials definitely caused students to learn faster."
+        },
+        {
+          "id": "B",
+          "text": "Course completion increased, but students also spent more time per lesson."
+        },
+        {
+          "id": "C",
+          "text": "Students stopped using other learning resources."
+        },
+        {
+          "id": "D",
+          "text": "The platform became less effective because lesson time increased."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The data directly shows that completion increased from 60% to 75%, while average lesson time increased from 20 to 30 minutes. We cannot conclude from this data alone that the videos definitely caused the improvement or that students stopped using other resources.",
+      "score": 1
+    },
+    {
+      "question_id": "AT-05",
+      "category": "analytical_thinking",
+      "difficulty": "hard",
+      "question_type": "data_reasoning",
+      "question": "A university compares two programming courses. Course A has 80 students, with 60 passing. Course B has 40 students, with 34 passing. Which course has the higher pass rate, and what is the approximate difference?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Course A, by approximately 10 percentage points"
+        },
+        {
+          "id": "B",
+          "text": "Course B, by approximately 10 percentage points"
+        },
+        {
+          "id": "C",
+          "text": "Course A, by approximately 5 percentage points"
+        },
+        {
+          "id": "D",
+          "text": "Both courses have the same pass rate"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Course A has a pass rate of 60/80 = 75%. Course B has a pass rate of 34/40 = 85%. Therefore, Course B has the higher pass rate by 10 percentage points.",
+      "score": 1
+    },
+    {
+      "question_id": "LR-01",
+      "category": "logical_reasoning",
+      "difficulty": "easy",
+      "question_type": "sequence",
+      "question": "What number should come next in the sequence: 2, 4, 6, 8, ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "11"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Each number increases by 2. Therefore, after 8, the next number is 10.",
+      "score": 1
+    },
+    {
+      "question_id": "LR-02",
+      "category": "logical_reasoning",
+      "difficulty": "easy",
+      "question_type": "logic",
+      "question": "All programmers in a team know Python. Ali is a programmer in the team. What can logically be concluded?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ali knows Python."
+        },
+        {
+          "id": "B",
+          "text": "Ali knows Java only."
+        },
+        {
+          "id": "C",
+          "text": "Ali does not know Python."
+        },
+        {
+          "id": "D",
+          "text": "Nothing can be concluded about Ali."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The statement says that all programmers in the team know Python. Since Ali is a programmer in that team, it logically follows that Ali knows Python.",
+      "score": 1
+    },
+    {
+      "question_id": "LR-03",
+      "category": "logical_reasoning",
+      "difficulty": "medium",
+      "question_type": "conditional_reasoning",
+      "question": "A university system follows this rule: If a student's attendance is below 75%, the student cannot appear in the final examination. Sara is allowed to appear in the final examination. What can be logically concluded?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sara's attendance is definitely below 75%."
+        },
+        {
+          "id": "B",
+          "text": "Sara's attendance is at least 75%."
+        },
+        {
+          "id": "C",
+          "text": "Sara has no attendance record."
+        },
+        {
+          "id": "D",
+          "text": "Sara must have exactly 75% attendance."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "If attendance below 75% prevents a student from appearing in the examination, then a student who is allowed to appear must not have attendance below 75%. Therefore, Sara's attendance is at least 75%.",
+      "score": 1
+    },
+    {
+      "question_id": "LR-04",
+      "category": "logical_reasoning",
+      "difficulty": "medium",
+      "question_type": "pattern",
+      "question": "A sequence follows this pattern: 3, 6, 12, 24, ?. Which number should come next?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "36"
+        },
+        {
+          "id": "C",
+          "text": "42"
+        },
+        {
+          "id": "D",
+          "text": "48"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Each number is multiplied by 2 to produce the next number: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24. Therefore, 24 × 2 = 48.",
+      "score": 1
+    },
+    {
+      "question_id": "LR-05",
+      "category": "logical_reasoning",
+      "difficulty": "hard",
+      "question_type": "deduction",
+      "question": "Three students — Ali, Bilal, and Hamza — each specialize in a different area: Web Development, Data Science, and Cybersecurity. Ali does not specialize in Data Science. Bilal does not specialize in Web Development. Hamza specializes in Cybersecurity. Which specialization does Ali have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Web Development"
+        },
+        {
+          "id": "B",
+          "text": "Data Science"
+        },
+        {
+          "id": "C",
+          "text": "Cybersecurity"
+        },
+        {
+          "id": "D",
+          "text": "It cannot be determined"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Hamza has Cybersecurity. Therefore, Ali and Bilal must have Web Development and Data Science. Since Ali does not specialize in Data Science, Ali must specialize in Web Development.",
+      "score": 1
+    },
+    {
+      "question_id": "TA-01",
+      "category": "technical_aptitude",
+      "difficulty": "easy",
+      "question_type": "mcq",
+      "question": "Which component of a computer is primarily responsible for executing instructions and performing calculations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RAM"
+        },
+        {
+          "id": "B",
+          "text": "CPU"
+        },
+        {
+          "id": "C",
+          "text": "Hard Drive"
+        },
+        {
+          "id": "D",
+          "text": "Monitor"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The Central Processing Unit (CPU) executes program instructions and performs calculations and logical operations.",
+      "score": 1
+    },
+    {
+      "question_id": "TA-02",
+      "category": "technical_aptitude",
+      "difficulty": "easy",
+      "question_type": "programming",
+      "question": "What will be the value of x after the following operations? x = 5; x = x + 3;",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "The variable x initially contains 5. Adding 3 changes its value to 8.",
+      "score": 1
+    },
+    {
+      "question_id": "TA-03",
+      "category": "technical_aptitude",
+      "difficulty": "medium",
+      "question_type": "database",
+      "question": "A university database contains a Students table where each student has a unique student ID. Which database concept is most appropriate for ensuring that each student ID is unique?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Primary Key"
+        },
+        {
+          "id": "B",
+          "text": "Foreign Key"
+        },
+        {
+          "id": "C",
+          "text": "Duplicate Record"
+        },
+        {
+          "id": "D",
+          "text": "Database View"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A primary key uniquely identifies each record in a database table and prevents duplicate values for that key.",
+      "score": 1
+    },
+    {
+      "question_id": "TA-04",
+      "category": "technical_aptitude",
+      "difficulty": "medium",
+      "question_type": "networking",
+      "question": "A student can access websites on their computer, but another device connected to the same local network cannot access the internet. What should be checked first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The monitor brightness"
+        },
+        {
+          "id": "B",
+          "text": "The second device's network connection and IP configuration"
+        },
+        {
+          "id": "C",
+          "text": "The keyboard layout"
+        },
+        {
+          "id": "D",
+          "text": "The computer's wallpaper"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Since one device can access the internet, the problem may be specific to the second device. Checking its network connection and IP configuration is a logical first troubleshooting step.",
+      "score": 1
+    },
+    {
+      "question_id": "TA-05",
+      "category": "technical_aptitude",
+      "difficulty": "medium",
+      "question_type": "algorithm",
+      "question": "An algorithm checks every item in a list of n items exactly once. How does the number of operations generally grow as the size of the list increases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It remains constant regardless of list size."
+        },
+        {
+          "id": "B",
+          "text": "It grows approximately in proportion to n."
+        },
+        {
+          "id": "C",
+          "text": "It grows approximately as n squared."
+        },
+        {
+          "id": "D",
+          "text": "It decreases as n increases."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "When an algorithm processes each of n items once, the number of operations grows linearly with n. This is commonly represented as O(n).",
+      "score": 1
+    },
+    {
+      "question_id": "TA-06",
+      "category": "technical_aptitude",
+      "difficulty": "hard",
+      "question_type": "programming_logic",
+      "question": "Consider the following pseudocode: total = 0; for i = 1 to 4: total = total + i. What is the final value of total?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "The loop adds 1, 2, 3, and 4 to total. Therefore, total = 1 + 2 + 3 + 4 = 10.",
+      "score": 1
+    },
+    {
+      "question_id": "TA-07",
+      "category": "technical_aptitude",
+      "difficulty": "hard",
+      "question_type": "technical_scenario",
+      "question": "A web application becomes slower as the number of users increases. The database contains a large table, and a frequently searched column has no index. Which change is most likely to improve the performance of searches on that column?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add an appropriate database index to the frequently searched column."
+        },
+        {
+          "id": "B",
+          "text": "Increase the font size of the website."
+        },
+        {
+          "id": "C",
+          "text": "Change the website background image."
+        },
+        {
+          "id": "D",
+          "text": "Remove the login page."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A suitable database index can significantly reduce the amount of data the database needs to examine when searching a frequently queried column, improving query performance.",
+      "score": 1
+    },
+    {
+      "question_id": "CR-01",
+      "category": "creativity",
+      "difficulty": "easy",
+      "question_type": "alternative_solution",
+      "question": "A university wants to encourage students to read more books, but it has a limited budget. Which idea demonstrates the most creative approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Buy expensive books for every student."
+        },
+        {
+          "id": "B",
+          "text": "Create a student book-exchange system where students can share and exchange books."
+        },
+        {
+          "id": "C",
+          "text": "Close the library earlier."
+        },
+        {
+          "id": "D",
+          "text": "Require every student to buy the same book."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The book-exchange system uses an existing resource in a new way and encourages reading without requiring a large budget. It demonstrates practical and resourceful thinking.",
+      "score": 1
+    },
+    {
+      "question_id": "CR-02",
+      "category": "creativity",
+      "difficulty": "easy",
+      "question_type": "scenario",
+      "question": "A student needs to explain a difficult programming concept to beginners who are struggling to understand it. Which approach demonstrates the most creative thinking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Repeat the same technical definition several times."
+        },
+        {
+          "id": "B",
+          "text": "Use a real-world analogy, simple example, or interactive demonstration."
+        },
+        {
+          "id": "C",
+          "text": "Give the students a longer technical document."
+        },
+        {
+          "id": "D",
+          "text": "Tell the students to memorize the definition."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Using analogies, examples, or interactive demonstrations presents information in a different way and can make a difficult concept easier to understand.",
+      "score": 1
+    },
+    {
+      "question_id": "CR-03",
+      "category": "creativity",
+      "difficulty": "medium",
+      "question_type": "design_problem",
+      "question": "A university cafeteria has long queues during lunch. Which solution demonstrates the strongest combination of creativity and practical thinking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tell students to arrive earlier."
+        },
+        {
+          "id": "B",
+          "text": "Close some of the cafeteria counters."
+        },
+        {
+          "id": "C",
+          "text": "Introduce a pre-order system where students order through an app and collect prepared meals at scheduled times."
+        },
+        {
+          "id": "D",
+          "text": "Make the lunch break shorter."
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "The pre-order system changes the process rather than simply asking students to adjust their behavior. It uses technology to reduce waiting time and improve the overall workflow.",
+      "score": 1
+    },
+    {
+      "question_id": "CR-04",
+      "category": "creativity",
+      "difficulty": "medium",
+      "question_type": "multiple_solutions",
+      "question": "A student wants to improve participation in an online programming class. Which idea provides the most creative way to increase engagement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Require students to attend longer lectures."
+        },
+        {
+          "id": "B",
+          "text": "Use short coding challenges, team competitions, badges, and real-world mini-projects."
+        },
+        {
+          "id": "C",
+          "text": "Send students more lecture slides."
+        },
+        {
+          "id": "D",
+          "text": "Remove practical exercises from the course."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Combining challenges, competition, rewards, collaboration, and practical projects introduces multiple engaging methods instead of relying only on traditional lectures.",
+      "score": 1
+    },
+    {
+      "question_id": "CR-05",
+      "category": "creativity",
+      "difficulty": "hard",
+      "question_type": "innovation_scenario",
+      "question": "A university has many students who have useful skills but rarely get opportunities to work on real projects. Which idea demonstrates the strongest innovative thinking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ask students to submit more assignments."
+        },
+        {
+          "id": "B",
+          "text": "Create a platform that matches students with real university or community problems and allows them to form teams to develop solutions."
+        },
+        {
+          "id": "C",
+          "text": "Increase the number of written examinations."
+        },
+        {
+          "id": "D",
+          "text": "Give all students the same project every semester."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The idea connects existing student skills with real-world problems and encourages collaboration, project-based learning, and practical innovation. It creates a new system rather than simply increasing existing academic tasks.",
+      "score": 1
+    },
+    {
+      "question_id": "CM-01",
+      "category": "communication",
+      "difficulty": "easy",
+      "question_type": "explanation",
+      "question": "You need to explain a technical concept to a person who has no technical background. Which approach is most effective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use as many technical terms as possible."
+        },
+        {
+          "id": "B",
+          "text": "Give a simple explanation using familiar examples and avoid unnecessary technical jargon."
+        },
+        {
+          "id": "C",
+          "text": "Read the technical definition word for word."
+        },
+        {
+          "id": "D",
+          "text": "Assume the person already understands the concept."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Effective communication requires adapting the explanation to the audience. Simple language and familiar examples make technical concepts easier for non-technical people to understand.",
+      "score": 1
+    },
+    {
+      "question_id": "CM-02",
+      "category": "communication",
+      "difficulty": "easy",
+      "question_type": "scenario",
+      "question": "A team member sends you a message saying that they do not understand your part of the project. What would be the best response?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ignore the message because the project instructions are already available."
+        },
+        {
+          "id": "B",
+          "text": "Tell them to figure it out themselves."
+        },
+        {
+          "id": "C",
+          "text": "Explain the part clearly, provide an example if needed, and ask whether they have any questions."
+        },
+        {
+          "id": "D",
+          "text": "Send the same message again without changing anything."
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Good communication involves responding to the other person's needs, clarifying information, and checking whether the explanation was understood.",
+      "score": 1
+    },
+    {
+      "question_id": "CM-03",
+      "category": "communication",
+      "difficulty": "medium",
+      "question_type": "technical_explanation",
+      "question": "You are presenting a machine learning project to university students from different fields. Which presentation approach would communicate the project most effectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Explain every mathematical formula in detail before describing the purpose of the project."
+        },
+        {
+          "id": "B",
+          "text": "Explain the problem first, then describe the solution, give a simple example, and introduce technical details where they are relevant."
+        },
+        {
+          "id": "C",
+          "text": "Use only technical terminology throughout the presentation."
+        },
+        {
+          "id": "D",
+          "text": "Show the source code without explaining what the system does."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "A clear presentation establishes context first and then gradually introduces technical information. This helps an audience with different levels of technical knowledge understand the project.",
+      "score": 1
+    },
+    {
+      "question_id": "CM-04",
+      "category": "communication",
+      "difficulty": "hard",
+      "question_type": "communication_scenario",
+      "question": "During a team meeting, another member disagrees with your proposed solution. What is the most effective response?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Interrupt them and insist that your solution is correct."
+        },
+        {
+          "id": "B",
+          "text": "Ignore their opinion and continue with your plan."
+        },
+        {
+          "id": "C",
+          "text": "Listen to their reasoning, ask clarifying questions, explain your reasoning respectfully, and compare both approaches using evidence."
+        },
+        {
+          "id": "D",
+          "text": "Agree immediately even if you believe their solution has problems."
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Effective professional communication involves active listening, respectful discussion, clear reasoning, and evidence-based decision making rather than simply agreeing or arguing.",
+      "score": 1
+    },
+    {
+      "question_id": "AD-01",
+      "category": "attention_to_detail",
+      "difficulty": "easy",
+      "question_type": "error_detection",
+      "question": "Which email address is different from the other three?",
+      "options": [
+        {
+          "id": "A",
+          "text": "student@minerva.com"
+        },
+        {
+          "id": "B",
+          "text": "student@minerva.com"
+        },
+        {
+          "id": "C",
+          "text": "student@minerva.com"
+        },
+        {
+          "id": "D",
+          "text": "student@minerva.co"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "The fourth email address ends with '.co' instead of '.com'. Detecting this small difference requires careful attention to detail.",
+      "score": 1
+    },
+    {
+      "question_id": "AD-02",
+      "category": "attention_to_detail",
+      "difficulty": "easy",
+      "question_type": "comparison",
+      "question": "Two student records should contain the same university name. Which record contains a spelling inconsistency?",
+      "options": [
+        {
+          "id": "A",
+          "text": "University of Karachi"
+        },
+        {
+          "id": "B",
+          "text": "University of Karachi"
+        },
+        {
+          "id": "C",
+          "text": "University of Karachi"
+        },
+        {
+          "id": "D",
+          "text": "Univercity of Karachi"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "The fourth record contains 'Univercity' instead of 'University'. Identifying the spelling difference requires careful comparison.",
+      "score": 1
+    },
+    {
+      "question_id": "AD-03",
+      "category": "attention_to_detail",
+      "difficulty": "medium",
+      "question_type": "code_comparison",
+      "question": "The following two lines of code are intended to perform the same operation. What is the difference that could cause an error?\n\nLine 1: total = price + tax\nLine 2: total = price - tax",
+      "options": [
+        {
+          "id": "A",
+          "text": "The variable 'total' is different."
+        },
+        {
+          "id": "B",
+          "text": "The first line adds tax, while the second line subtracts tax."
+        },
+        {
+          "id": "C",
+          "text": "The variable 'price' is different."
+        },
+        {
+          "id": "D",
+          "text": "There is no difference."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The arithmetic operator changes from '+' to '-'. This small difference changes the result and could cause an incorrect calculation.",
+      "score": 1
+    },
+    {
+      "question_id": "AD-04",
+      "category": "attention_to_detail",
+      "difficulty": "medium",
+      "question_type": "data_checking",
+      "question": "A student is checking a dataset where every student ID should contain exactly 6 digits. Which ID contains an error?",
+      "options": [
+        {
+          "id": "A",
+          "text": "102345"
+        },
+        {
+          "id": "B",
+          "text": "284761"
+        },
+        {
+          "id": "C",
+          "text": "593812"
+        },
+        {
+          "id": "D",
+          "text": "47321"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "The required format is exactly 6 digits. '47321' contains only 5 digits, so it does not follow the required format.",
+      "score": 1
+    },
+    {
+      "question_id": "AD-05",
+      "category": "attention_to_detail",
+      "difficulty": "hard",
+      "question_type": "debugging_scenario",
+      "question": "A programmer reviews the following code and expects it to calculate the average of three numbers:\n\nnum1 = 10\nnum2 = 20\nnum3 = 30\naverage = (num1 + num2 + num3) / 2\n\nWhat is the most important error to identify?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The variable names are incorrect."
+        },
+        {
+          "id": "B",
+          "text": "The numbers should be strings."
+        },
+        {
+          "id": "C",
+          "text": "The sum is divided by 2 instead of 3."
+        },
+        {
+          "id": "D",
+          "text": "There is no error in the code."
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "There are three numbers, so their total should be divided by 3 to calculate the average. Dividing by 2 produces an incorrect result.",
+      "score": 1
+    },
+    {
+      "question_id": "LA-01",
+      "category": "learning_ability",
+      "difficulty": "easy",
+      "question_type": "new_rule_application",
+      "question": "Suppose a new programming language uses the rule that every command must end with a semicolon (;). Based on this rule, which statement is written correctly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "print(\"Hello\")"
+        },
+        {
+          "id": "B",
+          "text": "print(\"Hello\");"
+        },
+        {
+          "id": "C",
+          "text": "print(\"Hello\")."
+        },
+        {
+          "id": "D",
+          "text": "print(\"Hello\"),"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The new rule states that every command must end with a semicolon. Therefore, the statement ending with ';' follows the rule correctly.",
+      "score": 1
+    },
+    {
+      "question_id": "LA-02",
+      "category": "learning_ability",
+      "difficulty": "easy",
+      "question_type": "concept_application",
+      "question": "A teacher explains a new rule: 'Whenever a number is marked with X, multiply it by 3.' If 7X appears in a problem, what should you calculate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 + 3"
+        },
+        {
+          "id": "B",
+          "text": "7 - 3"
+        },
+        {
+          "id": "C",
+          "text": "7 × 3"
+        },
+        {
+          "id": "D",
+          "text": "7 ÷ 3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "The new rule states that a number marked with X should be multiplied by 3. Therefore, 7X means 7 × 3.",
+      "score": 1
+    },
+    {
+      "question_id": "LA-03",
+      "category": "learning_ability",
+      "difficulty": "medium",
+      "question_type": "unfamiliar_concept",
+      "question": "A new system uses the following rule: A 'priority score' is calculated by adding the task's urgency score and importance score. A task has an urgency score of 8 and an importance score of 6. What is its priority score?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "14"
+        },
+        {
+          "id": "C",
+          "text": "48"
+        },
+        {
+          "id": "D",
+          "text": "86"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The newly introduced rule says to add the urgency score and importance score. Therefore, 8 + 6 = 14.",
+      "score": 1
+    },
+    {
+      "question_id": "LA-04",
+      "category": "learning_ability",
+      "difficulty": "hard",
+      "question_type": "new_concept_application",
+      "question": "A new data structure follows this rule: every new number is placed after the existing numbers, but when a number is removed, the earliest remaining number is removed first. Starting with [10, 20, 30], the number 40 is added and then one number is removed. What will remain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[20, 30, 40]"
+        },
+        {
+          "id": "B",
+          "text": "[10, 20, 30]"
+        },
+        {
+          "id": "C",
+          "text": "[10, 30, 40]"
+        },
+        {
+          "id": "D",
+          "text": "[20, 40]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The new number 40 is added after the existing numbers, giving [10, 20, 30, 40]. When one number is removed, the earliest remaining number, 10, is removed. Therefore, [20, 30, 40] remains.",
+      "score": 1
+    }
+  ]
+}
