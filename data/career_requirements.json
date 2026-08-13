@@ -1,0 +1,574 @@
+{
+  "dataset": {
+    "name": "Minerva IT/CS Career Requirements Dataset",
+    "version": "1.0",
+    "total_careers": 40
+  },
+
+  "careers": [
+    {
+      "career_id": "CAREER-01",
+      "career": "Software Engineer",
+      "required_skills": {
+        "problem_solving": 80,
+        "analytical_thinking": 75,
+        "logical_reasoning": 80,
+        "technical_aptitude": 85,
+        "creativity": 65,
+        "communication": 65,
+        "attention_to_detail": 80,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-02",
+      "career": "Software Developer",
+      "required_skills": {
+        "problem_solving": 80,
+        "analytical_thinking": 75,
+        "logical_reasoning": 80,
+        "technical_aptitude": 85,
+        "creativity": 65,
+        "communication": 60,
+        "attention_to_detail": 80,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-03",
+      "career": "Frontend Developer",
+      "required_skills": {
+        "problem_solving": 70,
+        "analytical_thinking": 65,
+        "logical_reasoning": 70,
+        "technical_aptitude": 80,
+        "creativity": 85,
+        "communication": 65,
+        "attention_to_detail": 80,
+        "learning_ability": 75
+      }
+    },
+    {
+      "career_id": "CAREER-04",
+      "career": "Backend Developer",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 80,
+        "logical_reasoning": 85,
+        "technical_aptitude": 90,
+        "creativity": 60,
+        "communication": 60,
+        "attention_to_detail": 85,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-05",
+      "career": "Full Stack Developer",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 80,
+        "logical_reasoning": 85,
+        "technical_aptitude": 90,
+        "creativity": 75,
+        "communication": 70,
+        "attention_to_detail": 85,
+        "learning_ability": 85
+      }
+    },
+    {
+      "career_id": "CAREER-06",
+      "career": "Mobile App Developer",
+      "required_skills": {
+        "problem_solving": 80,
+        "analytical_thinking": 70,
+        "logical_reasoning": 75,
+        "technical_aptitude": 85,
+        "creativity": 75,
+        "communication": 60,
+        "attention_to_detail": 80,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-07",
+      "career": "Android Developer",
+      "required_skills": {
+        "problem_solving": 80,
+        "analytical_thinking": 70,
+        "logical_reasoning": 75,
+        "technical_aptitude": 85,
+        "creativity": 70,
+        "communication": 60,
+        "attention_to_detail": 80,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-08",
+      "career": "iOS Developer",
+      "required_skills": {
+        "problem_solving": 80,
+        "analytical_thinking": 70,
+        "logical_reasoning": 75,
+        "technical_aptitude": 85,
+        "creativity": 75,
+        "communication": 60,
+        "attention_to_detail": 80,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-09",
+      "career": "Web Developer",
+      "required_skills": {
+        "problem_solving": 70,
+        "analytical_thinking": 65,
+        "logical_reasoning": 70,
+        "technical_aptitude": 80,
+        "creativity": 80,
+        "communication": 60,
+        "attention_to_detail": 75,
+        "learning_ability": 75
+      }
+    },
+    {
+      "career_id": "CAREER-10",
+      "career": "Game Developer",
+      "required_skills": {
+        "problem_solving": 80,
+        "analytical_thinking": 75,
+        "logical_reasoning": 80,
+        "technical_aptitude": 85,
+        "creativity": 90,
+        "communication": 60,
+        "attention_to_detail": 80,
+        "learning_ability": 80
+      }
+    },
+
+    {
+      "career_id": "CAREER-11",
+      "career": "Data Scientist",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 95,
+        "logical_reasoning": 90,
+        "technical_aptitude": 90,
+        "creativity": 75,
+        "communication": 70,
+        "attention_to_detail": 85,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-12",
+      "career": "Data Analyst",
+      "required_skills": {
+        "problem_solving": 75,
+        "analytical_thinking": 90,
+        "logical_reasoning": 85,
+        "technical_aptitude": 80,
+        "creativity": 65,
+        "communication": 75,
+        "attention_to_detail": 90,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-13",
+      "career": "Data Engineer",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 85,
+        "logical_reasoning": 85,
+        "technical_aptitude": 95,
+        "creativity": 60,
+        "communication": 65,
+        "attention_to_detail": 90,
+        "learning_ability": 85
+      }
+    },
+    {
+      "career_id": "CAREER-14",
+      "career": "Machine Learning Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 95,
+        "logical_reasoning": 95,
+        "technical_aptitude": 95,
+        "creativity": 75,
+        "communication": 65,
+        "attention_to_detail": 85,
+        "learning_ability": 95
+      }
+    },
+    {
+      "career_id": "CAREER-15",
+      "career": "AI Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 95,
+        "logical_reasoning": 90,
+        "technical_aptitude": 95,
+        "creativity": 80,
+        "communication": 65,
+        "attention_to_detail": 85,
+        "learning_ability": 95
+      }
+    },
+    {
+      "career_id": "CAREER-16",
+      "career": "Deep Learning Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 95,
+        "logical_reasoning": 95,
+        "technical_aptitude": 95,
+        "creativity": 80,
+        "communication": 60,
+        "attention_to_detail": 90,
+        "learning_ability": 95
+      }
+    },
+    {
+      "career_id": "CAREER-17",
+      "career": "NLP Engineer",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 90,
+        "logical_reasoning": 90,
+        "technical_aptitude": 90,
+        "creativity": 80,
+        "communication": 80,
+        "attention_to_detail": 85,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-18",
+      "career": "Computer Vision Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 95,
+        "logical_reasoning": 90,
+        "technical_aptitude": 95,
+        "creativity": 80,
+        "communication": 60,
+        "attention_to_detail": 90,
+        "learning_ability": 95
+      }
+    },
+    {
+      "career_id": "CAREER-19",
+      "career": "AI Researcher",
+      "required_skills": {
+        "problem_solving": 95,
+        "analytical_thinking": 100,
+        "logical_reasoning": 95,
+        "technical_aptitude": 95,
+        "creativity": 90,
+        "communication": 70,
+        "attention_to_detail": 90,
+        "learning_ability": 100
+      }
+    },
+    {
+      "career_id": "CAREER-20",
+      "career": "MLOps Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 85,
+        "logical_reasoning": 90,
+        "technical_aptitude": 95,
+        "creativity": 65,
+        "communication": 65,
+        "attention_to_detail": 90,
+        "learning_ability": 90
+      }
+    },
+
+    {
+      "career_id": "CAREER-21",
+      "career": "Cybersecurity Analyst",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 90,
+        "logical_reasoning": 95,
+        "technical_aptitude": 90,
+        "creativity": 70,
+        "communication": 65,
+        "attention_to_detail": 95,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-22",
+      "career": "Cybersecurity Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 90,
+        "logical_reasoning": 95,
+        "technical_aptitude": 95,
+        "creativity": 70,
+        "communication": 65,
+        "attention_to_detail": 95,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-23",
+      "career": "Penetration Tester",
+      "required_skills": {
+        "problem_solving": 95,
+        "analytical_thinking": 90,
+        "logical_reasoning": 95,
+        "technical_aptitude": 95,
+        "creativity": 90,
+        "communication": 65,
+        "attention_to_detail": 95,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-24",
+      "career": "Security Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 90,
+        "logical_reasoning": 95,
+        "technical_aptitude": 95,
+        "creativity": 70,
+        "communication": 70,
+        "attention_to_detail": 95,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-25",
+      "career": "Digital Forensics Analyst",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 95,
+        "logical_reasoning": 95,
+        "technical_aptitude": 90,
+        "creativity": 65,
+        "communication": 70,
+        "attention_to_detail": 100,
+        "learning_ability": 85
+      }
+    },
+
+    {
+      "career_id": "CAREER-26",
+      "career": "Cloud Engineer",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 80,
+        "logical_reasoning": 85,
+        "technical_aptitude": 95,
+        "creativity": 65,
+        "communication": 65,
+        "attention_to_detail": 90,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-27",
+      "career": "DevOps Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 85,
+        "logical_reasoning": 90,
+        "technical_aptitude": 95,
+        "creativity": 70,
+        "communication": 70,
+        "attention_to_detail": 90,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-28",
+      "career": "Site Reliability Engineer",
+      "required_skills": {
+        "problem_solving": 95,
+        "analytical_thinking": 90,
+        "logical_reasoning": 95,
+        "technical_aptitude": 95,
+        "creativity": 65,
+        "communication": 70,
+        "attention_to_detail": 95,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-29",
+      "career": "Network Engineer",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 80,
+        "logical_reasoning": 85,
+        "technical_aptitude": 90,
+        "creativity": 60,
+        "communication": 65,
+        "attention_to_detail": 85,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-30",
+      "career": "Systems Administrator",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 75,
+        "logical_reasoning": 85,
+        "technical_aptitude": 90,
+        "creativity": 55,
+        "communication": 70,
+        "attention_to_detail": 90,
+        "learning_ability": 80
+      }
+    },
+
+    {
+      "career_id": "CAREER-31",
+      "career": "Database Administrator",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 85,
+        "logical_reasoning": 85,
+        "technical_aptitude": 90,
+        "creativity": 55,
+        "communication": 65,
+        "attention_to_detail": 95,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-32",
+      "career": "Database Developer",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 85,
+        "logical_reasoning": 85,
+        "technical_aptitude": 90,
+        "creativity": 60,
+        "communication": 65,
+        "attention_to_detail": 90,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-33",
+      "career": "UI/UX Designer",
+      "required_skills": {
+        "problem_solving": 75,
+        "analytical_thinking": 70,
+        "logical_reasoning": 65,
+        "technical_aptitude": 65,
+        "creativity": 95,
+        "communication": 85,
+        "attention_to_detail": 90,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-34",
+      "career": "Product Designer",
+      "required_skills": {
+        "problem_solving": 80,
+        "analytical_thinking": 75,
+        "logical_reasoning": 70,
+        "technical_aptitude": 65,
+        "creativity": 95,
+        "communication": 90,
+        "attention_to_detail": 90,
+        "learning_ability": 85
+      }
+    },
+    {
+      "career_id": "CAREER-35",
+      "career": "Product Manager (Tech)",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 85,
+        "logical_reasoning": 80,
+        "technical_aptitude": 75,
+        "creativity": 80,
+        "communication": 95,
+        "attention_to_detail": 80,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-36",
+      "career": "Business Analyst (IT)",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 90,
+        "logical_reasoning": 80,
+        "technical_aptitude": 70,
+        "creativity": 70,
+        "communication": 90,
+        "attention_to_detail": 85,
+        "learning_ability": 85
+      }
+    },
+    {
+      "career_id": "CAREER-37",
+      "career": "QA / Software Test Engineer",
+      "required_skills": {
+        "problem_solving": 85,
+        "analytical_thinking": 85,
+        "logical_reasoning": 90,
+        "technical_aptitude": 80,
+        "creativity": 70,
+        "communication": 70,
+        "attention_to_detail": 100,
+        "learning_ability": 80
+      }
+    },
+    {
+      "career_id": "CAREER-38",
+      "career": "Embedded Systems Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 90,
+        "logical_reasoning": 95,
+        "technical_aptitude": 95,
+        "creativity": 70,
+        "communication": 60,
+        "attention_to_detail": 95,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-39",
+      "career": "IoT Engineer",
+      "required_skills": {
+        "problem_solving": 90,
+        "analytical_thinking": 85,
+        "logical_reasoning": 90,
+        "technical_aptitude": 95,
+        "creativity": 80,
+        "communication": 65,
+        "attention_to_detail": 90,
+        "learning_ability": 90
+      }
+    },
+    {
+      "career_id": "CAREER-40",
+      "career": "IT Support Specialist",
+      "required_skills": {
+        "problem_solving": 80,
+        "analytical_thinking": 70,
+        "logical_reasoning": 75,
+        "technical_aptitude": 80,
+        "creativity": 60,
+        "communication": 90,
+        "attention_to_detail": 80,
+        "learning_ability": 80
+      }
+    }
+  ]
+}
