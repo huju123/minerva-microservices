@@ -46,6 +46,7 @@ class CareerCompareRequest(BaseModel):
 
 
 @app.get("/")
+@app.head("/")
 def root():
     return {
         "message": "Minerva Assessment Scoring Service is running",
@@ -54,6 +55,7 @@ def root():
 
 
 @app.get("/health")
+@app.head("/health")
 def health():
     return {
         "status": "healthy"
