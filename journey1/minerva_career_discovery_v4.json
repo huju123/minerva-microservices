@@ -1,0 +1,1783 @@
+{
+    "assessment_id": "minerva_career_discovery_v4",
+    "title": "Minerva Career Discovery Assessment",
+    "version": "4.0",
+    "careers": [
+        {
+            "id": "ui_ux",
+            "name": "UI/UX Design",
+            "short_name": "UI/UX",
+            "primary_dimension": "user_centered_design",
+            "primary_dimension_name": "User-Centered Design",
+            "secondary_dimensions": [
+                "user_research",
+                "usability",
+                "visual_hierarchy",
+                "interaction_design",
+                "iterative_design",
+                "problem_framing",
+                "clarity",
+                "usability_testing",
+                "evidence_based_design",
+                "design_evaluation",
+                "user_outcomes",
+                "iteration",
+                "feedback"
+            ]
+        },
+        {
+            "id": "development",
+            "name": "Software Development",
+            "short_name": "Development",
+            "primary_dimension": "logical_problem_solving",
+            "primary_dimension_name": "Logical Problem Solving",
+            "secondary_dimensions": [
+                "algorithmic_thinking",
+                "algorithms",
+                "conditional_logic",
+                "debugging",
+                "logical_reasoning",
+                "software_engineering",
+                "problem_solving",
+                "logic",
+                "scalability",
+                "state_reasoning",
+                "root_cause_analysis",
+                "collaboration",
+                "version_control"
+            ]
+        },
+        {
+            "id": "data",
+            "name": "Data & Analytics",
+            "short_name": "Data",
+            "primary_dimension": "analytical_reasoning",
+            "primary_dimension_name": "Analytical Reasoning",
+            "secondary_dimensions": [
+                "analytical_thinking",
+                "pattern_recognition",
+                "data_reasoning",
+                "evidence_based_reasoning",
+                "data_quality",
+                "critical_thinking",
+                "anomaly_detection",
+                "data_validation",
+                "data_visualization",
+                "communication",
+                "causal_reasoning",
+                "data_interpretation"
+            ]
+        },
+        {
+            "id": "ai",
+            "name": "AI & Machine Learning",
+            "short_name": "AI/ML",
+            "primary_dimension": "machine_learning_reasoning",
+            "primary_dimension_name": "Machine Learning Reasoning",
+            "secondary_dimensions": [
+                "prediction",
+                "training",
+                "evaluation",
+                "model_evaluation",
+                "generalization",
+                "diagnostic_reasoning",
+                "feature_engineering",
+                "data_leakage",
+                "critical_reasoning",
+                "metrics",
+                "model_monitoring",
+                "distribution_shift",
+                "continuous_improvement"
+            ]
+        },
+        {
+            "id": "cyber",
+            "name": "Cybersecurity",
+            "short_name": "Cyber",
+            "primary_dimension": "security_risk_reasoning",
+            "primary_dimension_name": "Security & Risk Reasoning",
+            "secondary_dimensions": [
+                "risk_detection",
+                "incident_reasoning",
+                "security_awareness",
+                "incident_response",
+                "threat_reasoning",
+                "social_engineering_awareness",
+                "security_decision_making",
+                "risk_assessment",
+                "access_control",
+                "containment",
+                "forensic_awareness",
+                "threat_detection",
+                "incident_handling",
+                "risk_management"
+            ]
+        }
+    ],
+    "modes": {
+        "exploring": {
+            "description": "The student is unsure which CS domain suits them. Ten career-specific questions assess two questions for each of the five career domains.",
+            "total_activities": 10,
+            "questions_per_career": 2,
+            "selection_rule": "Select exactly 2 exploration questions from each career.",
+            "scoring_rule": "Each correct answer adds 1 point to that question's career. Maximum 2 points per career.",
+            "result_rule": "Rank the five careers by score from highest to lowest and use the ranking for career matching."
+        },
+        "career_in_mind": {
+            "description": "The student already has a career domain in mind. Five domain-specific questions validate whether their interest is supported by practical thinking.",
+            "total_activities": 5,
+            "selection_rule": "Filter questions by the selected career and use all 5 questions.",
+            "scoring_rule": "Each correct answer adds 1 point to the selected career.",
+            "result_rule": "Show the selected career's assessment score and identify strengths and areas to improve."
+        }
+    },
+    "questions": {
+        "exploring": [
+            {
+                "id": "UIUX_01",
+                "title": "The beautiful app nobody can navigate",
+                "type": "scenario_choice",
+                "interaction": "multiple_choice",
+                "instruction": "A university app looks polished, but students keep missing the exam schedule. You have one hour to decide what to investigate first. What is the strongest move?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Observe a few students trying to find the schedule and note exactly where they hesitate."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Add a notification feature without checking why students miss it now."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Add brighter colors and animations to make the schedule stand out."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Ask the developer to rewrite the backend before investigating the problem."
+                    }
+                ],
+                "correct_option": "A",
+                "score": 1,
+                "career": "ui_ux",
+                "career_name": "UI/UX Design",
+                "behavior_signals": [
+                    "user_research",
+                    "usability",
+                    "visual_hierarchy"
+                ],
+                "primary_dimension": "user_centered_design",
+                "secondary_dimension": "user_research"
+            },
+            {
+                "id": "UIUX_02",
+                "title": "Fix the checkout before users give up",
+                "type": "mini_activity",
+                "interaction": "multiple_choice",
+                "instruction": "An online store has a 40% checkout drop-off. Testing shows users repeatedly look between the delivery-address field and a small 'Continue' button. Which change would you test first?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Replace the database because checkout completion is low."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Make the primary action clear, place it near the form flow, and test the change with users."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Add decorative illustrations around the form."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Add five more checkout options so users have more control."
+                    }
+                ],
+                "correct_option": "B",
+                "score": 1,
+                "career": "ui_ux",
+                "career_name": "UI/UX Design",
+                "behavior_signals": [
+                    "usability",
+                    "interaction_design",
+                    "iterative_design"
+                ],
+                "primary_dimension": "user_centered_design",
+                "secondary_dimension": "usability"
+            },
+            {
+                "id": "DEV_01",
+                "title": "The button works for everyone except one case",
+                "type": "debugging_scenario",
+                "interaction": "multiple_choice",
+                "instruction": "A registration button works for most users but crashes the app when the name field is left empty. What would you naturally investigate first?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Redesign the registration page before checking the crash."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Delete the registration feature and build it again from scratch."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Reproduce the empty-name case, inspect the error, and trace the code handling that input."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Change the database server without confirming that it causes the problem."
+                    }
+                ],
+                "correct_option": "C",
+                "score": 1,
+                "career": "development",
+                "career_name": "Software Development",
+                "behavior_signals": [
+                    "logical_reasoning",
+                    "debugging",
+                    "problem_solving"
+                ],
+                "primary_dimension": "logical_problem_solving",
+                "secondary_dimension": "logical_reasoning"
+            },
+            {
+                "id": "DEV_02",
+                "title": "Turn a messy task into an algorithm",
+                "type": "word_problem",
+                "interaction": "multiple_choice",
+                "instruction": "You need to process 1,000 student marks and print only students who scored 80 or above. Which approach shows the strongest programming thinking?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Write 1,000 separate print statements so every student has its own code."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Change the interface colors to make high marks easier to see."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Sort the students alphabetically because names determine eligibility."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Check each student's mark against 80 and output the student when the condition is true."
+                    }
+                ],
+                "correct_option": "D",
+                "score": 1,
+                "career": "development",
+                "career_name": "Software Development",
+                "behavior_signals": [
+                    "algorithmic_thinking",
+                    "logic",
+                    "problem_solving"
+                ],
+                "primary_dimension": "logical_problem_solving",
+                "secondary_dimension": "algorithmic_thinking"
+            },
+            {
+                "id": "DATA_01",
+                "title": "The sales table has a story hidden inside it",
+                "type": "mini_analysis",
+                "interaction": "multiple_choice",
+                "instruction": "A shop gives you 50,000 sales records and says, 'Sales fell last month.' What would be the most useful first analysis?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Compare sales across time, products, regions, and other relevant factors to find where the change occurred."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Build a new shopping interface before understanding the sales pattern."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Guess that customers lost interest without checking the records."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Delete unusual records because they may make the result complicated."
+                    }
+                ],
+                "correct_option": "A",
+                "score": 1,
+                "career": "data",
+                "career_name": "Data & Analytics",
+                "behavior_signals": [
+                    "analytical_thinking",
+                    "pattern_recognition",
+                    "data_reasoning"
+                ],
+                "primary_dimension": "analytical_reasoning",
+                "secondary_dimension": "analytical_thinking"
+            },
+            {
+                "id": "DATA_02",
+                "title": "Find the pattern, not just the number",
+                "type": "word_problem",
+                "interaction": "multiple_choice",
+                "instruction": "A website gets 1,000 visits on Monday, 1,050 on Tuesday, 1,020 on Wednesday, 1,600 on Thursday, and 1,580 on Friday. The team asks why traffic jumped. What is the strongest next step?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Assume Thursday's number is an error and remove it immediately."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Investigate what changed around Thursday and compare traffic sources, campaigns, devices, and other relevant dimensions."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Redesign the website without checking what caused the traffic change."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Say the website is permanently growing because two days are higher."
+                    }
+                ],
+                "correct_option": "B",
+                "score": 1,
+                "career": "data",
+                "career_name": "Data & Analytics",
+                "behavior_signals": [
+                    "analytical_thinking",
+                    "pattern_recognition",
+                    "evidence_based_reasoning"
+                ],
+                "primary_dimension": "analytical_reasoning",
+                "secondary_dimension": "analytical_thinking"
+            },
+            {
+                "id": "AI_01",
+                "title": "Teach a model to predict student support needs",
+                "type": "prediction_scenario",
+                "interaction": "multiple_choice",
+                "instruction": "You have past attendance, assignment, and exam data. Your goal is to predict which students may need academic support next month. Which task would most interest someone suited to AI/ML?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Inspect login attempts for suspicious network activity."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Choose the dashboard's colors and typography."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Train and evaluate a model that learns relationships in the historical data and predicts outcomes for new students."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Write only the navigation menu for the student portal."
+                    }
+                ],
+                "correct_option": "C",
+                "score": 1,
+                "career": "ai",
+                "career_name": "AI & Machine Learning",
+                "behavior_signals": [
+                    "machine_learning_reasoning",
+                    "prediction",
+                    "model_evaluation"
+                ],
+                "primary_dimension": "machine_learning_reasoning",
+                "secondary_dimension": "prediction"
+            },
+            {
+                "id": "AI_02",
+                "title": "When the model gets fooled",
+                "type": "reasoning_scenario",
+                "interaction": "multiple_choice",
+                "instruction": "A spam detector is 98% accurate on the emails it trained on but performs poorly on new emails. What would you want to investigate first?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Whether the firewall should replace the model."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Whether every training example should simply be duplicated."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Whether the email application's font is too small."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Whether the model has overfit the training examples and fails to generalize."
+                    }
+                ],
+                "correct_option": "D",
+                "score": 1,
+                "career": "ai",
+                "career_name": "AI & Machine Learning",
+                "behavior_signals": [
+                    "machine_learning_reasoning",
+                    "generalization",
+                    "model_evaluation"
+                ],
+                "primary_dimension": "machine_learning_reasoning",
+                "secondary_dimension": "generalization"
+            },
+            {
+                "id": "CYBER_01",
+                "title": "The login pattern that should make you suspicious",
+                "type": "security_scenario",
+                "interaction": "multiple_choice",
+                "instruction": "A company sees hundreds of failed login attempts against one account from many unfamiliar locations within ten minutes. What would be the strongest first response?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Investigate the pattern, protect the account, and determine whether the activity indicates an attack."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Redesign the login page because the screen may look outdated."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Ignore the attempts unless the user reports a problem."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Delete the login logs so the system has less data to process."
+                    }
+                ],
+                "correct_option": "A",
+                "score": 1,
+                "career": "cyber",
+                "career_name": "Cybersecurity",
+                "behavior_signals": [
+                    "risk_detection",
+                    "incident_reasoning",
+                    "security_awareness"
+                ],
+                "primary_dimension": "security_risk_reasoning",
+                "secondary_dimension": "risk_detection"
+            },
+            {
+                "id": "CYBER_02",
+                "title": "One suspicious email, four possible reactions",
+                "type": "security_decision",
+                "interaction": "multiple_choice",
+                "instruction": "You receive an urgent email asking you to open a link and enter your company password. The sender name looks familiar, but the address is slightly different. What is the safest reasoning?",
+                "options": [
+                    {
+                        "id": "A",
+                        "text": "Reply with your password and ask whether the request is genuine."
+                    },
+                    {
+                        "id": "B",
+                        "text": "Verify the sender and request through a trusted channel before clicking or entering credentials."
+                    },
+                    {
+                        "id": "C",
+                        "text": "Forward the email to coworkers and ask them to try the link first."
+                    },
+                    {
+                        "id": "D",
+                        "text": "Click immediately because the message uses the company's logo."
+                    }
+                ],
+                "correct_option": "B",
+                "score": 1,
+                "career": "cyber",
+                "career_name": "Cybersecurity",
+                "behavior_signals": [
+                    "risk_detection",
+                    "security_awareness",
+                    "social_engineering_awareness"
+                ],
+                "primary_dimension": "security_risk_reasoning",
+                "secondary_dimension": "risk_detection"
+            }
+        ],
+        "career_in_mind": {
+            "ui_ux": [
+                {
+                    "id": "UIUX_01",
+                    "title": "Users cannot find the feature they need",
+                    "type": "scenario_choice",
+                    "interaction": "multiple_choice",
+                    "instruction": "A university app looks attractive, but students keep missing the exam schedule. You can make only one first move. What should you do?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Add more features so the schedule has more visibility."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Add more colors to the exam schedule."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Observe students using the app and identify where the navigation becomes confusing."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Rewrite the backend without investigating the user problem."
+                        }
+                    ],
+                    "correct_option": "C",
+                    "score": 1,
+                    "career": "ui_ux",
+                    "career_name": "UI/UX Design",
+                    "behavior_signals": [
+                        "user_research",
+                        "usability",
+                        "problem_framing"
+                    ],
+                    "primary_dimension": "user_centered_design",
+                    "secondary_dimension": "user_research"
+                },
+                {
+                    "id": "UIUX_02",
+                    "title": "The checkout screen is making users hesitate",
+                    "type": "mini_activity",
+                    "interaction": "multiple_choice",
+                    "instruction": "During usability testing, users hesitate because two buttons look equally important: 'Save for Later' and 'Place Order'. What would you change first?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Add animations to both buttons."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Add three more buttons for additional choices."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Make both buttons exactly the same so neither is more important."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Give the primary action clearer visual hierarchy and make the labels unambiguous."
+                        }
+                    ],
+                    "correct_option": "D",
+                    "score": 1,
+                    "career": "ui_ux",
+                    "career_name": "UI/UX Design",
+                    "behavior_signals": [
+                        "visual_hierarchy",
+                        "interaction_design",
+                        "clarity"
+                    ],
+                    "primary_dimension": "user_centered_design",
+                    "secondary_dimension": "visual_hierarchy"
+                },
+                {
+                    "id": "UIUX_03",
+                    "title": "A form is losing users halfway through",
+                    "type": "scenario_analysis",
+                    "interaction": "multiple_choice",
+                    "instruction": "A registration form has 12 fields and many users quit after field 7. Which investigation gives you the strongest evidence before redesigning it?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Check where users drop off, observe users completing the form, and identify friction around that point."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Change the database structure first."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Increase every font size without testing."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Add five more fields so users can provide more information."
+                        }
+                    ],
+                    "correct_option": "A",
+                    "score": 1,
+                    "career": "ui_ux",
+                    "career_name": "UI/UX Design",
+                    "behavior_signals": [
+                        "user_research",
+                        "usability_testing",
+                        "evidence_based_design"
+                    ],
+                    "primary_dimension": "user_centered_design",
+                    "secondary_dimension": "user_research"
+                },
+                {
+                    "id": "UIUX_04",
+                    "title": "Two designs solve the same task",
+                    "type": "design_evaluation",
+                    "interaction": "multiple_choice",
+                    "instruction": "Design A looks more stylish, but users complete the task in 45 seconds. Design B looks simpler, but users complete it in 20 seconds with fewer mistakes. Which conclusion is strongest?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Design A is automatically better because it looks more professional."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Design B is promising because usability evidence shows users complete the task faster and with fewer errors."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Add more decoration to Design B before testing again."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Both designs are equally good because appearance is the only difference."
+                        }
+                    ],
+                    "correct_option": "B",
+                    "score": 1,
+                    "career": "ui_ux",
+                    "career_name": "UI/UX Design",
+                    "behavior_signals": [
+                        "usability",
+                        "design_evaluation",
+                        "user_outcomes"
+                    ],
+                    "primary_dimension": "user_centered_design",
+                    "secondary_dimension": "usability"
+                },
+                {
+                    "id": "UIUX_05",
+                    "title": "Your first design gets rejected",
+                    "type": "problem_solving",
+                    "interaction": "multiple_choice",
+                    "instruction": "A client says, 'This looks good, but our users still cannot complete the main task.' What is the strongest next step?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Change every element randomly to get a different result."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Defend the design because visual quality proves it works."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Ask for specific user/task feedback, identify the problem, create a revised version, and test again."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Stop the project because the first design was rejected."
+                        }
+                    ],
+                    "correct_option": "C",
+                    "score": 1,
+                    "career": "ui_ux",
+                    "career_name": "UI/UX Design",
+                    "behavior_signals": [
+                        "iteration",
+                        "feedback",
+                        "problem_solving"
+                    ],
+                    "primary_dimension": "user_centered_design",
+                    "secondary_dimension": "iteration"
+                }
+            ],
+            "development": [
+                {
+                    "id": "DEV_01",
+                    "title": "Debug the bug instead of guessing",
+                    "type": "debugging_scenario",
+                    "interaction": "multiple_choice",
+                    "instruction": "An app crashes only when a user submits an empty phone number. What is the best first move?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Ignore it because other users can submit successfully."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Change the color of the submit button."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Rewrite the whole application."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Reproduce the exact case, inspect the error, and trace how the empty value is handled."
+                        }
+                    ],
+                    "correct_option": "D",
+                    "score": 1,
+                    "career": "development",
+                    "career_name": "Software Development",
+                    "behavior_signals": [
+                        "debugging",
+                        "logical_reasoning",
+                        "root_cause_analysis"
+                    ],
+                    "primary_dimension": "logical_problem_solving",
+                    "secondary_dimension": "debugging"
+                },
+                {
+                    "id": "DEV_02",
+                    "title": "Build the logic for a simple delivery fee",
+                    "type": "word_problem",
+                    "interaction": "multiple_choice",
+                    "instruction": "A delivery app charges Rs. 200 for orders below Rs. 2,000 and free delivery for orders of Rs. 2,000 or more. Which logic best represents the rule?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "If order total is at least Rs. 2,000, delivery fee is 0; otherwise delivery fee is Rs. 200."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Always charge Rs. 200 because every order needs delivery."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Randomly choose the delivery fee for each order."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Give free delivery only when the order total is below Rs. 2,000."
+                        }
+                    ],
+                    "correct_option": "A",
+                    "score": 1,
+                    "career": "development",
+                    "career_name": "Software Development",
+                    "behavior_signals": [
+                        "conditional_logic",
+                        "algorithmic_thinking",
+                        "problem_solving"
+                    ],
+                    "primary_dimension": "logical_problem_solving",
+                    "secondary_dimension": "conditional_logic"
+                },
+                {
+                    "id": "DEV_03",
+                    "title": "Choose the right structure for repeated work",
+                    "type": "coding_reasoning",
+                    "interaction": "multiple_choice",
+                    "instruction": "You need to check 10,000 transactions and flag every transaction above Rs. 100,000. Which approach is most scalable?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Write a separate statement manually for every transaction."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Use a loop or equivalent iteration to process each transaction and apply the condition."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Change the interface design instead of processing the data."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Check only the first transaction and assume the rest are similar."
+                        }
+                    ],
+                    "correct_option": "B",
+                    "score": 1,
+                    "career": "development",
+                    "career_name": "Software Development",
+                    "behavior_signals": [
+                        "algorithms",
+                        "scalability",
+                        "logical_reasoning"
+                    ],
+                    "primary_dimension": "logical_problem_solving",
+                    "secondary_dimension": "algorithms"
+                },
+                {
+                    "id": "DEV_04",
+                    "title": "The bug appears only sometimes",
+                    "type": "debugging",
+                    "interaction": "multiple_choice",
+                    "instruction": "Users report that an app sometimes shows the wrong total after quickly adding and removing items. You cannot reproduce it every time. What is the strongest approach?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Change random code until the issue disappears."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Remove the cart feature permanently."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Collect reproduction steps/logs, identify the sequence that triggers it, and inspect the state changes around that sequence."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Assume users are entering incorrect data."
+                        }
+                    ],
+                    "correct_option": "C",
+                    "score": 1,
+                    "career": "development",
+                    "career_name": "Software Development",
+                    "behavior_signals": [
+                        "debugging",
+                        "state_reasoning",
+                        "root_cause_analysis"
+                    ],
+                    "primary_dimension": "logical_problem_solving",
+                    "secondary_dimension": "debugging"
+                },
+                {
+                    "id": "DEV_05",
+                    "title": "A team needs to work on the same project safely",
+                    "type": "team_scenario",
+                    "interaction": "multiple_choice",
+                    "instruction": "Four developers are building one application. Two people sometimes overwrite each other's changes. What practice would most directly solve the collaboration problem?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Stop testing so changes can be merged faster."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Ask developers to rename files after every change."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Keep one master copy on a single computer and avoid sharing it."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Use version control with branches, commits, and a review/merge process."
+                        }
+                    ],
+                    "correct_option": "D",
+                    "score": 1,
+                    "career": "development",
+                    "career_name": "Software Development",
+                    "behavior_signals": [
+                        "software_engineering",
+                        "collaboration",
+                        "version_control"
+                    ],
+                    "primary_dimension": "logical_problem_solving",
+                    "secondary_dimension": "software_engineering"
+                }
+            ],
+            "data": [
+                {
+                    "id": "DATA_01",
+                    "title": "The sales drop needs an explanation",
+                    "type": "analytical_scenario",
+                    "interaction": "multiple_choice",
+                    "instruction": "A company says monthly sales dropped by 18%. Your manager asks, 'Why?' What should you do before giving an explanation?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Compare the data across time, products, regions, customer groups, and other relevant factors to locate the change."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Remove unusual records until the sales drop looks smaller."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Redesign the company's website immediately."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Pick the most obvious explanation and present it as fact."
+                        }
+                    ],
+                    "correct_option": "A",
+                    "score": 1,
+                    "career": "data",
+                    "career_name": "Data & Analytics",
+                    "behavior_signals": [
+                        "analytical_thinking",
+                        "evidence_based_reasoning",
+                        "pattern_recognition"
+                    ],
+                    "primary_dimension": "analytical_reasoning",
+                    "secondary_dimension": "analytical_thinking"
+                },
+                {
+                    "id": "DATA_02",
+                    "title": "A missing-data puzzle",
+                    "type": "data_quality",
+                    "interaction": "multiple_choice",
+                    "instruction": "A customer dataset has missing ages for 15% of customers. What is the most responsible first step?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Delete every row containing a missing value automatically."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Understand why ages are missing, inspect the pattern of missingness, and then choose an appropriate handling method."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Replace every missing age with zero without checking."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Ignore the missing values because they cannot affect analysis."
+                        }
+                    ],
+                    "correct_option": "B",
+                    "score": 1,
+                    "career": "data",
+                    "career_name": "Data & Analytics",
+                    "behavior_signals": [
+                        "data_quality",
+                        "critical_thinking",
+                        "analytical_reasoning"
+                    ],
+                    "primary_dimension": "analytical_reasoning",
+                    "secondary_dimension": "data_quality"
+                },
+                {
+                    "id": "DATA_03",
+                    "title": "Find the suspicious number",
+                    "type": "data_reasoning",
+                    "interaction": "multiple_choice",
+                    "instruction": "Most daily sales are between Rs. 80,000 and Rs. 120,000, but one day shows Rs. 950,000. What should you do first?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Change the chart type so the value is harder to notice."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Assume that sales will always be near Rs. 950,000 from now on."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Investigate the record and its source to determine whether it is a real event, a data-entry issue, or another anomaly."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Delete it immediately because it is unusual."
+                        }
+                    ],
+                    "correct_option": "C",
+                    "score": 1,
+                    "career": "data",
+                    "career_name": "Data & Analytics",
+                    "behavior_signals": [
+                        "anomaly_detection",
+                        "critical_thinking",
+                        "data_validation"
+                    ],
+                    "primary_dimension": "analytical_reasoning",
+                    "secondary_dimension": "anomaly_detection"
+                },
+                {
+                    "id": "DATA_04",
+                    "title": "Choose the chart that tells the story",
+                    "type": "visualization_reasoning",
+                    "interaction": "multiple_choice",
+                    "instruction": "You need to show how monthly revenue changes from January to December. Which visualization is the clearest starting point for spotting the trend?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "A random collection of icons sized by month."
+                        },
+                        {
+                            "id": "B",
+                            "text": "A code editor screenshot."
+                        },
+                        {
+                            "id": "C",
+                            "text": "A password table."
+                        },
+                        {
+                            "id": "D",
+                            "text": "A line chart with months in order on the x-axis and revenue on the y-axis."
+                        }
+                    ],
+                    "correct_option": "D",
+                    "score": 1,
+                    "career": "data",
+                    "career_name": "Data & Analytics",
+                    "behavior_signals": [
+                        "data_visualization",
+                        "communication",
+                        "pattern_recognition"
+                    ],
+                    "primary_dimension": "analytical_reasoning",
+                    "secondary_dimension": "data_visualization"
+                },
+                {
+                    "id": "DATA_05",
+                    "title": "Correlation is not automatically the answer",
+                    "type": "analytical_reasoning",
+                    "interaction": "multiple_choice",
+                    "instruction": "A dataset shows that ice-cream sales and electricity use rise together in summer. Someone concludes, 'Ice cream causes higher electricity use.' What is the best analytical response?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Look for other factors, such as temperature or season, before claiming a causal relationship."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Change the visualization until the relationship disappears."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Delete one variable because correlated variables should never be analyzed together."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Accept the conclusion because the two variables rise together."
+                        }
+                    ],
+                    "correct_option": "A",
+                    "score": 1,
+                    "career": "data",
+                    "career_name": "Data & Analytics",
+                    "behavior_signals": [
+                        "critical_thinking",
+                        "causal_reasoning",
+                        "data_interpretation"
+                    ],
+                    "primary_dimension": "analytical_reasoning",
+                    "secondary_dimension": "critical_thinking"
+                }
+            ],
+            "ai": [
+                {
+                    "id": "AI_01",
+                    "title": "Build a model that learns from examples",
+                    "type": "machine_learning_scenario",
+                    "interaction": "multiple_choice",
+                    "instruction": "You have thousands of labeled emails marked 'spam' or 'not spam'. You want a system that can classify new emails. Which workflow best matches machine learning?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Hard-code a separate rule for every possible future email."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Train a model on labeled examples, evaluate it on unseen data, and improve it based on the results."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Configure a firewall and assume it has learned the email patterns."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Choose a new font for the email interface."
+                        }
+                    ],
+                    "correct_option": "B",
+                    "score": 1,
+                    "career": "ai",
+                    "career_name": "AI & Machine Learning",
+                    "behavior_signals": [
+                        "machine_learning_reasoning",
+                        "training",
+                        "evaluation"
+                    ],
+                    "primary_dimension": "machine_learning_reasoning",
+                    "secondary_dimension": "training"
+                },
+                {
+                    "id": "AI_02",
+                    "title": "The model is excellent in training and terrible in reality",
+                    "type": "model_diagnosis",
+                    "interaction": "multiple_choice",
+                    "instruction": "A model gets 99% accuracy on training data but only 65% on new data. Which explanation should you investigate first?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "The database must be deleted and rebuilt."
+                        },
+                        {
+                            "id": "B",
+                            "text": "The UI color scheme is causing the model to fail."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Overfitting: the model may have learned the training data too specifically instead of general patterns."
+                        },
+                        {
+                            "id": "D",
+                            "text": "The model is perfect because training accuracy is high."
+                        }
+                    ],
+                    "correct_option": "C",
+                    "score": 1,
+                    "career": "ai",
+                    "career_name": "AI & Machine Learning",
+                    "behavior_signals": [
+                        "model_evaluation",
+                        "generalization",
+                        "diagnostic_reasoning"
+                    ],
+                    "primary_dimension": "machine_learning_reasoning",
+                    "secondary_dimension": "model_evaluation"
+                },
+                {
+                    "id": "AI_03",
+                    "title": "One feature knows too much",
+                    "type": "feature_reasoning",
+                    "interaction": "multiple_choice",
+                    "instruction": "You are building a model to predict whether a student will pass an exam. One feature contains the student's final exam result itself. What should concern you most?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "The feature only affects the interface design."
+                        },
+                        {
+                            "id": "B",
+                            "text": "The feature should be duplicated many times to increase accuracy."
+                        },
+                        {
+                            "id": "C",
+                            "text": "The feature should always be kept because more features are always better."
+                        },
+                        {
+                            "id": "D",
+                            "text": "The feature may leak the answer into the model, making evaluation misleading and predictions unusable."
+                        }
+                    ],
+                    "correct_option": "D",
+                    "score": 1,
+                    "career": "ai",
+                    "career_name": "AI & Machine Learning",
+                    "behavior_signals": [
+                        "feature_engineering",
+                        "data_leakage",
+                        "critical_reasoning"
+                    ],
+                    "primary_dimension": "machine_learning_reasoning",
+                    "secondary_dimension": "feature_engineering"
+                },
+                {
+                    "id": "AI_04",
+                    "title": "Accuracy alone hides an important problem",
+                    "type": "model_evaluation",
+                    "interaction": "word_problem",
+                    "instruction": "A disease-screening model is 95% accurate, but the disease is rare and the model misses many actual patients. What should you do before declaring the model successful?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Examine suitable evaluation metrics such as recall and the confusion matrix, not accuracy alone."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Declare it successful because 95% is a high number."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Remove the rare cases because they make accuracy harder to achieve."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Evaluate only on the training data."
+                        }
+                    ],
+                    "correct_option": "A",
+                    "score": 1,
+                    "career": "ai",
+                    "career_name": "AI & Machine Learning",
+                    "behavior_signals": [
+                        "model_evaluation",
+                        "metrics",
+                        "critical_thinking"
+                    ],
+                    "primary_dimension": "machine_learning_reasoning",
+                    "secondary_dimension": "metrics"
+                },
+                {
+                    "id": "AI_05",
+                    "title": "The model changes when the world changes",
+                    "type": "real_world_scenario",
+                    "interaction": "multiple_choice",
+                    "instruction": "A recommendation model worked well last year, but user behavior has changed and its results are now much worse. What is the most sensible response?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Keep the same model forever because it worked once."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Investigate whether the data distribution or user behavior changed, then evaluate and retrain the model as appropriate."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Change the dashboard colors to improve prediction quality."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Delete all historical data without investigating."
+                        }
+                    ],
+                    "correct_option": "B",
+                    "score": 1,
+                    "career": "ai",
+                    "career_name": "AI & Machine Learning",
+                    "behavior_signals": [
+                        "model_monitoring",
+                        "distribution_shift",
+                        "continuous_improvement"
+                    ],
+                    "primary_dimension": "machine_learning_reasoning",
+                    "secondary_dimension": "model_monitoring"
+                }
+            ],
+            "cyber": [
+                {
+                    "id": "CYBER_01",
+                    "title": "The login attack pattern",
+                    "type": "incident_scenario",
+                    "interaction": "multiple_choice",
+                    "instruction": "A company detects hundreds of failed logins against one account from many locations within minutes. What would you prioritize?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Redesign the login page before investigating the event."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Delete the logs to stop the alerts."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Investigate the activity, protect the account, and determine whether it is a credential-attack pattern."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Ignore it because every login failed."
+                        }
+                    ],
+                    "correct_option": "C",
+                    "score": 1,
+                    "career": "cyber",
+                    "career_name": "Cybersecurity",
+                    "behavior_signals": [
+                        "incident_response",
+                        "risk_detection",
+                        "threat_reasoning"
+                    ],
+                    "primary_dimension": "security_risk_reasoning",
+                    "secondary_dimension": "incident_response"
+                },
+                {
+                    "id": "CYBER_02",
+                    "title": "Spot the phishing trap",
+                    "type": "social_engineering_scenario",
+                    "interaction": "multiple_choice",
+                    "instruction": "An email appears to come from your manager and says, 'Send the company payroll file in the next 10 minutes.' The sender address has one extra character. What should you do?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Reply with your password so the manager can verify you."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Send the file immediately because the request sounds urgent."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Forward the file to several coworkers for confirmation."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Verify the request through a trusted channel before sharing anything."
+                        }
+                    ],
+                    "correct_option": "D",
+                    "score": 1,
+                    "career": "cyber",
+                    "career_name": "Cybersecurity",
+                    "behavior_signals": [
+                        "social_engineering_awareness",
+                        "risk_detection",
+                        "security_decision_making"
+                    ],
+                    "primary_dimension": "security_risk_reasoning",
+                    "secondary_dimension": "social_engineering_awareness"
+                },
+                {
+                    "id": "CYBER_03",
+                    "title": "One password, many doors",
+                    "type": "risk_analysis",
+                    "interaction": "multiple_choice",
+                    "instruction": "A small company uses the same password for many employee accounts. What risk should concern you most?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "One compromised password could allow access to multiple accounts and systems."
+                        },
+                        {
+                            "id": "B",
+                            "text": "The website will become slower automatically."
+                        },
+                        {
+                            "id": "C",
+                            "text": "The user interface will lose its visual hierarchy."
+                        },
+                        {
+                            "id": "D",
+                            "text": "The company will no longer be able to analyze data."
+                        }
+                    ],
+                    "correct_option": "A",
+                    "score": 1,
+                    "career": "cyber",
+                    "career_name": "Cybersecurity",
+                    "behavior_signals": [
+                        "risk_assessment",
+                        "access_control",
+                        "security_awareness"
+                    ],
+                    "primary_dimension": "security_risk_reasoning",
+                    "secondary_dimension": "risk_assessment"
+                },
+                {
+                    "id": "CYBER_04",
+                    "title": "An account may already be compromised",
+                    "type": "incident_response",
+                    "interaction": "multiple_choice",
+                    "instruction": "Security staff find evidence that an employee account may have been compromised. Which response is most responsible?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Wait until the attacker contacts the company."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Contain the risk, secure the account, preserve relevant evidence/logs, investigate, and follow the incident-response process."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Delete all logs so the attacker cannot see them."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Publish the account details to warn other employees."
+                        }
+                    ],
+                    "correct_option": "B",
+                    "score": 1,
+                    "career": "cyber",
+                    "career_name": "Cybersecurity",
+                    "behavior_signals": [
+                        "incident_response",
+                        "containment",
+                        "forensic_awareness"
+                    ],
+                    "primary_dimension": "security_risk_reasoning",
+                    "secondary_dimension": "containment"
+                },
+                {
+                    "id": "CYBER_05",
+                    "title": "The strange file on a company laptop",
+                    "type": "threat_analysis",
+                    "interaction": "multiple_choice",
+                    "instruction": "An employee reports that a downloaded file suddenly started a process they do not recognize. What is the strongest security-minded response?",
+                    "options": [
+                        {
+                            "id": "A",
+                            "text": "Delete the file and all logs immediately."
+                        },
+                        {
+                            "id": "B",
+                            "text": "Send the file to coworkers so they can test it on their computers."
+                        },
+                        {
+                            "id": "C",
+                            "text": "Treat it as potentially suspicious, isolate the affected system according to procedure, preserve evidence, and investigate the process."
+                        },
+                        {
+                            "id": "D",
+                            "text": "Open the file again to see whether it happens twice."
+                        }
+                    ],
+                    "correct_option": "C",
+                    "score": 1,
+                    "career": "cyber",
+                    "career_name": "Cybersecurity",
+                    "behavior_signals": [
+                        "threat_detection",
+                        "incident_handling",
+                        "risk_management"
+                    ],
+                    "primary_dimension": "security_risk_reasoning",
+                    "secondary_dimension": "threat_detection"
+                }
+            ]
+        }
+    },
+    "result": {
+        "exploring": {
+            "show": [
+                "Top Career Match",
+                "Second Career Match",
+                "Thinking Pattern",
+                "Strength Signals",
+                "Recommended Domains"
+            ],
+            "example": {
+                "top_match": "Data & Analytics",
+                "second_match": "AI & Machine Learning",
+                "thinking_pattern": "Analytical + Pattern-Oriented",
+                "message": "Your responses show strong analytical thinking and an interest in discovering patterns and solving problems using evidence.",
+                "note": "This block is documentation only. Actual results are always computed at runtime from real scores, never hardcoded."
+            }
+        },
+        "career_in_mind": {
+            "show": [
+                "Domain Readiness",
+                "Interest Validation",
+                "Strengths",
+                "Areas To Improve",
+                "Recommended Next Step"
+            ],
+            "example": {
+                "domain": "Software Development",
+                "readiness": 82,
+                "validation": "Strong Match",
+                "message": "Your interest in Software Development is supported by your problem-solving and debugging performance.",
+                "note": "This block is documentation only. Actual results are always computed at runtime from real scores, never hardcoded."
+            }
+        }
+    },
+    "career_selection_examples": {
+        "ui_ux": [
+            "UI/UX Design",
+            "UI/UX Designer",
+            "UX Designer",
+            "Product Designer"
+        ],
+        "development": [
+            "Software Development",
+            "Software Developer",
+            "Web Developer",
+            "Frontend Developer",
+            "Backend Developer",
+            "Full Stack Developer"
+        ],
+        "data": [
+            "Data",
+            "Data Analytics",
+            "Data Analyst",
+            "Data Science",
+            "Data Scientist"
+        ],
+        "ai": [
+            "AI",
+            "Artificial Intelligence",
+            "Machine Learning",
+            "AI Engineer",
+            "Machine Learning Engineer"
+        ],
+        "cyber": [
+            "Cybersecurity",
+            "Cyber Security",
+            "Security Analyst",
+            "Cybersecurity Analyst"
+        ]
+    },
+    "dimensions": {
+        "primary": [
+            {
+                "id": "user_centered_design",
+                "name": "User-Centered Design",
+                "description": "Understanding users, usability, interaction, visual hierarchy, and iterative design."
+            },
+            {
+                "id": "logical_problem_solving",
+                "name": "Logical Problem Solving",
+                "description": "Breaking problems into algorithms, debugging, logic, and software engineering practices."
+            },
+            {
+                "id": "analytical_reasoning",
+                "name": "Analytical Reasoning",
+                "description": "Finding patterns, validating data, interpreting evidence, and communicating insights."
+            },
+            {
+                "id": "machine_learning_reasoning",
+                "name": "Machine Learning Reasoning",
+                "description": "Learning from data, evaluating models, generalization, features, and model behavior."
+            },
+            {
+                "id": "security_risk_reasoning",
+                "name": "Security & Risk Reasoning",
+                "description": "Detecting threats, assessing risk, protecting systems, and responding to incidents."
+            }
+        ],
+        "secondary": [
+            {
+                "id": "user_research",
+                "name": "User Research"
+            },
+            {
+                "id": "usability",
+                "name": "Usability"
+            },
+            {
+                "id": "visual_hierarchy",
+                "name": "Visual Hierarchy"
+            },
+            {
+                "id": "interaction_design",
+                "name": "Interaction Design"
+            },
+            {
+                "id": "iterative_design",
+                "name": "Iterative Design"
+            },
+            {
+                "id": "problem_framing",
+                "name": "Problem Framing"
+            },
+            {
+                "id": "clarity",
+                "name": "Clarity"
+            },
+            {
+                "id": "usability_testing",
+                "name": "Usability Testing"
+            },
+            {
+                "id": "evidence_based_design",
+                "name": "Evidence-Based Design"
+            },
+            {
+                "id": "design_evaluation",
+                "name": "Design Evaluation"
+            },
+            {
+                "id": "user_outcomes",
+                "name": "User Outcomes"
+            },
+            {
+                "id": "iteration",
+                "name": "Iteration"
+            },
+            {
+                "id": "feedback",
+                "name": "Feedback"
+            },
+            {
+                "id": "logical_reasoning",
+                "name": "Logical Reasoning"
+            },
+            {
+                "id": "debugging",
+                "name": "Debugging"
+            },
+            {
+                "id": "problem_solving",
+                "name": "Problem Solving"
+            },
+            {
+                "id": "algorithmic_thinking",
+                "name": "Algorithmic Thinking"
+            },
+            {
+                "id": "logic",
+                "name": "Logic"
+            },
+            {
+                "id": "conditional_logic",
+                "name": "Conditional Logic"
+            },
+            {
+                "id": "algorithms",
+                "name": "Algorithms"
+            },
+            {
+                "id": "scalability",
+                "name": "Scalability"
+            },
+            {
+                "id": "state_reasoning",
+                "name": "State Reasoning"
+            },
+            {
+                "id": "root_cause_analysis",
+                "name": "Root Cause Analysis"
+            },
+            {
+                "id": "software_engineering",
+                "name": "Software Engineering"
+            },
+            {
+                "id": "collaboration",
+                "name": "Collaboration"
+            },
+            {
+                "id": "version_control",
+                "name": "Version Control"
+            },
+            {
+                "id": "analytical_thinking",
+                "name": "Analytical Thinking"
+            },
+            {
+                "id": "pattern_recognition",
+                "name": "Pattern Recognition"
+            },
+            {
+                "id": "data_reasoning",
+                "name": "Data Reasoning"
+            },
+            {
+                "id": "evidence_based_reasoning",
+                "name": "Evidence-Based Reasoning"
+            },
+            {
+                "id": "data_quality",
+                "name": "Data Quality"
+            },
+            {
+                "id": "critical_thinking",
+                "name": "Critical Thinking"
+            },
+            {
+                "id": "anomaly_detection",
+                "name": "Anomaly Detection"
+            },
+            {
+                "id": "data_validation",
+                "name": "Data Validation"
+            },
+            {
+                "id": "data_visualization",
+                "name": "Data Visualization"
+            },
+            {
+                "id": "communication",
+                "name": "Communication"
+            },
+            {
+                "id": "causal_reasoning",
+                "name": "Causal Reasoning"
+            },
+            {
+                "id": "data_interpretation",
+                "name": "Data Interpretation"
+            },
+            {
+                "id": "prediction",
+                "name": "Prediction"
+            },
+            {
+                "id": "model_evaluation",
+                "name": "Model Evaluation"
+            },
+            {
+                "id": "generalization",
+                "name": "Generalization"
+            },
+            {
+                "id": "training",
+                "name": "Training"
+            },
+            {
+                "id": "evaluation",
+                "name": "Evaluation"
+            },
+            {
+                "id": "diagnostic_reasoning",
+                "name": "Diagnostic Reasoning"
+            },
+            {
+                "id": "feature_engineering",
+                "name": "Feature Engineering"
+            },
+            {
+                "id": "data_leakage",
+                "name": "Data Leakage"
+            },
+            {
+                "id": "critical_reasoning",
+                "name": "Critical Reasoning"
+            },
+            {
+                "id": "metrics",
+                "name": "Metrics"
+            },
+            {
+                "id": "model_monitoring",
+                "name": "Model Monitoring"
+            },
+            {
+                "id": "distribution_shift",
+                "name": "Distribution Shift"
+            },
+            {
+                "id": "continuous_improvement",
+                "name": "Continuous Improvement"
+            },
+            {
+                "id": "risk_detection",
+                "name": "Risk Detection"
+            },
+            {
+                "id": "incident_reasoning",
+                "name": "Incident Reasoning"
+            },
+            {
+                "id": "security_awareness",
+                "name": "Security Awareness"
+            },
+            {
+                "id": "social_engineering_awareness",
+                "name": "Social Engineering Awareness"
+            },
+            {
+                "id": "incident_response",
+                "name": "Incident Response"
+            },
+            {
+                "id": "threat_reasoning",
+                "name": "Threat Reasoning"
+            },
+            {
+                "id": "security_decision_making",
+                "name": "Security Decision Making"
+            },
+            {
+                "id": "risk_assessment",
+                "name": "Risk Assessment"
+            },
+            {
+                "id": "access_control",
+                "name": "Access Control"
+            },
+            {
+                "id": "containment",
+                "name": "Containment"
+            },
+            {
+                "id": "forensic_awareness",
+                "name": "Forensic Awareness"
+            },
+            {
+                "id": "threat_detection",
+                "name": "Threat Detection"
+            },
+            {
+                "id": "incident_handling",
+                "name": "Incident Handling"
+            },
+            {
+                "id": "risk_management",
+                "name": "Risk Management"
+            }
+        ],
+        "assignment_rule": "Each question has one primary_dimension representing the career domain and one secondary_dimension selected from its behavior_signals. Primary dimensions drive career-level scoring; secondary dimensions describe the thinking/behavior signal demonstrated by the question. Full per-question signal detail lives only in behavior_signals — secondary_dimension is not repeated as a separate array on questions, and a career's own primary_dimension is not repeated inside its secondary_dimensions list."
+    },
+    "dimension_scoring": {
+        "primary": "Score the question under its primary_dimension when the answer is correct. In exploring mode, each career has 2 questions and a maximum of 2 primary-dimension points. In career_in_mind mode, the selected career has 5 questions and a maximum of 5 primary-dimension points.",
+        "secondary": "secondary_dimension and behavior_signals are diagnostic signals only and do not create additional score, unless the application explicitly enables secondary-dimension analytics."
+    },
+    "schema_notes": {
+        "answer_shuffle": "Correct answer positions are intentionally distributed across A, B, C, and D. correct_option has been updated to match the shuffled options.",
+        "dimensions_added": "Added primary_dimension, secondary_dimension, and behavior_signals to every activity, plus top-level dimension definitions and career mappings.",
+        "id_uniqueness_rule": "Question IDs are unique within their own mode only (questions.exploring vs questions.career_in_mind[career]), not globally across the whole file. Validators must scope uniqueness checks per mode.",
+        "answer_key_security": "correct_option and score must never be sent to the frontend/client. Serve only question text and options client-side; keep correct_option and score server-side and use them exclusively inside the backend scoring engine.",
+        "schema_change_log": "v4.0 restructure: exploring_activities and career_in_mind_activities were merged into a single top-level 'questions' object (questions.exploring as a flat array, questions.career_in_mind keyed by career id) to match the existing Python evaluator, which expects assessment['questions']. Content (all 35 questions) was not changed. Question-level secondary_dimensions arrays were removed as duplicates of behavior_signals. Career-level secondary_dimensions no longer repeat that career's own primary_dimension."
+    }
+}

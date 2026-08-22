@@ -1,0 +1,828 @@
+{
+  "schema_version": "1.0",
+  "journey": "career_in_mind",
+  "title": "Minerva Journey 2 Career-in-Mind Skills Profile",
+  "description": "Skill requirements, assessment mappings, readiness rules, and current-skill-profile logic for Journey 2. Assessment questions and answer keys remain in assessment.json.",
+  "source_files": {
+    "questions": "assessment.json",
+    "skills_logic": "journey_2_skills.json"
+  },
+  "design_rules": {
+    "assessment_questions_per_career": 5,
+    "max_score_per_career": 5,
+    "question_score": 1,
+    "primary_dimension_scoring": "Primary dimensions are already defined in assessment.json. This file maps each question to the skill signals used to build the current skill profile.",
+    "secondary_dimension_scoring": "Secondary dimensions are diagnostic signals. They do not add extra points to the readiness score.",
+    "answer_key_security": "correct_option and score remain server-side in assessment.json and must never be sent to the frontend."
+  },
+  "careers": {
+    "ui_ux": {
+      "career_name": "UI/UX Design",
+      "primary_skill": "User-Centered Design",
+      "required_skills": [
+        {
+          "id": "user_research",
+          "name": "User Research",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "usability",
+          "name": "Usability",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "visual_hierarchy",
+          "name": "Visual Hierarchy",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "interaction_design",
+          "name": "Interaction Design",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "problem_framing",
+          "name": "Problem Framing",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "usability_testing",
+          "name": "Usability Testing",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "evidence_based_design",
+          "name": "Evidence-Based Design",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "design_evaluation",
+          "name": "Design Evaluation",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "iteration",
+          "name": "Iteration",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "feedback",
+          "name": "Feedback",
+          "category": "supporting",
+          "target_level": 3
+        }
+      ],
+      "question_skill_mapping": {
+        "UIUX_01": [
+          "user_research",
+          "usability",
+          "problem_framing"
+        ],
+        "UIUX_02": [
+          "visual_hierarchy",
+          "interaction_design",
+          "clarity"
+        ],
+        "UIUX_03": [
+          "user_research",
+          "usability_testing",
+          "evidence_based_design"
+        ],
+        "UIUX_04": [
+          "usability",
+          "design_evaluation",
+          "user_outcomes"
+        ],
+        "UIUX_05": [
+          "iteration",
+          "feedback",
+          "problem_solving"
+        ]
+      }
+    },
+    "development": {
+      "career_name": "Software Development",
+      "primary_skill": "Logical Problem Solving",
+      "required_skills": [
+        {
+          "id": "debugging",
+          "name": "Debugging",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "logical_reasoning",
+          "name": "Logical Reasoning",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "conditional_logic",
+          "name": "Conditional Logic",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "algorithmic_thinking",
+          "name": "Algorithmic Thinking",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "algorithms",
+          "name": "Algorithms",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "scalability",
+          "name": "Scalability",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "state_reasoning",
+          "name": "State Reasoning",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "root_cause_analysis",
+          "name": "Root Cause Analysis",
+          "category": "supporting",
+          "target_level": 4
+        },
+        {
+          "id": "software_engineering",
+          "name": "Software Engineering",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "version_control",
+          "name": "Version Control",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "collaboration",
+          "name": "Collaboration",
+          "category": "supporting",
+          "target_level": 3
+        }
+      ],
+      "question_skill_mapping": {
+        "DEV_01": [
+          "debugging",
+          "logical_reasoning",
+          "root_cause_analysis"
+        ],
+        "DEV_02": [
+          "conditional_logic",
+          "algorithmic_thinking",
+          "problem_solving"
+        ],
+        "DEV_03": [
+          "algorithms",
+          "scalability",
+          "logical_reasoning"
+        ],
+        "DEV_04": [
+          "debugging",
+          "state_reasoning",
+          "root_cause_analysis"
+        ],
+        "DEV_05": [
+          "software_engineering",
+          "collaboration",
+          "version_control"
+        ]
+      }
+    },
+    "data": {
+      "career_name": "Data & Analytics",
+      "primary_skill": "Analytical Reasoning",
+      "required_skills": [
+        {
+          "id": "analytical_thinking",
+          "name": "Analytical Thinking",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "pattern_recognition",
+          "name": "Pattern Recognition",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "data_quality",
+          "name": "Data Quality",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "critical_thinking",
+          "name": "Critical Thinking",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "anomaly_detection",
+          "name": "Anomaly Detection",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "data_validation",
+          "name": "Data Validation",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "data_visualization",
+          "name": "Data Visualization",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "causal_reasoning",
+          "name": "Causal Reasoning",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "data_interpretation",
+          "name": "Data Interpretation",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "evidence_based_reasoning",
+          "name": "Evidence-Based Reasoning",
+          "category": "supporting",
+          "target_level": 4
+        }
+      ],
+      "question_skill_mapping": {
+        "DATA_01": [
+          "analytical_thinking",
+          "evidence_based_reasoning",
+          "pattern_recognition"
+        ],
+        "DATA_02": [
+          "data_quality",
+          "critical_thinking",
+          "analytical_thinking"
+        ],
+        "DATA_03": [
+          "anomaly_detection",
+          "critical_thinking",
+          "data_validation"
+        ],
+        "DATA_04": [
+          "data_visualization",
+          "pattern_recognition",
+          "communication"
+        ],
+        "DATA_05": [
+          "critical_thinking",
+          "causal_reasoning",
+          "data_interpretation"
+        ]
+      }
+    },
+    "ai": {
+      "career_name": "AI & Machine Learning",
+      "primary_skill": "Machine Learning Reasoning",
+      "required_skills": [
+        {
+          "id": "training",
+          "name": "Model Training",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "model_evaluation",
+          "name": "Model Evaluation",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "generalization",
+          "name": "Generalization",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "feature_engineering",
+          "name": "Feature Engineering",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "data_leakage",
+          "name": "Data Leakage Awareness",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "metrics",
+          "name": "Evaluation Metrics",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "diagnostic_reasoning",
+          "name": "Diagnostic Reasoning",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "critical_reasoning",
+          "name": "Critical Reasoning",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "model_monitoring",
+          "name": "Model Monitoring",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "distribution_shift",
+          "name": "Distribution Shift",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "continuous_improvement",
+          "name": "Continuous Improvement",
+          "category": "supporting",
+          "target_level": 3
+        }
+      ],
+      "question_skill_mapping": {
+        "AI_01": [
+          "training",
+          "evaluation",
+          "machine_learning_reasoning"
+        ],
+        "AI_02": [
+          "model_evaluation",
+          "generalization",
+          "diagnostic_reasoning"
+        ],
+        "AI_03": [
+          "feature_engineering",
+          "data_leakage",
+          "critical_reasoning"
+        ],
+        "AI_04": [
+          "model_evaluation",
+          "metrics",
+          "critical_reasoning"
+        ],
+        "AI_05": [
+          "model_monitoring",
+          "distribution_shift",
+          "continuous_improvement"
+        ]
+      }
+    },
+    "cyber": {
+      "career_name": "Cybersecurity",
+      "primary_skill": "Security & Risk Reasoning",
+      "required_skills": [
+        {
+          "id": "incident_response",
+          "name": "Incident Response",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "risk_detection",
+          "name": "Risk Detection",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "threat_reasoning",
+          "name": "Threat Reasoning",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "social_engineering_awareness",
+          "name": "Social Engineering Awareness",
+          "category": "core",
+          "target_level": 4
+        },
+        {
+          "id": "security_decision_making",
+          "name": "Security Decision Making",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "risk_assessment",
+          "name": "Risk Assessment",
+          "category": "core",
+          "target_level": 3
+        },
+        {
+          "id": "access_control",
+          "name": "Access Control",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "containment",
+          "name": "Containment",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "forensic_awareness",
+          "name": "Forensic Awareness",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "threat_detection",
+          "name": "Threat Detection",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "incident_handling",
+          "name": "Incident Handling",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "risk_management",
+          "name": "Risk Management",
+          "category": "supporting",
+          "target_level": 3
+        },
+        {
+          "id": "security_awareness",
+          "name": "Security Awareness",
+          "category": "supporting",
+          "target_level": 3
+        }
+      ],
+      "question_skill_mapping": {
+        "CYBER_01": [
+          "incident_response",
+          "risk_detection",
+          "threat_reasoning"
+        ],
+        "CYBER_02": [
+          "social_engineering_awareness",
+          "risk_detection",
+          "security_decision_making"
+        ],
+        "CYBER_03": [
+          "risk_assessment",
+          "access_control",
+          "security_awareness"
+        ],
+        "CYBER_04": [
+          "incident_response",
+          "containment",
+          "forensic_awareness"
+        ],
+        "CYBER_05": [
+          "threat_detection",
+          "incident_handling",
+          "risk_management"
+        ]
+      }
+    }
+  },
+  "skill_level_scale": {
+    "scale_min": 1,
+    "scale_max": 5,
+    "levels": [
+      {
+        "level": 1,
+        "label": "Needs Foundation",
+        "description": "Little or no demonstrated evidence yet."
+      },
+      {
+        "level": 2,
+        "label": "Developing",
+        "description": "Some evidence is present, but the skill needs more development."
+      },
+      {
+        "level": 3,
+        "label": "Functional",
+        "description": "Basic practical understanding is demonstrated."
+      },
+      {
+        "level": 4,
+        "label": "Strong",
+        "description": "Consistent and strong reasoning is demonstrated."
+      },
+      {
+        "level": 5,
+        "label": "Advanced",
+        "description": "Very strong evidence; suitable for more complex tasks."
+      }
+    ]
+  },
+  "readiness_rules": {
+    "formula": "readiness_percent = round((correct_answers / 5) * 100)",
+    "score_range": {
+      "min": 0,
+      "max": 5
+    },
+    "performance_levels": [
+      {
+        "min_score": 0,
+        "max_score": 1,
+        "min_percent": 0,
+        "max_percent": 20,
+        "level": "Needs Foundation"
+      },
+      {
+        "min_score": 2,
+        "max_score": 2,
+        "min_percent": 40,
+        "max_percent": 40,
+        "level": "Early Development"
+      },
+      {
+        "min_score": 3,
+        "max_score": 3,
+        "min_percent": 60,
+        "max_percent": 60,
+        "level": "Developing"
+      },
+      {
+        "min_score": 4,
+        "max_score": 4,
+        "min_percent": 80,
+        "max_percent": 80,
+        "level": "Strong Readiness"
+      },
+      {
+        "min_score": 5,
+        "max_score": 5,
+        "min_percent": 100,
+        "max_percent": 100,
+        "level": "Highly Ready"
+      }
+    ],
+    "validation_labels": [
+      {
+        "min_percent": 0,
+        "max_percent": 39,
+        "label": "Needs Development"
+      },
+      {
+        "min_percent": 40,
+        "max_percent": 59,
+        "label": "Emerging Match"
+      },
+      {
+        "min_percent": 60,
+        "max_percent": 79,
+        "label": "Good Match"
+      },
+      {
+        "min_percent": 80,
+        "max_percent": 100,
+        "label": "Strong Match"
+      }
+    ]
+  },
+  "current_skill_profile_logic": {
+    "purpose": "Convert the five career-specific assessment answers into a diagnostic current-skill profile without changing the overall readiness score.",
+    "step_1": "Score the five questions using assessment.json.",
+    "step_2": "For every correctly answered question, mark all skills in that question's question_skill_mapping as demonstrated.",
+    "step_3": "For every incorrectly answered question, mark those mapped skills as needing development evidence.",
+    "step_4": "Aggregate evidence for each skill. A skill can receive multiple positive or negative signals when it appears in multiple questions.",
+    "step_5": "Convert the evidence into a 1-5 skill level using the skill_level_calculation rules below.",
+    "step_6": "Compare the resulting current level with each skill's target_level.",
+    "step_7": "Generate strengths from skills at or above target_level.",
+    "step_8": "Generate weaknesses from skills below target_level.",
+    "step_9": "Generate priority from the size of the gap and the skill category.",
+    "step_10": "Return the current skill profile together with readiness; do not expose correct answers."
+  },
+  "skill_level_calculation": {
+    "question_signal_weight": 1,
+    "positive_signal": "correct answer on a question mapped to the skill",
+    "negative_signal": "incorrect answer on a question mapped to the skill",
+    "mapping_rule": "Because each career has five questions and skills may appear in one or more question mappings, calculate evidence as positive_signals / total_signals for that skill.",
+    "conversion": [
+      {
+        "evidence_min": 0.0,
+        "evidence_max": 0.19,
+        "level": 1
+      },
+      {
+        "evidence_min": 0.2,
+        "evidence_max": 0.39,
+        "level": 2
+      },
+      {
+        "evidence_min": 0.4,
+        "evidence_max": 0.59,
+        "level": 3
+      },
+      {
+        "evidence_min": 0.6,
+        "evidence_max": 0.79,
+        "level": 4
+      },
+      {
+        "evidence_min": 0.8,
+        "evidence_max": 1.0,
+        "level": 5
+      }
+    ],
+    "important_note": "A skill appearing in only one question can only receive level 1 or level 5 from this assessment alone. The backend should label this as assessment evidence rather than a complete real-world skill certification."
+  },
+  "skill_gap_logic": {
+    "formula": "gap = max(target_level - current_level, 0)",
+    "gap_labels": [
+      {
+        "min_gap": 0,
+        "max_gap": 0,
+        "label": "No Gap"
+      },
+      {
+        "min_gap": 1,
+        "max_gap": 1,
+        "label": "Low Gap"
+      },
+      {
+        "min_gap": 2,
+        "max_gap": 2,
+        "label": "Moderate Gap"
+      },
+      {
+        "min_gap": 3,
+        "max_gap": 4,
+        "label": "High Gap"
+      }
+    ],
+    "priority_rules": [
+      {
+        "condition": "gap >= 3",
+        "priority": "High"
+      },
+      {
+        "condition": "gap == 2",
+        "priority": "Medium"
+      },
+      {
+        "condition": "gap == 1",
+        "priority": "Low"
+      },
+      {
+        "condition": "gap == 0",
+        "priority": "None"
+      }
+    ],
+    "tie_breaker": "If two skills have the same gap, core skills have higher priority than supporting skills."
+  },
+  "result_generation": {
+    "readiness": [
+      "readiness_percent",
+      "score",
+      "max_score",
+      "performance_level",
+      "validation_label"
+    ],
+    "strengths": [
+      "skills with current_level >= target_level",
+      "sort by current_level descending"
+    ],
+    "weaknesses": [
+      "skills with current_level < target_level",
+      "sort by gap descending, then core before supporting"
+    ],
+    "current_skills": [
+      "skill_id",
+      "skill_name",
+      "category",
+      "current_level",
+      "current_level_label",
+      "target_level",
+      "evidence_ratio",
+      "gap",
+      "gap_label",
+      "priority"
+    ]
+  },
+  "output_contract": {
+    "example_structure": {
+      "career_id": "data",
+      "career_name": "Data & Analytics",
+      "score": 4,
+      "max_score": 5,
+      "readiness_percent": 80,
+      "performance_level": "Strong Readiness",
+      "validation": "Strong Match",
+      "strengths": [],
+      "weaknesses": [],
+      "current_skills": [],
+      "recommended_next_step": "Prioritize the highest-gap core skills first."
+    },
+    "privacy_and_security": {
+      "frontend_can_receive": [
+        "career_id",
+        "career_name",
+        "score",
+        "max_score",
+        "readiness_percent",
+        "performance_level",
+        "validation",
+        "strengths",
+        "weaknesses",
+        "current_skills",
+        "recommended_next_step"
+      ],
+      "frontend_must_not_receive": [
+        "correct_option",
+        "answer_key",
+        "server-side scoring details"
+      ]
+    }
+  },
+  "recommended_next_step_rules": [
+    {
+      "condition": "high_priority_gaps_exist",
+      "message": "Focus first on your highest-priority core skill gaps."
+    },
+    {
+      "condition": "no_high_priority_gaps_and_readiness_below_80",
+      "message": "Strengthen the skills marked Developing or Functional through guided practice."
+    },
+    {
+      "condition": "readiness_at_least_80",
+      "message": "Move toward practical projects and deeper career-specific practice."
+    },
+    {
+      "condition": "readiness_100",
+      "message": "Validate your readiness through a practical project rather than relying on assessment performance alone."
+    }
+  ],
+  "validation": {
+    "expected_careers": 5,
+    "expected_questions_per_career": 5,
+    "expected_total_career_in_mind_questions": 25,
+    "required_question_ids": {
+      "ui_ux": [
+        "UIUX_01",
+        "UIUX_02",
+        "UIUX_03",
+        "UIUX_04",
+        "UIUX_05"
+      ],
+      "development": [
+        "DEV_01",
+        "DEV_02",
+        "DEV_03",
+        "DEV_04",
+        "DEV_05"
+      ],
+      "data": [
+        "DATA_01",
+        "DATA_02",
+        "DATA_03",
+        "DATA_04",
+        "DATA_05"
+      ],
+      "ai": [
+        "AI_01",
+        "AI_02",
+        "AI_03",
+        "AI_04",
+        "AI_05"
+      ],
+      "cyber": [
+        "CYBER_01",
+        "CYBER_02",
+        "CYBER_03",
+        "CYBER_04",
+        "CYBER_05"
+      ]
+    },
+    "assessment_file_compatibility": "Question IDs and career IDs are aligned with assessment.json v4.0. No question content or answer key is duplicated here."
+  }
+}
