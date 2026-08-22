@@ -7,7 +7,8 @@ Responsibilities:
 - Load exactly 5 career-specific questions from assessment.json
 - Score submitted answers server-side
 - Calculate readiness percentage and performance level
-- Build current-skill profile from journey_2_skills.json
+- Build current-skill profile from normalized canonical skills
+- Use career_skill_matrix.json as the sole source of target levels
 - Calculate strengths, weak areas, skill gaps, and priorities
 - Return a backend-friendly result payload
 
@@ -15,8 +16,9 @@ Security:
 - Never expose correct_option through public question methods.
 - Never expose answer keys to the frontend.
 - Scoring remains server-side.
-- Diagnostic skill signals not defined in required_skills are not
-  treated as formal skill-profile entries.
+- Diagnostic signals are normalized through skill_normalization.json.
+- Diagnostic-only signals never become formal canonical skills.
+- Canonical target levels come only from career_skill_matrix.json.
 
 Expected journey_2_skills.json structure:
 
@@ -57,12 +59,19 @@ CAREER_IDS = (
 
 ANSWER_OPTIONS = {"A", "B", "C", "D"}
 
+# SKILL_LEVEL_LABELS = {
+#     1: "Needs Foundation",
+#     2: "Developing",
+#     3: "Functional",
+#     4: "Strong",
+#     5: "Advanced",
+# }
 SKILL_LEVEL_LABELS = {
-    1: "Needs Foundation",
-    2: "Developing",
-    3: "Functional",
-    4: "Strong",
-    5: "Advanced",
+    1: "Beginner",
+    2: "Novice",
+    3: "Intermediate",
+    4: "Advanced",
+    5: "Expert",
 }
 
 PRIORITY_ORDER = {
@@ -123,13 +132,19 @@ class Journey2ScoringEngine:
         self,
         assessment_path: str | Path = "assessment.json",
         skills_path: str | Path = "journey_2_skills.json",
+        matrix_path: str | Path = "career_skill_matrix.json",
+        normalization_path: str | Path = "skill_normalization.json",
     ) -> None:
 
         self.assessment_path = Path(assessment_path)
         self.skills_path = Path(skills_path)
+        self.matrix_path = Path(matrix_path)
+        self.normalization_path = Path(normalization_path)
 
         self.assessment = self._load_json(self.assessment_path)
         self.skills_config = self._load_json(self.skills_path)
+        self.career_skill_matrix = self._load_json(self.matrix_path)
+        self.skill_normalization = self._load_json(self.normalization_path)
 
         self._validate_config()
 
@@ -178,6 +193,8 @@ class Journey2ScoringEngine:
 
         self._validate_assessment()
         self._validate_skills_config()
+        self._validate_canonical_matrix()
+        self._validate_normalization()
 
     def _validate_assessment(self) -> None:
         """
@@ -536,6 +553,169 @@ class Journey2ScoringEngine:
             )
 
     # ========================================================
+    # CANONICAL MATRIX VALIDATION
+    # ========================================================
+
+    def _validate_canonical_matrix(self) -> None:
+        """Validate career_skill_matrix.json as the target source of truth."""
+
+        careers = self.career_skill_matrix.get("careers")
+        if not isinstance(careers, dict):
+            raise InvalidAssessmentError(
+                "career_skill_matrix.json must contain a 'careers' object."
+            )
+
+        configured_ids = set(careers.keys())
+        expected_ids = set(CAREER_IDS)
+
+        if configured_ids != expected_ids:
+            raise InvalidAssessmentError(
+                "career_skill_matrix.json career IDs must exactly match "
+                f"{sorted(expected_ids)}; found {sorted(configured_ids)}."
+            )
+
+        for career in CAREER_IDS:
+            config = careers[career]
+            if not isinstance(config, dict):
+                raise InvalidAssessmentError(
+                    f"Canonical configuration for '{career}' must be an object."
+                )
+
+            career_name = config.get("career_name")
+            if not isinstance(career_name, str) or not career_name.strip():
+                raise InvalidAssessmentError(
+                    f"Canonical career '{career}' must have a valid career_name."
+                )
+
+            required_skills = config.get("required_skills")
+            if not isinstance(required_skills, dict) or not required_skills:
+                raise InvalidAssessmentError(
+                    f"Canonical career '{career}' must contain required_skills as a non-empty object."
+                )
+
+            for skill_id, definition in required_skills.items():
+                if not isinstance(skill_id, str) or not skill_id:
+                    raise InvalidAssessmentError(
+                        f"Canonical career '{career}' contains an invalid skill ID."
+                    )
+                if not isinstance(definition, dict):
+                    raise InvalidAssessmentError(
+                        f"Canonical skill '{skill_id}' in '{career}' must be an object."
+                    )
+                target = definition.get("target_level")
+                if not isinstance(target, int) or not 1 <= target <= 5:
+                    raise InvalidAssessmentError(
+                        f"Canonical skill '{skill_id}' in '{career}' has invalid target_level {target!r}."
+                    )
+                if definition.get("category") not in {"core", "supporting", "tool"}:
+                    raise InvalidAssessmentError(
+                        f"Canonical skill '{skill_id}' in '{career}' has invalid category."
+                    )
+                weight = definition.get("weight")
+                if not isinstance(weight, (int, float)) or weight <= 0:
+                    raise InvalidAssessmentError(
+                        f"Canonical skill '{skill_id}' in '{career}' must have a positive numeric weight."
+                    )
+
+    # ========================================================
+    # NORMALIZATION VALIDATION
+    # ========================================================
+
+    def _validate_normalization(self) -> None:
+        """Validate source-signal → canonical-skill normalization."""
+
+        mappings = self.skill_normalization.get("career_mappings")
+        if not isinstance(mappings, dict):
+            raise InvalidAssessmentError(
+                "skill_normalization.json must contain career_mappings."
+            )
+
+        canonical_careers = self.career_skill_matrix["careers"]
+
+        for career in CAREER_IDS:
+            career_mappings = mappings.get(career)
+            if not isinstance(career_mappings, dict):
+                raise InvalidAssessmentError(
+                    f"skill_normalization.json is missing mappings for '{career}'."
+                )
+
+            entries = career_mappings.get("mappings")
+            if not isinstance(entries, list):
+                raise InvalidAssessmentError(
+                    f"Normalization mappings for '{career}' must be an array."
+                )
+
+            seen = set()
+            canonical_ids = set(canonical_careers[career]["required_skills"].keys())
+
+            for entry in entries:
+                if not isinstance(entry, dict):
+                    raise InvalidAssessmentError(
+                        f"Invalid normalization entry in career '{career}'."
+                    )
+
+                source = entry.get("source_skill")
+                target = entry.get("canonical_skill")
+                mapping_type = entry.get("mapping_type")
+                confidence = entry.get("confidence")
+
+                if not isinstance(source, str) or not source:
+                    raise InvalidAssessmentError(
+                        f"Normalization entry in '{career}' has invalid source_skill."
+                    )
+                if source in seen:
+                    raise InvalidAssessmentError(
+                        f"Duplicate normalization source '{source}' in '{career}'."
+                    )
+                seen.add(source)
+
+                if mapping_type not in {"exact", "semantic", "diagnostic_only"}:
+                    raise InvalidAssessmentError(
+                        f"Invalid mapping_type '{mapping_type}' for '{source}' in '{career}'."
+                    )
+                if confidence not in {"high", "moderate"}:
+                    raise InvalidAssessmentError(
+                        f"Invalid confidence '{confidence}' for '{source}' in '{career}'."
+                    )
+
+                if mapping_type == "diagnostic_only":
+                    if target is not None:
+                        raise InvalidAssessmentError(
+                            f"Diagnostic-only signal '{source}' in '{career}' must have canonical_skill=null."
+                        )
+                else:
+                    if not isinstance(target, str) or target not in canonical_ids:
+                        raise InvalidAssessmentError(
+                            f"Normalization target '{target}' for '{source}' in '{career}' "
+                            "is not a canonical skill for that career."
+                        )
+
+            # Every signal used by the J2 question mappings must be normalized.
+            j2_mapping = self.skills_config["careers"][career]["question_skill_mapping"]
+            normalized_sources = seen
+            missing_sources = {
+                signal
+                for signals in j2_mapping.values()
+                for signal in signals
+                if signal not in normalized_sources
+            }
+            if missing_sources:
+                raise InvalidAssessmentError(
+                    f"Career '{career}' has unmapped J2 diagnostic signals: "
+                    f"{sorted(missing_sources)}"
+                )
+
+    # ========================================================
+    # CANONICAL CAREER CONFIGURATION
+    # ========================================================
+
+    def _canonical_career_config(self, career: str) -> Dict[str, Any]:
+        """Return canonical career requirements from career_skill_matrix.json."""
+
+        career = self.normalize_career(career)
+        return self.career_skill_matrix["careers"][career]
+
+    # ========================================================
     # CAREER NORMALIZATION
     # ========================================================
 
@@ -873,7 +1053,7 @@ class Journey2ScoringEngine:
         # Career metadata
         # ----------------------------------------------------
 
-        career_info = self._career_config(career)
+        career_info = self._canonical_career_config(career)
 
         career_name = career_info.get(
             "career_name",
@@ -1062,279 +1242,179 @@ class Journey2ScoringEngine:
         question_results: List[Dict[str, Any]],
     ) -> Dict[str, Any]:
         """
-        Build the current skill profile.
+        Build the formal current-skill profile using canonical skills.
 
-        The JSON defines question -> skills:
+        Flow:
+            J2 question signals
+                ↓
+            skill_normalization.json
+                ↓
+            canonical skill IDs
+                ↓
+            evidence by question
+                ↓
+            current level
 
-            question_skill_mapping = {
-                "DATA_01": [
-                    "analytical_thinking",
-                    "pattern_recognition"
-                ]
-            }
+        Canonical target levels, categories, and weights come exclusively
+        from career_skill_matrix.json. Diagnostic-only signals never become
+        formal skill-profile entries.
 
-        This method reverses that relationship internally:
-
-            skill -> questions
-
-        Only skills listed in required_skills are included in
-        the formal current skill profile.
-
-        Diagnostic-only signals are ignored for the formal
-        skill profile.
+        Important: no evidence is represented as ``current_level=None``
+        rather than falsely treating the user as Beginner (level 1).
         """
 
-        career_info = self._career_config(career)
+        career = self.normalize_career(career)
+        j2_config = self._career_config(career)
+        canonical_config = self._canonical_career_config(career)
+        canonical_skills = canonical_config["required_skills"]
 
-        required_skills = career_info.get(
-            "required_skills",
-            [],
-        )
-
-        question_skill_mapping = career_info.get(
-            "question_skill_mapping",
-            {},
-        )
-
-        # ----------------------------------------------------
-        # Question correctness lookup
-        # ----------------------------------------------------
+        question_skill_mapping = j2_config.get("question_skill_mapping", {})
+        normalization_entries = self.skill_normalization["career_mappings"][career]["mappings"]
+        normalization = {
+            entry["source_skill"]: entry
+            for entry in normalization_entries
+        }
 
         correctness_by_question = {
-            item["question_id"]: bool(
-                item["is_correct"]
-            )
+            item["question_id"]: bool(item["is_correct"])
             for item in question_results
         }
 
-        # ----------------------------------------------------
-        # Reverse question -> skill mapping
-        #
-        # skill_id -> [question_id, question_id, ...]
-        # ----------------------------------------------------
+        # canonical_skill -> set(question_ids)
+        # A question counts at most once for a canonical skill, even if
+        # multiple source signals in that question normalize to the same skill.
+        skill_question_map: Dict[str, set[str]] = {
+            skill_id: set() for skill_id in canonical_skills
+        }
 
-        skill_question_map: Dict[
-            str,
-            List[str],
-        ] = {}
-
-        for question_id, skill_ids in (
-            question_skill_mapping.items()
-        ):
-
-            if not isinstance(skill_ids, list):
+        for question_id, source_signals in question_skill_mapping.items():
+            if question_id not in correctness_by_question:
                 continue
 
-            for skill_id in skill_ids:
+            for source_signal in source_signals:
+                entry = normalization.get(source_signal)
+                if not entry:
+                    raise InvalidAssessmentError(
+                        f"No normalization mapping for signal '{source_signal}' "
+                        f"in career '{career}'."
+                    )
 
-                skill_question_map.setdefault(
-                    skill_id,
-                    [],
-                ).append(question_id)
+                if entry["mapping_type"] == "diagnostic_only":
+                    continue
 
-        # ----------------------------------------------------
-        # Calculate skill evidence
-        # ----------------------------------------------------
+                canonical_skill = entry["canonical_skill"]
+                if canonical_skill in canonical_skills:
+                    skill_question_map[canonical_skill].add(question_id)
 
         result: List[Dict[str, Any]] = []
-
-        strengths: List[str] = []
-
+        strength_items: List[Dict[str, Any]] = []
         weak_skill_items: List[Dict[str, Any]] = []
 
-        for skill in required_skills:
+        for skill_id, definition in canonical_skills.items():
+            skill_name = self._display_skill_name(skill_id)
+            category = definition["category"]
+            target_level = int(definition["target_level"])
+            weight = float(definition["weight"])
 
-            skill_id = skill["id"]
-
-            skill_name = skill["name"]
-
-            category = skill.get(
-                "category",
-                "supporting",
-            )
-
-            target_level = int(
-                skill.get(
-                    "target_level",
-                    3,
-                )
-            )
-
-            question_ids = skill_question_map.get(
-                skill_id,
-                [],
-            )
-
-            # ------------------------------------------------
-            # Gather positive / negative signals
-            # ------------------------------------------------
-
+            question_ids = sorted(skill_question_map.get(skill_id, set()))
             evidence = [
-                correctness_by_question[question_id]
-                for question_id in question_ids
-                if question_id in correctness_by_question
+                correctness_by_question[qid]
+                for qid in question_ids
+                if qid in correctness_by_question
             ]
 
             total_signals = len(evidence)
+            positive_signals = sum(1 for signal in evidence if signal)
+            negative_signals = total_signals - positive_signals
 
-            positive_signals = sum(
-                1
-                for signal in evidence
-                if signal
-            )
-
-            negative_signals = (
-                total_signals - positive_signals
-            )
-
-            if total_signals > 0:
-                evidence_ratio = (
-                    positive_signals
-                    / total_signals
-                )
+            if total_signals == 0:
+                current_level = None
+                evidence_ratio = None
+                gap = None
+                gap_label = "No Evidence"
+                priority = "None"
             else:
-                evidence_ratio = 0.0
+                evidence_ratio = positive_signals / total_signals
 
-            # ------------------------------------------------
-            # Convert evidence ratio to level.
-            #
-            # Uses the exact conversion defined in
-            # journey_2_skills.json.
-            # ------------------------------------------------
-
-            current_level = (
-                self._evidence_to_skill_level(
-                    evidence_ratio
+                # A high percentage from very few questions is not enough
+                # evidence to claim an expert skill level.
+                current_level, evidence_confidence = (
+                    self._evidence_to_skill_level(
+                        evidence_ratio,
+                        total_signals,
+                    )
                 )
-            )
 
-            # ------------------------------------------------
-            # Skill gap
-            # ------------------------------------------------
-
-            gap = max(
-                target_level - current_level,
-                0,
-            )
-
-            gap_label = self._gap_label(gap)
-
-            priority = self._priority_for_gap(
-                gap
-            )
-
-            # ------------------------------------------------
-            # Current skill result
-            # ------------------------------------------------
+                gap = max(target_level - current_level, 0)
+                gap_label = self._gap_label(gap)
+                priority = self._priority_for_gap(gap)
 
             item = {
                 "skill_id": skill_id,
                 "skill_name": skill_name,
                 "category": category,
-
+                "weight": weight,
                 "current_level": current_level,
-
                 "current_level_label": (
-                    SKILL_LEVEL_LABELS[
-                        current_level
-                    ]
+                    SKILL_LEVEL_LABELS[current_level]
+                    if current_level is not None
+                    else "No Evidence"
                 ),
-
                 "target_level": target_level,
-
-                "evidence_ratio": round(
-                    evidence_ratio,
-                    2,
+                "evidence_ratio": (
+                    round(evidence_ratio, 2)
+                    if evidence_ratio is not None
+                    else None
                 ),
-
                 "positive_signals": positive_signals,
-
                 "negative_signals": negative_signals,
-
                 "total_signals": total_signals,
-
                 "evidence_questions": question_ids,
-
                 "gap": gap,
-
                 "gap_label": gap_label,
-
                 "priority": priority,
+                "evidence_status": (
+                    "measured" if total_signals > 0 else "no_evidence"
+                ),
+                "evidence_confidence": (
+                    evidence_confidence if total_signals > 0 else "none"
+                ),
             }
 
             result.append(item)
 
-            # ------------------------------------------------
-            # Strengths
-            # ------------------------------------------------
+            if current_level is not None and current_level >= target_level:
+                strength_items.append(item)
 
-            if current_level >= target_level:
-                strengths.append(skill_name)
-
-            # ------------------------------------------------
-            # Weak areas
-            # ------------------------------------------------
-
-            if gap > 0:
+            if gap is not None and gap > 0:
                 weak_skill_items.append(item)
-
-        # ----------------------------------------------------
-        # Sort strengths
-        # Stronger levels first.
-        # ----------------------------------------------------
-
-        strength_items = [
-            item
-            for item in result
-            if item["current_level"]
-            >= item["target_level"]
-        ]
 
         strength_items.sort(
             key=lambda item: (
                 -item["current_level"],
-                CATEGORY_ORDER.get(
-                    item["category"],
-                    9,
-                ),
+                CATEGORY_ORDER.get(item["category"], 9),
                 item["skill_name"],
             )
         )
-
-        strengths = [
-            item["skill_name"]
-            for item in strength_items
-        ]
-
-        # ----------------------------------------------------
-        # Sort weak areas
-        #
-        # 1. Largest gap
-        # 2. Core before supporting
-        # 3. Skill name
-        # ----------------------------------------------------
 
         weak_skill_items.sort(
             key=lambda item: (
                 -item["gap"],
-                CATEGORY_ORDER.get(
-                    item["category"],
-                    9,
-                ),
+                CATEGORY_ORDER.get(item["category"], 9),
                 item["skill_name"],
             )
         )
 
-        weak_areas = [
-            item["skill_name"]
-            for item in weak_skill_items
-        ]
-
         return {
             "skills": result,
-            "strengths": strengths,
-            "weak_areas": weak_areas,
+            "strengths": [item["skill_name"] for item in strength_items],
+            "weak_areas": [item["skill_name"] for item in weak_skill_items],
         }
+
+    @staticmethod
+    def _display_skill_name(skill_id: str) -> str:
+        """Convert canonical snake_case skill IDs to readable names."""
+        return skill_id.replace("_", " ").title()
 
     # ========================================================
     # EVIDENCE → SKILL LEVEL
@@ -1343,76 +1423,62 @@ class Journey2ScoringEngine:
     def _evidence_to_skill_level(
         self,
         evidence_ratio: float,
-    ) -> int:
+        evidence_count: int,
+    ) -> tuple[int, str]:
         """
-        Convert evidence ratio to a 1-5 skill level.
+        Convert assessment evidence into a conservative 1-5 skill level.
 
-        Uses journey_2_skills.json:
+        Existing ratio thresholds are preserved, but evidence quantity now
+        limits how high the system can claim:
+            1 evidence question -> maximum Level 3 (Intermediate)
+            2 evidence questions -> maximum Level 4 (Advanced)
+            3+ evidence questions -> normal ratio conversion
 
-            0.00 - 0.19 -> 1
-            0.20 - 0.39 -> 2
-            0.40 - 0.59 -> 3
-            0.60 - 0.79 -> 4
-            0.80 - 1.00 -> 5
+        Returns:
+            (skill_level, evidence_confidence)
         """
 
         conversion = (
             self.skills_config
-            .get(
-                "skill_level_calculation",
-                {},
-            )
-            .get(
-                "conversion",
-                [],
-            )
+            .get("skill_level_calculation", {})
+            .get("conversion", [])
         )
 
+        level = None
+
         for rule in conversion:
-
-            minimum = float(
-                rule.get(
-                    "evidence_min",
-                    0.0,
-                )
-            )
-
-            maximum = float(
-                rule.get(
-                    "evidence_max",
-                    1.0,
-                )
-            )
+            minimum = float(rule.get("evidence_min", 0.0))
+            maximum = float(rule.get("evidence_max", 1.0))
 
             if minimum <= evidence_ratio <= maximum:
-                level = int(
-                    rule.get(
-                        "level",
-                        1,
-                    )
-                )
+                level = int(rule.get("level", 1))
+                break
 
-                return max(
-                    1,
-                    min(5, level),
-                )
+        if level is None:
+            if evidence_ratio >= 0.80:
+                level = 5
+            elif evidence_ratio >= 0.60:
+                level = 4
+            elif evidence_ratio >= 0.40:
+                level = 3
+            elif evidence_ratio >= 0.20:
+                level = 2
+            else:
+                level = 1
 
-        # Safe fallback.
-        if evidence_ratio >= 0.80:
-            return 5
+        level = max(1, min(5, level))
 
-        if evidence_ratio >= 0.60:
-            return 4
+        if evidence_count <= 1:
+            level = min(level, 3)
+            confidence = "low"
+        elif evidence_count == 2:
+            level = min(level, 4)
+            confidence = "moderate"
+        else:
+            confidence = "high"
 
-        if evidence_ratio >= 0.40:
-            return 3
+        return level, confidence
 
-        if evidence_ratio >= 0.20:
-            return 2
-
-        return 1
-
-    # ========================================================
     # GAP LABEL
     # ========================================================
 
@@ -1552,76 +1618,44 @@ class Journey2ScoringEngine:
         career: str,
         current_profile: Dict[str, Any],
     ) -> List[Dict[str, Any]]:
-        """
-        Build skill gap results.
+        """Build measured canonical skill gaps.
 
-        Skills with no gap are excluded.
-
-        Sorting:
-            1. Priority
-            2. Gap size
-            3. Core before supporting
-            4. Skill name
+        Skills with no assessment evidence are excluded from the formal gap
+        list because lack of evidence is not proof of a skill level of 1.
+        They remain visible in ``current_skill_profile`` with
+        ``evidence_status='no_evidence'``.
         """
 
-        # Keep career parameter for API compatibility and
-        # future career-specific rules.
         _ = career
-
         gaps: List[Dict[str, Any]] = []
 
         for skill in current_profile["skills"]:
+            missing = skill.get("gap")
 
-            missing = int(
-                skill["gap"]
-            )
-
-            if missing <= 0:
+            if missing is None or int(missing) <= 0:
                 continue
 
             gaps.append(
                 {
                     "skill_id": skill["skill_id"],
                     "skill_name": skill["skill_name"],
-                    "category": skill.get(
-                        "category",
-                        "supporting",
-                    ),
-                    "current_level": skill[
-                        "current_level"
-                    ],
-                    "required_level": skill[
-                        "target_level"
-                    ],
-                    "missing_levels": missing,
-                    "gap_label": skill[
-                        "gap_label"
-                    ],
-                    "priority": skill[
-                        "priority"
-                    ],
-                    "evidence_ratio": skill[
-                        "evidence_ratio"
-                    ],
+                    "category": skill.get("category", "supporting"),
+                    "weight": skill.get("weight", 1.0),
+                    "current_level": skill["current_level"],
+                    "required_level": skill["target_level"],
+                    "missing_levels": int(missing),
+                    "gap_label": skill["gap_label"],
+                    "priority": skill["priority"],
+                    "evidence_ratio": skill["evidence_ratio"],
+                    "evidence_questions": skill.get("evidence_questions", []),
                 }
             )
 
-        # ----------------------------------------------------
-        # Tie-breaker:
-        # core skills higher priority than supporting.
-        # ----------------------------------------------------
-
         gaps.sort(
             key=lambda item: (
-                PRIORITY_ORDER.get(
-                    item["priority"],
-                    9,
-                ),
+                PRIORITY_ORDER.get(item["priority"], 9),
                 -item["missing_levels"],
-                CATEGORY_ORDER.get(
-                    item["category"],
-                    9,
-                ),
+                CATEGORY_ORDER.get(item["category"], 9),
                 item["skill_name"],
             )
         )
@@ -1759,6 +1793,8 @@ class Journey2ScoringEngine:
 def build_engine(
     assessment_path: str | Path = "assessment.json",
     skills_path: str | Path = "journey_2_skills.json",
+    matrix_path: str | Path = "career_skill_matrix.json",
+    normalization_path: str | Path = "skill_normalization.json",
 ) -> Journey2ScoringEngine:
     """
     Convenience factory used by backend code.
@@ -1767,6 +1803,8 @@ def build_engine(
     return Journey2ScoringEngine(
         assessment_path=assessment_path,
         skills_path=skills_path,
+        matrix_path=matrix_path,
+        normalization_path=normalization_path,
     )
 
 

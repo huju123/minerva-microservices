@@ -38,6 +38,8 @@ J1_ASSESSMENT = load_assessment(
 J2_ENGINE = build_engine(
     assessment_path=BASE_DIR / "journey2" / "assessment.json",
     skills_path=BASE_DIR / "journey2" / "journey_2_skills.json",
+    matrix_path=BASE_DIR / "journey2" / "career_skill_matrix.json",
+    normalization_path=BASE_DIR / "journey2" / "skill_normalization.json",
 )
 
 class Journey1Answer(BaseModel):
