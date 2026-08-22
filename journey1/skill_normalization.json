@@ -1,0 +1,467 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Normalization layer that maps journey-specific assessment signals to canonical skills defined in career_skill_matrix.json.",
+    "source_of_truth": "career_skill_matrix.json",
+    "target_levels_source": "career_skill_matrix.json",
+    "important_rule": "Mappings provide evidence for canonical skills; they do not redefine canonical skills, target levels, categories, or weights.",
+    "mapping_types": {
+      "exact": "Source signal is the same canonical skill.",
+      "semantic": "Source signal is meaningfully related to a canonical skill and may provide evidence for it.",
+      "diagnostic_only": "Useful diagnostic signal that must not contribute to canonical skill-gap calculation."
+    },
+    "confidence_levels": [
+      "high",
+      "moderate"
+    ]
+  },
+  "career_mappings": {
+    "ui_ux": {
+      "source": "journey_2_skills.json",
+      "mappings": [
+        {
+          "source_skill": "user_research",
+          "canonical_skill": "user_research",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "usability",
+          "canonical_skill": "usability",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "visual_hierarchy",
+          "canonical_skill": "visual_hierarchy",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "interaction_design",
+          "canonical_skill": "interaction_design",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "problem_framing",
+          "canonical_skill": "user_centered_design",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "usability_testing",
+          "canonical_skill": "usability",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "evidence_based_design",
+          "canonical_skill": "user_centered_design",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "design_evaluation",
+          "canonical_skill": "usability",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "iteration",
+          "canonical_skill": "iterative_design",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "feedback",
+          "canonical_skill": null,
+          "mapping_type": "diagnostic_only",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "clarity",
+          "canonical_skill": null,
+          "mapping_type": "diagnostic_only",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "user_outcomes",
+          "canonical_skill": null,
+          "mapping_type": "diagnostic_only",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "problem_solving",
+          "canonical_skill": null,
+          "mapping_type": "diagnostic_only",
+          "confidence": "high"
+        }
+      ]
+    },
+    "development": {
+      "source": "journey_2_skills.json",
+      "mappings": [
+        {
+          "source_skill": "debugging",
+          "canonical_skill": "debugging",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "logical_reasoning",
+          "canonical_skill": "logical_problem_solving",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "conditional_logic",
+          "canonical_skill": "algorithmic_thinking",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "algorithmic_thinking",
+          "canonical_skill": "algorithmic_thinking",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "algorithms",
+          "canonical_skill": "algorithmic_thinking",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "scalability",
+          "canonical_skill": "system_design",
+          "mapping_type": "semantic",
+          "confidence": "moderate"
+        },
+        {
+          "source_skill": "state_reasoning",
+          "canonical_skill": null,
+          "mapping_type": "diagnostic_only",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "root_cause_analysis",
+          "canonical_skill": "debugging",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "software_engineering",
+          "canonical_skill": null,
+          "mapping_type": "diagnostic_only",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "version_control",
+          "canonical_skill": "git",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "collaboration",
+          "canonical_skill": null,
+          "mapping_type": "diagnostic_only",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "problem_solving",
+          "canonical_skill": "logical_problem_solving",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        }
+      ]
+    },
+    "data": {
+      "source": "journey_2_skills.json",
+      "mappings": [
+        {
+          "source_skill": "analytical_thinking",
+          "canonical_skill": "analytical_thinking",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "pattern_recognition",
+          "canonical_skill": "analytical_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "data_quality",
+          "canonical_skill": "data_quality",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "critical_thinking",
+          "canonical_skill": "critical_thinking",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "anomaly_detection",
+          "canonical_skill": "anomaly_detection",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "data_validation",
+          "canonical_skill": "data_validation",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "data_visualization",
+          "canonical_skill": "data_visualization",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "causal_reasoning",
+          "canonical_skill": "analytical_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "data_interpretation",
+          "canonical_skill": "analytical_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "evidence_based_reasoning",
+          "canonical_skill": "analytical_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "communication",
+          "canonical_skill": null,
+          "mapping_type": "diagnostic_only",
+          "confidence": "high"
+        }
+      ]
+    },
+    "ai": {
+      "source": "journey_2_skills.json",
+      "mappings": [
+        {
+          "source_skill": "training",
+          "canonical_skill": "machine_learning_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "moderate"
+        },
+        {
+          "source_skill": "machine_learning_reasoning",
+          "canonical_skill": "machine_learning_reasoning",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "model_evaluation",
+          "canonical_skill": "model_evaluation",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "generalization",
+          "canonical_skill": "generalization",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "feature_engineering",
+          "canonical_skill": "machine_learning_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "moderate"
+        },
+        {
+          "source_skill": "data_leakage",
+          "canonical_skill": "machine_learning_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "moderate"
+        },
+        {
+          "source_skill": "metrics",
+          "canonical_skill": "model_evaluation",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "diagnostic_reasoning",
+          "canonical_skill": "machine_learning_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "moderate"
+        },
+        {
+          "source_skill": "critical_reasoning",
+          "canonical_skill": "machine_learning_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "moderate"
+        },
+        {
+          "source_skill": "model_monitoring",
+          "canonical_skill": "mlops",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "distribution_shift",
+          "canonical_skill": "mlops",
+          "mapping_type": "semantic",
+          "confidence": "moderate"
+        },
+        {
+          "source_skill": "continuous_improvement",
+          "canonical_skill": "mlops",
+          "mapping_type": "semantic",
+          "confidence": "moderate"
+        },
+        {
+          "source_skill": "evaluation",
+          "canonical_skill": "model_evaluation",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        }
+      ]
+    },
+    "cyber": {
+      "source": "journey_2_skills.json",
+      "mappings": [
+        {
+          "source_skill": "incident_response",
+          "canonical_skill": "incident_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "risk_detection",
+          "canonical_skill": "risk_detection",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "threat_reasoning",
+          "canonical_skill": "security_risk_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "social_engineering_awareness",
+          "canonical_skill": "social_engineering_awareness",
+          "mapping_type": "exact",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "security_decision_making",
+          "canonical_skill": "security_risk_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "risk_assessment",
+          "canonical_skill": "security_risk_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "access_control",
+          "canonical_skill": null,
+          "mapping_type": "diagnostic_only",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "containment",
+          "canonical_skill": "incident_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "forensic_awareness",
+          "canonical_skill": "incident_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "moderate"
+        },
+        {
+          "source_skill": "threat_detection",
+          "canonical_skill": "risk_detection",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "incident_handling",
+          "canonical_skill": "incident_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "risk_management",
+          "canonical_skill": "security_risk_reasoning",
+          "mapping_type": "semantic",
+          "confidence": "high"
+        },
+        {
+          "source_skill": "security_awareness",
+          "canonical_skill": "security_awareness",
+          "mapping_type": "exact",
+          "confidence": "high"
+        }
+      ]
+    }
+  },
+  "diagnostic_only": {
+    "ui_ux": [
+      "feedback",
+      "clarity",
+      "user_outcomes",
+      "problem_solving"
+    ],
+    "development": [
+      "state_reasoning",
+      "software_engineering",
+      "collaboration"
+    ],
+    "data": [
+      "communication"
+    ],
+    "ai": [],
+    "cyber": [
+      "access_control"
+    ]
+  },
+  "canonical_skills_without_j2_direct_evidence": {
+    "ui_ux": [
+      "prototyping_tools",
+      "figma"
+    ],
+    "development": [
+      "api_development",
+      "javascript",
+      "python",
+      "docker"
+    ],
+    "data": [
+      "sql",
+      "pandas"
+    ],
+    "ai": [
+      "prediction",
+      "pytorch",
+      "tensorflow",
+      "python"
+    ],
+    "cyber": [
+      "network_security"
+    ]
+  },
+  "question_mapping_policy": {
+    "rule": "Only mapped signals that are genuinely evidenced by a question should contribute to canonical skill evidence.",
+    "important_note": "A normalized mapping does not by itself prove that every question containing the source signal provides valid evidence. Question-to-signal validity must be reviewed separately.",
+    "assessment_evidence_warning": "Assessment-derived skill levels represent assessment evidence, not complete real-world skill certification."
+  }
+}

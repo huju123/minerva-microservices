@@ -2,9 +2,11 @@ from typing import Dict, List
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
+from journey1.skill_gap import build_final_result
 
 import traceback
-
+import json
+import tempfile
 from assessment.scoring import process_assessment
 from career.career_matching import generate_career_matches
 from career.top_careers import generate_top_career_result
@@ -168,12 +170,12 @@ def journey1_complete(request: Journey1Request):
         raise HTTPException(status_code=404, detail="Assessment not found.")
 
     answers_dict = {a.question_id: a.selected_option for a in request.answers}
+
     try:
         deterministic_result = evaluate_journey_1(J1_ASSESSMENT, answers_dict)
         context = build_ai_context(J1_ASSESSMENT, deterministic_result)
         ai_result = generate_local_interpretation(context)
 
-        # generate_recommendation() expects ai_result wrapped under "ai_evaluation"
         ai_result_for_recommendation = {"ai_evaluation": ai_result}
 
         recommendation = generate_recommendation(
@@ -182,14 +184,31 @@ def journey1_complete(request: Journey1Request):
             ai_result_for_recommendation
         )
 
-        return {
-            "assessment_id": "minerva_career_discovery_v4",
-            "version": "4.0",
-            "journey": "exploring",
-            "evaluation": deterministic_result,
-            "ai_interpretation": ai_result.get("ai_insights", ai_result),
-            "recommendation": recommendation,
-        }
+        # --- NEW: skill_gap.py needs deterministic_result and
+        # recommendation written to temp files, since it reads
+        # from disk paths rather than accepting dicts directly.
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp_path = Path(tmp_dir)
+
+            exploring_result_path = tmp_path / "exploring_result.json"
+            recommendation_path = tmp_path / "exploring_recommendation.json"
+            output_path = tmp_path / "journey1_final_result.json"
+
+            with exploring_result_path.open("w", encoding="utf-8") as f:
+                json.dump(deterministic_result, f)
+
+            with recommendation_path.open("w", encoding="utf-8") as f:
+                json.dump(recommendation, f)
+
+            final_result = build_final_result(
+                exploring_result_path=exploring_result_path,
+                recommendation_path=recommendation_path,
+                matrix_path=BASE_DIR / "journey1" / "career_skill_matrix.json",
+                normalization_path=BASE_DIR / "journey1" / "skill_normalization.json",
+                output_path=output_path,
+            )
+
+        return final_result
 
     except Exception as e:
         traceback.print_exc()
