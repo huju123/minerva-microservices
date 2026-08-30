@@ -1,5 +1,5 @@
-from preprocessing.remove_whitespace import normalize_whitespace
-from parsing.loaders.field_loaders import load_months_list
+from ..preprocessing.remove_whitespace import normalize_whitespace
+from .loaders.field_loaders import load_months_list
 import re
 
 months = load_months_list()

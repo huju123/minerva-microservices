@@ -1,6 +1,6 @@
 from .loaders.field_loaders import load_certification_keywords_list
-from parsing.education_extractor import extract_education_history
-from parsing.certificate_extractor import extract_certificates
+from .education_extractor import extract_education_history
+from .certificate_extractor import extract_certificates
 import re
 
 def classify_education_certification_lines(text):

@@ -1,8 +1,8 @@
 from .weights_loader import load_score_weights
 from .weights_loader import load_weights_profile
-from parsing.loaders.field_loaders import load_months_list
-from parsing.experience_extractor import extract_experience
-from skills.extract_skills import find_skills_overlap_safe
+from ..parsing.loaders.field_loaders import load_months_list
+from ..parsing.experience_extractor import extract_experience
+from ..skills.extract_skills import find_skills_overlap_safe
 from collections import Counter
 import re
 

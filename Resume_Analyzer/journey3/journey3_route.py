@@ -1,5 +1,5 @@
-from resume_extraction import extract_resume
-from analysis.resume_analysis import analyze_resume
+from ..resume_extraction import extract_resume
+from ..analysis.resume_analysis import analyze_resume
 from .career_selection import select_target_career
 from .json_loader import load_career_skill_matrix
 from .question_generation import generate_route3_questions
@@ -56,6 +56,5 @@ def evaluate_route3_assessment(questions, answers, career):
         
     except Exception as e:
         return {"success": False, "error": str(e)}
-
 
 

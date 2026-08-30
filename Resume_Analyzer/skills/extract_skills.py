@@ -1,6 +1,6 @@
-from skills.skill_loader import load_skill_list
-from skills.skill_loader import load_cannonical_skill_terms_dict
-from skills.skill_loader import load_stack_expansions_dict
+from .skill_loader import load_skill_list
+from .skill_loader import load_cannonical_skill_terms_dict
+from .skill_loader import load_stack_expansions_dict
 import re
 
 skill_categories = {}

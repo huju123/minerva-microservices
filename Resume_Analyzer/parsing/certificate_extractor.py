@@ -1,4 +1,4 @@
-from preprocessing.remove_whitespace import normalize_whitespace
+from ..preprocessing.remove_whitespace import normalize_whitespace
 # from .loaders.field_loaders import load_months_list
 # import re
 

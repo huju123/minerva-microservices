@@ -1,14 +1,24 @@
-from preprocessing import clean_text
-from extractors import file_format_router
-from parsing.section_segmentor import segment_resume 
-from contact_extractor.personal_info_extractor import extract_personal_info
-from skills.extract_skills import find_skills_overlap_safe
-from parsing.education_extractor import extract_education_history
-from parsing.experience_extractor import extract_experience_info
-from parsing.project_extractor import extract_all_projects
-from parsing.certificate_extractor import extract_certificates
-from parsing.combined_section_handler import classify_education_certification_lines
-from parsing.leadership_extractor import extract_leadership_info
+from .preprocessing import clean_text
+
+from .extractors import file_format_router
+
+from .parsing.section_segmentor import segment_resume
+
+from .contact_extractor.personal_info_extractor import extract_personal_info
+
+from .skills.extract_skills import find_skills_overlap_safe
+
+from .parsing.education_extractor import extract_education_history
+
+from .parsing.experience_extractor import extract_experience_info
+
+from .parsing.project_extractor import extract_all_projects
+
+from .parsing.certificate_extractor import extract_certificates
+
+from .parsing.combined_section_handler import classify_education_certification_lines
+
+from .parsing.leadership_extractor import extract_leadership_info
 
 
 

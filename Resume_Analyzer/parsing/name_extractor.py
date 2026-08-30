@@ -1,5 +1,5 @@
-from .email_extractor import extract_email
-from .phone_extractor import extract_phone_no
+from ..contact_extractor.email_extractor import extract_email
+from ..contact_extractor.phone_extractor import extract_phone_no
 
 def extract_name(header_lines):
     url_keywords = ["github", "linkedin", "www", "http"]

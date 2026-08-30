@@ -1,6 +1,6 @@
 from .loaders.field_loaders import load_months_list
-from preprocessing.remove_whitespace import normalize_whitespace
-from skills.extract_skills import find_skills_overlap_safe
+from ..preprocessing.remove_whitespace import normalize_whitespace
+from ..skills.extract_skills import find_skills_overlap_safe
 import re
 
 months = load_months_list()

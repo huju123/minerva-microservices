@@ -1,6 +1,6 @@
 from .loaders.field_loaders import load_months_list
 from .loaders.field_loaders import load_job_title_keywords_list
-from preprocessing.remove_whitespace import normalize_whitespace
+from ..preprocessing.remove_whitespace import normalize_whitespace
 import re
 
 months = load_months_list()

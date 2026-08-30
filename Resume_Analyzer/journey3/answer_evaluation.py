@@ -1,5 +1,5 @@
-from llm.client import get_structured_llm_response
-from llm.client import normalize_llm_text
+from ..llm.client import get_structured_llm_response
+from ..llm.client import normalize_llm_text
 
 
 def evaluate_route3_answer(question, student_answer, skill_id):

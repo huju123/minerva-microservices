@@ -1,5 +1,5 @@
-from resume_extraction import extract_resume
-from analysis.resume_analysis import analyze_resume
+from .resume_extraction import extract_resume
+from .analysis.resume_analysis import analyze_resume
 
 def evaluate_resume(filepath):
     try:

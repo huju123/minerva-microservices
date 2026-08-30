@@ -43,8 +43,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 sys.path.insert(0, str(BASE_DIR / "resume_analyzer"))
 
-from resume_evaluation import evaluate_resume
-
+from resume_analyzer.resume_evaluation import evaluate_resume
 J1_ASSESSMENT = load_assessment(
     BASE_DIR / "journey1" / "minerva_career_discovery_v4.json"
 )

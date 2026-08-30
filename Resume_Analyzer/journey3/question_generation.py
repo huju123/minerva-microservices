@@ -1,5 +1,5 @@
-from llm.client import get_llm_response
-from llm.client import normalize_llm_text
+from ..llm.client import get_llm_response
+from ..llm.client import normalize_llm_text
 import random
 
 def select_target_skills(career, matrix, num_core=4, num_supporting=1):
@@ -33,4 +33,3 @@ Respond with ONLY the question text, nothing else."""
         questions.append({"skill_id": skill_id, "question": text})
 
     return questions
-
