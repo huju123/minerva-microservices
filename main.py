@@ -1,10 +1,6 @@
 from pathlib import Path
-import sys
 
 BASE_DIR = Path(__file__).resolve().parent
-
-sys.path.insert(0, str(BASE_DIR / "resume_analyzer"))
-
 
 from typing import Dict, List
 from fastapi import UploadFile, File
@@ -41,9 +37,7 @@ app = FastAPI(
 
 BASE_DIR = Path(__file__).resolve().parent
 
-sys.path.insert(0, str(BASE_DIR / "resume_analyzer"))
-
-from resume_analyzer.resume_evaluation import evaluate_resume
+from Resume_Analyzer.resume_evaluation import evaluate_resume
 J1_ASSESSMENT = load_assessment(
     BASE_DIR / "journey1" / "minerva_career_discovery_v4.json"
 )
