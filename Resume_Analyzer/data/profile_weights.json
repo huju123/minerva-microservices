@@ -1,0 +1,17 @@
+{
+    "job_weights" : {
+        "skills" : {"bucket_max" : 35, "k" : 16.00},
+        "experience_leadership" : {"bucket_max" : 35, "k" : 1.13},
+        "projects" : {"bucket_max" : 25, "k" : 0.82},
+        "additional_skills" : {"bucket_max" : 5, "k" : 1.67},
+        "certifications": {"bucket_max" : 8, "k" : 2}
+    },
+
+    "internship_weights" : {
+        "skills" : {"bucket_max" : 35, "k" : 22.00},
+        "experience_leadership" : {"bucket_max" : 15, "k" : 0.33},
+        "projects" : {"bucket_max" : 40, "k" : 0.86},
+        "additional_skills" : {"bucket_max" : 10, "k" : 1.67},
+        "certifications": {"bucket_max" : 8, "k" : 2}
+    }
+}

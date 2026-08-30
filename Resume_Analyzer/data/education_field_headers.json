@@ -1,0 +1,6 @@
+{
+    "education_field_headers": {
+        "courses": ["relevant courses", "coursework", "courses"],
+        "honors": ["honors", "awards", "achievements"]
+    }
+}

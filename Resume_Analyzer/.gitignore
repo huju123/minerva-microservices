@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Ignore node_modules directory
+node_modules/
+# Ignore log files
+*.log
+# Ignore environment files
+.env
+*.env
+.env.*
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

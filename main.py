@@ -1,9 +1,18 @@
-from typing import Dict, List
+from pathlib import Path
+import sys
 
+BASE_DIR = Path(__file__).resolve().parent
+
+sys.path.insert(0, str(BASE_DIR / "resume_analyzer"))
+
+
+from typing import Dict, List
+from fastapi import UploadFile, File
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from journey1.skill_gap import build_final_result
 
+import shutil
 import traceback
 import json
 import tempfile
@@ -13,6 +22,7 @@ from career.top_careers import generate_top_career_result
 from career.career_comparison import generate_comparison_result
 
 from pathlib import Path
+
 
 from journey1.exploring_scoring import load_assessment, evaluate_journey_1
 from journey1.exploring_ai import build_ai_context, generate_local_interpretation
@@ -30,6 +40,10 @@ app = FastAPI(
 )
 
 BASE_DIR = Path(__file__).resolve().parent
+
+sys.path.insert(0, str(BASE_DIR / "resume_analyzer"))
+
+from resume_evaluation import evaluate_resume
 
 J1_ASSESSMENT = load_assessment(
     BASE_DIR / "journey1" / "minerva_career_discovery_v4.json"
@@ -233,3 +247,41 @@ def journey2_submit(request: Journey2SubmitRequest):
         return J2_ENGINE.score_assessment(career=request.career, answers=request.answers)
     except (InvalidCareerError, InvalidAnswersError) as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+@app.post("/resume/evaluate")
+async def resume_evaluate(file: UploadFile = File(...)):
+
+    allowed_extensions = {".pdf", ".docx"}
+    file_ext = Path(file.filename).suffix.lower()
+
+    if file_ext not in allowed_extensions:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unsupported file type '{file_ext}'. Only PDF and DOCX are allowed."
+        )
+
+    try:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp_path = Path(tmp_dir) / file.filename
+
+            with tmp_path.open("wb") as buffer:
+                shutil.copyfileobj(file.file, buffer)
+
+            result = evaluate_resume(str(tmp_path))
+
+        if not result.get("success"):
+            raise HTTPException(
+                status_code=400,
+                detail=f"Resume evaluation failed: {result.get('error', 'Unknown error')}"
+            )
+
+        return result
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Resume evaluation error: {str(e)}"
+        )

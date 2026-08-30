@@ -1,0 +1,623 @@
+{
+    "cannonical_terms": {
+
+                    
+              "React": [
+                "React",
+                "React.js"
+              ],
+              "Angular": [
+                "Angular",
+                "AngularJS"
+              ],
+              "Vue.js": [
+                "Vue.js"
+              ],
+              "Svelte": [
+                "Svelte"
+              ],
+              "Next.js": [
+                "Next.js"
+              ],
+              "Node.js": [
+                "Node.js"
+              ],
+              "Django": [
+                "Django"
+              ],
+              "Flask": [
+                "Flask"
+              ],
+              "Spring Boot": [
+                "Spring Boot"
+              ],
+              "Express.js": [
+                "Express.js"
+              ],
+              "Ruby on Rails": [
+                "Ruby on Rails",
+                "Rails"
+              ],
+              "Laravel": [
+                "Laravel"
+              ],
+              "ASP.NET": [
+                "ASP.NET",
+                "ASP.NET Core",
+                ".NET",
+                ".NET Core",
+                ".NET Framework"
+              ],
+              "React Native": [
+                "React Native"
+              ],
+              "Flutter": [
+                "Flutter"
+              ],
+              "Xamarin": [
+                "Xamarin"
+              ],
+              "SwiftUI": [
+                "SwiftUI"
+              ],
+              "Jetpack Compose": [
+                "Jetpack Compose"
+              ],
+              "JavaFX": [
+                "JavaFX"
+              ],
+              "TensorFlow": [
+                "TensorFlow"
+              ],
+              "PyTorch": [
+                "PyTorch"
+              ],
+              "Keras": [
+                "Keras"
+              ],
+              "Scikit-learn": [
+                "Scikit-learn",
+                "sklearn"
+              ],
+              "Pandas": [
+                "Pandas"
+              ],
+              "NumPy": [
+                "NumPy"
+              ],
+              "Matplotlib": [
+                "Matplotlib"
+              ],
+              "Seaborn": [
+                "Seaborn"
+              ],
+              "Plotly": [
+                "Plotly"
+              ],
+              "LangChain": [
+                "LangChain"
+              ],
+              "Transformers": [
+                "Transformers",
+                "Hugging Face Transformers"
+              ],
+              "CSS Frameworks": [
+                "CSS Frameworks",
+                "Bootstrap",
+                "Tailwind CSS"
+              ],
+              "Python": [
+                "Python"
+              ],
+              "Java": [
+                "Java"
+              ],
+              "C++": [
+                "C++"
+              ],
+              "C#": [
+                "C#"
+              ],
+              "C": [
+                "C"
+              ],
+              "Rust": [
+                "Rust"
+              ],
+              "Swift": [
+                "Swift"
+              ],
+              "Kotlin": [
+                "Kotlin"
+              ],
+              "Go": [
+                "Go",
+                "Golang"
+              ],
+              "Ruby": [
+                "Ruby"
+              ],
+              "PHP": [
+                "PHP"
+              ],
+              "Perl": [
+                "Perl"
+              ],
+              "R": [
+                "R"
+              ],
+              "Scala": [
+                "Scala"
+              ],
+              "Haskell": [
+                "Haskell"
+              ],
+              "Elixir": [
+                "Elixir"
+              ],
+              "Clojure": [
+                "Clojure"
+              ],
+              "Deno": [
+                "Deno"
+              ],
+              "TypeScript": [
+                "TypeScript"
+              ],
+              "JavaScript": [
+                "JavaScript",
+                "JS"
+              ],
+              "Dart": [
+                "Dart"
+              ],
+              "HTML": [
+                "HTML5",
+                "HTML"
+              ],
+              "CSS": [
+                "CSS3",
+                "CSS"
+              ],
+              "SASS": [
+                "SASS",
+                "SCSS"
+              ],
+              "Shell Scripting": [
+                "Bash",
+                "PowerShell",
+                "Shell Scripting"
+              ],
+
+
+                "PostgreSQL": [
+                    "PostgreSQL"
+                  ],
+                  "MySQL": [
+                    "MySQL"
+                  ],
+                  "MongoDB": [
+                    "MongoDB"
+                  ],
+                  "Redis": [
+                    "Redis"
+                  ],
+                  "Elasticsearch": [
+                    "Elasticsearch"
+                  ],
+                  "NoSQL": [
+                    "NoSQL"
+                  ],
+                  "SQL": [
+                    "SQL"
+                  ],
+                  "AWS": [
+                    "AWS",
+                    "Amazon Web Services"
+                  ],
+                  "Azure": [
+                    "Azure",
+                    "Microsoft Azure"
+                  ],
+                  "GCP": [
+                    "GCP",
+                    "Google Cloud Platform"
+                  ],
+                  "Cloud Computing": [
+                    "Cloud Computing",
+                    "Cloud Infrastructure"
+                  ],
+                  "Serverless Computing": [
+                    "Serverless Computing",
+                    "Serverless",      
+                    "Azure Functions",
+                    "Google Cloud Functions"
+                  ],
+                    "AWS Lambda" : [
+                        "AWS Lambda"
+                    ],
+        
+                  "Infrastructure as Code": [
+                    "Infrastructure as Code"
+                  ],
+                  "Containerization": [
+                    "Containerization"
+                  ],
+                  "Orchestration": [
+                    "Orchestration"
+                  ],
+                  "CI/CD": [
+                    "CI/CD",
+                    "CI/CD Pipelines",
+                    "Jenkins",
+                    "GitHub Actions",
+                    "GitLab CI",
+                    "CircleCI"
+                  ],
+                  "DevOps": [
+                    "DevOps",
+                    "DevOps Engineering",
+                    "Site Reliability Engineering",
+                    "SRE"
+                  ],
+                  "Docker": [
+                    "Docker"
+                  ],
+                  "Kubernetes": [
+                    "Kubernetes",
+                    "K8s"
+                  ],
+                  "Terraform": [
+                    "Terraform"
+                  ],
+                  "Ansible": [
+                    "Ansible"
+                  ],
+                  "Puppet": [
+                    "Puppet"
+                  ],
+                  "Chef": [
+                    "Chef"
+                  ],
+                  "Git": [
+                    "Git",
+                    "GitHub",
+                    "Bitbucket"
+                  ],
+                  
+                    "Jira":[
+                        "Jira"
+                    ],
+                    "Confluence":[
+                        "Confluence"
+                    ],
+                 
+                    "Figma":[
+                        "Figma"
+                    ],
+
+                    "Adobe XD":[
+                        "Adobe XD"
+                    ],
+
+                    "Photoshop":[
+                        "Photoshop",
+                        "Adobe Photoshop"
+                    ],
+        
+                    "Illustrator":[
+                        "Illustrator",
+                        "Adobe Illustrator"
+                    ],
+                 
+                    "Tableau": [
+                    "Tableau"
+                     ],
+                "Power BI" : [
+                    "Power BI"
+                        ],
+                  
+                    "Splunk" : [
+                        "Splunk"
+                    ],
+                    "Datadog" : [
+                        "Datadog"
+                    ],
+                    "New Relic" : [
+                        "New Relic"
+                    ],
+                    "Fluentd" : [
+                        "Fluentd"
+                    ],
+                    "Prometheus" : [
+                        "Prometheus"
+                    ],
+                    "Grafana" : [
+                        "Grafana"
+                    ],
+                
+                    "Nginx" :[
+                        "Nginx"
+                    ],
+                    "Apache" :[
+                        "Apache"
+                    ],
+                    "Tomcat" :[
+                    "Tomcat"
+                    ],
+
+                    "IIS" :[
+                        "IIS",
+                    "Internet Information Server"
+                    ],
+                "Firebase": [
+                "Firebase"
+                  ],
+
+                
+              "Mobile Application Development": [
+                "Mobile Development",
+                "Mobile Application Development",
+                "Android Development",
+                "iOS Development"
+              ],
+              "Full Stack Development": [
+                "Full Stack Development",
+                  "Full Stack"
+              ],
+              "Machine Learning": [
+                "ML",
+                "AI/ML",
+                "Machine Learning",
+                "Deep Learning",
+                "Reinforcement Learning"
+              ],
+              "Web Development": [
+                "Web Development"
+              ],
+                "Backend Development" : [
+                    "Backend Development",
+                    "Backend Problem Solving"
+                ],
+              "Data Analysis": [
+                "Data Analysis",
+                "Data Wrangling & Visualisation"
+              ],
+              "Prompt Engineering": [
+                "Prompt Engineering"
+              ],
+              "Graphic Design": [
+                  "Graphic Design",
+                "Graphic Designing"
+              ],
+              "Workflow Automation": [
+                "Workflow Automation"
+              ],
+            
+              "Natural Language Processing": [
+                "Natural Language Processing"
+              ],
+              "Computer Vision": [
+                "Computer Vision"
+              ],
+              "Big Data Processing": [
+                "Big Data Processing"
+              ],
+              "Data Engineering": [
+                "Data Engineering"
+              ],
+              "UI/UX Design": [
+                "UI/UX Design",
+                "UI Design",
+                "UX Design",
+                "Responsive Design"
+              ],
+              "Test Automation": [
+                "Test Automation",
+                "Unit Testing",
+                "Integration Testing"
+              ],
+              "Database Design": [
+                "Database Design"
+              ],
+              "System Design": [
+                "System Design",
+                "Software Architecture",
+                "Microservices Architecture"
+              ],
+              "API Development": [
+                "API Development",
+                "REST API Development",
+                "API",
+                "REST API",
+                "RESTful APIs"
+              ],
+              "GraphQL": [
+                "GraphQL"
+              ],
+              "WebSockets": [
+                "WebSockets"
+              ],
+              "gRPC": [
+                "gRPC"
+              ],
+              "Authentication & Authorization": [
+                  "Authentication & Authorization",
+                "OAuth",
+                "JWT",
+                "SAML",
+                "SSO"
+              ],
+              "Message Queuing": [
+                "Message Queuing",
+                "Kafka",
+                "RabbitMQ"
+              ],
+            
+        
+            "Agile Methodologies": [
+                "Agile Methodologies",
+                "Scrum",
+                "Kanban"
+              ],
+              "Linux": [
+                "Linux",
+                "Unix"
+              ],
+              "Windows": [
+                "Windows"
+              ],
+              "MacOS": [
+                "MacOS"
+              ],
+              "Penetration Testing": [
+                "Penetration Testing",
+                "Vulnerability Assessment"
+              ],
+              "Network Security": [
+                "Network Security"
+              ],
+              "Cybersecurity": [
+                "Cybersecurity"
+              ],
+              "Encryption": [
+                "Encryption"
+              ],
+              "Firewall": [
+                "Firewall"
+              ],
+              "VPN": [
+                "VPN"
+              ],
+
+        
+          "Communication": [
+            "Communication",
+            "Strong Communication",
+            "Verbal Communication",
+            "Written Communication"
+          ],
+          "Collaboration": [
+            "Collaboration",
+            "Team Collaboration",
+            "Cross-functional Collaboration"
+          ],
+          "Leadership": [
+            "Leadership",
+            "Team Leadership",
+            "Project Leadership"
+          ],
+          "Project Management": [
+            "Project Management"
+          ],
+          "Time Management": [
+            "Time Management"
+          ],
+          "Problem Solving": [
+            "Problem Solving"
+          ],
+          "Critical Thinking": [
+            "Critical Thinking",
+            "Analytical Thinking"
+          ],
+          "Adaptability": [
+            "Adaptability",
+            "Flexibility"
+          ],
+          "Innovation": [
+            "Creativity",
+            "Innovation"
+          ],
+          "Organization": [
+            "Attention to Detail",
+            "Organization"
+          ],
+          "Prioritization": [
+            "Multitasking",
+            "Prioritization"
+          ],
+          "Decision Making": [
+            "Decision Making"
+          ],
+          "Conflict Resolution": [
+            "Conflict Resolution",
+            "Negotiation"
+          ],
+          "Presentation": [
+            "Presentation",
+            "Presentation Skills",
+            "Public Speaking"
+          ],
+          "Interpersonal Skills": [
+            "Interpersonal Skills",
+            "Emotional Intelligence",
+            "Empathy"
+          ],
+          "Mentoring": [
+            "Mentoring",
+            "Coaching"
+          ],
+          "Stakeholder Management": [
+            "Stakeholder Management",
+            "Client Relations"
+          ],
+          "Customer Service": [
+            "Customer Service"
+          ],
+          "Self-Motivation": [
+              "Self Motivan",
+            "Self-motivation",
+            "Proactive"
+          ],
+          "Results Orientation": [
+              "Results Orienctation",
+            "Results-oriented"
+          ],
+          "Strategic Thinking": [
+            "Strategic Thinking"
+          ],
+          "Learning Agility": [
+              "Learning Agility",
+            "Continuous Learning",
+            "Growth Mindset"
+          ],
+          "Language Skills": [
+              "Language Skill",
+            "Fluent in English",
+            "Bilingual",
+            "Multilingual"
+          ],
+        "Logstash":[
+            "Logstash"
+        ],
+        "Kibana": [
+            "Kibana"
+        ],
+        "Kali Linux":[
+            "Kali Linux",
+            "kali"
+        ],
+        "Parrot OS":[
+            "Parrot OS"
+        ],
+        "Metasploit":[
+            "Metasploit"
+        ],
+        "Wireshark":[
+            "Wireshark"
+        ],
+        "Nmap":[
+            "Nmap"
+        ],
+        "Burp Suite":[
+            "Burp Suite"
+        ],
+        "John the Ripper":[
+            "John the Ripper"
+        ]
+    }
+}
+
+
+
+

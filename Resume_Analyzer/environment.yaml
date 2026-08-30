@@ -1,0 +1,14 @@
+name: resume-analyzer
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - jupyterlab
+  - pip:
+      # --- Resume Analyzer / Skill Extraction ---
+      - pymupdf
+      - python-docx
+      - spacy
+      - groq
+      - python-dotenv

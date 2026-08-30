@@ -1,0 +1,81 @@
+
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Single source of truth for required skill levels per career. All journeys use this matrix as the single source of truth for career target skill levels. Journey-specific engines provide current skill evidence.",
+    "level_scale": {
+      "1": "Beginner",
+      "2": "Novice",
+      "3": "Intermediate",
+      "4": "Advanced",
+      "5": "Expert"
+    }
+  },
+  "careers": {
+    "ui_ux": {
+      "career_name": "UI/UX Design",
+      "required_skills": {
+        "user_centered_design": { "target_level": 4, "category": "core", "weight": 1.0 },
+        "user_research": { "target_level": 3, "category": "core", "weight": 0.9 },
+        "usability": { "target_level": 4, "category": "core", "weight": 1.0 },
+        "interaction_design": { "target_level": 3, "category": "core", "weight": 0.8 },
+        "iterative_design": { "target_level": 3, "category": "supporting", "weight": 0.7 },
+        "visual_hierarchy": { "target_level": 3, "category": "supporting", "weight": 0.7 },
+        "prototyping_tools": { "target_level": 3, "category": "supporting", "weight": 0.8 },
+        "figma": { "target_level": 3, "category": "tool", "weight": 0.6 }
+      }
+    },
+    "development": {
+      "career_name": "Software Development",
+      "required_skills": {
+        "logical_problem_solving": { "target_level": 4, "category": "core", "weight": 1.0 },
+        "algorithmic_thinking": { "target_level": 4, "category": "core", "weight": 1.0 },
+        "debugging": { "target_level": 3, "category": "core", "weight": 0.9 },
+        "api_development": { "target_level": 3, "category": "core", "weight": 0.9 },
+        "javascript": { "target_level": 3, "category": "tool", "weight": 0.7 },
+        "python": { "target_level": 3, "category": "tool", "weight": 0.7 },
+        "git": { "target_level": 3, "category": "tool", "weight": 0.6 },
+        "docker": { "target_level": 2, "category": "supporting", "weight": 0.5 },
+        "system_design": { "target_level": 3, "category": "supporting", "weight": 0.8 }
+      }
+    },
+    "data": {
+      "career_name": "Data & Analytics",
+      "required_skills": {
+        "analytical_reasoning": { "target_level": 4, "category": "core", "weight": 1.0 },
+        "analytical_thinking": { "target_level": 4, "category": "core", "weight": 1.0 },
+        "data_quality": { "target_level": 3, "category": "core", "weight": 0.8 },
+        "critical_thinking": { "target_level": 4, "category": "core", "weight": 0.9 },
+        "anomaly_detection": { "target_level": 3, "category": "core", "weight": 0.7 },
+        "data_validation": { "target_level": 3, "category": "supporting", "weight": 0.7 },
+        "data_visualization": { "target_level": 3, "category": "supporting", "weight": 0.7 },
+        "sql": { "target_level": 3, "category": "tool", "weight": 0.8 },
+        "pandas": { "target_level": 3, "category": "tool", "weight": 0.7 }
+      }
+    },
+    "ai": {
+      "career_name": "AI & Machine Learning",
+      "required_skills": {
+        "machine_learning_reasoning": { "target_level": 4, "category": "core", "weight": 1.0 },
+        "prediction": { "target_level": 3, "category": "core", "weight": 0.8 },
+        "model_evaluation": { "target_level": 3, "category": "core", "weight": 0.8 },
+        "generalization": { "target_level": 3, "category": "core", "weight": 0.7 },
+        "pytorch": { "target_level": 3, "category": "tool", "weight": 0.8 },
+        "tensorflow": { "target_level": 3, "category": "tool", "weight": 0.6 },
+        "mlops": { "target_level": 2, "category": "supporting", "weight": 0.6 },
+        "python": { "target_level": 4, "category": "tool", "weight": 0.9 }
+      }
+    },
+    "cyber": {
+      "career_name": "Cybersecurity",
+      "required_skills": {
+        "security_risk_reasoning": { "target_level": 4, "category": "core", "weight": 1.0 },
+        "risk_detection": { "target_level": 4, "category": "core", "weight": 0.9 },
+        "incident_reasoning": { "target_level": 3, "category": "core", "weight": 0.8 },
+        "security_awareness": { "target_level": 3, "category": "core", "weight": 0.8 },
+        "social_engineering_awareness": { "target_level": 3, "category": "supporting", "weight": 0.6 },
+        "network_security": { "target_level": 3, "category": "supporting", "weight": 0.7 }
+      }
+    }
+  }
+}

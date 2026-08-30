@@ -1,0 +1,235 @@
+{
+    "skills": {
+        
+      "programming_languages": [
+        "Python",
+        "Java",
+        "C++",
+        "C#",
+        "C",
+        "Rust",
+        "Swift",
+        "Kotlin",
+        "Go",
+        "Ruby",
+        "PHP",
+        "Perl",
+        "R",
+        "Scala",
+        "Haskell",
+        "Elixir",
+        "Clojure",
+        "Deno",
+        "TypeScript",
+        "JavaScript",
+        "Dart",
+        "HTML",
+        "CSS",
+        "SASS",
+         "Shell Scripting"   
+      ],
+      "frameworks": [
+        "React",
+        "Angular",
+        "Vue.js",
+        "Svelte",
+        "Next.js",
+        "Node.js",
+        "Django",
+        "Flask",
+        "Spring Boot",
+        "Express.js",
+        "Ruby on Rails",
+        "Laravel",
+        "ASP.NET",
+        "React Native",
+        "Flutter",
+        "Xamarin",
+        "SwiftUI",
+        "Jetpack Compose",
+        "JavaFX",
+        "LangChain",
+        "Transformers",
+        "CSS Frameworks"
+      ],
+        
+        "ml_libraries": [
+            "TensorFlow",
+            "PyTorch",
+            "Keras",
+            "Scikit-learn"
+        ],
+
+        "data_libraries" : [
+
+            
+            "Pandas",
+            "NumPy",
+            "Matplotlib",
+            "Seaborn",
+            "Plotly"
+        ],
+      
+        "design_tools": [
+        "Figma",
+        "Adobe XD",
+        "Photoshop",
+        "Illustrator"
+        ],
+
+        "devops_tools" :[
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Ansible",
+        "Puppet",
+        "Chef",
+        "Nginx",
+        "Apache",
+        "IIS",
+        "Tomcat",
+        "Firebase"
+        ],
+        
+        "bi_and_visualization_tools" :[
+            "Tableau",
+            "Power BI"
+        ],
+
+        "project_tools" :[
+            "Jira",
+            "Confluence",
+            "Git"
+        ],
+
+        "observability_tools" : [
+            "Logstash",
+            "Kibana",
+            "Splunk",
+            "Datadog",
+            "New Relic",
+            "Fluentd",
+            "Prometheus",
+            "Grafana"
+        ],
+        
+      "cloud_and_infrastructure": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "AWS Lambda",
+        "Cloud Computing",
+        "Serverless Computing",
+        "Infrastructure as Code",
+        "Containerization",
+        "Orchestration",
+        "CI/CD",
+        "DevOps"
+      ],
+      "databases": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "Elasticsearch",
+        "NoSQL",
+        "SQL"
+        
+      ],
+        "architecture_and_concepts": [
+            "Database Design",
+            "System Design",
+            "API Development",
+            "GraphQL",
+            "WebSockets",
+            "gRPC",
+            "Authentication & Authorization",
+            "Message Queuing"  
+        ],
+        "security" : [
+            "Penetration Testing",
+            "Network Security",
+            "Cybersecurity",
+            "Encryption",
+            "Firewall",
+            "VPN"
+        ],
+
+        "pentest_tools" : [
+          "Kali Linux",
+            "Parrot OS",
+            "Metasploit",
+            "Wireshark",
+            "Nmap",
+            "Burp Suite",
+            "John the Ripper"
+        ],
+        "specializations": [
+
+            "Mobile Application Development",
+            "Full Stack Development",
+            "Machine Learning",
+            "Web Development",
+            "Data Analysis",
+            "Prompt Engineering",
+            "Backend Development",
+            "Graphic Design",
+            "Workflow Automation",
+            "Shell Scripting",
+            "Natural Language Processing",
+            "Computer Vision",
+            "Big Data Processing",
+            "Data Engineering",
+            "UI/UX Design",
+            "Test Automation"
+        ],
+      "methodologies": [
+        "Agile Methodologies"
+        
+      ],
+      "soft_skills": [
+        "Communication",
+        "Collaboration",
+        "Leadership",
+        "Project Management",
+        "Time Management",
+        "Problem Solving",
+        "Critical Thinking",
+        "Adaptability",
+        "Innovation",
+        "Organization",
+        "Prioritization",
+        "Decision Making",
+        "Conflict Resolution",
+        "Presentation",
+        "Interpersonal Skills",
+        "Mentoring",
+        "Stakeholder Management",
+        "Customer Service",
+        "Self-Motivation",
+        "Results Orientation",
+        "Strategic Thinking",
+        "Learning Agility",
+        "Language Skills"
+      ],
+      "operating_systems": [
+        "Linux",
+        "Windows",
+        "MacOS"
+      ]
+    },
+
+
+    "stack_expansions": {
+    "MERN Stack": ["MongoDB", "Express.js", "React", "Node.js"],
+    "MEAN Stack": ["MongoDB", "Express.js", "Angular", "Node.js"],
+    "LAMP Stack": ["Linux", "Apache", "MySQL", "PHP"],
+    "ELK Stack": ["Elasticsearch", "Logstash","Kibana"]
+    
+  }
+    
+}
+
+
+
+  

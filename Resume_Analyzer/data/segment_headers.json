@@ -1,0 +1,17 @@
+{
+    "section_headers": {
+    "education": ["education", "academic qualification"],
+    "skills": ["skills", "technical skills", "hard skills", "key skills"],
+    "experience": ["experience", "work experience", "relevant experience"],
+    "projects": ["projects", "academic porjects undertaken", "academic project undertaken"],
+    "certifications": ["certifications", "certificates"],
+    "leadership": ["leadership", "leadership experience", "extracurricular experience"],
+    "key strengths": ["strengths", "key strengths", "core strengths"],
+    "education & certification": ["education and certification", "education/certification", "education & certification"],
+    "objective": ["objective", "about me", "introduction", "career objective", "professional summary", "summary"],
+    "certification": ["certification", "certifications", "certificates"],
+    "leadership" : ["leadership", "leadership roles", "leadership experience"],
+    "references" : ["references"]
+    }
+    
+}

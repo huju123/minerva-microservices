@@ -1,0 +1,22 @@
+{
+  "category_weights": {
+    "programming_languages": {"weight": 4},
+    "frameworks": {"weight": 6, "threshold": 3, "padding_fraction": 0.3},
+    "ml_libraries": {"weight": 2},
+    "data_libraries": {"weight": 2},
+    "design_tools": {"weight": 3},
+    "devops_tools": {"weight": 3},
+    "bi_and_visualization_tools": {"weight": 3},
+    "project_tools": {"weight": 3},
+    "observability_tools": {"weight": 3},
+    "cloud_and_infrastructure": {"weight": 5},
+    "databases": {"weight": 3},
+    "architecture_and_concepts": {"weight": 8, "threshold": 3, "padding_fraction": 0.3},
+    "security": {"weight": 5},
+    "specializations": {"weight": 8, "threshold": 3, "padding_fraction": 0.3},
+    "methodologies": {"weight": 2},
+    "soft_skills": {"weight": 3, "threshold": 4, "padding_fraction": 0.2},
+    "operating_systems": {"weight": 4},
+    "pentest_tools": {"weight" : 4}
+  }
+}

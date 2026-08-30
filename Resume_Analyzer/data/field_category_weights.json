@@ -1,0 +1,145 @@
+{
+    "field_weights":{
+        "Development" : {
+            "categories" : {
+                
+            "programming_languages" :  {"weight": 8},
+            "frameworks": {"weight": 10, "threshold": 3, "padding_fraction": 0.1},
+            "devops_tools": {"weight": 4} ,
+            "cloud_and_infrastructure" : {"weight": 4} ,
+            "databases" : {"weight": 6},
+            "architecture_and_concepts" : {"weight": 6} ,
+            "specializations" : {"weight": 8, "threshold" : 4, "padding_fraction": 0.1},
+            "soft_skills" : {"weight": 2, "threshold": 4, "padding_fraction": 0.2},
+            
+            "operating_systems" : {"weight": 1},
+            "methodologies" : {"weight" : 1},
+            "project_tools": {"weight": 1},
+                
+            "data_libraries" : {"weight" : 0},
+            "ml_libraries" : {"weight" : 0},    
+            "security" : {"weight" : 0},
+            "design_tools": {"weight": 0},
+            "bi_and_visualization_tools": {"weight": 0},
+            "pentest_tools": {"weight" : 0},
+            "observability_tools": {"weight": 0}
+            }
+            
+        },
+        "AI and Machine Learning" : {
+            "categories": {
+                
+            "programming_languages" : {"weight": 6, "threshold": 1, "padding_fraction": 0.3} ,
+            "ml_libraries" : {"weight": 10},
+            "frameworks": {"weight": 8, "threshold": 1, "padding_fraction": 0.1},
+            "cloud_and_infrastructure" : {"weight": 5} ,
+            "specializations" : {"weight": 8, "threshold" : 3, "padding_fraction": 0.1 },
+            "soft_skills" : {"weight": 2, "threshold": 4, "padding_fraction": 0.2},
+            
+            "operating_systems" : {"weight": 1},
+            "databases" : {"weight" : 1},
+            
+            "methodologies" : {"weight" : 0},     
+            "security" : {"weight" : 0},
+            "architecture_and_concepts" : {"weight" : 0},
+            "design_tools": {"weight": 0},
+            "devops_tools": {"weight": 0},
+            "bi_and_visualization_tools": {"weight": 0},
+            "project_tools": {"weight": 0},
+            "observability_tools": {"weight": 0},
+            "data_libraries" : {"weight" : 0},
+            "pentest_tools": {"weight" : 0}
+            },
+            "primary_fields" : "ml_libraries",
+            "gate_penalty" : 0.15
+            
+            
+        },
+        "UI/UX" :{
+            "categories" : {
+                
+            "design_tools": {"weight": 10},
+            "specializations" : {"weight": 8, "threshold" : 2, "padding_fraction" : 0.1},
+            "soft_skills" : {"weight": 2, "threshold": 4, "padding_fraction": 0.2},
+            
+            "programming_languages" : {"weight" : 0},
+            "data_libraries" : {"weight" : 0},
+            "ml_libraries" : {"weight" : 0},
+            "frameworks" : {"weight" : 0},
+            "cloud_and_infrastructure" : {"weight" : 0},
+            "databases" : {"weight" : 0},
+            "security" : {"weight" : 0},
+            "operating_systems" : {"weight" : 0},
+            "architecture_and_concepts" : {"weight" : 0},
+            "methodologies" : {"weight" : 0},
+            "devops_tools": {"weight": 0},
+            "bi_and_visualization_tools": {"weight": 0},
+            "project_tools": {"weight": 0},
+            "observability_tools": {"weight": 0},
+            "pentest_tools": {"weight" : 0}
+            },
+            "primary_fields" : "design_tools",
+            "gate_penalty" : 0.15
+            
+            
+            
+        },
+        "Data Analysis" : {
+            "categories" : {
+                
+            "programming_languages" :{"weight": 6, "threshold": 1, "padding_fraction": 0.3} ,
+            "data_libraries" : {"weight": 10},
+            "cloud_and_infrastructure" : {"weight": 5} ,
+            "specializations" : {"weight": 8, "threshold" : 3, "padding_fraction" : 0.1},
+            "bi_and_visualization_tools" : {"weight": 8},
+            "soft_skills" : {"weight": 2, "threshold": 4, "padding_fraction": 0.2},
+            "operating_systems" : {"weight": 1},
+            "databases" : {"weight" : 1},
+            
+            "frameworks" : {"weight" : 0},
+            "architecture_and_concepts" : {"weight" : 0},
+            "security" : {"weight" : 0},
+            "methodologies" : {"weight" : 0},
+            "design_tools": {"weight": 0},
+            "devops_tools": {"weight": 0},
+            "project_tools": {"weight": 0},
+            "observability_tools": {"weight": 0},
+            "ml_libraries" : {"weight" : 0},
+            "pentest_tools": {"weight" : 0}
+            },
+            "primary_fields" : "data_libraries",
+            "gate_penalty" : 0.15
+            
+        },
+        "CyberSecurity": {
+            "categories":{
+
+            "security" : {"weight": 10},
+            "operating_systems" : {"weight": 3},
+            "soft_skills" : {"weight": 2, "threshold": 4, "padding_fraction": 0.2},
+            "programming_languages" : {"weight": 2, "threshold": 3, "padding_fraction": 0.1},
+            "devops_tools": {"weight": 3, "threshold": 3, "padding_fraction": 0.1},
+            "architecture_and_concepts" : {"weight": 4} ,
+            "observability_tools": {"weight": 6, "threshold": 3, "padding_fraction": 0.3},
+            "pentest_tools": {"weight" : 8},
+
+            "data_libraries" : {"weight" : 0},
+            "ml_libraries" : {"weight" : 0},
+            "cloud_and_infrastructure" : {"weight" : 0},
+            "specializations" : {"weight" : 0},
+            "databases" : {"weight" : 0},
+            "frameworks" : {"weight" : 0},
+            "methodologies" : {"weight" : 0},
+            "design_tools": {"weight": 0},
+            "bi_and_visualization_tools": {"weight": 0},
+            "project_tools": {"weight": 0}
+            
+            },
+            "primary_fields" : "security",
+            "gate_penalty" : 0.15
+            
+        }
+    }
+}
+
+
