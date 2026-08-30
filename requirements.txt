@@ -1,9 +1,19 @@
+# fastapi
+# uvicorn[standard]
+# pydantic
+# pymupdf
+# python-docx
+# spacy
+# groq
+# python-dotenv
+# https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+
 fastapi
 uvicorn[standard]
 pydantic
 pymupdf
 python-docx
-spacy
+spacy==3.7.5
 groq
 python-dotenv
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
