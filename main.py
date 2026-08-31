@@ -24,6 +24,11 @@ from journey1.exploring_scoring import load_assessment, evaluate_journey_1
 from journey1.exploring_ai import build_ai_context, generate_local_interpretation
 from journey1.exploring_recommendation import generate_recommendation
 
+from Resume_Analyzer.journey3.journey3_route import (
+    run_route3_assessment,
+    evaluate_route3_assessment
+)
+
 from journey2.journey_2_engine import (
     build_engine,
     InvalidCareerError,
@@ -91,6 +96,12 @@ class CareerCompareRequest(BaseModel):
         ...,
         description="Dictionary containing category names and percentage scores."
     )
+
+class Route3SubmitRequest(BaseModel):
+    questions: list
+    answers: list
+    career: str
+
 
 
 @app.get("/")
@@ -277,4 +288,69 @@ async def resume_evaluate(file: UploadFile = File(...)):
         raise HTTPException(
             status_code=500,
             detail=f"Resume evaluation error: {str(e)}"
+        )
+
+@app.post("/route3/start")
+async def route3_start(file: UploadFile = File(...)):
+
+    allowed_extensions = {".pdf", ".docx"}
+    file_ext = Path(file.filename).suffix.lower()
+
+    if file_ext not in allowed_extensions:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unsupported file type '{file_ext}'. Only PDF and DOCX are allowed."
+        )
+
+    try:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp_path = Path(tmp_dir) / file.filename
+
+            with tmp_path.open("wb") as buffer:
+                shutil.copyfileobj(file.file, buffer)
+
+            result = run_route3_assessment(str(tmp_path))
+
+        if not result.get("success"):
+            raise HTTPException(
+                status_code=400,
+                detail=f"Route 3 start failed: {result.get('error', 'Unknown error')}"
+            )
+
+        return result
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Route 3 start error: {str(e)}"
+        )
+
+
+@app.post("/route3/submit")
+def route3_submit(request: Route3SubmitRequest):
+    try:
+        result = evaluate_route3_assessment(
+            request.questions,
+            request.answers,
+            request.career
+        )
+
+        if not result.get("success"):
+            raise HTTPException(
+                status_code=400,
+                detail=f"Route 3 evaluation failed: {result.get('error', 'Unknown error')}"
+            )
+
+        return result
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Route 3 submit error: {str(e)}"
         )
