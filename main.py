@@ -24,6 +24,11 @@ from journey1.exploring_scoring import load_assessment, evaluate_journey_1
 from journey1.exploring_ai import build_ai_context, generate_local_interpretation
 from journey1.exploring_recommendation import generate_recommendation
 
+from Resume_Analyzer.llm.interview import (
+    generate_interview_questions,
+    evaluate_interview_answers
+)
+
 from Resume_Analyzer.journey3.journey3_route import (
     run_route3_assessment,
     evaluate_route3_assessment
@@ -107,6 +112,17 @@ class ChatMessageRequest(BaseModel):
     skill_profile: list
     conversation_history: list = []
     career: str | None = None
+
+class InterviewStartRequest(BaseModel):
+    target_role: str
+    skill_profile: list
+    num_questions: int = 5
+
+
+class InterviewEvaluateRequest(BaseModel):
+    questions: list
+    answers: list
+    target_role: str
 
 
 
@@ -386,4 +402,66 @@ def chat_message(request: ChatMessageRequest):
         raise HTTPException(
             status_code=500,
             detail=f"Chat error: {str(e)}"
+        )
+
+@app.post("/interview/start")
+def interview_start(request: InterviewStartRequest):
+    try:
+        result = generate_interview_questions(
+            target_role=request.target_role,
+            skill_profile=request.skill_profile,
+            num_questions=request.num_questions
+        )
+
+        if not result.get("success"):
+            raise HTTPException(
+                status_code=400,
+                detail=f"Interview generation failed: {result.get('error', 'Unknown error')}"
+            )
+
+        return result
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Interview start error: {str(e)}"
+        )
+
+
+@app.post("/interview/evaluate")
+def interview_evaluate(request: InterviewEvaluateRequest):
+    try:
+        questions_text = "\n".join(
+            f"{i+1}. {q}"
+            for i, q in enumerate(request.questions)
+        )
+        answers_text = "\n".join(
+            f"{i+1}. {a}"
+            for i, a in enumerate(request.answers)
+        )
+
+        result = evaluate_interview_answers(
+            question=questions_text,
+            student_answer=answers_text,
+            target_role=request.target_role
+        )
+
+        if not result.get("success"):
+            raise HTTPException(
+                status_code=400,
+                detail=f"Interview evaluation failed: {result.get('error', 'Unknown error')}"
+            )
+
+        return result
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Interview evaluate error: {str(e)}"
         )
