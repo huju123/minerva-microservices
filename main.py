@@ -18,7 +18,7 @@ from career.top_careers import generate_top_career_result
 from career.career_comparison import generate_comparison_result
 
 from pathlib import Path
-
+from Resume_Analyzer.llm.chatbot import handle_chat_message
 
 from journey1.exploring_scoring import load_assessment, evaluate_journey_1
 from journey1.exploring_ai import build_ai_context, generate_local_interpretation
@@ -101,6 +101,12 @@ class Route3SubmitRequest(BaseModel):
     questions: list
     answers: list
     career: str
+
+class ChatMessageRequest(BaseModel):
+    message: str
+    skill_profile: list
+    conversation_history: list = []
+    career: str | None = None
 
 
 
@@ -353,4 +359,31 @@ def route3_submit(request: Route3SubmitRequest):
         raise HTTPException(
             status_code=500,
             detail=f"Route 3 submit error: {str(e)}"
+        )
+
+@app.post("/chat/message")
+def chat_message(request: ChatMessageRequest):
+    try:
+        result = handle_chat_message(
+            user_message=request.message,
+            skill_profile=request.skill_profile,
+            conversation_history=request.conversation_history,
+            career=request.career
+        )
+
+        if not result.get("success"):
+            raise HTTPException(
+                status_code=400,
+                detail=f"Chat failed: {result.get('error', 'Unknown error')}"
+            )
+
+        return result
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Chat error: {str(e)}"
         )
