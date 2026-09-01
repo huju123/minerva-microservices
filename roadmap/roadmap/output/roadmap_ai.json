@@ -1,0 +1,536 @@
+{
+  "career": "ai",
+  "goal": null,
+  "starting_level": null,
+  "target_level": null,
+  "learning_objectives": [
+    {
+      "skill": "Machine Learning Reasoning",
+      "priority": "low"
+    }
+  ],
+  "phases": [
+    {
+      "phase": 1,
+      "title": "Foundations",
+      "objectives": [
+        "Machine Learning Reasoning"
+      ],
+      "resources": [
+        "ai_ml_001",
+        "ai_core_supervised_and_unsupervised_learning_concepts",
+        "ai_understand_neural_network_structure_training_and_evaluation",
+        "ai_prediction_001"
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Advanced Reasoning",
+      "objectives": [
+        "Machine Learning Reasoning"
+      ],
+      "resources": [
+        "ai_advanced_machine_learning_reasoning",
+        "ai_analyze_model_assumptions_limitations_generalization_and_trade_offs",
+        "ai_mlops_001",
+        "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization"
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Job Readiness",
+      "objectives": [
+        "Machine Learning Reasoning"
+      ],
+      "resources": [
+        "ai_job_002",
+        "ai_job_003"
+      ]
+    }
+  ],
+  "certifications": [
+    "ai_cert_001"
+  ],
+  "job_preparation": [],
+  "recommended_jobs": [],
+  "timeline": {
+    "total_duration_weeks": 41,
+    "hours_per_week": 8.0,
+    "total_estimated_hours": 325,
+    "weeks": [
+      {
+        "week": 1,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_ml_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Started Google Machine Learning Crash Course"
+      },
+      {
+        "week": 2,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_ml_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Google Machine Learning Crash Course"
+      },
+      {
+        "week": 3,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_ml_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Google Machine Learning Crash Course"
+      },
+      {
+        "week": 4,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_ml_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Google Machine Learning Crash Course"
+      },
+      {
+        "week": 5,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_ml_001",
+          "ai_core_supervised_and_unsupervised_learning_concepts"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished ML Crash Course, started Machine Learning Fundamentals"
+      },
+      {
+        "week": 6,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_core_supervised_and_unsupervised_learning_concepts"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Machine Learning Fundamentals"
+      },
+      {
+        "week": 7,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_core_supervised_and_unsupervised_learning_concepts"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Machine Learning Fundamentals"
+      },
+      {
+        "week": 8,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_core_supervised_and_unsupervised_learning_concepts"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Machine Learning Fundamentals"
+      },
+      {
+        "week": 9,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_core_supervised_and_unsupervised_learning_concepts",
+          "ai_understand_neural_network_structure_training_and_evaluation"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Machine Learning Fundamentals, started Neural Network Fundamentals"
+      },
+      {
+        "week": 10,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_understand_neural_network_structure_training_and_evaluation"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Neural Network Fundamentals"
+      },
+      {
+        "week": 11,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_understand_neural_network_structure_training_and_evaluation"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Neural Network Fundamentals"
+      },
+      {
+        "week": 12,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_understand_neural_network_structure_training_and_evaluation",
+          "ai_prediction_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Neural Network Fundamentals, started Supervised Learning"
+      },
+      {
+        "week": 13,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_prediction_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Supervised Learning"
+      },
+      {
+        "week": 14,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_prediction_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Supervised Learning"
+      },
+      {
+        "week": 15,
+        "focus": [
+          "Foundations"
+        ],
+        "resources": [
+          "ai_prediction_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Supervised Learning"
+      },
+      {
+        "week": 16,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_advanced_machine_learning_reasoning"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Started Advanced Machine Learning Reasoning"
+      },
+      {
+        "week": 17,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_advanced_machine_learning_reasoning"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced Machine Learning Reasoning"
+      },
+      {
+        "week": 18,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_advanced_machine_learning_reasoning"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced Machine Learning Reasoning"
+      },
+      {
+        "week": 19,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_advanced_machine_learning_reasoning"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced Machine Learning Reasoning"
+      },
+      {
+        "week": 20,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_advanced_machine_learning_reasoning"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced Machine Learning Reasoning"
+      },
+      {
+        "week": 21,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_advanced_machine_learning_reasoning",
+          "ai_analyze_model_assumptions_limitations_generalization_and_trade_offs"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Advanced Machine Learning Reasoning, started Advanced ML Reasoning"
+      },
+      {
+        "week": 22,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_analyze_model_assumptions_limitations_generalization_and_trade_offs"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced ML Reasoning"
+      },
+      {
+        "week": 23,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_analyze_model_assumptions_limitations_generalization_and_trade_offs"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced ML Reasoning"
+      },
+      {
+        "week": 24,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_analyze_model_assumptions_limitations_generalization_and_trade_offs"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced ML Reasoning"
+      },
+      {
+        "week": 25,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_analyze_model_assumptions_limitations_generalization_and_trade_offs"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Advanced ML Reasoning"
+      },
+      {
+        "week": 26,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_mlops_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Started MLOps Concepts"
+      },
+      {
+        "week": 27,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_mlops_001",
+          "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished MLOps Concepts, started Advanced ML Case Study"
+      },
+      {
+        "week": 28,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced ML Case Study"
+      },
+      {
+        "week": 29,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced ML Case Study"
+      },
+      {
+        "week": 30,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced ML Case Study"
+      },
+      {
+        "week": 31,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced ML Case Study"
+      },
+      {
+        "week": 32,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced ML Case Study"
+      },
+      {
+        "week": 33,
+        "focus": [
+          "Advanced Reasoning"
+        ],
+        "resources": [
+          "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced ML Case Study"
+      },
+      {
+        "week": 34,
+        "focus": [
+          "Advanced Reasoning",
+          "Job Readiness",
+          "Certification"
+        ],
+        "resources": [
+          "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization",
+          "ai_job_002",
+          "ai_job_003",
+          "ai_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Advanced ML Case Study, added job prep, started certification"
+      },
+      {
+        "week": 35,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ai_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp Machine Learning with Python"
+      },
+      {
+        "week": 36,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ai_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp Machine Learning with Python"
+      },
+      {
+        "week": 37,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ai_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp Machine Learning with Python"
+      },
+      {
+        "week": 38,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ai_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp Machine Learning with Python"
+      },
+      {
+        "week": 39,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ai_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp Machine Learning with Python"
+      },
+      {
+        "week": 40,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ai_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp Machine Learning with Python"
+      },
+      {
+        "week": 41,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ai_cert_001"
+        ],
+        "estimated_hours": 5,
+        "milestone": "Completed freeCodeCamp Machine Learning with Python"
+      }
+    ]
+  },
+  "meta": {
+    "plan_source": "groq",
+    "timeline_source": "groq",
+    "plan_fallback_reason": null,
+    "timeline_fallback_reason": null,
+    "engine_mode": "groq_with_module_fallbacks",
+    "validation": {
+      "is_valid": true,
+      "errors": [],
+      "warnings": []
+    }
+  }
+}

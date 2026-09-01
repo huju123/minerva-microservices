@@ -1,0 +1,5558 @@
+{
+  "_meta": {
+    "version": "1.1",
+    "description": "Expanded MINERVA fixed resource knowledge base for deterministic metadata retrieval.",
+    "source_policy": "Fixed curated resources only. Roadmap generation must not invent resources or URLs.",
+    "skill_source": "career_skill_matrix.json",
+    "retrieval_mode": "metadata filtering + deterministic ranking",
+    "resource_types": [
+      "course",
+      "project",
+      "certification",
+      "job"
+    ],
+    "note": "Job entries are fixed job archetypes/listing categories, not live availability claims."
+  },
+  "resources": [
+    {
+      "resource_id": "dev_python_001",
+      "resource_type": "course",
+      "title": "Python Tutorial",
+      "description": "Official Python tutorial covering Python syntax and core programming concepts.",
+      "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 3,
+        "logical_problem_solving": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Python Software Foundation",
+      "is_free": true,
+      "tags": [
+        "python",
+        "programming"
+      ]
+    },
+    {
+      "resource_id": "dev_python_002",
+      "resource_type": "course",
+      "title": "Python Beginner Practice",
+      "description": "Structured Python practice covering functions, collections, modules and problem solving.",
+      "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 3,
+        "logical_problem_solving": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "python",
+        "practice"
+      ]
+    },
+    {
+      "resource_id": "dev_git_001",
+      "resource_type": "course",
+      "title": "Git Documentation",
+      "description": "Official Git reference and user manual for version control workflows.",
+      "url": "https://www.youtube.com/watch?v=mAFoROnOfHs",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "git": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "Git",
+      "is_free": true,
+      "tags": [
+        "git",
+        "version-control"
+      ]
+    },
+    {
+      "resource_id": "dev_git_002",
+      "resource_type": "project",
+      "title": "Git Collaboration Portfolio",
+      "description": "Practice repository branching, commits, pull requests and clean project history.",
+      "url": "https://github.com/Roshanjossey/first-contributions",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "git": 3,
+        "logical_problem_solving": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 15,
+      "prerequisites": [
+        "dev_git_001"
+      ],
+      "provider": "GitHub",
+      "is_free": true,
+      "tags": [
+        "git",
+        "github",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "dev_algo_001",
+      "resource_type": "course",
+      "title": "Algorithms and Data Structures",
+      "description": "Practice common algorithms, data structures and computational problem solving.",
+      "url": "https://www.youtube.com/watch?v=8hly31xKli0",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "algorithmic_thinking": 3,
+        "logical_problem_solving": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 50,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "algorithms",
+        "data-structures"
+      ]
+    },
+    {
+      "resource_id": "dev_debug_001",
+      "resource_type": "course",
+      "title": "Debugging Fundamentals",
+      "description": "Hands-on debugging, reading errors and systematic fault isolation.",
+      "url": "https://www.youtube.com/watch?v=NUrV_FbJqWs",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "debugging": 3,
+        "logical_problem_solving": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 18,
+      "prerequisites": [],
+      "provider": "MDN",
+      "is_free": true,
+      "tags": [
+        "debugging",
+        "web"
+      ]
+    },
+    {
+      "resource_id": "dev_js_001",
+      "resource_type": "course",
+      "title": "JavaScript Guide",
+      "description": "MDN JavaScript learning material covering core language concepts and browser programming.",
+      "url": "https://www.youtube.com/watch?v=lfmg-EJ8gm4",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "javascript": 3,
+        "logical_problem_solving": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "MDN",
+      "is_free": true,
+      "tags": [
+        "javascript",
+        "web"
+      ]
+    },
+    {
+      "resource_id": "dev_api_001",
+      "resource_type": "course",
+      "title": "REST API Fundamentals",
+      "description": "Learn HTTP, REST concepts, requests, responses and API design fundamentals.",
+      "url": "https://www.youtube.com/watch?v=tLKKmouUams",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "api_development": 3,
+        "javascript": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "MDN",
+      "is_free": true,
+      "tags": [
+        "api",
+        "rest",
+        "http"
+      ]
+    },
+    {
+      "resource_id": "dev_api_002",
+      "resource_type": "project",
+      "title": "CRUD REST API",
+      "description": "Build and document a CRUD API with validation, error handling and persistent storage.",
+      "url": "https://github.com/tiangolo/full-stack-fastapi-template",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "api_development": 3,
+        "python": 3,
+        "debugging": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [
+        "dev_python_001",
+        "dev_api_001"
+      ],
+      "provider": "FastAPI",
+      "is_free": true,
+      "tags": [
+        "api",
+        "python",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "dev_docker_001",
+      "resource_type": "course",
+      "title": "Docker Get Started",
+      "description": "Official Docker learning path covering images, containers and basic workflows.",
+      "url": "https://www.youtube.com/watch?v=fqMOX6JJhGo",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "docker": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "Docker",
+      "is_free": true,
+      "tags": [
+        "docker",
+        "containers"
+      ]
+    },
+    {
+      "resource_id": "dev_docker_002",
+      "resource_type": "project",
+      "title": "Containerize an API",
+      "description": "Containerize a small API and document local development and deployment steps.",
+      "url": "https://github.com/docker/awesome-compose",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "docker": 2,
+        "api_development": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 12,
+      "prerequisites": [
+        "dev_api_002",
+        "dev_docker_001"
+      ],
+      "provider": "Docker",
+      "is_free": true,
+      "tags": [
+        "docker",
+        "api"
+      ]
+    },
+    {
+      "resource_id": "dev_system_001",
+      "resource_type": "course",
+      "title": "System Design Primer",
+      "description": "Study scalable architecture, components, caching, databases and trade-offs.",
+      "url": "https://www.youtube.com/watch?v=6TOOz6SSG0A",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "system_design": 3,
+        "logical_problem_solving": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 45,
+      "prerequisites": [],
+      "provider": "GitHub Open Source",
+      "is_free": true,
+      "tags": [
+        "system-design",
+        "architecture"
+      ]
+    },
+    {
+      "resource_id": "dev_project_001",
+      "resource_type": "project",
+      "title": "Full Stack Portfolio App",
+      "description": "Create a production-style application integrating frontend, API, database and Git workflow.",
+      "url": "https://github.com/bradtraversy/vanillawebprojects",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "javascript": 3,
+        "api_development": 3,
+        "git": 3,
+        "debugging": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 60,
+      "prerequisites": [
+        "dev_js_001",
+        "dev_api_002",
+        "dev_git_002"
+      ],
+      "provider": "MDN",
+      "is_free": true,
+      "tags": [
+        "portfolio",
+        "full-stack"
+      ]
+    },
+    {
+      "resource_id": "dev_project_002",
+      "resource_type": "project",
+      "title": "Algorithm Practice Portfolio",
+      "description": "Build a repository of solved algorithmic problems with explanations and tests.",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "algorithmic_thinking": 3,
+        "logical_problem_solving": 3,
+        "git": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [
+        "dev_algo_001"
+      ],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "algorithms",
+        "github"
+      ]
+    },
+    {
+      "resource_id": "dev_cert_001",
+      "resource_type": "certification",
+      "title": "freeCodeCamp JavaScript Algorithms and Data Structures",
+      "description": "FreeCodeCamp certification path demonstrating JavaScript and algorithm practice.",
+      "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "javascript": 3,
+        "algorithmic_thinking": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 50,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "javascript"
+      ]
+    },
+    {
+      "resource_id": "dev_job_001",
+      "resource_type": "job",
+      "title": "Junior Software Developer",
+      "description": "Entry-level software development archetype emphasizing programming, Git, debugging and API fundamentals.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20Software%20Developer",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 2,
+        "git": 2,
+        "debugging": 2,
+        "api_development": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "junior",
+        "software-development"
+      ]
+    },
+    {
+      "resource_id": "dev_job_002",
+      "resource_type": "job",
+      "title": "Backend Developer",
+      "description": "Backend role archetype requiring API development, programming, Git and debugging.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Backend%20Developer",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 3,
+        "api_development": 3,
+        "git": 3,
+        "debugging": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "backend"
+      ]
+    },
+    {
+      "resource_id": "dev_job_003",
+      "resource_type": "job",
+      "title": "Software Engineer",
+      "description": "Software engineering archetype with stronger algorithmic and system-design expectations.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Software%20Engineer",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "algorithmic_thinking": 3,
+        "logical_problem_solving": 3,
+        "git": 3,
+        "system_design": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "software-engineering"
+      ]
+    },
+    {
+      "resource_id": "data_reason_001",
+      "resource_type": "course",
+      "title": "Khan Academy Statistics and Probability",
+      "description": "Statistics and probability foundations useful for analytical reasoning and critical thinking.",
+      "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "analytical_reasoning": 3,
+        "analytical_thinking": 3,
+        "critical_thinking": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "Khan Academy",
+      "is_free": true,
+      "tags": [
+        "statistics",
+        "reasoning"
+      ]
+    },
+    {
+      "resource_id": "data_sql_001",
+      "resource_type": "course",
+      "title": "SQL for Data Science",
+      "description": "SQL learning path focused on querying and working with data.",
+      "url": "https://www.youtube.com/watch?v=-fW2X7fh7Yg",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 3,
+        "analytical_reasoning": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Coursera",
+      "is_free": true,
+      "tags": [
+        "sql",
+        "data-science"
+      ]
+    },
+    {
+      "resource_id": "data_sql_002",
+      "resource_type": "course",
+      "title": "SQL Tutorial",
+      "description": "Practical SQL reference and exercises for relational data querying.",
+      "url": "https://www.youtube.com/watch?v=-fW2X7fh7Yg",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 3,
+        "data_validation": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "W3Schools",
+      "is_free": true,
+      "tags": [
+        "sql",
+        "database"
+      ]
+    },
+    {
+      "resource_id": "data_pandas_001",
+      "resource_type": "course",
+      "title": "Pandas User Guide",
+      "description": "Official pandas documentation and getting-started material.",
+      "url": "https://www.youtube.com/watch?v=gtjxAH8uaP0",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "pandas": 3,
+        "data_quality": 2,
+        "data_validation": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "pandas",
+        "python",
+        "data"
+      ]
+    },
+    {
+      "resource_id": "data_pandas_002",
+      "resource_type": "project",
+      "title": "Data Cleaning with Pandas",
+      "description": "Clean, validate and document a messy dataset using pandas.",
+      "url": "https://github.com/pb111/Data-Cleaning-with-Python-and-Pandas",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "pandas": 3,
+        "data_quality": 3,
+        "data_validation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [
+        "data_pandas_001"
+      ],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "pandas",
+        "data-cleaning"
+      ]
+    },
+    {
+      "resource_id": "data_viz_001",
+      "resource_type": "course",
+      "title": "Power BI Learning Path",
+      "description": "Microsoft learning content for preparing and visualizing data in Power BI.",
+      "url": "https://www.youtube.com/watch?v=WUOkVj9sGNw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 3,
+        "data_validation": 2,
+        "data_quality": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 8,
+      "prerequisites": [],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "power-bi",
+        "visualization"
+      ]
+    },
+    {
+      "resource_id": "data_viz_002",
+      "resource_type": "course",
+      "title": "Power BI Get Started",
+      "description": "Official Power BI fundamentals and getting-started documentation.",
+      "url": "https://www.youtube.com/watch?v=WUOkVj9sGNw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 2,
+        "analytical_thinking": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 8,
+      "prerequisites": [],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "power-bi"
+      ]
+    },
+    {
+      "resource_id": "data_quality_001",
+      "resource_type": "course",
+      "title": "Prepare Data for Analysis with Power BI",
+      "description": "Intermediate learning path covering profiling, cleaning and loading data.",
+      "url": "https://www.youtube.com/watch?v=bDhvCp3_lYw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_quality": 3,
+        "data_validation": 3,
+        "data_visualization": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 5,
+      "prerequisites": [],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "data-quality",
+        "power-bi"
+      ]
+    },
+    {
+      "resource_id": "data_anomaly_001",
+      "resource_type": "course",
+      "title": "Anomaly Detection Concepts",
+      "description": "Study statistical patterns, outliers and methods for detecting unusual observations.",
+      "url": "https://www.youtube.com/watch?v=OS9xRGKfx4E",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "anomaly_detection": 3,
+        "critical_thinking": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "anomaly-detection",
+        "statistics"
+      ]
+    },
+    {
+      "resource_id": "data_project_001",
+      "resource_type": "project",
+      "title": "SQL Analytics Project",
+      "description": "Analyze a relational dataset using SQL, answer business questions and document insights.",
+      "url": "https://github.com/lerocha/chinook-database",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 3,
+        "analytical_reasoning": 3,
+        "analytical_thinking": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [
+        "data_sql_001"
+      ],
+      "provider": "PostgreSQL",
+      "is_free": true,
+      "tags": [
+        "sql",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_project_002",
+      "resource_type": "project",
+      "title": "Power BI Dashboard",
+      "description": "Build an interactive dashboard with data cleaning, modeling and visual storytelling.",
+      "url": "https://github.com/microsoft/powerbi-desktop-samples",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 3,
+        "data_quality": 2,
+        "data_validation": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [
+        "data_viz_001"
+      ],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "power-bi",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_project_003",
+      "resource_type": "project",
+      "title": "Pandas EDA Portfolio",
+      "description": "Perform exploratory data analysis, validation and anomaly investigation on a public dataset.",
+      "url": "https://github.com/pb111/Data-Cleaning-with-Python-and-Pandas",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "pandas": 3,
+        "anomaly_detection": 3,
+        "data_quality": 3,
+        "analytical_thinking": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [
+        "data_pandas_002"
+      ],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "eda",
+        "pandas",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_cert_001",
+      "resource_type": "certification",
+      "title": "Microsoft Power BI Learning Achievement",
+      "description": "Structured Microsoft Learn pathway for preparing and visualizing data with Power BI.",
+      "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 3,
+        "data_quality": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 8,
+      "prerequisites": [],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "power-bi"
+      ]
+    },
+    {
+      "resource_id": "data_cert_002",
+      "resource_type": "certification",
+      "title": "freeCodeCamp Data Analysis with Python",
+      "description": "Free certification curriculum covering Python-based data analysis.",
+      "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "pandas": 3,
+        "analytical_thinking": 3,
+        "data_validation": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 50,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "python",
+        "pandas"
+      ]
+    },
+    {
+      "resource_id": "data_job_001",
+      "resource_type": "job",
+      "title": "Junior Data Analyst",
+      "description": "Entry-level analyst archetype requiring SQL, analytical thinking, data quality and visualization.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20Data%20Analyst",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 2,
+        "analytical_thinking": 2,
+        "data_visualization": 2,
+        "data_quality": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "data-analyst"
+      ]
+    },
+    {
+      "resource_id": "data_job_002",
+      "resource_type": "job",
+      "title": "Data Analyst",
+      "description": "Analyst archetype with stronger SQL, pandas, analytical reasoning and visualization requirements.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data%20Analyst",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 3,
+        "pandas": 3,
+        "analytical_reasoning": 3,
+        "data_visualization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "data-analyst"
+      ]
+    },
+    {
+      "resource_id": "data_job_003",
+      "resource_type": "job",
+      "title": "BI Analyst",
+      "description": "Business intelligence archetype focused on data validation, visualization and analytical reasoning.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=BI%20Analyst",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 3,
+        "data_validation": 3,
+        "analytical_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "bi"
+      ]
+    },
+    {
+      "resource_id": "ai_ml_001",
+      "resource_type": "course",
+      "title": "Google Machine Learning Crash Course",
+      "description": "Practical introduction to machine learning concepts, models and evaluation.",
+      "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "machine_learning_reasoning": 3,
+        "prediction": 3,
+        "model_evaluation": 3,
+        "generalization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Google",
+      "is_free": true,
+      "tags": [
+        "machine-learning",
+        "ml"
+      ]
+    },
+    {
+      "resource_id": "ai_python_001",
+      "resource_type": "course",
+      "title": "Python for AI Foundations",
+      "description": "Python foundations for numerical and machine-learning workflows.",
+      "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 3,
+        "machine_learning_reasoning": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Python Software Foundation",
+      "is_free": true,
+      "tags": [
+        "python",
+        "ai"
+      ]
+    },
+    {
+      "resource_id": "ai_pytorch_001",
+      "resource_type": "course",
+      "title": "PyTorch Learn the Basics",
+      "description": "Official beginner PyTorch tutorials covering tensors, datasets, models and training.",
+      "url": "https://www.youtube.com/watch?v=V_xro1bcAuA",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "pytorch": 3,
+        "python": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "PyTorch",
+      "is_free": true,
+      "tags": [
+        "pytorch",
+        "deep-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_tensorflow_001",
+      "resource_type": "course",
+      "title": "TensorFlow Tutorials",
+      "description": "Official TensorFlow tutorials for building and training ML models.",
+      "url": "https://www.youtube.com/watch?v=tPYj3fFJGjk",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "tensorflow": 3,
+        "python": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "TensorFlow",
+      "is_free": true,
+      "tags": [
+        "tensorflow",
+        "deep-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_eval_001",
+      "resource_type": "course",
+      "title": "Model Evaluation Guide",
+      "description": "Practical scikit-learn documentation on model selection and evaluation.",
+      "url": "https://www.youtube.com/watch?v=-8s9KuNo5SA",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "model_evaluation": 3,
+        "generalization": 3,
+        "prediction": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 18,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "evaluation",
+        "machine-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_prediction_001",
+      "resource_type": "course",
+      "title": "Supervised Learning",
+      "description": "Learn regression and classification concepts for prediction tasks.",
+      "url": "https://www.youtube.com/watch?v=tFi4Y_y-GNM",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "prediction": 3,
+        "machine_learning_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "prediction",
+        "supervised-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_mlops_001",
+      "resource_type": "course",
+      "title": "MLOps Concepts",
+      "description": "Introduction to production ML workflows, deployment and lifecycle management.",
+      "url": "https://www.youtube.com/watch?v=dPmH3G9NQtY",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "mlops": 2,
+        "machine_learning_reasoning": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Google Cloud",
+      "is_free": true,
+      "tags": [
+        "mlops",
+        "deployment"
+      ]
+    },
+    {
+      "resource_id": "ai_project_001",
+      "resource_type": "project",
+      "title": "End-to-End ML Project",
+      "description": "Train, evaluate and document a machine-learning model from data preparation through evaluation.",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 3,
+        "machine_learning_reasoning": 3,
+        "prediction": 3,
+        "model_evaluation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 45,
+      "prerequisites": [
+        "ai_python_001",
+        "ai_ml_001"
+      ],
+      "provider": "Google",
+      "is_free": true,
+      "tags": [
+        "machine-learning",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_project_002",
+      "resource_type": "project",
+      "title": "PyTorch Image Classifier",
+      "description": "Build and evaluate a neural-network classifier using PyTorch.",
+      "url": "https://github.com/pytorch/examples",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "pytorch": 3,
+        "python": 3,
+        "model_evaluation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [
+        "ai_pytorch_001"
+      ],
+      "provider": "PyTorch",
+      "is_free": true,
+      "tags": [
+        "pytorch",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_project_003",
+      "resource_type": "project",
+      "title": "TensorFlow Classification Project",
+      "description": "Build and evaluate a TensorFlow model and document its limitations.",
+      "url": "https://github.com/tensorflow/models",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "tensorflow": 3,
+        "prediction": 3,
+        "model_evaluation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [
+        "ai_tensorflow_001"
+      ],
+      "provider": "TensorFlow",
+      "is_free": true,
+      "tags": [
+        "tensorflow",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_cert_001",
+      "resource_type": "certification",
+      "title": "freeCodeCamp Machine Learning with Python",
+      "description": "Free certification curriculum covering machine-learning projects in Python.",
+      "url": "https://www.freecodecamp.org/learn/machine-learning-with-python/",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 3,
+        "machine_learning_reasoning": 3,
+        "prediction": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 60,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "machine-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_job_001",
+      "resource_type": "job",
+      "title": "Junior Machine Learning Engineer",
+      "description": "Entry-level ML archetype emphasizing Python, ML reasoning and model evaluation.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20Machine%20Learning%20Engineer",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 3,
+        "machine_learning_reasoning": 2,
+        "model_evaluation": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "machine-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_job_002",
+      "resource_type": "job",
+      "title": "Machine Learning Engineer",
+      "description": "ML engineering archetype requiring stronger ML reasoning, prediction, evaluation and Python.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Machine%20Learning%20Engineer",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 4,
+        "machine_learning_reasoning": 3,
+        "prediction": 3,
+        "model_evaluation": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "machine-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_job_003",
+      "resource_type": "job",
+      "title": "AI Engineer",
+      "description": "AI engineering archetype combining Python, model development and production-oriented ML skills.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=AI%20Engineer",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 4,
+        "machine_learning_reasoning": 3,
+        "model_evaluation": 3,
+        "mlops": 2
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "ai-engineer"
+      ]
+    },
+    {
+      "resource_id": "ux_figma_001",
+      "resource_type": "course",
+      "title": "Figma Design for Beginners",
+      "description": "Official Figma beginner course with hands-on interface design and prototyping.",
+      "url": "https://www.youtube.com/watch?v=HoKD1qIcchQ",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "figma": 3,
+        "prototyping_tools": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 8,
+      "prerequisites": [],
+      "provider": "Figma",
+      "is_free": true,
+      "tags": [
+        "figma",
+        "prototyping"
+      ]
+    },
+    {
+      "resource_id": "ux_figma_002",
+      "resource_type": "course",
+      "title": "Figma Learn",
+      "description": "Official Figma learning hub covering UI design, UX, prototyping and wireframing.",
+      "url": "https://www.youtube.com/watch?v=HoKD1qIcchQ",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "figma": 3,
+        "prototyping_tools": 3,
+        "interaction_design": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Figma",
+      "is_free": true,
+      "tags": [
+        "figma",
+        "ui",
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ux_research_001",
+      "resource_type": "course",
+      "title": "UX Research Fundamentals",
+      "description": "Study user research methods, interviews, observation and synthesis.",
+      "url": "https://www.youtube.com/watch?v=rTNUTeXNG-c",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_research": 3,
+        "user_centered_design": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "ux-research",
+        "user-centered"
+      ]
+    },
+    {
+      "resource_id": "ux_usability_001",
+      "resource_type": "course",
+      "title": "Usability Heuristics",
+      "description": "Learn usability evaluation and heuristic principles for interface design.",
+      "url": "https://www.youtube.com/watch?v=n8MnoJyl3W4",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "usability": 3,
+        "user_centered_design": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 10,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "usability",
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ux_interaction_001",
+      "resource_type": "course",
+      "title": "Interaction Design Foundations",
+      "description": "Study interaction patterns, affordances, feedback and task flows.",
+      "url": "https://www.youtube.com/watch?v=U7rS_2ch_Ps",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "interaction_design": 3,
+        "usability": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 18,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "interaction-design"
+      ]
+    },
+    {
+      "resource_id": "ux_visual_001",
+      "resource_type": "course",
+      "title": "Visual Hierarchy Principles",
+      "description": "Learn hierarchy, typography, spacing and visual organization.",
+      "url": "https://www.youtube.com/watch?v=lFToIvzG0os",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "visual_hierarchy": 3,
+        "usability": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 10,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "visual-design",
+        "hierarchy"
+      ]
+    },
+    {
+      "resource_id": "ux_iterative_001",
+      "resource_type": "course",
+      "title": "Iterative Design",
+      "description": "Learn iterative prototyping, testing, feedback and refinement.",
+      "url": "https://www.youtube.com/watch?v=4nTh3AP6knM",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "iterative_design": 3,
+        "user_research": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "iteration",
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ux_project_001",
+      "resource_type": "project",
+      "title": "Mobile App UX Case Study",
+      "description": "Research users, define problems, create flows, prototype and test a mobile experience.",
+      "url": "https://github.com/topics/ux-research",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_research": 3,
+        "user_centered_design": 3,
+        "interaction_design": 3,
+        "figma": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [
+        "ux_figma_001",
+        "ux_research_001"
+      ],
+      "provider": "Figma",
+      "is_free": true,
+      "tags": [
+        "portfolio",
+        "case-study"
+      ]
+    },
+    {
+      "resource_id": "ux_project_002",
+      "resource_type": "project",
+      "title": "Usability Audit",
+      "description": "Evaluate an existing interface using usability heuristics and produce prioritized recommendations.",
+      "url": "https://github.com/topics/usability-testing",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "usability": 4,
+        "user_research": 2,
+        "visual_hierarchy": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [
+        "ux_usability_001"
+      ],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "usability",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ux_project_003",
+      "resource_type": "project",
+      "title": "Responsive Portfolio Design",
+      "description": "Design and prototype a responsive portfolio website in Figma.",
+      "url": "https://github.com/alfahad27/figma-ui-ux-designs",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "figma": 3,
+        "visual_hierarchy": 3,
+        "prototyping_tools": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [
+        "ux_figma_001",
+        "ux_visual_001"
+      ],
+      "provider": "Figma",
+      "is_free": true,
+      "tags": [
+        "figma",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ux_cert_001",
+      "resource_type": "certification",
+      "title": "Google UX Design Certificate",
+      "description": "UX design credential pathway available through Coursera; access conditions depend on the platform account.",
+      "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_centered_design": 3,
+        "user_research": 3,
+        "prototyping_tools": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 100,
+      "prerequisites": [],
+      "provider": "Google/Coursera",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ux_job_001",
+      "resource_type": "job",
+      "title": "Junior UX Designer",
+      "description": "Entry-level UX archetype emphasizing user-centered design, usability and prototyping.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20UX%20Designer",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_centered_design": 2,
+        "usability": 2,
+        "figma": 2,
+        "prototyping_tools": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ux_job_002",
+      "resource_type": "job",
+      "title": "UX Designer",
+      "description": "UX design archetype requiring research, usability, interaction design and prototyping.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=UX%20Designer",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_research": 3,
+        "usability": 3,
+        "interaction_design": 3,
+        "figma": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ux_job_003",
+      "resource_type": "job",
+      "title": "Product Designer",
+      "description": "Product design archetype combining research, interaction, visual hierarchy and iterative design.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Product%20Designer",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_research": 3,
+        "interaction_design": 3,
+        "visual_hierarchy": 3,
+        "iterative_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "product-design"
+      ]
+    },
+    {
+      "resource_id": "cyber_awareness_001",
+      "resource_type": "course",
+      "title": "Cybersecurity Basics",
+      "description": "Beginner cybersecurity concepts covering common risks, threats and defensive thinking.",
+      "url": "https://www.youtube.com/watch?v=z2hVCeiwvGk",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_awareness": 3,
+        "security_risk_reasoning": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "cybersecurity",
+        "awareness"
+      ]
+    },
+    {
+      "resource_id": "cyber_network_001",
+      "resource_type": "course",
+      "title": "Networking Basics",
+      "description": "Study networking concepts needed for security and network analysis.",
+      "url": "https://www.youtube.com/watch?v=4uKUSEqEosg",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3,
+        "risk_detection": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Cisco",
+      "is_free": true,
+      "tags": [
+        "networking",
+        "security"
+      ]
+    },
+    {
+      "resource_id": "cyber_risk_001",
+      "resource_type": "course",
+      "title": "Risk Management Framework",
+      "description": "Learn structured cybersecurity risk concepts and security controls.",
+      "url": "https://www.youtube.com/watch?v=mJIhpbzaF-o",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_risk_reasoning": 3,
+        "risk_detection": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "risk",
+        "security"
+      ]
+    },
+    {
+      "resource_id": "cyber_incident_001",
+      "resource_type": "course",
+      "title": "Incident Response Guide",
+      "description": "Study incident response lifecycle, preparation, detection, response and recovery.",
+      "url": "https://www.youtube.com/watch?v=7_d74-9xKDA",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "incident_reasoning": 3,
+        "risk_detection": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "incident-response"
+      ]
+    },
+    {
+      "resource_id": "cyber_social_001",
+      "resource_type": "course",
+      "title": "Social Engineering Awareness",
+      "description": "Learn common social-engineering patterns and defensive awareness.",
+      "url": "https://www.youtube.com/watch?v=Lyt6LXkbXEc",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "social_engineering_awareness": 3,
+        "security_awareness": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "social-engineering",
+        "awareness"
+      ]
+    },
+    {
+      "resource_id": "cyber_web_001",
+      "resource_type": "course",
+      "title": "OWASP Web Security Testing Guide",
+      "description": "Comprehensive open-source framework for testing web application and service security.",
+      "url": "https://www.youtube.com/watch?v=4uKUSEqEosg",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3,
+        "risk_detection": 3,
+        "security_risk_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "OWASP",
+      "is_free": true,
+      "tags": [
+        "web-security",
+        "owasp"
+      ]
+    },
+    {
+      "resource_id": "cyber_project_001",
+      "resource_type": "project",
+      "title": "Web Security Assessment",
+      "description": "Perform a controlled security assessment using OWASP testing methodology and document findings.",
+      "url": "https://github.com/aws-samples/aws-incident-response-playbooks",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "risk_detection": 3,
+        "incident_reasoning": 2,
+        "network_security": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [
+        "cyber_web_001"
+      ],
+      "provider": "OWASP",
+      "is_free": true,
+      "tags": [
+        "security",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "cyber_project_002",
+      "resource_type": "project",
+      "title": "Incident Response Playbook",
+      "description": "Create an incident-response playbook covering detection, triage, containment and recovery.",
+      "url": "https://github.com/counteractive/incident-response-plan-template",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "incident_reasoning": 3,
+        "security_risk_reasoning": 3,
+        "risk_detection": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [
+        "cyber_incident_001"
+      ],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "incident-response",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "cyber_project_003",
+      "resource_type": "project",
+      "title": "Network Security Lab",
+      "description": "Build a safe local lab to study network traffic, segmentation and defensive controls.",
+      "url": "https://github.com/noahmtubbs/Cybersecurity-HomeLab",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3,
+        "risk_detection": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [
+        "cyber_network_001"
+      ],
+      "provider": "Cisco",
+      "is_free": true,
+      "tags": [
+        "network-security",
+        "lab"
+      ]
+    },
+    {
+      "resource_id": "cyber_cert_001",
+      "resource_type": "certification",
+      "title": "ISC2 Certified in Cybersecurity",
+      "description": "Entry-level cybersecurity certification program; current availability and terms should be checked before recommendation.",
+      "url": "https://www.isc2.org/certifications/cc",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_awareness": 3,
+        "security_risk_reasoning": 3,
+        "risk_detection": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 60,
+      "prerequisites": [],
+      "provider": "ISC2",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "cybersecurity"
+      ]
+    },
+    {
+      "resource_id": "cyber_cert_002",
+      "resource_type": "certification",
+      "title": "Cisco Networking Academy Cybersecurity",
+      "description": "Cisco Networking Academy offers cybersecurity and networking learning pathways.",
+      "url": "https://www.netacad.com/courses/cybersecurity",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3,
+        "security_awareness": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "Cisco Networking Academy",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "networking"
+      ]
+    },
+    {
+      "resource_id": "cyber_job_001",
+      "resource_type": "job",
+      "title": "Junior Cybersecurity Analyst",
+      "description": "Entry-level security archetype emphasizing awareness, risk detection and incident fundamentals.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20Cybersecurity%20Analyst",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_awareness": 2,
+        "risk_detection": 2,
+        "incident_reasoning": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "cybersecurity"
+      ]
+    },
+    {
+      "resource_id": "cyber_job_002",
+      "resource_type": "job",
+      "title": "Cybersecurity Analyst",
+      "description": "Security analyst archetype requiring risk reasoning, detection and incident response skills.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Cybersecurity%20Analyst",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_risk_reasoning": 3,
+        "risk_detection": 3,
+        "incident_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "cybersecurity"
+      ]
+    },
+    {
+      "resource_id": "cyber_job_003",
+      "resource_type": "job",
+      "title": "Security Operations Analyst",
+      "description": "SOC-oriented archetype focused on detection, incident reasoning, awareness and network security.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Security%20Operations%20Analyst",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "risk_detection": 3,
+        "incident_reasoning": 3,
+        "network_security": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "soc"
+      ]
+    },
+    {
+      "resource_id": "development_practice_python_programming_through_structured_exercises",
+      "resource_type": "course",
+      "title": "Python Practice & Exercises",
+      "description": "Practice Python programming through structured exercises.",
+      "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "HackerRank",
+      "is_free": true,
+      "tags": [
+        "python",
+        "practice"
+      ]
+    },
+    {
+      "resource_id": "development_explore_standard_library_modules_and_practical_python_techniques",
+      "resource_type": "course",
+      "title": "Python Standard Library",
+      "description": "Explore standard-library modules and practical Python techniques.",
+      "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Python Software Foundation",
+      "is_free": true,
+      "tags": [
+        "python"
+      ]
+    },
+    {
+      "resource_id": "development_structured_javascript_language_reference_and_learning_material",
+      "resource_type": "course",
+      "title": "JavaScript Guide",
+      "description": "Structured JavaScript language reference and learning material.",
+      "url": "https://www.youtube.com/watch?v=lfmg-EJ8gm4",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "javascript": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "MDN",
+      "is_free": true,
+      "tags": [
+        "javascript"
+      ]
+    },
+    {
+      "resource_id": "development_practice_javascript_syntax_functions_arrays_and_problem_solving",
+      "resource_type": "course",
+      "title": "JavaScript Exercises",
+      "description": "Practice JavaScript syntax, functions, arrays and problem solving.",
+      "url": "https://www.youtube.com/watch?v=lfmg-EJ8gm4",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "javascript": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "javascript",
+        "practice"
+      ]
+    },
+    {
+      "resource_id": "development_learn_branches_merging_and_collaborative_git_workflows",
+      "resource_type": "course",
+      "title": "Git Branching and Collaboration",
+      "description": "Learn branches, merging and collaborative Git workflows.",
+      "url": "https://www.youtube.com/watch?v=mAFoROnOfHs",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "git": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "Git",
+      "is_free": true,
+      "tags": [
+        "git"
+      ]
+    },
+    {
+      "resource_id": "development_interactive_github_learning_paths_for_practical_repository_workflows",
+      "resource_type": "course",
+      "title": "GitHub Skills",
+      "description": "Interactive GitHub learning paths for practical repository workflows.",
+      "url": "https://www.youtube.com/watch?v=mAFoROnOfHs",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "git": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "GitHub",
+      "is_free": true,
+      "tags": [
+        "git",
+        "github"
+      ]
+    },
+    {
+      "resource_id": "development_study_restful_api_concepts_http_methods_and_resource_oriented_design",
+      "resource_type": "course",
+      "title": "REST API Design",
+      "description": "Study RESTful API concepts, HTTP methods and resource-oriented design.",
+      "url": "https://www.youtube.com/watch?v=tLKKmouUams",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "api_development": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 18,
+      "prerequisites": [],
+      "provider": "RESTfulAPI.net",
+      "is_free": true,
+      "tags": [
+        "api",
+        "rest"
+      ]
+    },
+    {
+      "resource_id": "development_official_fastapi_tutorial_for_building_typed_python_apis",
+      "resource_type": "course",
+      "title": "FastAPI Tutorial",
+      "description": "Official FastAPI tutorial for building typed Python APIs.",
+      "url": "https://www.youtube.com/watch?v=tLKKmouUams",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "api_development": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "FastAPI",
+      "is_free": true,
+      "tags": [
+        "api",
+        "python"
+      ]
+    },
+    {
+      "resource_id": "development_learn_http_requests_responses_headers_status_codes_and_methods",
+      "resource_type": "course",
+      "title": "HTTP Fundamentals",
+      "description": "Learn HTTP requests, responses, headers, status codes and methods.",
+      "url": "https://www.youtube.com/watch?v=tLKKmouUams",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "api_development": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "MDN",
+      "is_free": true,
+      "tags": [
+        "http",
+        "api"
+      ]
+    },
+    {
+      "resource_id": "development_debug_javascript_applications_using_browser_developer_tools",
+      "resource_type": "course",
+      "title": "Debugging JavaScript",
+      "description": "Debug JavaScript applications using browser developer tools.",
+      "url": "https://www.youtube.com/watch?v=NUrV_FbJqWs",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "debugging": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "MDN",
+      "is_free": true,
+      "tags": [
+        "debugging"
+      ]
+    },
+    {
+      "resource_id": "development_learn_browser_debugging_inspection_and_performance_workflows",
+      "resource_type": "course",
+      "title": "Chrome DevTools",
+      "description": "Learn browser debugging, inspection and performance workflows.",
+      "url": "https://www.youtube.com/watch?v=NUrV_FbJqWs",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "debugging": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Chrome for Developers",
+      "is_free": true,
+      "tags": [
+        "debugging"
+      ]
+    },
+    {
+      "resource_id": "development_practice_decomposition_and_algorithmic_problem_solving",
+      "resource_type": "course",
+      "title": "Problem Solving with Algorithms",
+      "description": "Practice decomposition and algorithmic problem solving.",
+      "url": "https://www.youtube.com/watch?v=8hly31xKli0",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "algorithmic_thinking": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "HackerRank",
+      "is_free": true,
+      "tags": [
+        "algorithms",
+        "practice"
+      ]
+    },
+    {
+      "resource_id": "development_study_arrays_linked_lists_trees_graphs_and_common_data_structures",
+      "resource_type": "course",
+      "title": "Data Structures",
+      "description": "Study arrays, linked lists, trees, graphs and common data structures.",
+      "url": "https://www.youtube.com/watch?v=8hly31xKli0",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "algorithmic_thinking": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "GeeksforGeeks",
+      "is_free": true,
+      "tags": [
+        "data-structures"
+      ]
+    },
+    {
+      "resource_id": "development_practice_systematic_reasoning_across_programming_problems",
+      "resource_type": "course",
+      "title": "Computational Problem Solving",
+      "description": "Practice systematic reasoning across programming problems.",
+      "url": "https://www.youtube.com/watch?v=6-x6XX5-pE8",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "logical_problem_solving": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "Khan Academy",
+      "is_free": true,
+      "tags": [
+        "problem-solving"
+      ]
+    },
+    {
+      "resource_id": "development_learn_architectural_components_and_software_design_trade_offs",
+      "resource_type": "course",
+      "title": "Software Architecture Basics",
+      "description": "Learn architectural components and software design trade-offs.",
+      "url": "https://www.youtube.com/watch?v=6TOOz6SSG0A",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "system_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "resource_id": "development_explore_scalability_availability_caching_and_distributed_system_concepts",
+      "resource_type": "course",
+      "title": "Scalable System Design",
+      "description": "Explore scalability, availability, caching and distributed-system concepts.",
+      "url": "https://www.youtube.com/watch?v=6TOOz6SSG0A",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "system_design": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 45,
+      "prerequisites": [],
+      "provider": "GitHub Open Source",
+      "is_free": true,
+      "tags": [
+        "system-design"
+      ]
+    },
+    {
+      "resource_id": "development_build_a_command_line_application_with_tests_documentation_and_git_history",
+      "resource_type": "project",
+      "title": "Python CLI Application",
+      "description": "Build a command-line application with tests, documentation and Git history.",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "Python Software Foundation",
+      "is_free": true,
+      "tags": [
+        "python",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "development_build_a_browser_application_using_modular_javascript_and_api_integration",
+      "resource_type": "project",
+      "title": "JavaScript Web App",
+      "description": "Build a browser application using modular JavaScript and API integration.",
+      "url": "https://github.com/bradtraversy/vanillawebprojects",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "javascript": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "MDN",
+      "is_free": true,
+      "tags": [
+        "javascript",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "development_design_an_api_and_publish_clear_endpoint_documentation_and_examples",
+      "resource_type": "project",
+      "title": "API Documentation Project",
+      "description": "Design an API and publish clear endpoint documentation and examples.",
+      "url": "https://github.com/tiangolo/full-stack-fastapi-template",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "api_development": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "FastAPI",
+      "is_free": true,
+      "tags": [
+        "api",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "development_solve_intentionally_broken_applications_and_document_root_causes_and_fixes",
+      "resource_type": "project",
+      "title": "Debugging Challenge Set",
+      "description": "Solve intentionally broken applications and document root causes and fixes.",
+      "url": "https://github.com/topics/debugging",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "debugging": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Chrome for Developers",
+      "is_free": true,
+      "tags": [
+        "debugging",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "development_create_a_github_repository_of_algorithm_solutions_with_explanations_and_tests",
+      "resource_type": "project",
+      "title": "Algorithms Repository",
+      "description": "Create a GitHub repository of algorithm solutions with explanations and tests.",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "algorithmic_thinking": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "GitHub Open Source",
+      "is_free": true,
+      "tags": [
+        "algorithms",
+        "github"
+      ]
+    },
+    {
+      "resource_id": "development_design_a_url_shortener_and_explain_storage_caching_and_scaling_decisions",
+      "resource_type": "project",
+      "title": "Scalable URL Shortener",
+      "description": "Design a URL shortener and explain storage, caching and scaling decisions.",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "system_design": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "GitHub Open Source",
+      "is_free": true,
+      "tags": [
+        "system-design",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "development_create_a_python_application_with_automated_tests_and_documented_debugging_practices",
+      "resource_type": "project",
+      "title": "Python Testing Project",
+      "description": "Create a Python application with automated tests and documented debugging practices.",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Python Software Foundation",
+      "is_free": true,
+      "tags": [
+        "python",
+        "testing"
+      ]
+    },
+    {
+      "resource_id": "development_package_a_web_service_into_a_reproducible_container_workflow",
+      "resource_type": "project",
+      "title": "Dockerized Web Service",
+      "description": "Package a web service into a reproducible container workflow.",
+      "url": "https://github.com/docker/awesome-compose",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "docker": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 18,
+      "prerequisites": [],
+      "provider": "Docker",
+      "is_free": true,
+      "tags": [
+        "docker"
+      ]
+    },
+    {
+      "resource_id": "development_skills_assessment_credential_for_python_programming",
+      "resource_type": "certification",
+      "title": "HackerRank Python Certificate",
+      "description": "Skills assessment credential for Python programming.",
+      "url": "https://www.hackerrank.com/skills-verification/python_basic",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 4,
+      "prerequisites": [],
+      "provider": "HackerRank",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "python"
+      ]
+    },
+    {
+      "resource_id": "development_skills_assessment_credential_focused_on_programming_problem_solving",
+      "resource_type": "certification",
+      "title": "HackerRank Problem Solving Certificate",
+      "description": "Skills assessment credential focused on programming problem solving.",
+      "url": "https://www.hackerrank.com/skills-verification/problem_solving_basic",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "logical_problem_solving": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 4,
+      "prerequisites": [],
+      "provider": "HackerRank",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "problem-solving"
+      ]
+    },
+    {
+      "resource_id": "development_github_focused_credential_covering_core_github_concepts_and_workflows",
+      "resource_type": "certification",
+      "title": "GitHub Foundations",
+      "description": "GitHub-focused credential covering core GitHub concepts and workflows.",
+      "url": "https://docs.github.com/en/get-started/showcase-your-expertise-with-github-certifications/about-github-certifications",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "git": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "GitHub",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "github"
+      ]
+    },
+    {
+      "resource_id": "development_free_curriculum_certification_covering_web_development_foundations",
+      "resource_type": "certification",
+      "title": "freeCodeCamp Responsive Web Design",
+      "description": "Free curriculum/certification covering web development foundations.",
+      "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "javascript": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 50,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "web"
+      ]
+    },
+    {
+      "resource_id": "development_free_certification_curriculum_covering_backend_and_api_development",
+      "resource_type": "certification",
+      "title": "freeCodeCamp Back End Development and APIs",
+      "description": "Free certification curriculum covering backend and API development.",
+      "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "api_development": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 60,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "api"
+      ]
+    },
+    {
+      "resource_id": "development_entry_level_python_developer_archetype",
+      "resource_type": "job",
+      "title": "Junior Python Developer",
+      "description": "Entry-level Python developer archetype.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20Python%20Developer",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "python": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "python"
+      ]
+    },
+    {
+      "resource_id": "development_entry_level_frontend_archetype_with_javascript_and_debugging_requirements",
+      "resource_type": "job",
+      "title": "Junior Frontend Developer",
+      "description": "Entry-level frontend archetype with JavaScript and debugging requirements.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20Frontend%20Developer",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "javascript": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "frontend"
+      ]
+    },
+    {
+      "resource_id": "development_backend_api_archetype_focused_on_http_apis_python_and_debugging",
+      "resource_type": "job",
+      "title": "API Developer",
+      "description": "Backend/API archetype focused on HTTP, APIs, Python and debugging.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=API%20Developer",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "api_development": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "api"
+      ]
+    },
+    {
+      "resource_id": "development_developer_archetype_with_git_and_introductory_container_knowledge",
+      "resource_type": "job",
+      "title": "DevOps-leaning Developer",
+      "description": "Developer archetype with Git and introductory container knowledge.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=DevOps-leaning%20Developer",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "docker": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "docker"
+      ]
+    },
+    {
+      "resource_id": "data_statistics_fundamentals_for_analytical_reasoning_and_interpretation",
+      "resource_type": "course",
+      "title": "Statistics Foundations",
+      "description": "Statistics fundamentals for analytical reasoning and interpretation.",
+      "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "analytical_reasoning": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Khan Academy",
+      "is_free": true,
+      "tags": [
+        "statistics"
+      ]
+    },
+    {
+      "resource_id": "data_practice_evaluating_evidence_assumptions_and_analytical_conclusions",
+      "resource_type": "course",
+      "title": "Critical Thinking",
+      "description": "Practice evaluating evidence, assumptions and analytical conclusions.",
+      "url": "https://www.youtube.com/watch?v=Cum3k-Wglfw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "critical_thinking": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "Khan Academy",
+      "is_free": true,
+      "tags": [
+        "critical-thinking"
+      ]
+    },
+    {
+      "resource_id": "data_interactive_sql_practice_for_queries_joins_and_aggregation",
+      "resource_type": "course",
+      "title": "SQL Practice",
+      "description": "Interactive SQL practice for queries, joins and aggregation.",
+      "url": "https://www.youtube.com/watch?v=-fW2X7fh7Yg",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "HackerRank",
+      "is_free": true,
+      "tags": [
+        "sql",
+        "practice"
+      ]
+    },
+    {
+      "resource_id": "data_relational_database_and_sql_tutorial_with_practical_examples",
+      "resource_type": "course",
+      "title": "PostgreSQL Tutorial",
+      "description": "Relational database and SQL tutorial with practical examples.",
+      "url": "https://www.youtube.com/watch?v=-fW2X7fh7Yg",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "PostgreSQL",
+      "is_free": true,
+      "tags": [
+        "sql"
+      ]
+    },
+    {
+      "resource_id": "data_official_pandas_learning_path_for_tabular_data_analysis",
+      "resource_type": "course",
+      "title": "Pandas Getting Started",
+      "description": "Official pandas learning path for tabular data analysis.",
+      "url": "https://www.youtube.com/watch?v=gtjxAH8uaP0",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "pandas": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "pandas"
+      ]
+    },
+    {
+      "resource_id": "data_numerical_python_fundamentals_supporting_analytical_workflows",
+      "resource_type": "course",
+      "title": "NumPy for Data Analysis",
+      "description": "Numerical Python fundamentals supporting analytical workflows.",
+      "url": "https://www.youtube.com/watch?v=Liv6eeb1VfE",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "analytical_thinking": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "NumPy",
+      "is_free": true,
+      "tags": [
+        "numpy"
+      ]
+    },
+    {
+      "resource_id": "data_methods_for_identifying_correcting_and_documenting_data_quality_issues",
+      "resource_type": "course",
+      "title": "Data Cleaning",
+      "description": "Methods for identifying, correcting and documenting data-quality issues.",
+      "url": "https://www.youtube.com/watch?v=bDhvCp3_lYw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_quality": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "data-quality"
+      ]
+    },
+    {
+      "resource_id": "data_learn_validation_concepts_for_trustworthy_analytical_datasets",
+      "resource_type": "course",
+      "title": "Data Validation",
+      "description": "Learn validation concepts for trustworthy analytical datasets.",
+      "url": "https://www.youtube.com/watch?v=-tU7fuUiq7w",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_validation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "validation"
+      ]
+    },
+    {
+      "resource_id": "data_explore_distributions_relationships_and_patterns_in_datasets",
+      "resource_type": "course",
+      "title": "Exploratory Data Analysis",
+      "description": "Explore distributions, relationships and patterns in datasets.",
+      "url": "https://www.youtube.com/watch?v=Liv6eeb1VfE",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "analytical_thinking": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "eda"
+      ]
+    },
+    {
+      "resource_id": "data_learn_statistical_and_model_based_methods_for_detecting_outliers",
+      "resource_type": "course",
+      "title": "Outlier Detection",
+      "description": "Learn statistical and model-based methods for detecting outliers.",
+      "url": "https://www.youtube.com/watch?v=OS9xRGKfx4E",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "anomaly_detection": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 18,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "anomaly-detection"
+      ]
+    },
+    {
+      "resource_id": "data_prepare_and_model_data_for_business_intelligence_reports",
+      "resource_type": "course",
+      "title": "Power BI Data Modeling",
+      "description": "Prepare and model data for business intelligence reports.",
+      "url": "https://www.youtube.com/watch?v=WUOkVj9sGNw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "power-bi"
+      ]
+    },
+    {
+      "resource_id": "data_create_meaningful_dashboards_and_visual_reports",
+      "resource_type": "course",
+      "title": "Power BI Visualization",
+      "description": "Create meaningful dashboards and visual reports.",
+      "url": "https://www.youtube.com/watch?v=WUOkVj9sGNw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "power-bi",
+        "visualization"
+      ]
+    },
+    {
+      "resource_id": "data_work_through_analytical_reasoning_exercises_using_data_driven_scenarios",
+      "resource_type": "course",
+      "title": "Analytical Reasoning Practice",
+      "description": "Work through analytical reasoning exercises using data-driven scenarios.",
+      "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "analytical_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Khan Academy",
+      "is_free": true,
+      "tags": [
+        "reasoning"
+      ]
+    },
+    {
+      "resource_id": "data_learn_how_to_communicate_analytical_findings_clearly_with_evidence_and_visuals",
+      "resource_type": "course",
+      "title": "Data Storytelling",
+      "description": "Learn how to communicate analytical findings clearly with evidence and visuals.",
+      "url": "https://www.youtube.com/watch?v=WUOkVj9sGNw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Tableau",
+      "is_free": true,
+      "tags": [
+        "data-storytelling"
+      ]
+    },
+    {
+      "resource_id": "data_integrate_quality_validation_reasoning_and_anomaly_analysis_into_workflows",
+      "resource_type": "course",
+      "title": "Advanced Data Analysis Concepts",
+      "description": "Integrate quality, validation, reasoning and anomaly analysis into workflows.",
+      "url": "https://www.youtube.com/watch?v=Cum3k-Wglfw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "critical_thinking": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "analysis"
+      ]
+    },
+    {
+      "resource_id": "data_answer_a_business_question_using_sql_queries_joins_and_aggregations",
+      "resource_type": "project",
+      "title": "SQL Business Analysis",
+      "description": "Answer a business question using SQL queries, joins and aggregations.",
+      "url": "https://github.com/lerocha/chinook-database",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "PostgreSQL",
+      "is_free": true,
+      "tags": [
+        "sql",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_clean_a_messy_dataset_and_publish_a_reproducible_data_quality_report",
+      "resource_type": "project",
+      "title": "Data Cleaning Portfolio",
+      "description": "Clean a messy dataset and publish a reproducible data-quality report.",
+      "url": "https://github.com/pb111/Data-Cleaning-with-Python-and-Pandas",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_quality": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "data-cleaning",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_create_checks_that_detect_invalid_missing_and_inconsistent_analytical_data",
+      "resource_type": "project",
+      "title": "Validation Pipeline",
+      "description": "Create checks that detect invalid, missing and inconsistent analytical data.",
+      "url": "https://github.com/great-expectations/great_expectations",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_validation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "validation",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_investigate_anomalous_records_and_explain_possible_causes_using_data",
+      "resource_type": "project",
+      "title": "Anomaly Investigation",
+      "description": "Investigate anomalous records and explain possible causes using data.",
+      "url": "https://github.com/yzhao062/pyod",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "anomaly_detection": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "anomaly",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_build_a_dashboard_with_a_clean_model_kpis_and_decision_oriented_visuals",
+      "resource_type": "project",
+      "title": "Power BI Executive Dashboard",
+      "description": "Build a dashboard with a clean model, KPIs and decision-oriented visuals.",
+      "url": "https://github.com/microsoft/powerbi-desktop-samples",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "power-bi",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_create_a_complete_exploratory_analysis_with_documented_findings_and_limitations",
+      "resource_type": "project",
+      "title": "Pandas EDA Report",
+      "description": "Create a complete exploratory analysis with documented findings and limitations.",
+      "url": "https://github.com/pb111/Data-Cleaning-with-Python-and-Pandas",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "pandas": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "eda",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_analyze_a_dataset_statistically_and_communicate_evidence_based_conclusions",
+      "resource_type": "project",
+      "title": "Statistical Insight Report",
+      "description": "Analyze a dataset statistically and communicate evidence-based conclusions.",
+      "url": "https://github.com/topics/exploratory-data-analysis",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "analytical_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "Khan Academy",
+      "is_free": true,
+      "tags": [
+        "statistics",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "data_audit_a_dataset_for_completeness_consistency_and_validity",
+      "resource_type": "project",
+      "title": "Data Quality Audit",
+      "description": "Audit a dataset for completeness, consistency and validity.",
+      "url": "https://github.com/pb111/Data-Cleaning-with-Python-and-Pandas",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_quality": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "data-quality"
+      ]
+    },
+    {
+      "resource_id": "data_solve_a_multi_step_business_problem_using_sql_pandas_and_visualization",
+      "resource_type": "project",
+      "title": "Analytical Case Study",
+      "description": "Solve a multi-step business problem using SQL, pandas and visualization.",
+      "url": "https://github.com/topics/exploratory-data-analysis",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "analytical_thinking": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 45,
+      "prerequisites": [],
+      "provider": "pandas",
+      "is_free": true,
+      "tags": [
+        "case-study"
+      ]
+    },
+    {
+      "resource_id": "data_free_certification_curriculum_for_python_based_data_analysis",
+      "resource_type": "certification",
+      "title": "freeCodeCamp Data Analysis with Python",
+      "description": "Free certification curriculum for Python-based data analysis.",
+      "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "pandas": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 50,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "data-analysis"
+      ]
+    },
+    {
+      "resource_id": "data_structured_microsoft_learning_path_for_power_bi_preparation_and_visualization",
+      "resource_type": "certification",
+      "title": "Microsoft Learn Power BI Path",
+      "description": "Structured Microsoft learning path for Power BI preparation and visualization.",
+      "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "Microsoft Learn",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "power-bi"
+      ]
+    },
+    {
+      "resource_id": "data_sql_skills_assessment_credential",
+      "resource_type": "certification",
+      "title": "HackerRank SQL Certificate",
+      "description": "SQL skills assessment credential.",
+      "url": "https://www.hackerrank.com/skills-verification/sql_basic",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 4,
+      "prerequisites": [],
+      "provider": "HackerRank",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "sql"
+      ]
+    },
+    {
+      "resource_id": "data_entry_level_bi_archetype_emphasizing_visualization_and_analytical_thinking",
+      "resource_type": "job",
+      "title": "Junior BI Analyst",
+      "description": "Entry-level BI archetype emphasizing visualization and analytical thinking.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20BI%20Analyst",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_visualization": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "bi"
+      ]
+    },
+    {
+      "resource_id": "data_entry_level_data_role_emphasizing_sql_and_analytical_reasoning",
+      "resource_type": "job",
+      "title": "Junior SQL Analyst",
+      "description": "Entry-level data role emphasizing SQL and analytical reasoning.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20SQL%20Analyst",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "sql": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "sql"
+      ]
+    },
+    {
+      "resource_id": "data_reporting_archetype_emphasizing_validation_visualization_and_data_quality",
+      "resource_type": "job",
+      "title": "Reporting Analyst",
+      "description": "Reporting archetype emphasizing validation, visualization and data quality.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Reporting%20Analyst",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "data_validation": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "reporting"
+      ]
+    },
+    {
+      "resource_id": "ai_core_supervised_and_unsupervised_learning_concepts",
+      "resource_type": "course",
+      "title": "Machine Learning Fundamentals",
+      "description": "Core supervised and unsupervised learning concepts.",
+      "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "machine_learning_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Google",
+      "is_free": true,
+      "tags": [
+        "machine-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_official_guide_to_common_machine_learning_algorithms_and_workflows",
+      "resource_type": "course",
+      "title": "Scikit-learn User Guide",
+      "description": "Official guide to common machine-learning algorithms and workflows.",
+      "url": "https://www.youtube.com/watch?v=tFi4Y_y-GNM",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "prediction": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "ml"
+      ]
+    },
+    {
+      "resource_id": "ai_study_cross_validation_model_selection_and_evaluation",
+      "resource_type": "course",
+      "title": "Model Selection",
+      "description": "Study cross-validation, model selection and evaluation.",
+      "url": "https://www.youtube.com/watch?v=-8s9KuNo5SA",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "model_evaluation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "resource_id": "ai_learn_generalization_bias_variance_and_overfitting_concepts",
+      "resource_type": "course",
+      "title": "Generalization and Overfitting",
+      "description": "Learn generalization, bias/variance and overfitting concepts.",
+      "url": "https://www.youtube.com/watch?v=kBkwa5Rr8dY",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "generalization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Google",
+      "is_free": true,
+      "tags": [
+        "generalization"
+      ]
+    },
+    {
+      "resource_id": "ai_official_pytorch_tutorials_for_neural_network_development",
+      "resource_type": "course",
+      "title": "PyTorch Deep Learning",
+      "description": "Official PyTorch tutorials for neural-network development.",
+      "url": "https://www.youtube.com/watch?v=V_xro1bcAuA",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "pytorch": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "PyTorch",
+      "is_free": true,
+      "tags": [
+        "pytorch"
+      ]
+    },
+    {
+      "resource_id": "ai_official_tensorflow_tutorials_for_model_building_and_training",
+      "resource_type": "course",
+      "title": "TensorFlow Fundamentals",
+      "description": "Official TensorFlow tutorials for model building and training.",
+      "url": "https://www.youtube.com/watch?v=tPYj3fFJGjk",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "tensorflow": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "TensorFlow",
+      "is_free": true,
+      "tags": [
+        "tensorflow"
+      ]
+    },
+    {
+      "resource_id": "ai_learn_reproducible_ml_workflow_and_pipeline_concepts",
+      "resource_type": "course",
+      "title": "ML Pipelines",
+      "description": "Learn reproducible ML workflow and pipeline concepts.",
+      "url": "https://www.youtube.com/watch?v=dPmH3G9NQtY",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "mlops": 2
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 18,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "mlops"
+      ]
+    },
+    {
+      "resource_id": "ai_study_deployment_patterns_and_operational_ml_lifecycle_concepts",
+      "resource_type": "course",
+      "title": "ML Deployment Concepts",
+      "description": "Study deployment patterns and operational ML lifecycle concepts.",
+      "url": "https://www.youtube.com/watch?v=dPmH3G9NQtY",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "mlops": 2
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "Google Cloud",
+      "is_free": true,
+      "tags": [
+        "mlops"
+      ]
+    },
+    {
+      "resource_id": "ai_python_programming_patterns_used_in_machine_learning_workflows",
+      "resource_type": "course",
+      "title": "Python for Machine Learning",
+      "description": "Python programming patterns used in machine-learning workflows.",
+      "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Python Software Foundation",
+      "is_free": true,
+      "tags": [
+        "python",
+        "machine-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_understand_neural_network_structure_training_and_evaluation",
+      "resource_type": "course",
+      "title": "Neural Network Fundamentals",
+      "description": "Understand neural-network structure, training and evaluation.",
+      "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "machine_learning_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "Google",
+      "is_free": true,
+      "tags": [
+        "neural-networks"
+      ]
+    },
+    {
+      "resource_id": "ai_build_predictive_models_for_classification_and_regression_tasks",
+      "resource_type": "course",
+      "title": "Classification and Regression",
+      "description": "Build predictive models for classification and regression tasks.",
+      "url": "https://www.youtube.com/watch?v=tFi4Y_y-GNM",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "prediction": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "prediction"
+      ]
+    },
+    {
+      "resource_id": "ai_apply_metrics_and_validation_strategies_to_predictive_models",
+      "resource_type": "course",
+      "title": "Model Evaluation Practice",
+      "description": "Apply metrics and validation strategies to predictive models.",
+      "url": "https://www.youtube.com/watch?v=-8s9KuNo5SA",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "model_evaluation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "resource_id": "ai_prepare_useful_model_inputs_and_reason_about_feature_quality",
+      "resource_type": "course",
+      "title": "Feature Engineering",
+      "description": "Prepare useful model inputs and reason about feature quality.",
+      "url": "https://www.youtube.com/watch?v=kBkwa5Rr8dY",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "generalization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "features"
+      ]
+    },
+    {
+      "resource_id": "ai_analyze_model_assumptions_limitations_generalization_and_trade_offs",
+      "resource_type": "course",
+      "title": "Advanced ML Reasoning",
+      "description": "Analyze model assumptions, limitations, generalization and trade-offs.",
+      "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "machine_learning_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Google",
+      "is_free": true,
+      "tags": [
+        "machine-learning"
+      ]
+    },
+    {
+      "resource_id": "ai_build_validate_and_explain_a_predictive_model_on_a_structured_dataset",
+      "resource_type": "project",
+      "title": "Predictive Modeling Project",
+      "description": "Build, validate and explain a predictive model on a structured dataset.",
+      "url": "https://github.com/topics/predictive-modeling",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "prediction": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 45,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "prediction",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_compare_models_using_appropriate_validation_and_evaluation_metrics",
+      "resource_type": "project",
+      "title": "Model Evaluation Study",
+      "description": "Compare models using appropriate validation and evaluation metrics.",
+      "url": "https://github.com/scikit-learn/scikit-learn",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "model_evaluation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "evaluation",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_demonstrate_overfitting_and_mitigation_using_train_validation_experiments",
+      "resource_type": "project",
+      "title": "Generalization Experiment",
+      "description": "Demonstrate overfitting and mitigation using train/validation experiments.",
+      "url": "https://github.com/topics/overfitting",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "generalization": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Google",
+      "is_free": true,
+      "tags": [
+        "generalization"
+      ]
+    },
+    {
+      "resource_id": "ai_train_and_evaluate_a_neural_classifier_with_pytorch",
+      "resource_type": "project",
+      "title": "PyTorch Classifier",
+      "description": "Train and evaluate a neural classifier with PyTorch.",
+      "url": "https://github.com/pytorch/examples",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "pytorch": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "PyTorch",
+      "is_free": true,
+      "tags": [
+        "pytorch",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_train_and_evaluate_a_neural_classifier_with_tensorflow",
+      "resource_type": "project",
+      "title": "TensorFlow Classifier",
+      "description": "Train and evaluate a neural classifier with TensorFlow.",
+      "url": "https://github.com/tensorflow/models",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "tensorflow": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "TensorFlow",
+      "is_free": true,
+      "tags": [
+        "tensorflow",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_create_a_reproducible_preprocessing_and_modeling_pipeline",
+      "resource_type": "project",
+      "title": "ML Pipeline",
+      "description": "Create a reproducible preprocessing and modeling pipeline.",
+      "url": "https://github.com/DataTalksClub/mlops-zoomcamp",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "mlops": 2
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "scikit-learn",
+      "is_free": true,
+      "tags": [
+        "mlops",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_compare_modeling_approaches_and_document_assumptions_limitations_and_generalization",
+      "resource_type": "project",
+      "title": "Advanced ML Case Study",
+      "description": "Compare modeling approaches and document assumptions, limitations and generalization.",
+      "url": "https://github.com/ageron/handson-ml3",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "machine_learning_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 50,
+      "prerequisites": [],
+      "provider": "Google",
+      "is_free": true,
+      "tags": [
+        "machine-learning",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_create_a_documented_python_ml_repository_with_experiments_and_reproducibility",
+      "resource_type": "project",
+      "title": "Python ML Portfolio",
+      "description": "Create a documented Python ML repository with experiments and reproducibility.",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "Python Software Foundation",
+      "is_free": true,
+      "tags": [
+        "python",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ai_free_machine_learning_certification_curriculum",
+      "resource_type": "certification",
+      "title": "freeCodeCamp Machine Learning with Python",
+      "description": "Free machine-learning certification curriculum.",
+      "url": "https://www.freecodecamp.org/learn/machine-learning-with-python/",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "machine_learning_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 60,
+      "prerequisites": [],
+      "provider": "freeCodeCamp",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "ml"
+      ]
+    },
+    {
+      "resource_id": "ai_free_course_covering_modern_machine_learning_and_model_tooling_concepts",
+      "resource_type": "certification",
+      "title": "Hugging Face Course",
+      "description": "Free course covering modern machine-learning and model tooling concepts.",
+      "url": "https://huggingface.co/learn/nlp-course",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "pytorch": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "Hugging Face",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "ai"
+      ]
+    },
+    {
+      "resource_id": "ai_official_tensorflow_learning_and_certification_preparation_resources",
+      "resource_type": "certification",
+      "title": "TensorFlow Developer Resources",
+      "description": "Official TensorFlow learning and certification preparation resources.",
+      "url": "https://www.tensorflow.org/resources/learn-ml",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "tensorflow": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 50,
+      "prerequisites": [],
+      "provider": "TensorFlow",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "tensorflow"
+      ]
+    },
+    {
+      "resource_id": "ai_entry_level_machine_learning_engineering_archetype",
+      "resource_type": "job",
+      "title": "Junior ML Engineer",
+      "description": "Entry-level machine-learning engineering archetype.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20ML%20Engineer",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "machine_learning_reasoning": 2
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "ml"
+      ]
+    },
+    {
+      "resource_id": "ai_entry_level_ai_engineering_archetype_emphasizing_python_and_ml_fundamentals",
+      "resource_type": "job",
+      "title": "Junior AI Engineer",
+      "description": "Entry-level AI engineering archetype emphasizing Python and ML fundamentals.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20AI%20Engineer",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "ai"
+      ]
+    },
+    {
+      "resource_id": "ai_research_oriented_archetype_emphasizing_reasoning_evaluation_and_experimentation",
+      "resource_type": "job",
+      "title": "ML Research Assistant",
+      "description": "Research-oriented archetype emphasizing reasoning, evaluation and experimentation.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=ML%20Research%20Assistant",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "model_evaluation": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "research"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_learn_core_ux_concepts_user_centered_design_and_problem_framing",
+      "resource_type": "course",
+      "title": "UX Design Fundamentals",
+      "description": "Learn core UX concepts, user-centered design and problem framing.",
+      "url": "https://www.youtube.com/watch?v=Q7NygniYyII",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_centered_design": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_study_interviews_and_qualitative_research_approaches",
+      "resource_type": "course",
+      "title": "User Interview Methods",
+      "description": "Study interviews and qualitative research approaches.",
+      "url": "https://www.youtube.com/watch?v=rTNUTeXNG-c",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_research": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "research"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_learn_usability_testing_methods_and_evaluation_principles",
+      "resource_type": "course",
+      "title": "Usability Testing",
+      "description": "Learn usability testing methods and evaluation principles.",
+      "url": "https://www.youtube.com/watch?v=n8MnoJyl3W4",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "usability": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "usability"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_study_interaction_patterns_controls_feedback_and_affordances",
+      "resource_type": "course",
+      "title": "Interaction Patterns",
+      "description": "Study interaction patterns, controls, feedback and affordances.",
+      "url": "https://www.youtube.com/watch?v=U7rS_2ch_Ps",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "interaction_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 18,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "interaction"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_use_an_iterative_user_centered_problem_solving_process",
+      "resource_type": "course",
+      "title": "Design Thinking",
+      "description": "Use an iterative, user-centered problem-solving process.",
+      "url": "https://www.youtube.com/watch?v=4nTh3AP6knM",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "iterative_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 18,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "design-thinking"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_learn_hierarchy_and_visual_organization_in_interface_design",
+      "resource_type": "course",
+      "title": "Visual Hierarchy",
+      "description": "Learn hierarchy and visual organization in interface design.",
+      "url": "https://www.youtube.com/watch?v=lFToIvzG0os",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "visual_hierarchy": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "visual-design"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_learn_structured_layout_and_responsive_design_techniques_in_figma",
+      "resource_type": "course",
+      "title": "Figma Auto Layout",
+      "description": "Learn structured layout and responsive design techniques in Figma.",
+      "url": "https://www.youtube.com/watch?v=HoKD1qIcchQ",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "figma": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "Figma",
+      "is_free": true,
+      "tags": [
+        "figma"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_create_interactive_prototypes_and_flows_in_figma",
+      "resource_type": "course",
+      "title": "Figma Prototyping",
+      "description": "Create interactive prototypes and flows in Figma.",
+      "url": "https://www.youtube.com/watch?v=mT_Jjn8RJdo",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "prototyping_tools": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Figma",
+      "is_free": true,
+      "tags": [
+        "prototyping"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_learn_accessibility_considerations_for_inclusive_interface_design",
+      "resource_type": "course",
+      "title": "Accessibility in UX",
+      "description": "Learn accessibility considerations for inclusive interface design.",
+      "url": "https://www.youtube.com/watch?v=Q7NygniYyII",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_centered_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 12,
+      "prerequisites": [],
+      "provider": "W3C",
+      "is_free": true,
+      "tags": [
+        "accessibility"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_study_reusable_components_patterns_and_consistency_in_ui_systems",
+      "resource_type": "course",
+      "title": "Design Systems",
+      "description": "Study reusable components, patterns and consistency in UI systems.",
+      "url": "https://www.youtube.com/watch?v=lFToIvzG0os",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "visual_hierarchy": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "design-systems"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_plan_and_synthesize_multi_method_user_research_studies",
+      "resource_type": "course",
+      "title": "Advanced UX Research",
+      "description": "Plan and synthesize multi-method user research studies.",
+      "url": "https://www.youtube.com/watch?v=rTNUTeXNG-c",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_research": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "research"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_analyze_complex_user_flows_and_interaction_trade_offs",
+      "resource_type": "course",
+      "title": "Advanced Interaction Design",
+      "description": "Analyze complex user flows and interaction trade-offs.",
+      "url": "https://www.youtube.com/watch?v=U7rS_2ch_Ps",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "interaction_design": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "interaction"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_run_design_test_refine_cycles_using_prototypes_and_user_feedback",
+      "resource_type": "course",
+      "title": "Iterative Prototyping",
+      "description": "Run design-test-refine cycles using prototypes and user feedback.",
+      "url": "https://www.youtube.com/watch?v=4nTh3AP6knM",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "iterative_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "prototyping"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_apply_advanced_user_centered_design_practices_across_complex_products",
+      "resource_type": "course",
+      "title": "Advanced User-Centered Design",
+      "description": "Apply advanced user-centered design practices across complex products.",
+      "url": "https://www.youtube.com/watch?v=Q7NygniYyII",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_centered_design": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_conduct_research_synthesize_findings_and_document_design_decisions",
+      "resource_type": "project",
+      "title": "UX Research Case Study",
+      "description": "Conduct research, synthesize findings and document design decisions.",
+      "url": "https://github.com/topics/ux-research",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_research": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "portfolio",
+        "research"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_plan_and_conduct_a_usability_evaluation_and_present_findings",
+      "resource_type": "project",
+      "title": "Usability Test Study",
+      "description": "Plan and conduct a usability evaluation and present findings.",
+      "url": "https://github.com/topics/usability-testing",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "usability": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "portfolio",
+        "usability"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_create_a_polished_mobile_flow_with_interactive_prototype_states",
+      "resource_type": "project",
+      "title": "Figma Mobile Prototype",
+      "description": "Create a polished mobile flow with interactive prototype states.",
+      "url": "https://github.com/alfahad27/figma-ui-ux-designs",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "figma": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "Figma",
+      "is_free": true,
+      "tags": [
+        "figma",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_build_a_reusable_component_library_and_usage_documentation",
+      "resource_type": "project",
+      "title": "Design System Starter",
+      "description": "Build a reusable component library and usage documentation.",
+      "url": "https://github.com/topics/design-system",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "visual_hierarchy": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "design-system"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_redesign_a_complex_flow_and_justify_interaction_decisions",
+      "resource_type": "project",
+      "title": "Interaction Flow Redesign",
+      "description": "Redesign a complex flow and justify interaction decisions.",
+      "url": "https://github.com/topics/interaction-design",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "interaction_design": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "interaction",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_audit_a_digital_interface_for_accessibility_issues_and_improvements",
+      "resource_type": "project",
+      "title": "Accessibility Audit",
+      "description": "Audit a digital interface for accessibility issues and improvements.",
+      "url": "https://github.com/topics/accessibility",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_centered_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "W3C",
+      "is_free": true,
+      "tags": [
+        "accessibility",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_improve_typography_spacing_and_hierarchy_in_an_existing_interface",
+      "resource_type": "project",
+      "title": "Visual Hierarchy Redesign",
+      "description": "Improve typography, spacing and hierarchy in an existing interface.",
+      "url": "https://github.com/topics/design-system",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "visual_hierarchy": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "visual-design",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_run_a_short_research_prototype_test_refine_design_cycle",
+      "resource_type": "project",
+      "title": "Iterative Product Sprint",
+      "description": "Run a short research-prototype-test-refine design cycle.",
+      "url": "https://github.com/topics/design-thinking",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "iterative_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": true,
+      "tags": [
+        "iteration",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_professional_ux_curriculum_and_certificate_pathway",
+      "resource_type": "certification",
+      "title": "Google UX Design Certificate",
+      "description": "Professional UX curriculum and certificate pathway.",
+      "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_centered_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 100,
+      "prerequisites": [],
+      "provider": "Google/Coursera",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_structured_figma_learning_resources_for_design_and_prototyping_skills",
+      "resource_type": "certification",
+      "title": "Figma Education Resources",
+      "description": "Structured Figma learning resources for design and prototyping skills.",
+      "url": "https://www.figma.com/education/",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "figma": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "Figma",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "figma"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_structured_ux_learning_resources_covering_research_usability_and_design",
+      "resource_type": "certification",
+      "title": "NN/g UX Resources",
+      "description": "Structured UX learning resources covering research, usability and design.",
+      "url": "https://www.nngroup.com/courses/",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "usability": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "Nielsen Norman Group",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "ux"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_entry_level_ui_archetype_focused_on_visual_hierarchy_and_prototyping",
+      "resource_type": "job",
+      "title": "Junior UI Designer",
+      "description": "Entry-level UI archetype focused on visual hierarchy and prototyping.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20UI%20Designer",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "visual_hierarchy": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "ui"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_entry_level_ux_research_archetype",
+      "resource_type": "job",
+      "title": "Junior UX Researcher",
+      "description": "Entry-level UX research archetype.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20UX%20Researcher",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_research": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "research"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_interaction_design_archetype_emphasizing_flows_usability_and_prototyping",
+      "resource_type": "job",
+      "title": "Interaction Designer",
+      "description": "Interaction design archetype emphasizing flows, usability and prototyping.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Interaction%20Designer",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "interaction_design": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "interaction"
+      ]
+    },
+    {
+      "resource_id": "cyber_foundational_security_concepts_threats_and_defensive_practices",
+      "resource_type": "course",
+      "title": "Cybersecurity Fundamentals",
+      "description": "Foundational security concepts, threats and defensive practices.",
+      "url": "https://www.youtube.com/watch?v=z2hVCeiwvGk",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_awareness": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "cybersecurity"
+      ]
+    },
+    {
+      "resource_id": "cyber_study_structured_cybersecurity_risk_management_and_controls",
+      "resource_type": "course",
+      "title": "NIST Cybersecurity Framework",
+      "description": "Study structured cybersecurity risk management and controls.",
+      "url": "https://www.youtube.com/watch?v=mJIhpbzaF-o",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_risk_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "risk",
+        "framework"
+      ]
+    },
+    {
+      "resource_id": "cyber_learn_cybersecurity_risk_management_concepts_and_lifecycle",
+      "resource_type": "course",
+      "title": "NIST Risk Management",
+      "description": "Learn cybersecurity risk management concepts and lifecycle.",
+      "url": "https://www.youtube.com/watch?v=mJIhpbzaF-o",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_risk_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "risk"
+      ]
+    },
+    {
+      "resource_id": "cyber_networking_and_security_concepts_for_defensive_analysis",
+      "resource_type": "course",
+      "title": "Network Security Fundamentals",
+      "description": "Networking and security concepts for defensive analysis.",
+      "url": "https://www.youtube.com/watch?v=4uKUSEqEosg",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "Cisco",
+      "is_free": true,
+      "tags": [
+        "networking"
+      ]
+    },
+    {
+      "resource_id": "cyber_incident_preparation_detection_containment_and_recovery",
+      "resource_type": "course",
+      "title": "Incident Response",
+      "description": "Incident preparation, detection, containment and recovery.",
+      "url": "https://www.youtube.com/watch?v=7_d74-9xKDA",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "incident_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "incident-response"
+      ]
+    },
+    {
+      "resource_id": "cyber_study_detection_concepts_and_analysis_of_suspicious_activity",
+      "resource_type": "course",
+      "title": "Threat Detection",
+      "description": "Study detection concepts and analysis of suspicious activity.",
+      "url": "https://www.youtube.com/watch?v=iAx4PgYoWD4",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "risk_detection": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "detection"
+      ]
+    },
+    {
+      "resource_id": "cyber_understand_social_engineering_techniques_and_defensive_awareness",
+      "resource_type": "course",
+      "title": "Social Engineering",
+      "description": "Understand social-engineering techniques and defensive awareness.",
+      "url": "https://www.youtube.com/watch?v=Lyt6LXkbXEc",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "social_engineering_awareness": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "social-engineering"
+      ]
+    },
+    {
+      "resource_id": "cyber_learn_common_web_application_security_testing_principles",
+      "resource_type": "course",
+      "title": "OWASP Web Security",
+      "description": "Learn common web application security testing principles.",
+      "url": "https://www.youtube.com/watch?v=4uKUSEqEosg",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "OWASP",
+      "is_free": true,
+      "tags": [
+        "web-security"
+      ]
+    },
+    {
+      "resource_id": "cyber_study_monitoring_indicators_and_defensive_security_operations",
+      "resource_type": "course",
+      "title": "Security Monitoring",
+      "description": "Study monitoring, indicators and defensive security operations.",
+      "url": "https://www.youtube.com/watch?v=iAx4PgYoWD4",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "risk_detection": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 25,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "monitoring"
+      ]
+    },
+    {
+      "resource_id": "cyber_build_organizational_security_awareness_practices",
+      "resource_type": "course",
+      "title": "Security Awareness Program",
+      "description": "Build organizational security-awareness practices.",
+      "url": "https://www.youtube.com/watch?v=z2hVCeiwvGk",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_awareness": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 15,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "awareness"
+      ]
+    },
+    {
+      "resource_id": "cyber_analyze_incident_scenarios_and_reason_about_response_priorities",
+      "resource_type": "course",
+      "title": "Advanced Incident Reasoning",
+      "description": "Analyze incident scenarios and reason about response priorities.",
+      "url": "https://www.youtube.com/watch?v=7_d74-9xKDA",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "incident_reasoning": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "incident-response"
+      ]
+    },
+    {
+      "resource_id": "cyber_study_defensive_network_controls_and_segmentation_concepts",
+      "resource_type": "course",
+      "title": "Advanced Network Defense",
+      "description": "Study defensive network controls and segmentation concepts.",
+      "url": "https://www.youtube.com/watch?v=4uKUSEqEosg",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Cisco",
+      "is_free": true,
+      "tags": [
+        "network-security"
+      ]
+    },
+    {
+      "resource_id": "cyber_practice_structured_analysis_of_threats_likelihood_and_impact",
+      "resource_type": "course",
+      "title": "Security Risk Analysis",
+      "description": "Practice structured analysis of threats, likelihood and impact.",
+      "url": "https://www.youtube.com/watch?v=mJIhpbzaF-o",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_risk_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "risk-analysis"
+      ]
+    },
+    {
+      "resource_id": "cyber_apply_structured_reasoning_to_threat_detection_and_defensive_prioritization",
+      "resource_type": "course",
+      "title": "Advanced Threat Analysis",
+      "description": "Apply structured reasoning to threat detection and defensive prioritization.",
+      "url": "https://www.youtube.com/watch?v=iAx4PgYoWD4",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "risk_detection": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "threat-analysis"
+      ]
+    },
+    {
+      "resource_id": "cyber_perform_a_structured_security_risk_assessment_and_document_controls",
+      "resource_type": "project",
+      "title": "Risk Assessment",
+      "description": "Perform a structured security risk assessment and document controls.",
+      "url": "https://github.com/counteractive/incident-response-plan-template",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_risk_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "risk",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "cyber_create_a_practical_incident_response_playbook_for_a_sample_organization",
+      "resource_type": "project",
+      "title": "Incident Response Playbook",
+      "description": "Create a practical incident-response playbook for a sample organization.",
+      "url": "https://github.com/counteractive/incident-response-plan-template",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "incident_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "incident-response",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "cyber_create_a_safe_defensive_lab_for_network_security_analysis",
+      "resource_type": "project",
+      "title": "Network Defense Lab",
+      "description": "Create a safe defensive lab for network-security analysis.",
+      "url": "https://github.com/noahmtubbs/Cybersecurity-HomeLab",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "Cisco",
+      "is_free": true,
+      "tags": [
+        "network-security",
+        "lab"
+      ]
+    },
+    {
+      "resource_id": "cyber_analyze_simulated_indicators_and_document_detection_decisions",
+      "resource_type": "project",
+      "title": "Threat Detection Case Study",
+      "description": "Analyze simulated indicators and document detection decisions.",
+      "url": "https://github.com/aws-samples/aws-incident-response-playbooks",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "risk_detection": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "detection",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "cyber_design_a_security_awareness_campaign_and_measurement_plan",
+      "resource_type": "project",
+      "title": "Security Awareness Campaign",
+      "description": "Design a security-awareness campaign and measurement plan.",
+      "url": "https://github.com/topics/security-awareness",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_awareness": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "awareness",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "cyber_analyze_social_engineering_scenarios_and_create_defensive_guidance",
+      "resource_type": "project",
+      "title": "Social Engineering Awareness Study",
+      "description": "Analyze social-engineering scenarios and create defensive guidance.",
+      "url": "https://github.com/topics/social-engineering",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "social_engineering_awareness": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 20,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "social-engineering"
+      ]
+    },
+    {
+      "resource_id": "cyber_conduct_a_controlled_web_security_assessment_using_owasp_methodology",
+      "resource_type": "project",
+      "title": "Web Security Assessment",
+      "description": "Conduct a controlled web-security assessment using OWASP methodology.",
+      "url": "https://github.com/noahmtubbs/Cybersecurity-HomeLab",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "OWASP",
+      "is_free": true,
+      "tags": [
+        "owasp",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "cyber_practice_safe_triage_of_simulated_security_alerts_and_escalation_decisions",
+      "resource_type": "project",
+      "title": "SOC Alert Triage",
+      "description": "Practice safe triage of simulated security alerts and escalation decisions.",
+      "url": "https://github.com/aws-samples/aws-incident-response-playbooks",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "risk_detection": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "CISA",
+      "is_free": true,
+      "tags": [
+        "soc",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "cyber_write_an_executive_level_risk_report_with_prioritized_mitigations",
+      "resource_type": "project",
+      "title": "Cybersecurity Risk Report",
+      "description": "Write an executive-level risk report with prioritized mitigations.",
+      "url": "https://github.com/counteractive/incident-response-plan-template",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_risk_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "NIST",
+      "is_free": true,
+      "tags": [
+        "risk",
+        "portfolio"
+      ]
+    },
+    {
+      "resource_id": "cyber_entry_level_cybersecurity_certification_pathway",
+      "resource_type": "certification",
+      "title": "ISC2 Certified in Cybersecurity",
+      "description": "Entry-level cybersecurity certification pathway.",
+      "url": "https://www.isc2.org/certifications/cc",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_awareness": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 60,
+      "prerequisites": [],
+      "provider": "ISC2",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "cybersecurity"
+      ]
+    },
+    {
+      "resource_id": "cyber_cisco_networking_academy_cybersecurity_learning_pathway",
+      "resource_type": "certification",
+      "title": "Cisco Cybersecurity Pathway",
+      "description": "Cisco Networking Academy cybersecurity learning pathway.",
+      "url": "https://www.netacad.com/courses/cybersecurity",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "network_security": 3
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "Cisco Networking Academy",
+      "is_free": true,
+      "tags": [
+        "certification",
+        "networking"
+      ]
+    },
+    {
+      "resource_id": "cyber_widely_recognized_foundational_cybersecurity_certification",
+      "resource_type": "certification",
+      "title": "CompTIA Security+",
+      "description": "Widely recognized foundational cybersecurity certification.",
+      "url": "https://www.comptia.org/certifications/security",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_risk_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 80,
+      "prerequisites": [],
+      "provider": "CompTIA",
+      "is_free": false,
+      "tags": [
+        "certification",
+        "security"
+      ]
+    },
+    {
+      "resource_id": "cyber_entry_level_soc_archetype_emphasizing_detection_and_incident_fundamentals",
+      "resource_type": "job",
+      "title": "Junior SOC Analyst",
+      "description": "Entry-level SOC archetype emphasizing detection and incident fundamentals.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20SOC%20Analyst",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "risk_detection": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "soc"
+      ]
+    },
+    {
+      "resource_id": "cyber_entry_level_security_analyst_archetype",
+      "resource_type": "job",
+      "title": "Junior Security Analyst",
+      "description": "Entry-level security analyst archetype.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior%20Security%20Analyst",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_awareness": 2
+      },
+      "difficulty": "beginner",
+      "level": 2,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "security"
+      ]
+    },
+    {
+      "resource_id": "cyber_incident_response_archetype_emphasizing_incident_reasoning_and_detection",
+      "resource_type": "job",
+      "title": "Incident Response Analyst",
+      "description": "Incident-response archetype emphasizing incident reasoning and detection.",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Incident%20Response%20Analyst",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "incident_reasoning": 3
+      },
+      "difficulty": "intermediate",
+      "level": 3,
+      "estimated_hours": 0,
+      "prerequisites": [],
+      "provider": "LinkedIn",
+      "is_free": true,
+      "tags": [
+        "job",
+        "incident-response"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_advanced_user_centered_design",
+      "resource_type": "course",
+      "title": "Advanced User-Centered Design Workshop",
+      "description": "Advanced fixed resource covering user_centered_design at level 4.",
+      "url": "https://www.youtube.com/watch?v=Q7NygniYyII",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "user_centered_design": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "ui_ux_advanced_usability",
+      "resource_type": "course",
+      "title": "Advanced Usability Evaluation",
+      "description": "Advanced fixed resource covering usability at level 4.",
+      "url": "https://www.youtube.com/watch?v=n8MnoJyl3W4",
+      "career": [
+        "ui_ux"
+      ],
+      "skills": {
+        "usability": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 30,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "development_advanced_logical_problem_solving",
+      "resource_type": "course",
+      "title": "Advanced Problem Solving Practice",
+      "description": "Advanced fixed resource covering logical_problem_solving at level 4.",
+      "url": "https://www.youtube.com/watch?v=6-x6XX5-pE8",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "logical_problem_solving": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "development_advanced_algorithmic_thinking",
+      "resource_type": "course",
+      "title": "Advanced Algorithms Practice",
+      "description": "Advanced fixed resource covering algorithmic_thinking at level 4.",
+      "url": "https://www.youtube.com/watch?v=8hly31xKli0",
+      "career": [
+        "development"
+      ],
+      "skills": {
+        "algorithmic_thinking": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 45,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "data_advanced_analytical_reasoning",
+      "resource_type": "course",
+      "title": "Advanced Analytical Reasoning Casework",
+      "description": "Advanced fixed resource covering analytical_reasoning at level 4.",
+      "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "analytical_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "data_advanced_analytical_thinking",
+      "resource_type": "course",
+      "title": "Advanced Data Analysis Casework",
+      "description": "Advanced fixed resource covering analytical_thinking at level 4.",
+      "url": "https://www.youtube.com/watch?v=Liv6eeb1VfE",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "analytical_thinking": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "data_advanced_critical_thinking",
+      "resource_type": "course",
+      "title": "Advanced Critical Thinking with Data",
+      "description": "Advanced fixed resource covering critical_thinking at level 4.",
+      "url": "https://www.youtube.com/watch?v=Cum3k-Wglfw",
+      "career": [
+        "data"
+      ],
+      "skills": {
+        "critical_thinking": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 35,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "ai_advanced_machine_learning_reasoning",
+      "resource_type": "course",
+      "title": "Advanced Machine Learning Reasoning",
+      "description": "Advanced fixed resource covering machine_learning_reasoning at level 4.",
+      "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "machine_learning_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 45,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "ai_advanced_python",
+      "resource_type": "course",
+      "title": "Advanced Python for ML",
+      "description": "Advanced fixed resource covering python at level 4.",
+      "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "career": [
+        "ai"
+      ],
+      "skills": {
+        "python": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "cyber_advanced_security_risk_reasoning",
+      "resource_type": "course",
+      "title": "Advanced Cybersecurity Risk Analysis",
+      "description": "Advanced fixed resource covering security_risk_reasoning at level 4.",
+      "url": "https://www.youtube.com/watch?v=mJIhpbzaF-o",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "security_risk_reasoning": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    },
+    {
+      "resource_id": "cyber_advanced_risk_detection",
+      "resource_type": "course",
+      "title": "Advanced Threat Detection Analysis",
+      "description": "Advanced fixed resource covering risk_detection at level 4.",
+      "url": "https://www.youtube.com/watch?v=iAx4PgYoWD4",
+      "career": [
+        "cyber"
+      ],
+      "skills": {
+        "risk_detection": 4
+      },
+      "difficulty": "advanced",
+      "level": 4,
+      "estimated_hours": 40,
+      "prerequisites": [],
+      "provider": "MINERVA curated source",
+      "is_free": true,
+      "tags": [
+        "advanced",
+        "level-4"
+      ]
+    }
+  ]
+}

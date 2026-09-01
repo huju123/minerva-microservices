@@ -8,6 +8,8 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from journey1.skill_gap import build_final_result
 
+from roadmap.roadmap.router import router as roadmap_router
+
 import shutil
 import traceback
 import json
@@ -44,6 +46,7 @@ app = FastAPI(
     title="Minerva Assessment Scoring Service",
     version="1.0.0"
 )
+app.include_router(roadmap_router, prefix="/api/roadmap", tags=["roadmap"])
 
 BASE_DIR = Path(__file__).resolve().parent
 

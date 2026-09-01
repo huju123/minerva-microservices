@@ -1,0 +1,276 @@
+{
+  "career": "data",
+  "career_name": "Data & Analytics",
+  "score": 5,
+  "max_score": 5,
+  "readiness_percent": 100.0,
+  "performance_level": "Highly Ready",
+  "performance_label": "Highly Ready",
+  "validation": "Strong Match",
+  "strengths": [
+    "Analytical Reasoning",
+    "Critical Thinking",
+    "Analytical Thinking",
+    "Anomaly Detection",
+    "Data Quality",
+    "Data Validation",
+    "Data Visualization"
+  ],
+  "weak_areas": [],
+  "current_skill_profile": [
+    {
+      "skill_id": "analytical_reasoning",
+      "skill_name": "Analytical Reasoning",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 5,
+      "current_level_label": "Expert",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "positive_signals": 3,
+      "negative_signals": 0,
+      "total_signals": 3,
+      "evidence_questions": [
+        "DATA_01",
+        "DATA_04",
+        "DATA_05"
+      ],
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None",
+      "evidence_status": "measured",
+      "evidence_confidence": "high"
+    },
+    {
+      "skill_id": "analytical_thinking",
+      "skill_name": "Analytical Thinking",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 4,
+      "current_level_label": "Advanced",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "positive_signals": 2,
+      "negative_signals": 0,
+      "total_signals": 2,
+      "evidence_questions": [
+        "DATA_01",
+        "DATA_02"
+      ],
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None",
+      "evidence_status": "measured",
+      "evidence_confidence": "moderate"
+    },
+    {
+      "skill_id": "data_quality",
+      "skill_name": "Data Quality",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": 3,
+      "current_level_label": "Intermediate",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "positive_signals": 1,
+      "negative_signals": 0,
+      "total_signals": 1,
+      "evidence_questions": [
+        "DATA_02"
+      ],
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None",
+      "evidence_status": "measured",
+      "evidence_confidence": "low"
+    },
+    {
+      "skill_id": "critical_thinking",
+      "skill_name": "Critical Thinking",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": 5,
+      "current_level_label": "Expert",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "positive_signals": 3,
+      "negative_signals": 0,
+      "total_signals": 3,
+      "evidence_questions": [
+        "DATA_02",
+        "DATA_03",
+        "DATA_05"
+      ],
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None",
+      "evidence_status": "measured",
+      "evidence_confidence": "high"
+    },
+    {
+      "skill_id": "anomaly_detection",
+      "skill_name": "Anomaly Detection",
+      "category": "core",
+      "weight": 0.7,
+      "current_level": 3,
+      "current_level_label": "Intermediate",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "positive_signals": 1,
+      "negative_signals": 0,
+      "total_signals": 1,
+      "evidence_questions": [
+        "DATA_03"
+      ],
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None",
+      "evidence_status": "measured",
+      "evidence_confidence": "low"
+    },
+    {
+      "skill_id": "data_validation",
+      "skill_name": "Data Validation",
+      "category": "supporting",
+      "weight": 0.7,
+      "current_level": 3,
+      "current_level_label": "Intermediate",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "positive_signals": 1,
+      "negative_signals": 0,
+      "total_signals": 1,
+      "evidence_questions": [
+        "DATA_03"
+      ],
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None",
+      "evidence_status": "measured",
+      "evidence_confidence": "low"
+    },
+    {
+      "skill_id": "data_visualization",
+      "skill_name": "Data Visualization",
+      "category": "supporting",
+      "weight": 0.7,
+      "current_level": 3,
+      "current_level_label": "Intermediate",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "positive_signals": 1,
+      "negative_signals": 0,
+      "total_signals": 1,
+      "evidence_questions": [
+        "DATA_04"
+      ],
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None",
+      "evidence_status": "measured",
+      "evidence_confidence": "low"
+    },
+    {
+      "skill_id": "sql",
+      "skill_name": "Sql",
+      "category": "tool",
+      "weight": 0.8,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "positive_signals": 0,
+      "negative_signals": 0,
+      "total_signals": 0,
+      "evidence_questions": [],
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None",
+      "evidence_status": "no_evidence",
+      "evidence_confidence": "none"
+    },
+    {
+      "skill_id": "pandas",
+      "skill_name": "Pandas",
+      "category": "tool",
+      "weight": 0.7,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "positive_signals": 0,
+      "negative_signals": 0,
+      "total_signals": 0,
+      "evidence_questions": [],
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None",
+      "evidence_status": "no_evidence",
+      "evidence_confidence": "none"
+    }
+  ],
+  "skill_gap": [],
+  "question_results": [
+    {
+      "question_id": "DATA_01",
+      "selected_option": "A",
+      "is_correct": true,
+      "primary_dimension": "analytical_reasoning",
+      "secondary_dimension": "analytical_thinking",
+      "behavior_signals": [
+        "analytical_thinking",
+        "evidence_based_reasoning",
+        "pattern_recognition"
+      ]
+    },
+    {
+      "question_id": "DATA_02",
+      "selected_option": "B",
+      "is_correct": true,
+      "primary_dimension": "analytical_reasoning",
+      "secondary_dimension": "data_quality",
+      "behavior_signals": [
+        "data_quality",
+        "critical_thinking",
+        "analytical_reasoning"
+      ]
+    },
+    {
+      "question_id": "DATA_03",
+      "selected_option": "C",
+      "is_correct": true,
+      "primary_dimension": "analytical_reasoning",
+      "secondary_dimension": "anomaly_detection",
+      "behavior_signals": [
+        "anomaly_detection",
+        "critical_thinking",
+        "data_validation"
+      ]
+    },
+    {
+      "question_id": "DATA_04",
+      "selected_option": "D",
+      "is_correct": true,
+      "primary_dimension": "analytical_reasoning",
+      "secondary_dimension": "data_visualization",
+      "behavior_signals": [
+        "data_visualization",
+        "communication",
+        "pattern_recognition"
+      ]
+    },
+    {
+      "question_id": "DATA_05",
+      "selected_option": "A",
+      "is_correct": true,
+      "primary_dimension": "analytical_reasoning",
+      "secondary_dimension": "critical_thinking",
+      "behavior_signals": [
+        "critical_thinking",
+        "causal_reasoning",
+        "data_interpretation"
+      ]
+    }
+  ],
+  "recommended_next_step": "Validate your readiness through a practical project rather than relying on assessment performance alone."
+}

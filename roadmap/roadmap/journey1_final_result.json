@@ -1,0 +1,1832 @@
+{
+  "journey": 1,
+  "mode": "exploring",
+  "status": "preliminary_skill_evidence",
+  "career_recommendation": {
+    "assessment": {
+      "assessment_id": "minerva_career_discovery_v4",
+      "title": "Minerva Career Discovery Assessment",
+      "version": "4.0",
+      "journey": 1,
+      "mode": "exploring"
+    },
+    "source": {
+      "deterministic_engine": "exploring_scoring.py",
+      "deterministic_result": "exploring_result.json",
+      "interpretation_engine": "exploring_ai.py",
+      "interpretation_result": "exploring_ai_result.json",
+      "recommendation_engine": "exploring_recommendation.py",
+      "engine_type": "local_rule_based",
+      "external_api": false,
+      "score_recalculation": false,
+      "answer_evaluation": false,
+      "question_access": false,
+      "answer_key_access": false
+    },
+    "recommendation": {
+      "type": "complete_tie",
+      "summary": "All five assessed career areas received the same deterministic score of 100%. No single primary career can therefore be selected. The strongest recommendation is to explore all five assessed areas — ui_ux, development, data, ai, cyber — through small practical projects before narrowing your focus.",
+      "career_tie": {
+        "is_tie": true,
+        "complete_tie": true,
+        "highest_percentage": 100.0,
+        "tied_careers": [
+          "ui_ux",
+          "development",
+          "data",
+          "ai",
+          "cyber"
+        ],
+        "tied_career_ids": [
+          "ui_ux",
+          "development",
+          "data",
+          "ai",
+          "cyber"
+        ]
+      },
+      "primary_career": {
+        "career_id": null,
+        "career": null,
+        "score": null,
+        "max_score": null,
+        "percentage": 100.0,
+        "status": "no_single_primary",
+        "why_it_fits": "No single primary career is identified because all assessed careers have the same deterministic score.",
+        "supporting_dimensions": []
+      },
+      "alternative_careers": [
+        {
+          "career_id": "ui_ux",
+          "career": "ui_ux",
+          "score": 2,
+          "max_score": 2,
+          "percentage": 100.0,
+          "why_it_fits": "ui_ux is a strong exploration area with a deterministic score of 100%. It is tied with all other assessed careers, so it should not be treated as the single best career. Its relevant supporting signals include Algorithmic Thinking, Analytical Reasoning, Analytical Thinking. This area involves designing user experiences, interfaces, usability, visual hierarchy, user research, and interaction flows.",
+          "supporting_dimensions": [
+            "Algorithmic Thinking",
+            "Analytical Reasoning",
+            "Analytical Thinking",
+            "Generalization",
+            "Logical Problem Solving"
+          ]
+        },
+        {
+          "career_id": "development",
+          "career": "development",
+          "score": 2,
+          "max_score": 2,
+          "percentage": 100.0,
+          "why_it_fits": "development is a strong exploration area with a deterministic score of 100%. It is tied with all other assessed careers, so it should not be treated as the single best career. Its relevant supporting signals include Algorithmic Thinking, Analytical Reasoning, Analytical Thinking. This area involves building software, solving programming problems, debugging systems, designing algorithms, and developing applications.",
+          "supporting_dimensions": [
+            "Algorithmic Thinking",
+            "Analytical Reasoning",
+            "Analytical Thinking",
+            "Generalization",
+            "Logical Problem Solving"
+          ]
+        },
+        {
+          "career_id": "data",
+          "career": "data",
+          "score": 2,
+          "max_score": 2,
+          "percentage": 100.0,
+          "why_it_fits": "data is a strong exploration area with a deterministic score of 100%. It is tied with all other assessed careers, so it should not be treated as the single best career. Its relevant supporting signals include Algorithmic Thinking, Analytical Reasoning, Analytical Thinking. This area involves exploring the skills and practical work associated with data.",
+          "supporting_dimensions": [
+            "Algorithmic Thinking",
+            "Analytical Reasoning",
+            "Analytical Thinking",
+            "Generalization",
+            "Logical Problem Solving"
+          ]
+        },
+        {
+          "career_id": "ai",
+          "career": "ai",
+          "score": 2,
+          "max_score": 2,
+          "percentage": 100.0,
+          "why_it_fits": "ai is a strong exploration area with a deterministic score of 100%. It is tied with all other assessed careers, so it should not be treated as the single best career. Its relevant supporting signals include Algorithmic Thinking, Analytical Reasoning, Analytical Thinking. This area involves exploring the skills and practical work associated with ai.",
+          "supporting_dimensions": [
+            "Algorithmic Thinking",
+            "Analytical Reasoning",
+            "Analytical Thinking",
+            "Generalization",
+            "Logical Problem Solving"
+          ]
+        },
+        {
+          "career_id": "cyber",
+          "career": "cyber",
+          "score": 2,
+          "max_score": 2,
+          "percentage": 100.0,
+          "why_it_fits": "cyber is a strong exploration area with a deterministic score of 100%. It is tied with all other assessed careers, so it should not be treated as the single best career. Its relevant supporting signals include Algorithmic Thinking, Analytical Reasoning, Analytical Thinking. This area involves exploring the skills and practical work associated with cyber.",
+          "supporting_dimensions": [
+            "Algorithmic Thinking",
+            "Analytical Reasoning",
+            "Analytical Thinking",
+            "Generalization",
+            "Logical Problem Solving"
+          ]
+        }
+      ],
+      "next_steps": [
+        {
+          "step": "Explore ui_ux",
+          "action": "Redesign a simple mobile app screen and create a basic clickable prototype."
+        },
+        {
+          "step": "Explore development",
+          "action": "Build a small beginner-friendly application such as a to-do list, calculator, or simple CRUD app."
+        },
+        {
+          "step": "Explore data",
+          "action": "Complete a small beginner-level project related to data and record what you learned."
+        },
+        {
+          "step": "Explore ai",
+          "action": "Complete a small beginner-level project related to ai and record what you learned."
+        },
+        {
+          "step": "Explore cyber",
+          "action": "Complete a small beginner-level project related to cyber and record what you learned."
+        },
+        {
+          "step": "Compare your experience",
+          "action": "After completing the exploration activities, compare which type of work you found most interesting, enjoyable, motivating, and worth learning further."
+        }
+      ]
+    },
+    "supporting_ai_insights": {
+      "overall": "You answered 10 of 10 questions correctly. Your career results are completely tied, so the assessment does not identify one career as uniquely stronger than the others. Use the recommended areas as equally promising directions and continue exploring them.",
+      "thinking_pattern": "Your results show particularly strong performance in algorithmic_thinking and analytical_reasoning. This suggests a consistent problem-solving profile that may support several analytical or technical career directions.",
+      "top_career_explanation": "UI/UX Design is one of the equally scored career areas. Because all careers have the same highest result, this assessment should not be interpreted as selecting this career over the others.",
+      "personalized_feedback": "Your results do not identify one uniquely dominant career, so avoid narrowing your options too early. Compare the equally scored career areas through small practical projects, courses, or real-world tasks before making a final decision.",
+      "strengths": [
+        "Algorithmic Thinking",
+        "Analytical Reasoning",
+        "Analytical Thinking",
+        "Generalization",
+        "Logical Problem Solving",
+        "Logical Reasoning",
+        "Machine Learning Reasoning"
+      ],
+      "improvement_areas": []
+    },
+    "deterministic_career_scores": [
+      {
+        "rank": 1,
+        "career_id": "ui_ux",
+        "career_name": "ui_ux",
+        "score": 2,
+        "max_score": 2,
+        "percentage": 100.0
+      },
+      {
+        "rank": 1,
+        "career_id": "development",
+        "career_name": "development",
+        "score": 2,
+        "max_score": 2,
+        "percentage": 100.0
+      },
+      {
+        "rank": 1,
+        "career_id": "data",
+        "career_name": "data",
+        "score": 2,
+        "max_score": 2,
+        "percentage": 100.0
+      },
+      {
+        "rank": 1,
+        "career_id": "ai",
+        "career_name": "ai",
+        "score": 2,
+        "max_score": 2,
+        "percentage": 100.0
+      },
+      {
+        "rank": 1,
+        "career_id": "cyber",
+        "career_name": "cyber",
+        "score": 2,
+        "max_score": 2,
+        "percentage": 100.0
+      }
+    ]
+  },
+  "target_careers": [
+    "ui_ux",
+    "development",
+    "data",
+    "ai",
+    "cyber"
+  ],
+  "skill_normalization": {
+    "source": "skill_normalization.json",
+    "mapping_structure": "career_mappings[career].mappings",
+    "mapped_signal_count": 17,
+    "career_mapping_counts": {
+      "ui_ux": 9,
+      "development": 9,
+      "data": 10,
+      "ai": 13,
+      "cyber": 12
+    },
+    "unmapped_behavior_signals": [
+      "algorithmic_thinking",
+      "analytical_thinking",
+      "data_reasoning",
+      "debugging",
+      "evidence_based_reasoning",
+      "generalization",
+      "incident_reasoning",
+      "interaction_design",
+      "iterative_design",
+      "logic",
+      "logical_reasoning",
+      "machine_learning_reasoning",
+      "model_evaluation",
+      "pattern_recognition",
+      "prediction",
+      "problem_solving",
+      "risk_detection",
+      "security_awareness",
+      "social_engineering_awareness",
+      "usability",
+      "user_research",
+      "visual_hierarchy"
+    ],
+    "career_unmapped_behavior_signals": {
+      "ui_ux": [
+        "algorithmic_thinking",
+        "analytical_thinking",
+        "data_reasoning",
+        "debugging",
+        "evidence_based_reasoning",
+        "generalization",
+        "incident_reasoning",
+        "iterative_design",
+        "logic",
+        "logical_reasoning",
+        "machine_learning_reasoning",
+        "model_evaluation",
+        "pattern_recognition",
+        "prediction",
+        "risk_detection",
+        "security_awareness",
+        "social_engineering_awareness"
+      ],
+      "development": [
+        "analytical_thinking",
+        "data_reasoning",
+        "evidence_based_reasoning",
+        "generalization",
+        "incident_reasoning",
+        "interaction_design",
+        "iterative_design",
+        "logic",
+        "machine_learning_reasoning",
+        "model_evaluation",
+        "pattern_recognition",
+        "prediction",
+        "risk_detection",
+        "security_awareness",
+        "social_engineering_awareness",
+        "usability",
+        "user_research",
+        "visual_hierarchy"
+      ],
+      "data": [
+        "algorithmic_thinking",
+        "data_reasoning",
+        "debugging",
+        "generalization",
+        "incident_reasoning",
+        "interaction_design",
+        "iterative_design",
+        "logic",
+        "logical_reasoning",
+        "machine_learning_reasoning",
+        "model_evaluation",
+        "prediction",
+        "problem_solving",
+        "risk_detection",
+        "security_awareness",
+        "social_engineering_awareness",
+        "usability",
+        "user_research",
+        "visual_hierarchy"
+      ],
+      "ai": [
+        "algorithmic_thinking",
+        "analytical_thinking",
+        "data_reasoning",
+        "debugging",
+        "evidence_based_reasoning",
+        "incident_reasoning",
+        "interaction_design",
+        "iterative_design",
+        "logic",
+        "logical_reasoning",
+        "pattern_recognition",
+        "prediction",
+        "problem_solving",
+        "risk_detection",
+        "security_awareness",
+        "social_engineering_awareness",
+        "usability",
+        "user_research",
+        "visual_hierarchy"
+      ],
+      "cyber": [
+        "algorithmic_thinking",
+        "analytical_thinking",
+        "data_reasoning",
+        "debugging",
+        "evidence_based_reasoning",
+        "generalization",
+        "incident_reasoning",
+        "interaction_design",
+        "iterative_design",
+        "logic",
+        "logical_reasoning",
+        "machine_learning_reasoning",
+        "model_evaluation",
+        "pattern_recognition",
+        "prediction",
+        "problem_solving",
+        "usability",
+        "user_research",
+        "visual_hierarchy"
+      ]
+    }
+  },
+  "preliminary_current_skill_profile": [
+    {
+      "career": "ai",
+      "skill_id": "generalization",
+      "skill_name": "Generalization",
+      "category": "core",
+      "weight": 0.7,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "AI_02"
+      ],
+      "evidence_careers": [
+        "ai"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "ai",
+      "skill_id": "machine_learning_reasoning",
+      "skill_name": "Machine Learning Reasoning",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "AI_01",
+        "AI_02"
+      ],
+      "evidence_careers": [
+        "ai"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "ai",
+      "skill_id": "model_evaluation",
+      "skill_name": "Model Evaluation",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "AI_01",
+        "AI_02"
+      ],
+      "evidence_careers": [
+        "ai"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "risk_detection",
+      "skill_name": "Risk Detection",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "CYBER_01",
+        "CYBER_02"
+      ],
+      "evidence_careers": [
+        "cyber"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "security_awareness",
+      "skill_name": "Security Awareness",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "CYBER_01",
+        "CYBER_02"
+      ],
+      "evidence_careers": [
+        "cyber"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "social_engineering_awareness",
+      "skill_name": "Social Engineering Awareness",
+      "category": "supporting",
+      "weight": 0.6,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "CYBER_02"
+      ],
+      "evidence_careers": [
+        "cyber"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "data",
+      "skill_id": "analytical_reasoning",
+      "skill_name": "Analytical Reasoning",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "DATA_01",
+        "DATA_02"
+      ],
+      "evidence_careers": [
+        "data"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "data",
+      "skill_id": "analytical_thinking",
+      "skill_name": "Analytical Thinking",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "DATA_01",
+        "DATA_02"
+      ],
+      "evidence_careers": [
+        "data"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "development",
+      "skill_id": "algorithmic_thinking",
+      "skill_name": "Algorithmic Thinking",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "DEV_02"
+      ],
+      "evidence_careers": [
+        "development"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "development",
+      "skill_id": "debugging",
+      "skill_name": "Debugging",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "DEV_01"
+      ],
+      "evidence_careers": [
+        "development"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "development",
+      "skill_id": "logical_problem_solving",
+      "skill_name": "Logical Problem Solving",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "DEV_01",
+        "DEV_02"
+      ],
+      "evidence_careers": [
+        "development"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "interaction_design",
+      "skill_name": "Interaction Design",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "UIUX_02"
+      ],
+      "evidence_careers": [
+        "ui_ux"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "usability",
+      "skill_name": "Usability",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "UIUX_01",
+        "UIUX_02"
+      ],
+      "evidence_careers": [
+        "ui_ux"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "user_research",
+      "skill_name": "User Research",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "UIUX_01"
+      ],
+      "evidence_careers": [
+        "ui_ux"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "visual_hierarchy",
+      "skill_name": "Visual Hierarchy",
+      "category": "supporting",
+      "weight": 0.7,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "UIUX_01"
+      ],
+      "evidence_careers": [
+        "ui_ux"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "ai",
+      "skill_id": "mlops",
+      "skill_name": "Mlops",
+      "category": "supporting",
+      "weight": 0.6,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 2,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "ai",
+      "skill_id": "prediction",
+      "skill_name": "Prediction",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "ai",
+      "skill_id": "python",
+      "skill_name": "Python",
+      "category": "tool",
+      "weight": 0.9,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 4,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "ai",
+      "skill_id": "pytorch",
+      "skill_name": "Pytorch",
+      "category": "tool",
+      "weight": 0.8,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "ai",
+      "skill_id": "tensorflow",
+      "skill_name": "Tensorflow",
+      "category": "tool",
+      "weight": 0.6,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "incident_reasoning",
+      "skill_name": "Incident Reasoning",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "network_security",
+      "skill_name": "Network Security",
+      "category": "supporting",
+      "weight": 0.7,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "security_risk_reasoning",
+      "skill_name": "Security Risk Reasoning",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 4,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "data",
+      "skill_id": "anomaly_detection",
+      "skill_name": "Anomaly Detection",
+      "category": "core",
+      "weight": 0.7,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "data",
+      "skill_id": "critical_thinking",
+      "skill_name": "Critical Thinking",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 4,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "data",
+      "skill_id": "data_quality",
+      "skill_name": "Data Quality",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "data",
+      "skill_id": "data_validation",
+      "skill_name": "Data Validation",
+      "category": "supporting",
+      "weight": 0.7,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "data",
+      "skill_id": "data_visualization",
+      "skill_name": "Data Visualization",
+      "category": "supporting",
+      "weight": 0.7,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "data",
+      "skill_id": "pandas",
+      "skill_name": "Pandas",
+      "category": "tool",
+      "weight": 0.7,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "data",
+      "skill_id": "sql",
+      "skill_name": "Sql",
+      "category": "tool",
+      "weight": 0.8,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "development",
+      "skill_id": "api_development",
+      "skill_name": "Api Development",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "development",
+      "skill_id": "docker",
+      "skill_name": "Docker",
+      "category": "supporting",
+      "weight": 0.5,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 2,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "development",
+      "skill_id": "git",
+      "skill_name": "Git",
+      "category": "tool",
+      "weight": 0.6,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "development",
+      "skill_id": "javascript",
+      "skill_name": "Javascript",
+      "category": "tool",
+      "weight": 0.7,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "development",
+      "skill_id": "python",
+      "skill_name": "Python",
+      "category": "tool",
+      "weight": 0.7,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "development",
+      "skill_id": "system_design",
+      "skill_name": "System Design",
+      "category": "supporting",
+      "weight": 0.8,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "figma",
+      "skill_name": "Figma",
+      "category": "tool",
+      "weight": 0.6,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "iterative_design",
+      "skill_name": "Iterative Design",
+      "category": "supporting",
+      "weight": 0.7,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "prototyping_tools",
+      "skill_name": "Prototyping Tools",
+      "category": "supporting",
+      "weight": 0.8,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 3,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "user_centered_design",
+      "skill_name": "User Centered Design",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": null,
+      "current_level_label": "No Evidence",
+      "target_level": 4,
+      "evidence_ratio": null,
+      "confidence": 0.0,
+      "evidence_questions": [],
+      "evidence_careers": [],
+      "positive_evidence": 0,
+      "negative_evidence": 0,
+      "evidence_status": "No Evidence",
+      "gap": null,
+      "gap_label": "No Evidence",
+      "priority": "None"
+    }
+  ],
+  "skill_gap_analysis": [
+    {
+      "career": "ai",
+      "skill_id": "machine_learning_reasoning",
+      "skill_name": "Machine Learning Reasoning",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "AI_01",
+        "AI_02"
+      ],
+      "evidence_careers": [
+        "ai"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "risk_detection",
+      "skill_name": "Risk Detection",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "CYBER_01",
+        "CYBER_02"
+      ],
+      "evidence_careers": [
+        "cyber"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "data",
+      "skill_id": "analytical_reasoning",
+      "skill_name": "Analytical Reasoning",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "DATA_01",
+        "DATA_02"
+      ],
+      "evidence_careers": [
+        "data"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "data",
+      "skill_id": "analytical_thinking",
+      "skill_name": "Analytical Thinking",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "DATA_01",
+        "DATA_02"
+      ],
+      "evidence_careers": [
+        "data"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "development",
+      "skill_id": "algorithmic_thinking",
+      "skill_name": "Algorithmic Thinking",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "DEV_02"
+      ],
+      "evidence_careers": [
+        "development"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "development",
+      "skill_id": "logical_problem_solving",
+      "skill_name": "Logical Problem Solving",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "DEV_01",
+        "DEV_02"
+      ],
+      "evidence_careers": [
+        "development"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "usability",
+      "skill_name": "Usability",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "UIUX_01",
+        "UIUX_02"
+      ],
+      "evidence_careers": [
+        "ui_ux"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    }
+  ],
+  "strengths": [
+    "ai: Generalization",
+    "ai: Model Evaluation",
+    "cyber: Security Awareness",
+    "cyber: Social Engineering Awareness",
+    "development: Debugging",
+    "ui_ux: Interaction Design",
+    "ui_ux: User Research",
+    "ui_ux: Visual Hierarchy"
+  ],
+  "strength_details": [
+    {
+      "career": "ai",
+      "skill_id": "generalization",
+      "skill_name": "Generalization",
+      "category": "core",
+      "weight": 0.7,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "AI_02"
+      ],
+      "evidence_careers": [
+        "ai"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "ai",
+      "skill_id": "model_evaluation",
+      "skill_name": "Model Evaluation",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "AI_01",
+        "AI_02"
+      ],
+      "evidence_careers": [
+        "ai"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "security_awareness",
+      "skill_name": "Security Awareness",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "CYBER_01",
+        "CYBER_02"
+      ],
+      "evidence_careers": [
+        "cyber"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "social_engineering_awareness",
+      "skill_name": "Social Engineering Awareness",
+      "category": "supporting",
+      "weight": 0.6,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "CYBER_02"
+      ],
+      "evidence_careers": [
+        "cyber"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "development",
+      "skill_id": "debugging",
+      "skill_name": "Debugging",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "DEV_01"
+      ],
+      "evidence_careers": [
+        "development"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "interaction_design",
+      "skill_name": "Interaction Design",
+      "category": "core",
+      "weight": 0.8,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "UIUX_02"
+      ],
+      "evidence_careers": [
+        "ui_ux"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "user_research",
+      "skill_name": "User Research",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "UIUX_01"
+      ],
+      "evidence_careers": [
+        "ui_ux"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "visual_hierarchy",
+      "skill_name": "Visual Hierarchy",
+      "category": "supporting",
+      "weight": 0.7,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 3,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "UIUX_01"
+      ],
+      "evidence_careers": [
+        "ui_ux"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 0,
+      "gap_label": "No Gap",
+      "priority": "None"
+    }
+  ],
+  "weak_areas": [
+    "ai: Machine Learning Reasoning",
+    "cyber: Risk Detection",
+    "data: Analytical Reasoning",
+    "data: Analytical Thinking",
+    "development: Algorithmic Thinking",
+    "development: Logical Problem Solving",
+    "ui_ux: Usability"
+  ],
+  "weak_area_details": [
+    {
+      "career": "ai",
+      "skill_id": "machine_learning_reasoning",
+      "skill_name": "Machine Learning Reasoning",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "AI_01",
+        "AI_02"
+      ],
+      "evidence_careers": [
+        "ai"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "cyber",
+      "skill_id": "risk_detection",
+      "skill_name": "Risk Detection",
+      "category": "core",
+      "weight": 0.9,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "CYBER_01",
+        "CYBER_02"
+      ],
+      "evidence_careers": [
+        "cyber"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "data",
+      "skill_id": "analytical_reasoning",
+      "skill_name": "Analytical Reasoning",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "DATA_01",
+        "DATA_02"
+      ],
+      "evidence_careers": [
+        "data"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "data",
+      "skill_id": "analytical_thinking",
+      "skill_name": "Analytical Thinking",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "DATA_01",
+        "DATA_02"
+      ],
+      "evidence_careers": [
+        "data"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "development",
+      "skill_id": "algorithmic_thinking",
+      "skill_name": "Algorithmic Thinking",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.35,
+      "evidence_questions": [
+        "DEV_02"
+      ],
+      "evidence_careers": [
+        "development"
+      ],
+      "positive_evidence": 1,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "development",
+      "skill_id": "logical_problem_solving",
+      "skill_name": "Logical Problem Solving",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "DEV_01",
+        "DEV_02"
+      ],
+      "evidence_careers": [
+        "development"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    },
+    {
+      "career": "ui_ux",
+      "skill_id": "usability",
+      "skill_name": "Usability",
+      "category": "core",
+      "weight": 1.0,
+      "current_level": 3,
+      "current_level_label": "Functional",
+      "target_level": 4,
+      "evidence_ratio": 1.0,
+      "confidence": 0.5,
+      "evidence_questions": [
+        "UIUX_01",
+        "UIUX_02"
+      ],
+      "evidence_careers": [
+        "ui_ux"
+      ],
+      "positive_evidence": 2,
+      "negative_evidence": 0,
+      "evidence_status": "Preliminary Evidence",
+      "gap": 1,
+      "gap_label": "Low Gap",
+      "priority": "Low"
+    }
+  ],
+  "recommended_next_step": "Strengthen these preliminary skill areas: ai: Machine Learning Reasoning, cyber: Risk Detection, data: Analytical Reasoning. Use practical exercises to build stronger evidence.",
+  "evidence_policy": {
+    "evidence_type": "preliminary",
+    "max_questions_per_career": 2,
+    "confidence_cap": 0.6,
+    "preliminary_level_cap": 3,
+    "no_evidence_is_not_a_skill_gap": true,
+    "diagnostic_only_signals_excluded": true,
+    "career_specific_normalization": true,
+    "shared_skill_evidence_is_not_cross_career_inflated": true,
+    "mapped_signal_requires_required_skill": true,
+    "interpretation_rule": "Never present Journey 1 evidence as definitive certification or expertise."
+  },
+  "target_level_source": "career_skill_matrix.json",
+  "gap_formula": "max(target_level - current_level, 0)",
+  "gap_labels": {
+    "0": "No Gap",
+    "1": "Low Gap",
+    "2": "Moderate Gap",
+    "3-4": "High Gap"
+  },
+  "priority_rules": {
+    "gap >= 3": "High",
+    "gap == 2": "Medium",
+    "gap == 1": "Low",
+    "gap == 0": "None"
+  }
+}

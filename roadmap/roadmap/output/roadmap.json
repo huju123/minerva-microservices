@@ -1,0 +1,34 @@
+{
+  "career": "data",
+  "goal": null,
+  "starting_level": null,
+  "target_level": null,
+  "learning_objectives": [],
+  "phases": [],
+  "certifications": [],
+  "job_preparation": [],
+  "recommended_jobs": [],
+  "timeline": {
+    "total_duration_weeks": 0,
+    "hours_per_week": 8.0,
+    "total_estimated_hours": 0,
+    "weeks": []
+  },
+  "meta": {
+    "plan_source": "empty",
+    "timeline_source": "empty",
+    "plan_fallback_reason": null,
+    "timeline_fallback_reason": null,
+    "engine_mode": "groq_with_module_fallbacks",
+    "validation": {
+      "is_valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    "status": "no_gaps_some_unassessed",
+    "unassessed_skills": [
+      "sql",
+      "pandas"
+    ]
+  }
+}

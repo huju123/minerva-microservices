@@ -1,0 +1,10 @@
+python roadmap_engine.py --journey 1 --input journey1_final_result.json --hours 8 --no-model
+python roadmap_engine.py --journey 1 --input journey1_final_result.json --hours 8
+
+python roadmap_engine.py --journey 2 --input journey2_final_result.json --hours 8 --no-model
+python roadmap_engine.py --journey 2 --input journey2_final_result.json --hours 8
+
+python -c "import ast, json; data = ast.literal_eval(open('evaluation results skill.json', encoding='utf-8').read()); json.dump(data, open('evaluation results skill.json', 'w', encoding='utf-8'), indent=2)"
+
+python roadmap_engine.py --journey 3 --input "evaluation results skill.json" --hours 8 --no-model
+python roadmap_engine.py --journey 3 --input "evaluation results skill.json" --hours 8

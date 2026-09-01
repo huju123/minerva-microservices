@@ -1,0 +1,316 @@
+{
+  "career": "data",
+  "goal": null,
+  "starting_level": null,
+  "target_level": null,
+  "learning_objectives": [
+    {
+      "skill": "Analytical Reasoning",
+      "priority": "low"
+    },
+    {
+      "skill": "Analytical Thinking",
+      "priority": "low"
+    }
+  ],
+  "phases": [
+    {
+      "phase": 1,
+      "title": "Foundational Learning",
+      "objectives": [
+        "Analytical Reasoning",
+        "Analytical Thinking"
+      ],
+      "resources": [
+        "data_work_through_analytical_reasoning_exercises_using_data_driven_scenarios",
+        "data_explore_distributions_relationships_and_patterns_in_datasets"
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Applied Projects",
+      "objectives": [
+        "Analytical Reasoning",
+        "Analytical Thinking"
+      ],
+      "resources": [
+        "data_analyze_a_dataset_statistically_and_communicate_evidence_based_conclusions",
+        "data_project_001"
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Certifications",
+      "objectives": [
+        "Analytical Thinking"
+      ],
+      "resources": [
+        "data_cert_002"
+      ]
+    },
+    {
+      "phase": 4,
+      "title": "Job Readiness",
+      "objectives": [],
+      "resources": [
+        "data_job_002",
+        "data_job_003"
+      ]
+    }
+  ],
+  "certifications": [
+    "data_cert_002"
+  ],
+  "job_preparation": [
+    "data_job_002",
+    "data_job_003"
+  ],
+  "recommended_jobs": [],
+  "timeline": {
+    "total_duration_weeks": 20,
+    "hours_per_week": 8.0,
+    "total_estimated_hours": 160,
+    "weeks": [
+      {
+        "week": 1,
+        "focus": [
+          "Foundational Learning"
+        ],
+        "resources": [
+          "data_work_through_analytical_reasoning_exercises_using_data_driven_scenarios"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Started Analytical Reasoning Practice"
+      },
+      {
+        "week": 2,
+        "focus": [
+          "Foundational Learning"
+        ],
+        "resources": [
+          "data_work_through_analytical_reasoning_exercises_using_data_driven_scenarios"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Analytical Reasoning Practice"
+      },
+      {
+        "week": 3,
+        "focus": [
+          "Foundational Learning"
+        ],
+        "resources": [
+          "data_work_through_analytical_reasoning_exercises_using_data_driven_scenarios"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Completed Analytical Reasoning Practice"
+      },
+      {
+        "week": 4,
+        "focus": [
+          "Foundational Learning"
+        ],
+        "resources": [
+          "data_work_through_analytical_reasoning_exercises_using_data_driven_scenarios",
+          "data_explore_distributions_relationships_and_patterns_in_datasets"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Analytical Reasoning, started Exploratory Data Analysis"
+      },
+      {
+        "week": 5,
+        "focus": [
+          "Foundational Learning"
+        ],
+        "resources": [
+          "data_explore_distributions_relationships_and_patterns_in_datasets"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Progressed Exploratory Data Analysis"
+      },
+      {
+        "week": 6,
+        "focus": [
+          "Foundational Learning"
+        ],
+        "resources": [
+          "data_explore_distributions_relationships_and_patterns_in_datasets"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Progressed Exploratory Data Analysis"
+      },
+      {
+        "week": 7,
+        "focus": [
+          "Foundational Learning",
+          "Applied Projects"
+        ],
+        "resources": [
+          "data_explore_distributions_relationships_and_patterns_in_datasets",
+          "data_analyze_a_dataset_statistically_and_communicate_evidence_based_conclusions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Completed Exploratory Data Analysis, started Statistical Insight Report"
+      },
+      {
+        "week": 8,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "data_analyze_a_dataset_statistically_and_communicate_evidence_based_conclusions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Statistical Insight Report progress"
+      },
+      {
+        "week": 9,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "data_analyze_a_dataset_statistically_and_communicate_evidence_based_conclusions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Statistical Insight Report progress"
+      },
+      {
+        "week": 10,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "data_analyze_a_dataset_statistically_and_communicate_evidence_based_conclusions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Completed Statistical Insight Report"
+      },
+      {
+        "week": 11,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "data_project_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Started SQL Analytics Project"
+      },
+      {
+        "week": 12,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "data_project_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued SQL Analytics Project"
+      },
+      {
+        "week": 13,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "data_project_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued SQL Analytics Project"
+      },
+      {
+        "week": 14,
+        "focus": [
+          "Applied Projects",
+          "Certifications"
+        ],
+        "resources": [
+          "data_project_001",
+          "data_cert_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Completed SQL Analytics Project, began Certification"
+      },
+      {
+        "week": 15,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "data_cert_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification progress"
+      },
+      {
+        "week": 16,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "data_cert_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification progress"
+      },
+      {
+        "week": 17,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "data_cert_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification progress"
+      },
+      {
+        "week": 18,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "data_cert_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification progress"
+      },
+      {
+        "week": 19,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "data_cert_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification progress"
+      },
+      {
+        "week": 20,
+        "focus": [
+          "Certifications",
+          "Job Readiness"
+        ],
+        "resources": [
+          "data_cert_002",
+          "data_job_002",
+          "data_job_003"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Completed Certification, added Job Readiness resources"
+      }
+    ]
+  },
+  "meta": {
+    "plan_source": "groq",
+    "timeline_source": "groq",
+    "plan_fallback_reason": null,
+    "timeline_fallback_reason": null,
+    "engine_mode": "groq_with_module_fallbacks",
+    "validation": {
+      "is_valid": true,
+      "errors": [],
+      "warnings": []
+    }
+  }
+}

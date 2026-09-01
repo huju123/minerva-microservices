@@ -1,0 +1,625 @@
+{
+  "career": "cyber",
+  "goal": null,
+  "starting_level": null,
+  "target_level": null,
+  "learning_objectives": [
+    {
+      "skill": "Risk Detection",
+      "priority": "low"
+    }
+  ],
+  "phases": [
+    {
+      "phase": 1,
+      "title": "Intermediate Risk Detection",
+      "objectives": [
+        "Risk Detection"
+      ],
+      "resources": [
+        "cyber_incident_001",
+        "cyber_web_001",
+        "cyber_risk_001"
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Advanced Risk Detection",
+      "objectives": [
+        "Risk Detection"
+      ],
+      "resources": [
+        "cyber_apply_structured_reasoning_to_threat_detection_and_defensive_prioritization",
+        "cyber_advanced_risk_detection",
+        "cyber_study_monitoring_indicators_and_defensive_security_operations",
+        "cyber_study_detection_concepts_and_analysis_of_suspicious_activity",
+        "cyber_project_002",
+        "cyber_project_001",
+        "cyber_practice_safe_triage_of_simulated_security_alerts_and_escalation_decisions",
+        "cyber_analyze_simulated_indicators_and_document_detection_decisions"
+      ]
+    }
+  ],
+  "certifications": [
+    "cyber_cert_001"
+  ],
+  "job_preparation": [
+    "cyber_job_002",
+    "cyber_job_003"
+  ],
+  "recommended_jobs": [],
+  "timeline": {
+    "total_duration_weeks": 49,
+    "hours_per_week": 8.0,
+    "total_estimated_hours": 385,
+    "weeks": [
+      {
+        "week": 1,
+        "focus": [
+          "Intermediate Risk Detection"
+        ],
+        "resources": [
+          "cyber_incident_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Started Incident Response Guide"
+      },
+      {
+        "week": 2,
+        "focus": [
+          "Intermediate Risk Detection"
+        ],
+        "resources": [
+          "cyber_incident_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Incident Response Guide"
+      },
+      {
+        "week": 3,
+        "focus": [
+          "Intermediate Risk Detection"
+        ],
+        "resources": [
+          "cyber_incident_001",
+          "cyber_web_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Incident Response Guide, started OWASP Web Security Testing Guide"
+      },
+      {
+        "week": 4,
+        "focus": [
+          "Intermediate Risk Detection"
+        ],
+        "resources": [
+          "cyber_web_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "OWASP Web Security Testing Guide progress"
+      },
+      {
+        "week": 5,
+        "focus": [
+          "Intermediate Risk Detection"
+        ],
+        "resources": [
+          "cyber_web_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "OWASP Web Security Testing Guide progress"
+      },
+      {
+        "week": 6,
+        "focus": [
+          "Intermediate Risk Detection"
+        ],
+        "resources": [
+          "cyber_web_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "OWASP Web Security Testing Guide progress"
+      },
+      {
+        "week": 7,
+        "focus": [
+          "Intermediate Risk Detection"
+        ],
+        "resources": [
+          "cyber_web_001",
+          "cyber_risk_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished OWASP guide, started Risk Management Framework"
+      },
+      {
+        "week": 8,
+        "focus": [
+          "Intermediate Risk Detection"
+        ],
+        "resources": [
+          "cyber_risk_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Risk Management Framework progress"
+      },
+      {
+        "week": 9,
+        "focus": [
+          "Intermediate Risk Detection"
+        ],
+        "resources": [
+          "cyber_risk_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Risk Management Framework progress"
+      },
+      {
+        "week": 10,
+        "focus": [
+          "Intermediate Risk Detection",
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_risk_001",
+          "cyber_apply_structured_reasoning_to_threat_detection_and_defensive_prioritization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Risk Management Framework, started Advanced Threat Analysis"
+      },
+      {
+        "week": 11,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_apply_structured_reasoning_to_threat_detection_and_defensive_prioritization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Advanced Threat Analysis progress"
+      },
+      {
+        "week": 12,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_apply_structured_reasoning_to_threat_detection_and_defensive_prioritization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Advanced Threat Analysis progress"
+      },
+      {
+        "week": 13,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_apply_structured_reasoning_to_threat_detection_and_defensive_prioritization"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Advanced Threat Analysis progress"
+      },
+      {
+        "week": 14,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_apply_structured_reasoning_to_threat_detection_and_defensive_prioritization",
+          "cyber_advanced_risk_detection"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Advanced Threat Analysis, started Advanced Threat Detection Analysis"
+      },
+      {
+        "week": 15,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_advanced_risk_detection"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Advanced Threat Detection Analysis progress"
+      },
+      {
+        "week": 16,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_advanced_risk_detection"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Advanced Threat Detection Analysis progress"
+      },
+      {
+        "week": 17,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_advanced_risk_detection"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Advanced Threat Detection Analysis progress"
+      },
+      {
+        "week": 18,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_advanced_risk_detection"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Advanced Threat Detection Analysis progress"
+      },
+      {
+        "week": 19,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_advanced_risk_detection",
+          "cyber_study_monitoring_indicators_and_defensive_security_operations"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Advanced Threat Detection Analysis, started Security Monitoring"
+      },
+      {
+        "week": 20,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_study_monitoring_indicators_and_defensive_security_operations"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Security Monitoring progress"
+      },
+      {
+        "week": 21,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_study_monitoring_indicators_and_defensive_security_operations"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Security Monitoring progress"
+      },
+      {
+        "week": 22,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_study_monitoring_indicators_and_defensive_security_operations",
+          "cyber_study_detection_concepts_and_analysis_of_suspicious_activity"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Security Monitoring, started Threat Detection"
+      },
+      {
+        "week": 23,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_study_detection_concepts_and_analysis_of_suspicious_activity"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Threat Detection progress"
+      },
+      {
+        "week": 24,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_study_detection_concepts_and_analysis_of_suspicious_activity"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Threat Detection progress"
+      },
+      {
+        "week": 25,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_study_detection_concepts_and_analysis_of_suspicious_activity"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Threat Detection progress"
+      },
+      {
+        "week": 26,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_study_detection_concepts_and_analysis_of_suspicious_activity",
+          "cyber_project_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Threat Detection, started Incident Response Playbook project"
+      },
+      {
+        "week": 27,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_project_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Incident Response Playbook progress"
+      },
+      {
+        "week": 28,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_project_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Incident Response Playbook progress"
+      },
+      {
+        "week": 29,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_project_002",
+          "cyber_project_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Incident Response Playbook, started Web Security Assessment project"
+      },
+      {
+        "week": 30,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_project_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Web Security Assessment progress"
+      },
+      {
+        "week": 31,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_project_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Web Security Assessment progress"
+      },
+      {
+        "week": 32,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_project_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Web Security Assessment progress"
+      },
+      {
+        "week": 33,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_project_001",
+          "cyber_practice_safe_triage_of_simulated_security_alerts_and_escalation_decisions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Web Security Assessment, started SOC Alert Triage project"
+      },
+      {
+        "week": 34,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_practice_safe_triage_of_simulated_security_alerts_and_escalation_decisions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "SOC Alert Triage progress"
+      },
+      {
+        "week": 35,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_practice_safe_triage_of_simulated_security_alerts_and_escalation_decisions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "SOC Alert Triage progress"
+      },
+      {
+        "week": 36,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_practice_safe_triage_of_simulated_security_alerts_and_escalation_decisions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "SOC Alert Triage progress"
+      },
+      {
+        "week": 37,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_practice_safe_triage_of_simulated_security_alerts_and_escalation_decisions",
+          "cyber_analyze_simulated_indicators_and_document_detection_decisions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished SOC Alert Triage, started Threat Detection Case Study project"
+      },
+      {
+        "week": 38,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_analyze_simulated_indicators_and_document_detection_decisions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Threat Detection Case Study progress"
+      },
+      {
+        "week": 39,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_analyze_simulated_indicators_and_document_detection_decisions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Threat Detection Case Study progress"
+      },
+      {
+        "week": 40,
+        "focus": [
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_analyze_simulated_indicators_and_document_detection_decisions"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Threat Detection Case Study progress"
+      },
+      {
+        "week": 41,
+        "focus": [
+          "Certification",
+          "Advanced Risk Detection"
+        ],
+        "resources": [
+          "cyber_analyze_simulated_indicators_and_document_detection_decisions",
+          "cyber_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Threat Detection Case Study, started ISC2 Certified in Cybersecurity preparation"
+      },
+      {
+        "week": 42,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "cyber_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification preparation progress"
+      },
+      {
+        "week": 43,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "cyber_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification preparation progress"
+      },
+      {
+        "week": 44,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "cyber_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification preparation progress"
+      },
+      {
+        "week": 45,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "cyber_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification preparation progress"
+      },
+      {
+        "week": 46,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "cyber_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification preparation progress"
+      },
+      {
+        "week": 47,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "cyber_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification preparation progress"
+      },
+      {
+        "week": 48,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "cyber_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Certification preparation progress"
+      },
+      {
+        "week": 49,
+        "focus": [
+          "Certification",
+          "Job Readiness"
+        ],
+        "resources": [
+          "cyber_cert_001",
+          "cyber_job_002",
+          "cyber_job_003"
+        ],
+        "estimated_hours": 1,
+        "milestone": "Completed certification preparation, added job readiness resources"
+      }
+    ]
+  },
+  "meta": {
+    "plan_source": "groq",
+    "timeline_source": "groq",
+    "plan_fallback_reason": null,
+    "timeline_fallback_reason": null,
+    "engine_mode": "groq_with_module_fallbacks",
+    "validation": {
+      "is_valid": true,
+      "errors": [],
+      "warnings": []
+    }
+  }
+}

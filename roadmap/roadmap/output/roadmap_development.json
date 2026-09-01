@@ -1,0 +1,312 @@
+{
+  "career": "development",
+  "goal": null,
+  "starting_level": null,
+  "target_level": null,
+  "learning_objectives": [
+    {
+      "skill": "Algorithmic Thinking",
+      "priority": "low"
+    },
+    {
+      "skill": "Logical Problem Solving",
+      "priority": "low"
+    }
+  ],
+  "phases": [
+    {
+      "phase": 1,
+      "title": "Foundational Courses",
+      "objectives": [
+        "Algorithmic Thinking",
+        "Logical Problem Solving"
+      ],
+      "resources": [
+        "dev_algo_001",
+        "development_practice_systematic_reasoning_across_programming_problems"
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Applied Projects",
+      "objectives": [
+        "Algorithmic Thinking"
+      ],
+      "resources": [
+        "dev_project_002"
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Certifications",
+      "objectives": [
+        "Algorithmic Thinking"
+      ],
+      "resources": [
+        "dev_cert_001"
+      ]
+    }
+  ],
+  "certifications": [
+    "dev_cert_001"
+  ],
+  "job_preparation": [
+    "dev_job_003"
+  ],
+  "recommended_jobs": [],
+  "timeline": {
+    "total_duration_weeks": 21,
+    "hours_per_week": 8.0,
+    "total_estimated_hours": 165,
+    "weeks": [
+      {
+        "week": 1,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "dev_algo_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Started Algorithms and Data Structures"
+      },
+      {
+        "week": 2,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "dev_algo_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Algorithms and Data Structures"
+      },
+      {
+        "week": 3,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "dev_algo_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Algorithms and Data Structures"
+      },
+      {
+        "week": 4,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "dev_algo_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Algorithms and Data Structures"
+      },
+      {
+        "week": 5,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "dev_algo_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Algorithms and Data Structures"
+      },
+      {
+        "week": 6,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "dev_algo_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Algorithms and Data Structures"
+      },
+      {
+        "week": 7,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "dev_algo_001",
+          "development_practice_systematic_reasoning_across_programming_problems"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Algorithms and Data Structures; started Computational Problem Solving"
+      },
+      {
+        "week": 8,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "development_practice_systematic_reasoning_across_programming_problems"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Computational Problem Solving"
+      },
+      {
+        "week": 9,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "development_practice_systematic_reasoning_across_programming_problems"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Computational Problem Solving"
+      },
+      {
+        "week": 10,
+        "focus": [
+          "Foundational Courses"
+        ],
+        "resources": [
+          "development_practice_systematic_reasoning_across_programming_problems"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Computational Problem Solving"
+      },
+      {
+        "week": 11,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "dev_project_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Started Algorithm Practice Portfolio"
+      },
+      {
+        "week": 12,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "dev_project_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Algorithm Practice Portfolio"
+      },
+      {
+        "week": 13,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "dev_project_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Algorithm Practice Portfolio"
+      },
+      {
+        "week": 14,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "dev_project_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Algorithm Practice Portfolio"
+      },
+      {
+        "week": 15,
+        "focus": [
+          "Applied Projects",
+          "Certifications"
+        ],
+        "resources": [
+          "dev_project_002",
+          "dev_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Algorithm Practice Portfolio; started freeCodeCamp JavaScript Algorithms and Data Structures"
+      },
+      {
+        "week": 16,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "dev_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp JavaScript Algorithms and Data Structures"
+      },
+      {
+        "week": 17,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "dev_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp JavaScript Algorithms and Data Structures"
+      },
+      {
+        "week": 18,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "dev_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp JavaScript Algorithms and Data Structures"
+      },
+      {
+        "week": 19,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "dev_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp JavaScript Algorithms and Data Structures"
+      },
+      {
+        "week": 20,
+        "focus": [
+          "Certifications"
+        ],
+        "resources": [
+          "dev_cert_001"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued freeCodeCamp JavaScript Algorithms and Data Structures"
+      },
+      {
+        "week": 21,
+        "focus": [
+          "Certifications",
+          "Job Readiness"
+        ],
+        "resources": [
+          "dev_cert_001",
+          "dev_job_003"
+        ],
+        "estimated_hours": 5,
+        "milestone": "Completed freeCodeCamp JavaScript Algorithms and Data Structures; reviewed Software Engineer job readiness"
+      }
+    ]
+  },
+  "meta": {
+    "plan_source": "groq",
+    "timeline_source": "groq",
+    "plan_fallback_reason": null,
+    "timeline_fallback_reason": null,
+    "engine_mode": "groq_with_module_fallbacks",
+    "validation": {
+      "is_valid": true,
+      "errors": [],
+      "warnings": []
+    }
+  }
+}

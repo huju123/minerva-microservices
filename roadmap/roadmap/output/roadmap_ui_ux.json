@@ -1,0 +1,280 @@
+{
+  "career": "ui_ux",
+  "goal": null,
+  "starting_level": null,
+  "target_level": null,
+  "learning_objectives": [
+    {
+      "skill": "Usability",
+      "priority": "low"
+    }
+  ],
+  "phases": [
+    {
+      "phase": 1,
+      "title": "Advanced Courses",
+      "objectives": [
+        "Usability"
+      ],
+      "resources": [
+        "ui_ux_advanced_usability",
+        "ui_ux_learn_usability_testing_methods_and_evaluation_principles"
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Applied Projects",
+      "objectives": [
+        "Usability"
+      ],
+      "resources": [
+        "ux_project_002",
+        "ui_ux_plan_and_conduct_a_usability_evaluation_and_present_findings"
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Certification",
+      "objectives": [
+        "Usability"
+      ],
+      "resources": [
+        "ui_ux_structured_ux_learning_resources_covering_research_usability_and_design"
+      ]
+    }
+  ],
+  "certifications": [
+    "ui_ux_structured_ux_learning_resources_covering_research_usability_and_design"
+  ],
+  "job_preparation": [
+    "ux_job_002"
+  ],
+  "recommended_jobs": [
+    "ux_job_002"
+  ],
+  "timeline": {
+    "total_duration_weeks": 18,
+    "hours_per_week": 8.0,
+    "total_estimated_hours": 140,
+    "weeks": [
+      {
+        "week": 1,
+        "focus": [
+          "Advanced Courses"
+        ],
+        "resources": [
+          "ui_ux_advanced_usability"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Started Advanced Usability Evaluation"
+      },
+      {
+        "week": 2,
+        "focus": [
+          "Advanced Courses"
+        ],
+        "resources": [
+          "ui_ux_advanced_usability"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced Usability Evaluation"
+      },
+      {
+        "week": 3,
+        "focus": [
+          "Advanced Courses"
+        ],
+        "resources": [
+          "ui_ux_advanced_usability"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Advanced Usability Evaluation"
+      },
+      {
+        "week": 4,
+        "focus": [
+          "Advanced Courses"
+        ],
+        "resources": [
+          "ui_ux_advanced_usability",
+          "ui_ux_learn_usability_testing_methods_and_evaluation_principles"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Advanced Usability Evaluation, started Usability Testing"
+      },
+      {
+        "week": 5,
+        "focus": [
+          "Advanced Courses"
+        ],
+        "resources": [
+          "ui_ux_learn_usability_testing_methods_and_evaluation_principles"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Usability Testing"
+      },
+      {
+        "week": 6,
+        "focus": [
+          "Advanced Courses"
+        ],
+        "resources": [
+          "ui_ux_learn_usability_testing_methods_and_evaluation_principles"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Usability Testing"
+      },
+      {
+        "week": 7,
+        "focus": [
+          "Advanced Courses",
+          "Applied Projects"
+        ],
+        "resources": [
+          "ui_ux_learn_usability_testing_methods_and_evaluation_principles",
+          "ux_project_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Usability Testing, started Usability Audit project"
+      },
+      {
+        "week": 8,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "ux_project_002"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Usability Audit"
+      },
+      {
+        "week": 9,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "ux_project_002",
+          "ui_ux_plan_and_conduct_a_usability_evaluation_and_present_findings"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Usability Audit, started Usability Test Study"
+      },
+      {
+        "week": 10,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "ui_ux_plan_and_conduct_a_usability_evaluation_and_present_findings"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Usability Test Study"
+      },
+      {
+        "week": 11,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "ui_ux_plan_and_conduct_a_usability_evaluation_and_present_findings"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Usability Test Study"
+      },
+      {
+        "week": 12,
+        "focus": [
+          "Applied Projects"
+        ],
+        "resources": [
+          "ui_ux_plan_and_conduct_a_usability_evaluation_and_present_findings"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued Usability Test Study"
+      },
+      {
+        "week": 13,
+        "focus": [
+          "Applied Projects",
+          "Certification"
+        ],
+        "resources": [
+          "ui_ux_plan_and_conduct_a_usability_evaluation_and_present_findings",
+          "ui_ux_structured_ux_learning_resources_covering_research_usability_and_design"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Finished Usability Test Study, started NN/g UX Resources"
+      },
+      {
+        "week": 14,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ui_ux_structured_ux_learning_resources_covering_research_usability_and_design"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued NN/g UX Resources"
+      },
+      {
+        "week": 15,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ui_ux_structured_ux_learning_resources_covering_research_usability_and_design"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued NN/g UX Resources"
+      },
+      {
+        "week": 16,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ui_ux_structured_ux_learning_resources_covering_research_usability_and_design"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued NN/g UX Resources"
+      },
+      {
+        "week": 17,
+        "focus": [
+          "Certification"
+        ],
+        "resources": [
+          "ui_ux_structured_ux_learning_resources_covering_research_usability_and_design"
+        ],
+        "estimated_hours": 8,
+        "milestone": "Continued NN/g UX Resources"
+      },
+      {
+        "week": 18,
+        "focus": [
+          "Certification",
+          "Job Readiness"
+        ],
+        "resources": [
+          "ui_ux_structured_ux_learning_resources_covering_research_usability_and_design",
+          "ux_job_002"
+        ],
+        "estimated_hours": 4,
+        "milestone": "Finished NN/g UX Resources, reviewed UX Designer job readiness"
+      }
+    ]
+  },
+  "meta": {
+    "plan_source": "groq",
+    "timeline_source": "groq",
+    "plan_fallback_reason": null,
+    "timeline_fallback_reason": null,
+    "engine_mode": "groq_with_module_fallbacks",
+    "validation": {
+      "is_valid": true,
+      "errors": [],
+      "warnings": []
+    }
+  }
+}
