@@ -209,40 +209,36 @@ def build_career_lookup(
     assessment: Dict[str, Any]
 ) -> Dict[str, Dict[str, Any]]:
     """
-    Build:
-
-        career_id -> career metadata
+    Build a lookup of canonical career IDs to career metadata
+    from the assessment definition.
     """
+
+    careers = assessment.get("careers", [])
+
+    if not isinstance(careers, list):
+        raise ValueError(
+            "Assessment 'careers' must be a list."
+        )
 
     lookup: Dict[str, Dict[str, Any]] = {}
 
-    careers = assessment.get(
-        "careers",
-        []
-    )
-
-    if not isinstance(
-        careers,
-        list
-    ):
-        return lookup
-
     for career in careers:
-
-        if not isinstance(
-            career,
-            dict
-        ):
+        if not isinstance(career, dict):
             continue
 
         career_id = normalize_text(
             career.get("id")
-            or career.get("career_id")
-            or career.get("career")
         )
 
-        if career_id:
-            lookup[career_id] = career
+        if not career_id:
+            continue
+
+        lookup[career_id] = career
+
+    if not lookup:
+        raise ValueError(
+            "No valid careers found in assessment."
+        )
 
     return lookup
 
@@ -599,46 +595,69 @@ def normalize_career_scores(
     career_lookup: Dict[str, Dict[str, Any]]
 ) -> List[Dict[str, Any]]:
     """
-    Normalize deterministic career scores.
+    Normalize deterministic career scores without recalculating them.
 
-    IMPORTANT:
-        No score is recalculated.
-        Existing deterministic percentage is preserved.
+    ranked_careers is preferred because it preserves the ranking
+    produced by exploring_scoring.py.
     """
 
     normalized: List[Dict[str, Any]] = []
 
-    career_scores = result.get(
-    "ranked_careers",
-    []
-)
+    career_scores = result.get("ranked_careers")
 
-    for index, item in enumerate(
-        career_scores,
-        start=1
-    ):
+    if not isinstance(career_scores, list) or not career_scores:
+        career_scores = result.get("career_scores", [])
 
-        if not isinstance(
-            item,
-            dict
-        ):
+    if not isinstance(career_scores, list):
+        return normalized
+
+    for index, item in enumerate(career_scores, start=1):
+
+        if not isinstance(item, dict):
             continue
 
         career_id = normalize_text(
-    item.get("career")
-)
+            item.get("career_id")
+            or item.get("career")
+        )
+
+        if not career_id:
+            continue
+
+        # Resolve the canonical career ID if a display name
+        # was supplied instead.
+        if career_id not in career_lookup:
+
+            for known_id, metadata in career_lookup.items():
+
+                known_name = normalize_text(
+                    metadata.get("name")
+                )
+
+                known_short_name = normalize_text(
+                    metadata.get("short_name")
+                )
+
+                if (
+                    normalize_key(known_name)
+                    == normalize_key(career_id)
+                    or
+                    normalize_key(known_short_name)
+                    == normalize_key(career_id)
+                ):
+                    career_id = known_id
+                    break
+
+        metadata = career_lookup.get(
+            career_id,
+            {}
+        )
 
         career_name = normalize_text(
-            item.get("career")
+            item.get("career_name")
         )
 
         if not career_name:
-
-            metadata = career_lookup.get(
-                career_id,
-                {}
-            )
-
             career_name = normalize_text(
                 metadata.get("name")
             )
@@ -651,29 +670,28 @@ def normalize_career_scores(
                 item.get("rank"),
                 index
             ),
-
             "career_id": career_id,
-
             "career_name": career_name,
-
             "score": safe_int(
                 item.get("score"),
                 0
             ),
-
             "max_score": safe_int(
                 item.get("max_score"),
                 0
             ),
-
             "percentage": safe_float(
                 item.get("percentage"),
-                0
+                0.0
             )
         })
 
-    return normalized
+    # Preserve deterministic ranking from exploring_scoring.py.
+    normalized.sort(
+        key=lambda item: item["rank"]
+    )
 
+    return normalized
 
 # ============================================================
 # TIE ANALYSIS
