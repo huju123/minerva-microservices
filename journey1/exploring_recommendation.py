@@ -4284,12 +4284,11 @@ def extract_supporting_strengths(
     # --------------------------------------------------------
 
     deterministic_dimensions = (
-        extract_dimensions_for_career(
-            career_id,
-            deterministic_result
-        )
+    extract_dimensions_for_career(
+        deterministic_result,
+        career_id
     )
-
+)
     for dimension in deterministic_dimensions:
 
         label = clean_dimension_label(
