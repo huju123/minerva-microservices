@@ -4106,8 +4106,8 @@ def analyze_career_tie(
 # ============================================================
 
 def extract_dimensions_for_career(
-    career_id: str,
     deterministic_result: Dict[str, Any],
+    career_id: str,
 ) -> List[str]:
     """
     Extract career-specific dimensions from the deterministic scoring result.
