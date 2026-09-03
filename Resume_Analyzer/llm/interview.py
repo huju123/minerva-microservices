@@ -43,6 +43,45 @@ def generate_interview_questions(target_role, skill_profile, num_questions=5):
         }
 
 
+def evaluate_interview_answers(question, student_answer, target_role):
+    try:
+        system_prompt = f"""
+        You are a hiring manager for {target_role} roles
+        evaluating computer science students.
+
+        The student was asked the following interview questions:
+        "{question}"
+
+        Evaluate their answers.
+
+        Respond with a score out of 10 for ALL answers combined
+        and 2-3 sentences of feedback per question.
+
+        Respond with ONLY valid JSON and nothing else.
+        No explanation.
+        No markdown code fences.
+        No extra text.
+
+        Example format:
+        {{"scores": [1, 2, 3], "total": 6, "feedback": ["...", "...", "..."]}}
+        """
+
+        response = get_structured_llm_response(
+            system_prompt,
+            student_answer
+        )
+
+        return {
+            "success": True,
+            "data": response
+        }
+
+    except Exception as e:
+        return {
+            "success": False,
+            "error": str(e)
+        }
+
         
     
     
