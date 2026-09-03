@@ -384,11 +384,11 @@ def route3_submit(request: Route3SubmitRequest):
 def chat_message(request: ChatMessageRequest):
     try:
         result = handle_chat_message(
-            user_message=request.message,
-            skill_profile=request.skill_profile,
-            conversation_history=request.conversation_history,
-            career=request.career
-        )
+        user_message=request.message,
+        adapted_profile=request.skill_profile,
+        conversation_history=request.conversation_history,
+        career=request.career
+    )
 
         if not result.get("success"):
             raise HTTPException(
