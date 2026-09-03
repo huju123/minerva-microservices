@@ -1384,6 +1384,9 @@ def build_alternative_careers(
 
     No tie:
         next two strongest careers are returned.
+
+    Supporting dimensions are career-specific. They must only be
+    attached when deterministic evidence exists for that career.
     """
 
     output: List[Dict[str, Any]] = []
@@ -1391,15 +1394,11 @@ def build_alternative_careers(
     if not career_scores:
         return output
 
-    if tie_info.get(
-        "complete_tie"
-    ):
+    if tie_info.get("complete_tie"):
 
         selected = career_scores
 
-    elif tie_info.get(
-        "is_tie"
-    ):
+    elif tie_info.get("is_tie"):
 
         tied_ids = set(
             tie_info.get(
@@ -1434,12 +1433,13 @@ def build_alternative_careers(
             "percentage"
         )
 
-        supporting_dimensions = (
-            extract_supporting_strengths(
-                career_id,
-                ai_result,
-                deterministic_result
-            )
+        # IMPORTANT:
+        # Do not use global AI strengths here.
+        # Extract only dimensions that have actual deterministic
+        # evidence for this specific career.
+        supporting_dimensions = extract_dimensions_for_career(
+            deterministic_result,
+            career_id
         )
 
         output.append({
@@ -1458,20 +1458,20 @@ def build_alternative_careers(
             "percentage": percentage,
 
             "why_it_fits": build_why_it_fits(
-    career_id,
-    career_name,
-    percentage,
-    supporting_dimensions,
-    tie_info.get(
-        "complete_tie",
-        False
-    ),
-    tie_info.get(
-        "is_tie",
-        False
-    ),
-    is_primary=False
-),
+                career_id,
+                career_name,
+                percentage,
+                supporting_dimensions,
+                tie_info.get(
+                    "complete_tie",
+                    False
+                ),
+                tie_info.get(
+                    "is_tie",
+                    False
+                ),
+                is_primary=False
+            ),
 
             "supporting_dimensions": (
                 supporting_dimensions
