@@ -2,7 +2,7 @@ from .client import get_structured_llm_response
 from .client import normalize_llm_text
 from.prompt_context import summarize_skill_profile
 
-def generate_interview_questions(target_role, skill_profile, num_questions=5):
+def generate_interview_questions(target_role, adapted_profile, num_questions=5):
     try:
         strengths, gap_summaries = summarize_skill_profile(skill_profile)
         # career_line = f"Target career: {target_role}\n"

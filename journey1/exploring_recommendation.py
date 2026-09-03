@@ -754,71 +754,112 @@ def analyze_career_tie(
 
 def extract_dimensions_for_career(
     career_id: str,
-    deterministic_result: Dict[str, Any]
+    deterministic_result: Dict[str, Any],
 ) -> List[str]:
     """
-    Extract dimensions associated with a specific career.
+    Extract career-specific dimensions from the deterministic scoring result.
 
-    IMPORTANT:
-        career_id must be used here, NOT career name.
+    The current exploring_scoring.py schema may provide dimensions either as:
+    1. A dictionary containing career-specific primary/secondary dimensions, or
+    2. A list of dimension objects.
+
+    Important:
+    Global dimension objects are NOT assigned to a career unless the
+    dimension object explicitly contains a matching career_id.
     """
 
-    dimensions = deterministic_result.get(
-        "dimensions",
-        {}
-    )
+    dimensions = deterministic_result.get("dimensions", [])
 
-    if not isinstance(
-        dimensions,
-        dict
-    ):
+    if not dimensions:
         return []
 
-    primary = dimensions.get(
-        "primary",
-        []
-    )
+    extracted: List[str] = []
 
-    if not isinstance(
-        primary,
-        list
-    ):
-        return []
+    # ---------------------------------------------------------
+    # Schema 1:
+    # {
+    #     "primary": [
+    #         {
+    #             "career_id": "data",
+    #             "dimension": "analytical_reasoning"
+    #         }
+    #     ]
+    # }
+    # ---------------------------------------------------------
+    if isinstance(dimensions, dict):
 
-    output: List[str] = []
+        for category in ("primary", "secondary"):
 
-    for item in primary:
+            items = dimensions.get(category, [])
 
-        if not isinstance(
-            item,
-            dict
-        ):
-            continue
+            if not isinstance(items, list):
+                continue
 
-        item_career_id = normalize_text(
-            item.get("career_id")
-        )
+            for item in items:
 
-        if (
-            item_career_id
-            and item_career_id != career_id
-        ):
-            continue
+                if not isinstance(item, dict):
+                    continue
 
-        dimension_name = normalize_text(
-            item.get("dimension")
-            or item.get("dimension_name")
-            or item.get("name")
-        )
+                item_career_id = normalize_text(
+                    item.get("career_id")
+                    or item.get("career")
+                )
 
-        if dimension_name and (
-            dimension_name not in output
-        ):
-            output.append(
-                dimension_name
+                dimension = normalize_text(
+                    item.get("dimension")
+                )
+
+                if (
+                    item_career_id == normalize_text(career_id)
+                    and dimension
+                ):
+                    extracted.append(dimension)
+
+        return list(dict.fromkeys(extracted))
+
+    # ---------------------------------------------------------
+    # Schema 2:
+    # [
+    #     {
+    #         "dimension": "analytical_reasoning",
+    #         "correct": 2,
+    #         "total": 2,
+    #         "percentage": 100,
+    #         "level": "Strong"
+    #     }
+    # ]
+    #
+    # These are GLOBAL dimensions.
+    #
+    # Therefore, only use them here if the individual dimension
+    # explicitly identifies a career.
+    # ---------------------------------------------------------
+    if isinstance(dimensions, list):
+
+        for item in dimensions:
+
+            if not isinstance(item, dict):
+                continue
+
+            item_career_id = normalize_text(
+                item.get("career_id")
+                or item.get("career")
             )
 
-    return output
+            dimension = normalize_text(
+                item.get("dimension")
+            )
+
+            if (
+                item_career_id
+                and item_career_id == normalize_text(career_id)
+                and dimension
+            ):
+                extracted.append(dimension)
+
+        return list(dict.fromkeys(extracted))
+
+    return []
 
 
 def clean_dimension_label(
@@ -1733,13 +1774,19 @@ def build_next_steps(
 # ============================================================
 
 def build_ai_context_summary(
-    ai_result: Dict[str, Any]
+    ai_result: Dict[str, Any],
+    deterministic_result: Dict[str, Any]
 ) -> Dict[str, Any]:
     """
     Preserve useful interpretation information for the
     recommendation output.
 
-    This does not replace deterministic scoring.
+    IMPORTANT:
+        The deterministic result is the source of truth for
+        the overall career result.
+
+        AI interpretation is supporting context only and must
+        never override the deterministic career ranking.
     """
 
     ai_evaluation = ai_result.get(
@@ -1761,6 +1808,85 @@ def build_ai_context_summary(
         "improvement_areas",
         []
     )
+
+    # ========================================================
+    # DETERMINISTIC OVERALL RESULT
+    # ========================================================
+
+    career_scores = deterministic_result.get(
+        "career_scores",
+        []
+    )
+
+    if not isinstance(
+        career_scores,
+        list
+    ) or not career_scores:
+
+        raise ValueError(
+            "Cannot build supporting AI insights because "
+            "deterministic career scores are missing."
+        )
+
+    # The deterministic career scores are already ranked by
+    # exploring_scoring.py. We use the first item as the
+    # authoritative top career.
+    top_career = career_scores[0]
+
+    top_career_name = normalize_text(
+        top_career.get(
+            "career_name"
+        )
+    )
+
+    top_percentage = safe_float(
+        top_career.get(
+            "percentage"
+        ),
+        0.0
+    )
+
+    # Calculate total questions from the deterministic career
+    # scores. There are 5 careers × 2 questions = 10 questions.
+    total_correct = sum(
+        safe_int(
+            item.get("score"),
+            0
+        )
+        for item in career_scores
+        if isinstance(item, dict)
+    )
+
+    total_questions = sum(
+        safe_int(
+            item.get("max_score"),
+            0
+        )
+        for item in career_scores
+        if isinstance(item, dict)
+    )
+
+    # IMPORTANT:
+    # Do NOT use:
+    #
+    #     insights.get("overall")
+    #
+    # here.
+    #
+    # That value can become stale or contradict the deterministic
+    # result. The recommendation layer must construct this
+    # statement from the deterministic result.
+    overall = (
+        f"You answered {total_correct} of "
+        f"{total_questions} questions correctly. "
+        f"Your strongest deterministic career result is "
+        f"{top_career_name} at "
+        f"{format_percentage(top_percentage)}."
+    )
+
+    # ========================================================
+    # STRENGTHS
+    # ========================================================
 
     strength_names: List[str] = []
 
@@ -1789,6 +1915,10 @@ def build_ai_context_summary(
             if len(strength_names) >= 7:
                 break
 
+    # ========================================================
+    # IMPROVEMENT AREAS
+    # ========================================================
+
     improvement_names: List[str] = []
 
     if isinstance(
@@ -1816,13 +1946,17 @@ def build_ai_context_summary(
             if len(improvement_names) >= 5:
                 break
 
+    # ========================================================
+    # FINAL SUPPORTING INSIGHTS
+    # ========================================================
+
     return {
-        "overall": normalize_text(
-            insights.get("overall")
-        ),
+        "overall": overall,
 
         "thinking_pattern": normalize_text(
-            insights.get("thinking_pattern")
+            insights.get(
+                "thinking_pattern"
+            )
         ),
 
         "top_career_explanation": normalize_text(
@@ -1905,7 +2039,7 @@ def generate_recommendation(
     )
 
     ai_summary = build_ai_context_summary(
-        ai_result
+        ai_result, deterministic_result
     )
 
     return {
