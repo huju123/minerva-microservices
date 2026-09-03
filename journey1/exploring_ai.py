@@ -47,7 +47,6 @@ IMPORTANT DESIGN RULES:
 
 import json
 import sys
-import traceback
 
 from pathlib import Path
 from typing import Any, Dict, List, Set
@@ -2155,7 +2154,25 @@ def build_overall_insight(
             "directions and continue exploring them."
         )
 
-    top = career_scores[0]
+    # --------------------------------------------------------
+    # IMPORTANT FIX:
+    # career_scores here preserves the ORIGINAL input order
+    # (not sorted by rank/percentage), so career_scores[0] is
+    # NOT guaranteed to be the actual top-scoring career. Use
+    # context["top_career"], which is taken directly from the
+    # deterministic scoring engine's own top_career field (the
+    # same source build_top_career_explanation already uses
+    # correctly), instead of guessing from list position.
+    # --------------------------------------------------------
+
+    top = context.get(
+        "top_career",
+        {}
+    ) or (
+        career_scores[0]
+        if career_scores
+        else {}
+    )
 
     top_name = clean_display_text(
         top.get(

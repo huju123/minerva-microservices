@@ -10,11 +10,21 @@ It does NOT modify:
 - Journey 2
 
 Canonical sources:
-- career_skill_matrix.json: target levels, categories, weights only
-- skill_normalization.json: career-specific raw signal -> canonical skill mapping only
+- career_skill_matrix.json:
+    target levels, categories, weights only
 
-Journey 1 has only 2 questions per career, so all skill evidence is
-explicitly preliminary and confidence is conservative.
+- skill_normalization.json:
+    career-specific raw signal -> canonical skill mapping only
+
+Journey 1 has very limited evidence.
+Therefore:
+- all skill evidence is preliminary
+- confidence is conservative
+- preliminary level is capped at 3
+- No Evidence is NOT treated as a skill gap
+- career-specific mappings are respected
+- diagnostic-only mappings never contribute
+- shared skills across multiple careers are handled conservatively
 """
 
 from __future__ import annotations
@@ -65,6 +75,7 @@ class Journey1SkillGapError(ValueError):
 # ============================================================
 
 def load_json(path: str | Path) -> Dict[str, Any]:
+
     path = Path(path)
 
     if not path.exists():
@@ -72,7 +83,11 @@ def load_json(path: str | Path) -> Dict[str, Any]:
             f"Required file not found: {path}"
         )
 
-    with path.open("r", encoding="utf-8") as file:
+    with path.open(
+        "r",
+        encoding="utf-8",
+    ) as file:
+
         value = json.load(file)
 
     if not isinstance(value, dict):
@@ -88,19 +103,48 @@ def load_json(path: str | Path) -> Dict[str, Any]:
 # ============================================================
 
 def _normalize_id(value: Any) -> str:
+    """
+    Normalize IDs/signals consistently.
+    """
+
+    if value is None:
+        return ""
+
     return str(value).strip().lower()
 
 
-def _first(
-    mapping: Dict[str, Any],
-    keys: Iterable[str],
-    default=None,
-):
-    for key in keys:
-        if key in mapping:
-            return mapping[key]
+def _safe_int(
+    value: Any,
+    field_name: str,
+    context: str,
+) -> int:
 
-    return default
+    try:
+        return int(value)
+
+    except (TypeError, ValueError):
+
+        raise Journey1SkillGapError(
+            f"Invalid integer value for "
+            f"'{field_name}' in {context}: {value}"
+        )
+
+
+def _safe_float(
+    value: Any,
+    field_name: str,
+    context: str,
+) -> float:
+
+    try:
+        return float(value)
+
+    except (TypeError, ValueError):
+
+        raise Journey1SkillGapError(
+            f"Invalid numeric value for "
+            f"'{field_name}' in {context}: {value}"
+        )
 
 
 # ============================================================
@@ -114,19 +158,25 @@ def _skill_records(
     """
     Read required canonical skills for one career.
 
-    Target level, category and weight ALWAYS come from
+    IMPORTANT:
+    target_level, category and weight ALWAYS come from
     career_skill_matrix.json.
+
+    This function does NOT infer target levels from
+    Exploring evidence.
     """
 
     careers = matrix.get("careers")
 
     if not isinstance(careers, dict):
+
         raise Journey1SkillGapError(
             "career_skill_matrix.json must contain "
             "'careers'."
         )
 
     if career not in careers:
+
         raise Journey1SkillGapError(
             f"career_skill_matrix.json has no career "
             f"'{career}'."
@@ -135,79 +185,100 @@ def _skill_records(
     career_data = careers[career]
 
     if not isinstance(career_data, dict):
+
         raise Journey1SkillGapError(
-            f"Invalid career configuration for '{career}'."
+            f"Invalid career configuration for "
+            f"'{career}'."
         )
 
     raw = career_data.get("required_skills")
 
+    if raw is None:
+
+        raise Journey1SkillGapError(
+            f"Career '{career}' does not contain "
+            f"'required_skills'."
+        )
+
+    records: Dict[str, Dict[str, Any]] = {}
+
     # --------------------------------------------------------
-    # Supported canonical matrix form
-    # --------------------------------------------------------
-    #
-    # "required_skills": {
-    #     "skill_id": {
-    #         "target_level": 4,
-    #         "category": "core",
-    #         "weight": 1.0
-    #     }
-    # }
-    #
+    # Dictionary format
     # --------------------------------------------------------
 
     if isinstance(raw, dict):
 
-        records: Dict[str, Dict[str, Any]] = {}
-
         for skill_id, meta in raw.items():
 
             if not isinstance(meta, dict):
+
                 raise Journey1SkillGapError(
                     f"Invalid skill metadata for "
                     f"'{career}:{skill_id}'."
                 )
 
+            canonical_id = _normalize_id(skill_id)
+
+            if not canonical_id:
+
+                raise Journey1SkillGapError(
+                    f"Empty skill ID for career "
+                    f"'{career}'."
+                )
+
             if "target_level" not in meta:
+
                 raise Journey1SkillGapError(
                     f"Missing target_level for "
                     f"'{career}:{skill_id}'."
                 )
 
-            canonical_id = _normalize_id(skill_id)
+            target_level = _safe_int(
+                meta["target_level"],
+                "target_level",
+                f"{career}:{skill_id}",
+            )
+
+            if not 1 <= target_level <= 5:
+
+                raise Journey1SkillGapError(
+                    f"target_level must be between "
+                    f"1 and 5 for "
+                    f"'{career}:{skill_id}'."
+                )
 
             records[canonical_id] = {
                 "id": canonical_id,
                 "name": (
-                    meta.get("name")
-                    or canonical_id.replace(
+                    str(meta.get("name")).strip()
+                    if meta.get("name")
+                    else canonical_id.replace(
                         "_",
                         " ",
                     ).title()
                 ),
-                "target_level": int(
-                    meta["target_level"]
-                ),
+                "target_level": target_level,
                 "category": meta.get(
                     "category",
                     "supporting",
                 ),
-                "weight": float(
+                "weight": _safe_float(
                     meta.get(
                         "weight",
                         1.0,
-                    )
+                    ),
+                    "weight",
+                    f"{career}:{skill_id}",
                 ),
             }
 
         return records
 
     # --------------------------------------------------------
-    # Journey 2-style list support
+    # List format
     # --------------------------------------------------------
 
     if isinstance(raw, list):
-
-        records = {}
 
         for item in raw:
 
@@ -215,42 +286,59 @@ def _skill_records(
                 not isinstance(item, dict)
                 or not item.get("id")
             ):
+
                 raise Journey1SkillGapError(
                     f"Invalid required skill entry "
                     f"for career '{career}'."
-                )
-
-            if "target_level" not in item:
-                raise Journey1SkillGapError(
-                    f"Missing target_level for "
-                    f"'{career}:{item.get('id')}'."
                 )
 
             skill_id = _normalize_id(
                 item["id"]
             )
 
+            if "target_level" not in item:
+
+                raise Journey1SkillGapError(
+                    f"Missing target_level for "
+                    f"'{career}:{skill_id}'."
+                )
+
+            target_level = _safe_int(
+                item["target_level"],
+                "target_level",
+                f"{career}:{skill_id}",
+            )
+
+            if not 1 <= target_level <= 5:
+
+                raise Journey1SkillGapError(
+                    f"target_level must be between "
+                    f"1 and 5 for "
+                    f"'{career}:{skill_id}'."
+                )
+
             records[skill_id] = {
                 "id": skill_id,
                 "name": (
-                    item.get("name")
-                    or skill_id.replace(
+                    str(item.get("name")).strip()
+                    if item.get("name")
+                    else skill_id.replace(
                         "_",
                         " ",
                     ).title()
                 ),
-                "target_level": int(
-                    item["target_level"]
-                ),
+                "target_level": target_level,
                 "category": item.get(
                     "category",
                     "supporting",
                 ),
-                "weight": float(
+                "weight": _safe_float(
                     item.get(
                         "weight",
                         1.0,
-                    )
+                    ),
+                    "weight",
+                    f"{career}:{skill_id}",
                 ),
             }
 
@@ -258,7 +346,8 @@ def _skill_records(
 
     raise Journey1SkillGapError(
         f"career_skill_matrix.json career "
-        f"'{career}' must contain required_skills."
+        f"'{career}' must contain required_skills "
+        f"as either an object or list."
     )
 
 
@@ -268,11 +357,14 @@ def _skill_records(
 
 def _extract_career_mappings(
     config: Dict[str, Any],
-) -> Dict[str, Dict[str, str]]:
+) -> Tuple[
+    Dict[str, Dict[str, str]],
+    Dict[str, set[str]],
+]:
     """
-    Read the FINALIZED skill_normalization.json structure.
+    Read the finalized career-specific normalization structure.
 
-    Expected structure:
+    Expected:
 
         career_mappings
             ui_ux
@@ -288,24 +380,25 @@ def _extract_career_mappings(
 
     Returns:
 
+        normalization:
         {
-            "ui_ux": {
-                "user_research": "user_research",
-                "usability": "usability",
-                ...
-            },
-            "development": {
-                "logical_reasoning":
-                    "logical_problem_solving",
+            career: {
+                source_signal: canonical_skill
+            }
+        }
+
+        diagnostic_only:
+        {
+            career: {
+                source_signal,
                 ...
             }
         }
 
-    IMPORTANT:
-    - diagnostic_only mappings are ignored
-    - canonical_skill == null is ignored
-    - mapping type does not change the canonical target
-    - career-specific mappings remain career-specific
+    Rules:
+    - diagnostic_only never contributes
+    - canonical_skill == null never contributes
+    - career mappings remain career-specific
     """
 
     career_mappings = config.get(
@@ -316,6 +409,7 @@ def _extract_career_mappings(
         career_mappings,
         dict,
     ):
+
         raise Journey1SkillGapError(
             "skill_normalization.json must contain "
             "'career_mappings'."
@@ -326,6 +420,11 @@ def _extract_career_mappings(
         Dict[str, str],
     ] = {}
 
+    diagnostic_only: Dict[
+        str,
+        set[str],
+    ] = {}
+
     for career in CAREERS:
 
         career_config = career_mappings.get(
@@ -333,13 +432,17 @@ def _extract_career_mappings(
         )
 
         if career_config is None:
+
             result[career] = {}
+            diagnostic_only[career] = set()
+
             continue
 
         if not isinstance(
             career_config,
             dict,
         ):
+
             raise Journey1SkillGapError(
                 f"Invalid normalization configuration "
                 f"for career '{career}'."
@@ -353,6 +456,7 @@ def _extract_career_mappings(
             mappings,
             list,
         ):
+
             raise Journey1SkillGapError(
                 f"skill_normalization.json career "
                 f"'{career}' must contain a "
@@ -360,6 +464,7 @@ def _extract_career_mappings(
             )
 
         career_result: Dict[str, str] = {}
+        career_diagnostic_only: set[str] = set()
 
         for item in mappings:
 
@@ -385,14 +490,25 @@ def _extract_career_mappings(
             )
 
             # ------------------------------------------------
-            # Diagnostic-only mappings NEVER contribute
+            # Diagnostic-only mapping
             # ------------------------------------------------
 
             if mapping_type == "diagnostic_only":
+
+                source_id = _normalize_id(
+                    source_skill
+                )
+
+                if source_id:
+
+                    career_diagnostic_only.add(
+                        source_id
+                    )
+
                 continue
 
             # ------------------------------------------------
-            # Null canonical skill NEVER contributes
+            # Null source/canonical mapping
             # ------------------------------------------------
 
             if (
@@ -418,18 +534,26 @@ def _extract_career_mappings(
 
         result[career] = career_result
 
+        diagnostic_only[
+            career
+        ] = career_diagnostic_only
+
     total_mappings = sum(
         len(mapping)
         for mapping in result.values()
     )
 
     if total_mappings == 0:
+
         raise Journey1SkillGapError(
             "skill_normalization.json contains no "
             "usable career-specific mappings."
         )
 
-    return result
+    return (
+        result,
+        diagnostic_only,
+    )
 
 
 # ============================================================
@@ -440,9 +564,10 @@ def _target_careers(
     recommendation: Dict[str, Any],
 ) -> List[str]:
     """
-    Determine which career(s) should receive Skill Gap analysis.
+    Determine which career(s) should receive
+    Skill Gap analysis.
 
-    Handles:
+    Supported recommendation types:
     - single_primary
     - highest_score_tie
     - complete_tie
@@ -457,19 +582,20 @@ def _target_careers(
         rec,
         dict,
     ):
+
         raise Journey1SkillGapError(
             "Invalid recommendation object."
         )
 
-    rec_type = str(
+    rec_type = _normalize_id(
         rec.get(
             "type",
             "",
         )
-    ).strip().lower()
+    )
 
     # --------------------------------------------------------
-    # Single primary career
+    # Single primary
     # --------------------------------------------------------
 
     if rec_type == "single_primary":
@@ -482,6 +608,7 @@ def _target_careers(
             primary,
             dict,
         ):
+
             career = _normalize_id(
                 primary.get(
                     "career_id"
@@ -501,35 +628,47 @@ def _target_careers(
             "career_tie"
         ) or {}
 
-        tied = tie.get(
-            "tied_career_ids",
-            [],
-        )
-
         if isinstance(
-            tied,
-            list,
+            tie,
+            dict,
         ):
 
-            careers = [
-                _normalize_id(value)
-                for value in tied
-            ]
+            tied = tie.get(
+                "tied_career_ids",
+                [],
+            )
 
-            careers = [
-                career
-                for career in careers
-                if career in CAREERS
-            ]
+            if isinstance(
+                tied,
+                list,
+            ):
 
-            if careers:
-                return careers
+                careers = []
+
+                for value in tied:
+
+                    career = _normalize_id(
+                        value
+                    )
+
+                    if (
+                        career in CAREERS
+                        and career not in careers
+                    ):
+
+                        careers.append(
+                            career
+                        )
+
+                if careers:
+                    return careers
 
     # --------------------------------------------------------
     # Complete tie
     # --------------------------------------------------------
 
     if rec_type == "complete_tie":
+
         return list(CAREERS)
 
     # --------------------------------------------------------
@@ -544,6 +683,7 @@ def _target_careers(
         primary,
         dict,
     ):
+
         career = _normalize_id(
             primary.get(
                 "career_id"
@@ -569,8 +709,7 @@ def _level_from_evidence(
     """
     Convert evidence ratio to preliminary 1-5 level.
 
-    Journey 1 has very limited evidence, therefore the
-    resulting level is capped at 3.
+    Journey 1 evidence is intentionally capped at level 3.
 
     ratio >= 0.80 -> raw 5 -> capped 3
     ratio >= 0.60 -> raw 4 -> capped 3
@@ -580,18 +719,23 @@ def _level_from_evidence(
     """
 
     if ratio >= 0.80:
+
         raw_level = 5
 
     elif ratio >= 0.60:
+
         raw_level = 4
 
     elif ratio >= 0.40:
+
         raw_level = 3
 
     elif ratio >= 0.20:
+
         raw_level = 2
 
     else:
+
         raw_level = 1
 
     return min(
@@ -611,24 +755,39 @@ def _confidence(
     """
     Conservative Journey 1 confidence.
 
-    1 question -> <= 0.35
-    2 questions -> <= 0.50
-    Hard cap -> 0.60
+    1 question -> maximum base 0.35
+    2 questions -> maximum base 0.50
+    Absolute hard cap -> 0.60
+
+    Confidence is based on evidence belonging to the
+    same career, not another career.
     """
+
+    if question_count <= 0:
+        return 0.0
 
     base = {
         1: 0.35,
         2: 0.50,
     }.get(
-        question_count,
-        0.55,
+        min(
+            question_count,
+            2,
+        ),
+        0.50,
     )
 
     consistency = (
         0.5
         + (
             0.5
-            * evidence_ratio
+            * max(
+                0.0,
+                min(
+                    evidence_ratio,
+                    1.0,
+                ),
+            )
         )
     )
 
@@ -689,28 +848,22 @@ def _collect_evidence_for_career(
     exploring_result: Dict[str, Any],
     career: str,
     career_normalization: Dict[str, str],
+    career_diagnostic_only: set[str],
+    required_skill_ids: set[str],
 ) -> Tuple[
     Dict[str, Dict[str, Any]],
     List[str],
 ]:
     """
-    Convert behavior signals into canonical skills using
-    ONLY the normalization mappings belonging to the target career.
+    Convert Exploring behavior signals into canonical skills
+    using ONLY the normalization mappings for the target career.
 
-    This is critical because skill_normalization.json contains
-    career-specific mappings.
+    Important:
+    A mapping is usable only when its canonical target is
+    actually required by that career.
 
-    Example:
-
-        development:
-            logical_reasoning
-                -> logical_problem_solving
-
-        data:
-            pattern_recognition
-                -> analytical_reasoning
-
-    A signal is therefore NOT globally normalized across all careers.
+    This prevents unrelated normalization entries from
+    being counted as usable skill evidence.
     """
 
     question_results = exploring_result.get(
@@ -722,6 +875,7 @@ def _collect_evidence_for_career(
         question_results,
         list,
     ):
+
         raise Journey1SkillGapError(
             "exploring_result.json question_results "
             "must be a list."
@@ -780,32 +934,49 @@ def _collect_evidence_for_career(
             if not signal:
                 continue
 
+            # ------------------------------------------------
+            # Diagnostic-only signal
+            # ------------------------------------------------
+
+            if signal in career_diagnostic_only:
+
+                continue
+
+            # ------------------------------------------------
+            # No mapping for this career
+            # ------------------------------------------------
+
             canonical = career_normalization.get(
                 signal
             )
 
-            # ------------------------------------------------
-            # Signal is not mapped for this career.
-            #
-            # This is NOT automatically an error.
-            # It may simply be:
-            # - diagnostic only
-            # - relevant to another career
-            # - not part of this career's normalization
-            # ------------------------------------------------
-
             if not canonical:
-                unmapped.add(signal)
+
+                unmapped.add(
+                    signal
+                )
+
                 continue
 
             # ------------------------------------------------
-            # Prevent duplicate counting inside one question
+            # Mapping exists, but canonical skill is NOT
+            # required by this target career.
+            #
+            # This is intentionally ignored rather than
+            # counted as usable evidence.
             # ------------------------------------------------
 
-            if (
-                canonical
-                in seen_canonical_this_question
-            ):
+            if canonical not in required_skill_ids:
+
+                continue
+
+            # ------------------------------------------------
+            # Prevent duplicate counting of the same
+            # canonical skill inside one question.
+            # ------------------------------------------------
+
+            if canonical in seen_canonical_this_question:
+
                 continue
 
             seen_canonical_this_question.add(
@@ -822,14 +993,20 @@ def _collect_evidence_for_career(
             )
 
             if is_correct:
+
                 item["positive"] += 1
+
             else:
+
                 item["negative"] += 1
 
             if question_id:
+
                 item[
                     "question_ids"
-                ].add(question_id)
+                ].add(
+                    question_id
+                )
 
     return (
         evidence,
@@ -850,19 +1027,21 @@ def build_preliminary_skill_profile(
     target_careers: List[str],
     matrix: Dict[str, Any],
     normalization: Dict[str, Dict[str, str]],
+    diagnostic_only: Dict[str, set[str]],
 ) -> Dict[str, Any]:
     """
     Build preliminary current skill profile and gap analysis.
 
-    NO-EVIDENCE RULE:
+    IMPORTANT DESIGN RULES:
 
-        current_level = None
-        gap = None
-        priority = None/None label
-        excluded from weak_areas
-        excluded from skill_gap_analysis
-
-    Evidence is collected separately for each target career.
+    1. Evidence is collected separately for every career.
+    2. Shared canonical skills are NOT allowed to inflate
+       evidence merely because the same skill appears in
+       multiple career mappings.
+    3. No Evidence remains None.
+    4. No Evidence is excluded from weak_areas and
+       skill_gap_analysis.
+    5. Confidence remains conservative.
     """
 
     # --------------------------------------------------------
@@ -876,56 +1055,39 @@ def build_preliminary_skill_profile(
     ]
 
     if not target_careers:
+
         raise Journey1SkillGapError(
             "No valid target careers supplied."
         )
 
+    # Remove duplicates while preserving order.
+
+    target_careers = list(
+        dict.fromkeys(
+            target_careers
+        )
+    )
+
     # --------------------------------------------------------
-    # Required canonical skills
-    #
-    # If multiple target careers share a skill, keep the
-    # highest target level.
+    # Load required skills PER CAREER
     # --------------------------------------------------------
 
-    required: Dict[
+    career_required_skills: Dict[
         str,
-        Dict[str, Any],
-    ] = {}
-
-    skill_careers: Dict[
-        str,
-        List[str],
+        Dict[str, Dict[str, Any]],
     ] = {}
 
     for career in target_careers:
 
-        career_skills = _skill_records(
+        career_required_skills[
+            career
+        ] = _skill_records(
             matrix,
             career,
         )
 
-        for skill_id, meta in career_skills.items():
-
-            skill_careers.setdefault(
-                skill_id,
-                [],
-            ).append(
-                career
-            )
-
-            if (
-                skill_id not in required
-                or meta["target_level"]
-                > required[
-                    skill_id
-                ]["target_level"]
-            ):
-                required[
-                    skill_id
-                ] = dict(meta)
-
     # --------------------------------------------------------
-    # Collect evidence CAREER BY CAREER
+    # Collect evidence PER CAREER
     # --------------------------------------------------------
 
     career_evidence: Dict[
@@ -940,16 +1102,25 @@ def build_preliminary_skill_profile(
 
     for career in target_careers:
 
-        career_normalization = normalization.get(
-            career,
-            {},
+        required_skill_ids = set(
+            career_required_skills[
+                career
+            ].keys()
         )
 
         evidence, unmapped = (
             _collect_evidence_for_career(
                 exploring_result=exploring_result,
                 career=career,
-                career_normalization=career_normalization,
+                career_normalization=normalization.get(
+                    career,
+                    {},
+                ),
+                career_diagnostic_only=diagnostic_only.get(
+                    career,
+                    set(),
+                ),
+                required_skill_ids=required_skill_ids,
             )
         )
 
@@ -962,80 +1133,53 @@ def build_preliminary_skill_profile(
         ] = unmapped
 
     # --------------------------------------------------------
-    # Build canonical skill evidence
+    # Build career-specific skill items.
     #
-    # Important:
-    # A skill may be required by multiple careers.
-    # Evidence is accepted if the relevant career mapping
-    # provides evidence for that canonical skill.
-    # --------------------------------------------------------
-
-    evidence: Dict[
-        str,
-        Dict[str, Any],
-    ] = {}
-
-    for career in target_careers:
-
-        for skill_id, ev in career_evidence[
-            career
-        ].items():
-
-            item = evidence.setdefault(
-                skill_id,
-                {
-                    "positive": 0,
-                    "negative": 0,
-                    "question_ids": set(),
-                    "careers": set(),
-                },
-            )
-
-            item[
-                "positive"
-            ] += ev["positive"]
-
-            item[
-                "negative"
-            ] += ev["negative"]
-
-            item[
-                "question_ids"
-            ].update(
-                ev["question_ids"]
-            )
-
-            item[
-                "careers"
-            ].add(
-                career
-            )
-
-    # --------------------------------------------------------
-    # Build final skill items
+    # This is the important correction:
+    #
+    # If two target careers require the same canonical skill,
+    # each career keeps its OWN evidence and target metadata.
+    #
+    # We do not combine:
+    #
+    #     Career A evidence
+    #     +
+    #     Career B evidence
+    #
+    # into an artificially stronger single evidence score.
     # --------------------------------------------------------
 
     skills = []
     strengths = []
     weak_areas = []
 
-    for skill_id, meta in required.items():
+    for career in target_careers:
 
-        ev = evidence.get(
-            skill_id
-        )
+        career_skills = career_required_skills[
+            career
+        ]
 
-        # ====================================================
-        # NO EVIDENCE
-        # ====================================================
+        career_evidence_map = career_evidence[
+            career
+        ]
 
-        if (
-            not ev
-            or not ev["question_ids"]
-        ):
+        for skill_id, meta in career_skills.items():
 
-            skills.append(
-                {
+            ev = career_evidence_map.get(
+                skill_id
+            )
+
+            # ====================================================
+            # NO EVIDENCE
+            # ====================================================
+
+            if (
+                not ev
+                or not ev["question_ids"]
+            ):
+
+                item = {
+                    "career": career,
                     "skill_id": skill_id,
                     "skill_name": meta["name"],
                     "category": meta["category"],
@@ -1047,109 +1191,182 @@ def build_preliminary_skill_profile(
                     "confidence": 0.0,
                     "evidence_questions": [],
                     "evidence_careers": [],
+                    "positive_evidence": 0,
+                    "negative_evidence": 0,
                     "evidence_status": "No Evidence",
                     "gap": None,
                     "gap_label": "No Evidence",
                     "priority": "None",
                 }
+
+                skills.append(
+                    item
+                )
+
+                continue
+
+            # ====================================================
+            # PRELIMINARY EVIDENCE
+            # ====================================================
+
+            positive = int(
+                ev["positive"]
             )
 
-            continue
+            negative = int(
+                ev["negative"]
+            )
 
-        # ====================================================
-        # PRELIMINARY EVIDENCE
-        # ====================================================
+            total = positive + negative
 
-        total = (
-            ev["positive"]
-            + ev["negative"]
-        )
+            if total <= 0:
 
-        ratio = (
-            ev["positive"]
-            / total
-            if total
-            else 0.0
-        )
+                item = {
+                    "career": career,
+                    "skill_id": skill_id,
+                    "skill_name": meta["name"],
+                    "category": meta["category"],
+                    "weight": meta["weight"],
+                    "current_level": None,
+                    "current_level_label": "No Evidence",
+                    "target_level": meta["target_level"],
+                    "evidence_ratio": None,
+                    "confidence": 0.0,
+                    "evidence_questions": [],
+                    "evidence_careers": [],
+                    "positive_evidence": 0,
+                    "negative_evidence": 0,
+                    "evidence_status": "No Evidence",
+                    "gap": None,
+                    "gap_label": "No Evidence",
+                    "priority": "None",
+                }
 
-        current_level = _level_from_evidence(
-            ratio
-        )
+                skills.append(
+                    item
+                )
 
-        confidence = _confidence(
-            len(
+                continue
+
+            ratio = (
+                positive / total
+            )
+
+            current_level = (
+                _level_from_evidence(
+                    ratio
+                )
+            )
+
+            question_count = len(
                 ev["question_ids"]
-            ),
-            ratio,
-        )
+            )
 
-        gap = max(
-            meta["target_level"]
-            - current_level,
-            0,
-        )
-
-        item = {
-            "skill_id": skill_id,
-            "skill_name": meta["name"],
-            "category": meta["category"],
-            "weight": meta["weight"],
-            "current_level": current_level,
-            "current_level_label": LEVEL_LABELS[
-                current_level
-            ],
-            "target_level": meta["target_level"],
-            "evidence_ratio": round(
+            confidence = _confidence(
+                question_count,
                 ratio,
-                2,
-            ),
-            "confidence": confidence,
-            "evidence_questions": sorted(
-                ev["question_ids"]
-            ),
-            "evidence_careers": sorted(
-                ev["careers"]
-            ),
-            "positive_evidence": ev[
-                "positive"
-            ],
-            "negative_evidence": ev[
-                "negative"
-            ],
-            "evidence_status": (
-                "Preliminary Evidence"
-            ),
-            "gap": gap,
-            "gap_label": _gap_label(
-                gap
-            ),
-            "priority": _priority(
-                gap
-            ),
-        }
+            )
 
-        skills.append(item)
+            gap = max(
+                meta["target_level"]
+                - current_level,
+                0,
+            )
 
-        if gap == 0:
-            strengths.append(item)
+            item = {
+                "career": career,
+                "skill_id": skill_id,
+                "skill_name": meta["name"],
+                "category": meta["category"],
+                "weight": meta["weight"],
+                "current_level": current_level,
+                "current_level_label": LEVEL_LABELS[
+                    current_level
+                ],
+                "target_level": meta["target_level"],
+                "evidence_ratio": round(
+                    ratio,
+                    2,
+                ),
+                "confidence": confidence,
+                "evidence_questions": sorted(
+                    ev["question_ids"]
+                ),
+                "evidence_careers": [
+                    career
+                ],
+                "positive_evidence": positive,
+                "negative_evidence": negative,
+                "evidence_status": (
+                    "Preliminary Evidence"
+                ),
+                "gap": gap,
+                "gap_label": _gap_label(
+                    gap
+                ),
+                "priority": _priority(
+                    gap
+                ),
+            }
 
-        elif gap > 0:
-            weak_areas.append(item)
+            skills.append(
+                item
+            )
 
-    # --------------------------------------------------------
-    # Sort strengths
-    # --------------------------------------------------------
+            # ----------------------------------------------------
+            # Strength vs. weak area
+            # ----------------------------------------------------
+            # IMPORTANT FIX:
+            # Previously this used gap == 0 for "strength" and
+            # gap > 0 for "weak area". That meant a skill with
+            # current_level 3 ("Functional"), positive-only
+            # evidence, and a Low-priority remaining gap (e.g.
+            # target_level 4) was labeled a weak area even though
+            # it is demonstrated, evidence-backed competence with
+            # some remaining room to grow.
+            #
+            # A skill is now treated as a strength whenever the
+            # evidence shows current_level >= 3 ("Functional" or
+            # higher), regardless of whether a gap remains to a
+            # higher target_level. The gap/priority fields on the
+            # item itself still communicate that remaining
+            # development need — the skill is not duplicated into
+            # weak_areas as well.
+            #
+            # weak_areas is reserved for skills where the
+            # evidence itself shows current_level < 3 (i.e.
+            # "Needs Foundation" / "Developing" — negative or
+            # weak evidence), which is a genuine current weakness
+            # rather than a strength with room to grow.
+            # ----------------------------------------------------
+
+            if current_level >= 3:
+
+                strengths.append(
+                    item
+                )
+
+            elif gap > 0:
+
+                weak_areas.append(
+                    item
+                )
+
+    # ========================================================
+    # SORT STRENGTHS
+    # ========================================================
 
     strengths.sort(
         key=lambda item: (
             -item["current_level"],
+            item["career"],
             item["skill_name"],
         )
     )
 
-    # --------------------------------------------------------
-    # Sort weak areas
-    # --------------------------------------------------------
+    # ========================================================
+    # SORT WEAK AREAS
+    # ========================================================
 
     weak_areas.sort(
         key=lambda item: (
@@ -1163,13 +1380,14 @@ def build_preliminary_skill_profile(
                 == "core"
                 else 1
             ),
+            item["career"],
             item["skill_name"],
         )
     )
 
-    # --------------------------------------------------------
-    # Sort all skills
-    # --------------------------------------------------------
+    # ========================================================
+    # SORT ALL SKILLS
+    # ========================================================
 
     skills.sort(
         key=lambda item: (
@@ -1178,28 +1396,34 @@ def build_preliminary_skill_profile(
                 if item["gap"] is not None
                 else 1
             ),
+            item["career"],
             item["skill_name"],
         )
     )
 
-    # --------------------------------------------------------
-    # Unmapped signals
-    # --------------------------------------------------------
+    # ========================================================
+    # UNMAPPED SIGNALS
+    # ========================================================
 
     all_unmapped = set()
 
     for signals in career_unmapped.values():
+
         all_unmapped.update(
             signals
         )
 
     return {
         "skills": skills,
+
         "strengths": strengths,
+
         "weak_areas": weak_areas,
+
         "unmapped_behavior_signals": sorted(
             all_unmapped
         ),
+
         "career_unmapped_behavior_signals": (
             career_unmapped
         ),
@@ -1230,7 +1454,10 @@ def recommended_next_step(
         if high:
 
             names = ", ".join(
-                item["skill_name"]
+                (
+                    f"{item['career']}: "
+                    f"{item['skill_name']}"
+                )
                 for item in high[:3]
             )
 
@@ -1242,7 +1469,10 @@ def recommended_next_step(
             )
 
         names = ", ".join(
-            item["skill_name"]
+            (
+                f"{item['career']}: "
+                f"{item['skill_name']}"
+            )
             for item in weak[:3]
         )
 
@@ -1268,6 +1498,138 @@ def recommended_next_step(
 
 
 # ============================================================
+# MAPPED SIGNAL COUNT
+# ============================================================
+
+def _count_mapped_behavior_signals(
+    exploring_result: Dict[str, Any],
+    target_careers: List[str],
+    normalization: Dict[str, Dict[str, str]],
+    diagnostic_only: Dict[str, set[str]],
+    career_required_skills: Dict[
+        str,
+        Dict[str, Dict[str, Any]],
+    ],
+) -> Tuple[
+    int,
+    List[str],
+]:
+    """
+    Count unique behavior signals that are actually usable.
+
+    A signal counts as mapped ONLY when:
+
+        signal exists in Exploring
+        AND
+        signal has a usable mapping for at least one target career
+        AND
+        mapped canonical skill is required by that career
+        AND
+        signal is not diagnostic-only.
+
+    This prevents unrelated mappings from inflating
+    mapped_signal_count.
+    """
+
+    all_behavior_signals = set()
+
+    question_results = exploring_result.get(
+        "question_results",
+        [],
+    )
+
+    if not isinstance(
+        question_results,
+        list,
+    ):
+
+        raise Journey1SkillGapError(
+            "exploring_result.json question_results "
+            "must be a list."
+        )
+
+    for question in question_results:
+
+        if not isinstance(
+            question,
+            dict,
+        ):
+            continue
+
+        signals = question.get(
+            "behavior_signals",
+            [],
+        )
+
+        if not isinstance(
+            signals,
+            list,
+        ):
+            continue
+
+        for signal in signals:
+
+            normalized_signal = _normalize_id(
+                signal
+            )
+
+            if normalized_signal:
+
+                all_behavior_signals.add(
+                    normalized_signal
+                )
+
+    mapped_signals = set()
+
+    for career in target_careers:
+
+        career_mapping = normalization.get(
+            career,
+            {},
+        )
+
+        career_diagnostic = diagnostic_only.get(
+            career,
+            set(),
+        )
+
+        required_skill_ids = set(
+            career_required_skills[
+                career
+            ].keys()
+        )
+
+        for signal in all_behavior_signals:
+
+            if signal in career_diagnostic:
+                continue
+
+            canonical = career_mapping.get(
+                signal
+            )
+
+            if not canonical:
+                continue
+
+            if canonical not in required_skill_ids:
+                continue
+
+            mapped_signals.add(
+                signal
+            )
+
+    unmapped_signals = sorted(
+        all_behavior_signals
+        - mapped_signals
+    )
+
+    return (
+        len(mapped_signals),
+        unmapped_signals,
+    )
+
+
+# ============================================================
 # FINAL RESULT
 # ============================================================
 
@@ -1289,9 +1651,9 @@ def build_final_result(
     ),
 ) -> Dict[str, Any]:
 
-    # --------------------------------------------------------
-    # Load canonical files
-    # --------------------------------------------------------
+    # ========================================================
+    # LOAD FILES
+    # ========================================================
 
     exploring = load_json(
         exploring_result_path
@@ -1309,60 +1671,93 @@ def build_final_result(
         normalization_path
     )
 
-    # --------------------------------------------------------
-    # Read finalized career-specific mappings
-    # --------------------------------------------------------
+    # ========================================================
+    # NORMALIZATION
+    # ========================================================
 
-    normalization = (
-        _extract_career_mappings(
-            normalization_config
-        )
+    (
+        normalization,
+        diagnostic_only,
+    ) = _extract_career_mappings(
+        normalization_config
     )
 
-    # --------------------------------------------------------
-    # Determine target career(s)
-    # --------------------------------------------------------
+    # ========================================================
+    # TARGET CAREERS
+    # ========================================================
 
     target_careers = _target_careers(
         recommendation
     )
 
-    # --------------------------------------------------------
-    # Build profile
-    # --------------------------------------------------------
+    # ========================================================
+    # LOAD REQUIRED SKILLS FOR TARGET CAREERS
+    # ========================================================
+
+    career_required_skills = {}
+
+    for career in target_careers:
+
+        career_required_skills[
+            career
+        ] = _skill_records(
+            matrix,
+            career,
+        )
+
+    # ========================================================
+    # BUILD PRELIMINARY PROFILE
+    # ========================================================
 
     profile = build_preliminary_skill_profile(
         exploring_result=exploring,
         target_careers=target_careers,
         matrix=matrix,
         normalization=normalization,
+        diagnostic_only=diagnostic_only,
     )
 
-    # --------------------------------------------------------
-    # Mapping counts
-    # --------------------------------------------------------
+    # ========================================================
+    # CAREER MAPPING COUNTS
+    # ========================================================
 
-    career_mapping_counts = {
-        career: len(
+    career_mapping_counts = {}
+
+    for career in target_careers:
+
+        career_mapping_counts[
+            career
+        ] = len(
             normalization.get(
                 career,
                 {},
             )
         )
-        for career in target_careers
-    }
 
-    mapped_signal_count = sum(
-        career_mapping_counts.values()
+    # ========================================================
+    # MAPPED SIGNAL COUNT
+    # ========================================================
+
+    (
+        mapped_behavior_signal_count,
+        calculated_unmapped_signals,
+    ) = _count_mapped_behavior_signals(
+        exploring_result=exploring,
+        target_careers=target_careers,
+        normalization=normalization,
+        diagnostic_only=diagnostic_only,
+        career_required_skills=career_required_skills,
     )
 
-    # --------------------------------------------------------
-    # Extract unmapped data
-    # --------------------------------------------------------
+    # ========================================================
+    # UNMAPPED DATA
+    # ========================================================
 
-    unmapped_behavior_signals = profile.pop(
+    profile_unmapped = profile.pop(
         "unmapped_behavior_signals"
     )
+
+    # Use the profile's career-aware unmapped information.
 
     career_unmapped_behavior_signals = (
         profile.pop(
@@ -1371,10 +1766,24 @@ def build_final_result(
     )
 
     # --------------------------------------------------------
-    # Final result
+    # Combine calculated and profile-level unmapped signals.
     # --------------------------------------------------------
 
+    unmapped_behavior_signals = sorted(
+        set(profile_unmapped)
+        | set(calculated_unmapped_signals)
+    )
+
+    # ========================================================
+    # FINAL RESULT
+    # ========================================================
+
     final = {
+
+        # ----------------------------------------------------
+        # Journey metadata
+        # ----------------------------------------------------
+
         "journey": 1,
 
         "mode": "exploring",
@@ -1384,22 +1793,29 @@ def build_final_result(
         ),
 
         # ----------------------------------------------------
-        # Recommendation remains untouched.
+        # Original recommendation
+        #
+        # NEVER modified.
         # ----------------------------------------------------
 
-        "career_recommendation": recommendation,
+        "career_recommendation": (
+            recommendation
+        ),
 
         # ----------------------------------------------------
-        # Career(s) receiving skill-gap analysis.
+        # Target careers
         # ----------------------------------------------------
 
-        "target_careers": target_careers,
+        "target_careers": (
+            target_careers
+        ),
 
         # ----------------------------------------------------
-        # Normalization information.
+        # Normalization information
         # ----------------------------------------------------
 
         "skill_normalization": {
+
             "source": Path(
                 normalization_path
             ).name,
@@ -1409,7 +1825,7 @@ def build_final_result(
             ),
 
             "mapped_signal_count": (
-                mapped_signal_count
+                mapped_behavior_signal_count
             ),
 
             "career_mapping_counts": (
@@ -1434,9 +1850,9 @@ def build_final_result(
         ),
 
         # ----------------------------------------------------
-        # Only evidence-backed gaps
+        # Evidence-backed gaps only
         #
-        # No-Evidence skills are excluded.
+        # No Evidence is excluded.
         # ----------------------------------------------------
 
         "skill_gap_analysis": [
@@ -1451,30 +1867,36 @@ def build_final_result(
         # ----------------------------------------------------
 
         "strengths": [
-            item["skill_name"]
+            (
+                f"{item['career']}: "
+                f"{item['skill_name']}"
+            )
             for item in profile[
                 "strengths"
             ]
         ],
 
-        "strength_details": profile[
-            "strengths"
-        ],
+        "strength_details": (
+            profile["strengths"]
+        ),
 
         # ----------------------------------------------------
         # Weak areas
         # ----------------------------------------------------
 
         "weak_areas": [
-            item["skill_name"]
+            (
+                f"{item['career']}: "
+                f"{item['skill_name']}"
+            )
             for item in profile[
                 "weak_areas"
             ]
         ],
 
-        "weak_area_details": profile[
-            "weak_areas"
-        ],
+        "weak_area_details": (
+            profile["weak_areas"]
+        ),
 
         # ----------------------------------------------------
         # Recommended next step
@@ -1508,6 +1930,10 @@ def build_final_result(
 
             "career_specific_normalization": True,
 
+            "shared_skill_evidence_is_not_cross_career_inflated": True,
+
+            "mapped_signal_requires_required_skill": True,
+
             "interpretation_rule": (
                 "Never present Journey 1 evidence as "
                 "definitive certification or expertise."
@@ -1530,24 +1956,40 @@ def build_final_result(
             "max(target_level - current_level, 0)"
         ),
 
+        # ----------------------------------------------------
+        # Gap labels
+        # ----------------------------------------------------
+
         "gap_labels": {
+
             "0": "No Gap",
+
             "1": "Low Gap",
+
             "2": "Moderate Gap",
+
             "3-4": "High Gap",
         },
 
+        # ----------------------------------------------------
+        # Priority rules
+        # ----------------------------------------------------
+
         "priority_rules": {
+
             "gap >= 3": "High",
+
             "gap == 2": "Medium",
+
             "gap == 1": "Low",
+
             "gap == 0": "None",
         },
     }
 
-    # --------------------------------------------------------
-    # Save
-    # --------------------------------------------------------
+    # ========================================================
+    # SAVE
+    # ========================================================
 
     output = Path(
         output_path
@@ -1587,12 +2029,15 @@ if __name__ == "__main__":
         )
 
         print()
+
         print(
             "=" * 60
         )
+
         print(
             "JOURNEY 1 SKILL GAP PIPELINE: PASS"
         )
+
         print(
             "=" * 60
         )
@@ -1600,12 +2045,15 @@ if __name__ == "__main__":
     except Exception as exc:
 
         print()
+
         print(
             "=" * 60
         )
+
         print(
             "JOURNEY 1 SKILL GAP PIPELINE: FAILED"
         )
+
         print(
             "=" * 60
         )
