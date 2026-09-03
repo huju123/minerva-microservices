@@ -1775,18 +1775,19 @@ def build_next_steps(
 
 def build_ai_context_summary(
     ai_result: Dict[str, Any],
-    deterministic_result: Dict[str, Any]
+    deterministic_result: Dict[str, Any],
+    career_scores: List[Dict[str, Any]],
+    tie_info: Dict[str, Any]
 ) -> Dict[str, Any]:
     """
     Preserve useful interpretation information for the
     recommendation output.
 
     IMPORTANT:
-        The deterministic result is the source of truth for
-        the overall career result.
+        Deterministic career ranking is the source of truth.
 
-        AI interpretation is supporting context only and must
-        never override the deterministic career ranking.
+        AI interpretation may provide supporting context, but
+        it must never determine or override the top career.
     """
 
     ai_evaluation = ai_result.get(
@@ -1813,24 +1814,14 @@ def build_ai_context_summary(
     # DETERMINISTIC OVERALL RESULT
     # ========================================================
 
-    career_scores = deterministic_result.get(
-        "career_scores",
-        []
-    )
-
-    if not isinstance(
-        career_scores,
-        list
-    ) or not career_scores:
-
+    if not career_scores:
         raise ValueError(
             "Cannot build supporting AI insights because "
             "deterministic career scores are missing."
         )
 
-    # The deterministic career scores are already ranked by
-    # exploring_scoring.py. We use the first item as the
-    # authoritative top career.
+    # career_scores has already been normalized from the
+    # deterministic ranking produced by exploring_scoring.py.
     top_career = career_scores[0]
 
     top_career_name = normalize_text(
@@ -1846,8 +1837,10 @@ def build_ai_context_summary(
         0.0
     )
 
-    # Calculate total questions from the deterministic career
-    # scores. There are 5 careers × 2 questions = 10 questions.
+    # --------------------------------------------------------
+    # Calculate totals from deterministic scores.
+    # --------------------------------------------------------
+
     total_correct = sum(
         safe_int(
             item.get("score"),
@@ -1866,23 +1859,75 @@ def build_ai_context_summary(
         if isinstance(item, dict)
     )
 
-    # IMPORTANT:
-    # Do NOT use:
-    #
-    #     insights.get("overall")
-    #
-    # here.
-    #
-    # That value can become stale or contradict the deterministic
-    # result. The recommendation layer must construct this
-    # statement from the deterministic result.
-    overall = (
-        f"You answered {total_correct} of "
-        f"{total_questions} questions correctly. "
-        f"Your strongest deterministic career result is "
-        f"{top_career_name} at "
-        f"{format_percentage(top_percentage)}."
-    )
+    # ========================================================
+    # DETERMINISTIC OVERALL MESSAGE
+    # ========================================================
+
+    if tie_info.get("complete_tie"):
+
+        overall = (
+            f"You answered {total_correct} of "
+            f"{total_questions} questions correctly. "
+            f"All assessed career areas share the same "
+            f"deterministic career score of "
+            f"{format_percentage(top_percentage)}."
+        )
+
+        top_career_explanation = (
+            "The assessment produced a complete tie across "
+            "the available career areas. No single career "
+            "has a stronger deterministic result."
+        )
+
+    elif tie_info.get("is_tie"):
+
+        tied_careers = [
+            normalize_text(name)
+            for name in tie_info.get(
+                "tied_careers",
+                []
+            )
+            if normalize_text(name)
+        ]
+
+        tied_text = ", ".join(
+            tied_careers
+        )
+
+        overall = (
+            f"You answered {total_correct} of "
+            f"{total_questions} questions correctly. "
+            f"{tied_text} share the highest deterministic "
+            f"career result at "
+            f"{format_percentage(top_percentage)}."
+        )
+
+        top_career_explanation = (
+            f"{tied_text} share the highest deterministic "
+            f"career result at "
+            f"{format_percentage(top_percentage)}. "
+            "The assessment therefore does not establish "
+            "a single highest-scoring career."
+        )
+
+    else:
+
+        overall = (
+            f"You answered {total_correct} of "
+            f"{total_questions} questions correctly. "
+            f"Your strongest deterministic career result "
+            f"is {top_career_name} at "
+            f"{format_percentage(top_percentage)}."
+        )
+
+        top_career_explanation = (
+            f"{top_career_name} achieved the highest "
+            f"deterministic career result at "
+            f"{format_percentage(top_percentage)}. "
+            "This means your current assessment profile "
+            "aligns most strongly with this career area "
+            "among the available options."
+        )
 
     # ========================================================
     # STRENGTHS
@@ -1951,6 +1996,8 @@ def build_ai_context_summary(
     # ========================================================
 
     return {
+        # These two fields are ALWAYS generated from the
+        # deterministic result.
         "overall": overall,
 
         "thinking_pattern": normalize_text(
@@ -1959,10 +2006,8 @@ def build_ai_context_summary(
             )
         ),
 
-        "top_career_explanation": normalize_text(
-            insights.get(
-                "top_career_explanation"
-            )
+        "top_career_explanation": (
+            top_career_explanation
         ),
 
         "personalized_feedback": normalize_text(
@@ -2039,7 +2084,10 @@ def generate_recommendation(
     )
 
     ai_summary = build_ai_context_summary(
-        ai_result, deterministic_result
+        ai_result=ai_result,
+    deterministic_result=deterministic_result,
+    career_scores=career_scores,
+    tie_info=tie_info
     )
 
     return {
