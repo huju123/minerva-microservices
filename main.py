@@ -116,15 +116,22 @@ class ChatMessageRequest(BaseModel):
     conversation_history: list = []
     career: str | None = None
 
+class QuestionItem(BaseModel):
+    id: str
+    question: str
+
+class AnswerItem(BaseModel):
+    id: str
+    answer: str
+
 class InterviewStartRequest(BaseModel):
     target_role: str
     skill_profile: list
     num_questions: int = 5
 
-
 class InterviewEvaluateRequest(BaseModel):
-    questions: list
-    answers: list
+    questions: List[QuestionItem]
+    answers: List[AnswerItem]
     target_role: str
 
 
@@ -437,18 +444,9 @@ def interview_start(request: InterviewStartRequest):
 @app.post("/interview/evaluate")
 def interview_evaluate(request: InterviewEvaluateRequest):
     try:
-        questions_text = "\n".join(
-            f"{i+1}. {q}"
-            for i, q in enumerate(request.questions)
-        )
-        answers_text = "\n".join(
-            f"{i+1}. {a}"
-            for i, a in enumerate(request.answers)
-        )
-
         result = evaluate_interview_answers(
-            question=questions_text,
-            student_answer=answers_text,
+            questions=request.questions,   # list of {"id": "q1", "question": "..."}
+            answers=request.answers,       # list of {"id": "q1", "answer": "..."}
             target_role=request.target_role
         )
 
